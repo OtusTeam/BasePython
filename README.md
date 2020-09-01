@@ -10,3 +10,4 @@
 - [Урок 5. Метаклассы](lessons/lesson.5/)
 - [Урок 7. Встроенные модули: os, sys, argparse, pathlib, functools, itertools](lessons/lesson.7/)
 - [Урок 8. HTTP, файлы, csv, config.ini](lessons/lesson.8/)
+- [Урок 9. asyncio, aiohttp](lessons/lesson.9/)
