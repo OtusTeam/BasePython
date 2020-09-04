@@ -11,3 +11,4 @@
 - [Урок 7. Встроенные модули: os, sys, argparse, pathlib, functools, itertools](lessons/lesson.7/)
 - [Урок 8. HTTP, файлы, csv, config.ini](lessons/lesson.8/)
 - [Урок 9. asyncio, aiohttp](lessons/lesson.9/)
+- [Урок 10. Базы данных: redis, mongo, postgres](lessons/lesson.10/)
