@@ -12,3 +12,4 @@
 - [Урок 8. HTTP, файлы, csv, config.ini](lessons/lesson.8/)
 - [Урок 9. asyncio, aiohttp](lessons/lesson.9/)
 - [Урок 10. Базы данных: redis, mongo, postgres](lessons/lesson.10/)
+- [Урок 11. ORM: SQLAlchemy](lessons/lesson.11/)
