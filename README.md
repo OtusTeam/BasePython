@@ -13,3 +13,4 @@
 - [Урок 9. asyncio, aiohttp](lessons/lesson.9/)
 - [Урок 10. Базы данных: redis, mongo, postgres](lessons/lesson.10/)
 - [Урок 11. ORM: SQLAlchemy](lessons/lesson.11/)
+- [Урок 12. async DB, async ORM](lessons/lesson.12/)
