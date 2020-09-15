@@ -14,3 +14,4 @@
 - [Урок 10. Базы данных: redis, mongo, postgres](lessons/lesson.10/)
 - [Урок 11. ORM: SQLAlchemy](lessons/lesson.11/)
 - [Урок 12. async DB, async ORM](lessons/lesson.12/)
+- [Урок 13. pytest](lessons/lesson.13/)
