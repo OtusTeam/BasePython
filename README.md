@@ -16,3 +16,4 @@
 - [Урок 12. async DB, async ORM](lessons/lesson.12/)
 - [Урок 13. pytest](lessons/lesson.13/)
 - [Урок 14. Telegram бот](lessons/lesson.14/)
+- [Урок 15. numpy](lessons/lesson.15/)
