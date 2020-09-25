@@ -17,3 +17,4 @@
 - [Урок 13. pytest](lessons/lesson.13/)
 - [Урок 14. Telegram бот](lessons/lesson.14/)
 - [Урок 15. numpy](lessons/lesson.15/)
+- [Урок 16. pandas](lessons/lesson.16/)
