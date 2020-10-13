@@ -20,3 +20,4 @@
 - [Урок 16. pandas](lessons/lesson.16/)
 - [Урок 17. opencv](lessons/lesson.17/)
 - [Урок 18. Flask](lessons/lesson.18/)
+- [Урок 19. Базовый фронтенд, bootstrap](lessons/lesson.19/)
