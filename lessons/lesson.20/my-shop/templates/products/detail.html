@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title -%}
+  Product #{{ product_id }}
+{%- endblock %}
+
+{% block body %}
+  <h1>Product <code id="product-name">{{ product_name }}</code></h1>
+  <hr>
+  <a href="{{ url_for('product_app.product_list') }}">Product list</a>
+
+  <hr>
+{#  Admin area #}
+  <div>
+    <button id="delete-product" class="btn btn-danger btn-lg">Delete</button>
+  </div>
+{% endblock %}
+
+{% block after_body %}
+  <script>
+  $(function() {
+    const name = $('#product-name')
+    console.log(name.text())
+
+    $('#delete-product').click(function () {
+      $.ajax({
+        method: 'DELETE',
+        success: function (res) {
+          console.log(res)
+          console.log(res.data)
+        },
+        error: function (err) {
+          console.error(err)
+        },
+        complete: function () {
+          window.location = '{{ url_for('product_app.product_list') }}'
+        },
+      })
+    })
+  });
+  </script>
+{% endblock %}

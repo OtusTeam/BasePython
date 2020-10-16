@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title -%}
+  Products
+{%- endblock %}
+
+{% block body %}
+  <h1>Products list</h1>
+  <div class="alert alert-info" role="alert">
+    Sale only today!
+  </div>
+  <div class="row">
+    <div class="col col-12 col-md-8 col-lg-6 col-xl-4">
+      <ul class="list-group">
+        {% for product_id in products %}
+          <li class="list-group-item product-item">
+            <a class="my-2" href="{{ url_for('product_app.product_detail', product_id=product_id) }}">
+              {{ products[product_id] }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}
+
+{% block after_body %}
+  <script>
+    $(function () {
+      const productItems = $('.product-item')
+      console.log(productItems)
+    });
+  </script>
+{% endblock %}
