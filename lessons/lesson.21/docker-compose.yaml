@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+  app:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    environment:
+      PG_HOST: pg
+    volumes:
+    - ./my-shop:/app
+    ports:
+      - 5000:5000
+    depends_on:
+      - pg
+
+  pg:
+    image: postgres:12
+    environment:
+      POSTGRES_DB: shop
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ./data/pgdata:/var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
