@@ -23,3 +23,4 @@
 - [Урок 19. Базовый фронтенд, bootstrap](lessons/lesson.19/)
 - [Урок 20. Pipenv; poetry; Docker](lessons/lesson.20/)
 - [Урок 21. Flask-Migrate, flask-sqlalchemy; docker-compose, network](lessons/lesson.21/)
+- [Урок 29. pydantic, FastAPI](lessons/lesson.29/)
