@@ -8,3 +8,4 @@
 ### Курсы Python Basic:
 
 - [PythonBasic.2020-07](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2020-07)
+- [PythonBasic.2020-11](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2020-11)
