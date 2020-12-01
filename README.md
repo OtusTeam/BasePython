@@ -25,3 +25,4 @@
 - [Урок 21. Flask-Migrate, flask-sqlalchemy; docker-compose, network](lessons/lesson.21/)
 - [Урок 29. pydantic, FastAPI](lessons/lesson.29/)
 - [Урок 30. webscrapping: BeautifulSoup, scrapy](lessons/lesson.30/)
+- [Урок 31. GitHub actions](lessons/lesson.31/)
