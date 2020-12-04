@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title -%}
+  Add Product
+{%- endblock %}
+
+{% block body %}
+  <form method="post">
+    <div class="form-group">
+      <label for="input-product-name">Product name</label>
+      <input name="product-name" type="text" class="form-control" id="input-product-name" required>
+    </div>
+    <div class="form-group form-check">
+      <input name="is-new" type="checkbox" class="form-check-input" id="check-is-new">
+      <label class="form-check-label" for="check-is-new">New?</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Add product</button>
+  </form>
+{% endblock %}

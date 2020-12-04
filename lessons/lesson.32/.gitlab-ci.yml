@@ -1,0 +1,55 @@
+image: python:3.8.5
+
+stages:
+  - testing
+  - deploy
+
+
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+# Pip's cache doesn't store the python packages
+# https://pip.pypa.io/en/stable/reference/pip_install/#caching
+#
+# If you want to also cache the installed packages, you have to install
+# them in a virtualenv and cache it as well.
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+
+run_tests:
+  stage: testing
+  variables:
+    PG_HOST: postgres
+    POSTGRES_DB: shop
+    POSTGRES_USER: user
+    POSTGRES_PASSWORD: password
+    POSTGRES_HOST_AUTH_METHOD: trust
+  only:
+    - master
+    - merge_requests
+  services:
+    - postgres:12.5-alpine
+  before_script:
+    - pip install virtualenv
+    - virtualenv venv
+    - source venv/bin/activate
+    - pip install poetry
+    - cd my-shop
+    - poetry install
+  script:
+    - pytest -vv --color=yes
+
+
+deploy_app:
+  stage: deploy
+  script:
+    - echo "Deploy me!"
+  only:
+    - master
+  dependencies:
+    - run_tests
