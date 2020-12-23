@@ -1,0 +1,2 @@
+attrs==20.3.0
+pydantic==1.7.3
