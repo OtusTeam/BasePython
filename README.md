@@ -8,3 +8,4 @@
 - [Урок 3. Генераторы; git, shell](lessons/lesson.3/)
 - [Урок 7. Модули и импорты](lessons/lesson.7/)
 - [Урок 8. attrs, dataclasses, pydantic](lessons/lesson.8/)
+- [Урок 9. os, pathlib, functools, itertools](lessons/lesson.9/)
