@@ -9,3 +9,4 @@
 - [Урок 7. Модули и импорты](lessons/lesson.7/)
 - [Урок 8. attrs, dataclasses, pydantic](lessons/lesson.8/)
 - [Урок 9. os, pathlib, functools, itertools](lessons/lesson.9/)
+- [Урок 10. http, csv, config.ini](lessons/lesson.10/)
