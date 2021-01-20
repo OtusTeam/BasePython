@@ -11,3 +11,4 @@
 - [Урок 9. os, pathlib, functools, itertools](lessons/lesson.9/)
 - [Урок 10. http, csv, config.ini](lessons/lesson.10/)
 - [Урок 11. ORM, SQLAlchemy, relationships](lessons/lesson.11/)
+- [Урок 12. SQLAlchemy, alembic, Many-To-Many relationships](lessons/lesson.12/)
