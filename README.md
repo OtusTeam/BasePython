@@ -15,3 +15,4 @@
 - [Урок 13. asyncio, aiohttp](lessons/lesson.13/)
 - [Урок 14. Базы данных: redis, mongo, postgres](lessons/lesson.14/)
 - [Урок 15. async DB, async ORM](lessons/lesson.15/)
+- [Урок 16. unittest, pytest, fixtures, parametrize, conftest](lessons/lesson.16/)
