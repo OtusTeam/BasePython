@@ -19,3 +19,4 @@
 - [Урок 17. Telegram Bot](lessons/lesson.17/)
 - [Урок 18. numpy](lessons/lesson.18/)
 - [Урок 19. pandas](lessons/lesson.19/)
+- [Урок 20. OpenCV](lessons/lesson.20/)
