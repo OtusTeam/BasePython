@@ -17,3 +17,4 @@
 - [Урок 15. async DB, async ORM](lessons/lesson.15/)
 - [Урок 16. unittest, pytest, fixtures, parametrize, conftest](lessons/lesson.16/)
 - [Урок 17. Telegram Bot](lessons/lesson.17/)
+- [Урок 18. numpy](lessons/lesson.18/)
