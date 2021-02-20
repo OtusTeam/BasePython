@@ -18,3 +18,4 @@
 - [Урок 16. unittest, pytest, fixtures, parametrize, conftest](lessons/lesson.16/)
 - [Урок 17. Telegram Bot](lessons/lesson.17/)
 - [Урок 18. numpy](lessons/lesson.18/)
+- [Урок 19. pandas](lessons/lesson.19/)
