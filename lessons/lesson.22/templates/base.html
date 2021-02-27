@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block title %}
+      Base title
+    {% endblock %}
+  </title>
+
+  <style>
+    html {
+        font-family: "Arial", sans-serif;
+    }
+    body {
+        background-color: aliceblue;
+    }
+  </style>
+  {% block head %}
+
+  {% endblock %}
+</head>
+<body>
+<div>
+  {% block body %}
+    Base body
+  {% endblock %}
+</div>
+</body>
+</html>
