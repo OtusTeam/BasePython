@@ -1,0 +1,10 @@
+{% macro input(name, id=None, value='', type='text', placeholder=None, size=20) -%}
+    <input
+      class="form-control"
+      id="{{ id or name }}"
+      type="{{ type }}"
+      name="{{ name }}"
+      placeholder="{{ placeholder }}"
+      value="{{ value|escape }}"
+      size="{{ size }}">
+{%- endmacro %}

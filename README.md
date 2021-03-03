@@ -22,3 +22,4 @@
 - [Урок 20. OpenCV](lessons/lesson.20/)
 - [Урок 21. Flask](lessons/lesson.21/)
 - [Урок 22. Базовый фронтенд](lessons/lesson.22/)
+- [Урок 23. Bootstrap](lessons/lesson.23/)

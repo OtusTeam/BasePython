@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Add Product
+{% endblock %}
+
+{% block head %}
+  <style>
+    #product-name-id {
+      font-weight: bold;
+      margin-top: 3px;
+      margin-bottom: 5px;
+    }
+    input[type="submit"] {
+      padding: 7px;
+      margin: 10px;
+      border: 5px double aquamarine;
+    }
+    input[type="submit"]:focus {
+      border-color: red;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <form method="post">
+    <label for="product-name-id">Product name:</label>
+    <input
+      id="product-name-id"
+      name="product-name"
+      type="text"
+      placeholder="{{ last_element_name }}"
+      required
+    >
+    <br>
+    <input id="submit-id" type="submit" value="Create">
+
+    <br>
+    <input id="inc-count" type="button" value="Count">
+  </form>
+
+  <hr>
+  <a href="{{ url_for('product_app.list') }}">back to products list</a>
+
+  <script>
+    console.log('Hello JS!');
+    const inputName = document.getElementById('product-name-id');
+    console.log('inputName:', inputName);
+    inputName.placeholder = `Like ${inputName.placeholder}`;
+    inputName.addEventListener('input', function () {
+      button.disabled = false;
+    })
+
+    const button = document.getElementById('submit-id');
+    button.disabled = 'disabled';
+
+    let count = 0;
+
+    const buttonCount = document.getElementById('inc-count');
+
+    function setCurrentCount() {
+      buttonCount.value = `Count: ${count}`
+    }
+    setCurrentCount();
+    buttonCount.addEventListener('click', function () {
+      count += 1;
+      setCurrentCount();
+    })
+
+  </script>
+{% endblock %}
