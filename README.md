@@ -23,3 +23,4 @@
 - [Урок 21. Flask](lessons/lesson.21/)
 - [Урок 22. Базовый фронтенд](lessons/lesson.22/)
 - [Урок 23. Bootstrap](lessons/lesson.23/)
+- [Урок 24. Docker. Системы контроля зависимостей](lessons/lesson.24/)

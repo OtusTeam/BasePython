@@ -1,0 +1,12 @@
+FROM python:3.9-buster
+
+WORKDIR /var/app
+
+COPY my-shop/requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+COPY my-shop .
+
+EXPOSE 5000
+
+CMD python app.py
