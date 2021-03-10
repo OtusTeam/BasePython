@@ -24,3 +24,4 @@
 - [Урок 22. Базовый фронтенд](lessons/lesson.22/)
 - [Урок 23. Bootstrap](lessons/lesson.23/)
 - [Урок 24. Docker. Системы контроля зависимостей](lessons/lesson.24/)
+- [Урок 25. docker-compose, Flask-SQLAlchemy, Flask-Migrate](lessons/lesson.25/)
