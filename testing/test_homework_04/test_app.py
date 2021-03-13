@@ -1,13 +1,15 @@
 import pytest
-from faker import Faker
 
 module_app = pytest.importorskip("homework_04.app")
-
-app = module_app.app
 
 
 @pytest.fixture
 def client():
+    try:
+        app = module_app.app
+    except AttributeError:
+        raise pytest.fail("skip testing homework_04 due to lack of Flask `app` in the `app.py`")
+
     app.config['TESTING'] = True
 
     with app.test_client() as client:
