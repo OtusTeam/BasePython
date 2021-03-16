@@ -10,6 +10,8 @@ class BaseProduct:
 
     def __add__(self, other):
         # return self.__class__(self.price + other.price)
+        # BaseProduct('BaseProduct', self.price + other.price)
+        # product = BaseProduct('BaseProduct', self.price + other.price)
         return BaseProduct('BaseProduct', self.price + other.price)
 
     def make_discount(self, discount):
