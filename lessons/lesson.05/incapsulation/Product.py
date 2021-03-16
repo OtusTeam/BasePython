@@ -1,4 +1,3 @@
-
 class BaseProduct:
     type = None
 
@@ -17,7 +16,7 @@ class BaseProduct:
         return BaseProduct('BaseProduct', self.price + other.price)
 
     def make_discount(self, discount):
-        self.price *= (100 - discount)/100
+        self.price *= (100 - discount) / 100
 
 
 class Laptop(BaseProduct):
@@ -27,26 +26,28 @@ class Laptop(BaseProduct):
 class MobilePhone(BaseProduct):
     type = 'Mobile Phone'
 
+
 class Basket:
 
     def __init__(self):
-        # self._items = []
+        self._items = []
         # -> _attr - protected - снаружи трогать нельзя
-        self.items = []
+        # self.items = []
 
     def __iadd__(self, product):
-        self.items.append(product)
+        self._items.append(product)
         return self
 
     def add(self, product):
-        self.items.append(product)
+        self._items.append(product)
 
     def __len__(self):
-        return len(self.items)
+        return len(self._items)
 
     def __iter__(self):
         # --> должен возвращать iterable
-        return (el for el in self.items)
+        return (el for el in self._items)
+
 
 samsung_note_10 = MobilePhone('Samsung Galaxy Note 10', 1000)
 mac_pro = Laptop('Macbook Pro 16"', 3500)
@@ -55,8 +56,3 @@ nokia = MobilePhone("Nokia 3310", 50)
 basket = Basket()
 basket.items.append(nokia)
 print(nokia in basket)
-
-
-
-
-

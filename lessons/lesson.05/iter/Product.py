@@ -1,4 +1,3 @@
-
 class BaseProduct:
     type = None
 
@@ -17,7 +16,7 @@ class BaseProduct:
         return BaseProduct('BaseProduct', self.price + other.price)
 
     def make_discount(self, discount):
-        self.price *= (100 - discount)/100
+        self.price *= (100 - discount) / 100
 
 
 class Laptop(BaseProduct):
@@ -26,6 +25,7 @@ class Laptop(BaseProduct):
 
 class MobilePhone(BaseProduct):
     type = 'Mobile Phone'
+
 
 class Basket:
 
@@ -46,6 +46,7 @@ class Basket:
         # --> должен возвращать iterable
         return (el for el in self.items)
 
+
 samsung_note_10 = MobilePhone('Samsung Galaxy Note 10', 1000)
 mac_pro = Laptop('Macbook Pro 16"', 3500)
 nokia = MobilePhone("Nokia 3310", 50)
@@ -59,7 +60,7 @@ basket.add(samsung_note_10)
 basket.add(mac_pro)
 basket.add(nokia)
 
-print(len(basket))
+print(nokia in basket)
 
 for product in basket:
     print(product)
@@ -69,5 +70,3 @@ print(nokia in basket)
 
 basket_list = list(basket)
 print(basket_list)
-
-

@@ -5,10 +5,10 @@ class BaseProduct:
         self.name = name
         self.price = price
 
-    def __str__(self):
+    def __str__(self): # user view
         return f"{self.name} (type = {self.type}, price = {self.price})"
 
-    def __repr__(self):
+    def __repr__(self): # python view
         return f"{self.name} (price = {self.price})"
 
     def __add__(self, other):
@@ -16,7 +16,7 @@ class BaseProduct:
         return BaseProduct('BaseProduct', self.price + other.price)
 
     def make_discount(self, discount):
-        self.price *= (100 - discount)/100
+        self.price *= (100 - discount) / 100
 
 
 class Laptop(BaseProduct):

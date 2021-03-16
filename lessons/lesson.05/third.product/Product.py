@@ -12,12 +12,10 @@ class BaseProduct:
         return self.price + other.price
 
     def make_discount(self, discount):
-        self.price *= (100 - discount)/100
-
+        self.price *= (100 - discount) / 100
 
 class Laptop(BaseProduct):
     type = 'Laptop'
-
 
 class MobilePhone(BaseProduct):
     type = 'Mobile Phone'
@@ -30,5 +28,9 @@ nokia = MobilePhone("Nokia 3310", 50)
 
 basket = 0
 # почему ошибка и почему именно эта ошибка
-basket = samsung_note_10 + mac_pro + nokia
+# basket = samsung_note_10 + mac_pro + nokia
+basket = samsung_note_10 + mac_pro
+
+basket = basket + nokia
+basket += nokia
 print(basket)

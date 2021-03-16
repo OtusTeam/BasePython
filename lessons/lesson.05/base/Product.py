@@ -9,7 +9,9 @@ class BaseProduct:
         return f"{self.name} ({self.type})"
 
     def make_discount(self, discount):
-        self.price *= (100 - discount)/100
+        # self.price = self.price * 5
+        # self.price *= 5
+        self.price *= (100 - discount) / 100
 
 
 class Laptop(BaseProduct):

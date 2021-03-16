@@ -1,4 +1,3 @@
-
 class BaseProduct:
     type = None
 
@@ -17,7 +16,7 @@ class BaseProduct:
         return BaseProduct('BaseProduct', self.price + other.price)
 
     def make_discount(self, discount):
-        self.price *= (100 - discount)/100
+        self.price *= (100 - discount) / 100
 
 
 class Laptop(BaseProduct):
@@ -25,13 +24,18 @@ class Laptop(BaseProduct):
 
 
 class MobilePhone(BaseProduct):
+    def __init__(self, name, price):
+        super().__init__(name, price)
+
     type = 'Mobile Phone'
+
 
 class Basket:
 
     # искажение имени аттрибута _Basket__items
     def __init__(self):
         self.__items = []
+        self._discount = 0
 
     @property
     def items(self):
@@ -60,13 +64,9 @@ mac_pro = Laptop('Macbook Pro 16"', 3500)
 nokia = MobilePhone("Nokia 3310", 50)
 
 basket = Basket()
-basket = mac_pro
-basket = nokia
-
-print(vars(basket))
+print(basket._discount)
 print(basket.__items)
 
-
-
-
-
+# print(vars(basket))
+# print(basket.__items)
+print(basket._discount)

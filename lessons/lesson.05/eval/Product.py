@@ -16,7 +16,7 @@ class BaseProduct:
         return BaseProduct('BaseProduct', self.price + other.price)
 
     def make_discount(self, discount):
-        self.price *= (100 - discount)/100
+        self.price *= (100 - discount) / 100
 
 
 class Laptop(BaseProduct):
@@ -34,4 +34,5 @@ nokia = MobilePhone("Nokia 3310", 50)
 basket = 0
 print(samsung_note_10)
 basket = [samsung_note_10, mac_pro, nokia]
+print(basket)
 nokia_clone = eval(repr(nokia))

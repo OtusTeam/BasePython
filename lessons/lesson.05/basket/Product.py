@@ -12,7 +12,7 @@ class BaseProduct:
         return self.price + other.price
 
     def make_discount(self, discount):
-        self.price *= (100 - discount)/100
+        self.price *= (100 - discount) / 100
 
 
 class Laptop(BaseProduct):
@@ -25,6 +25,7 @@ class MobilePhone(BaseProduct):
 
 phone = MobilePhone('Samsung Galaxy Note 10', 1000)
 laptop = Laptop('Macbook Pro 16"', 3500)
+
 
 # Перегрузка оператора
 # В Python нет перегрузки методов, есть overriding, но есть перегрузка операторов
