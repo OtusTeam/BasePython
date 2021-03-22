@@ -67,6 +67,6 @@ basket = Basket()
 print(basket._discount)
 print(basket.__items)
 
-# print(vars(basket))
-# print(basket.__items)
+# print(vars(getattribute))
+# print(getattribute.__items)
 print(basket._discount)

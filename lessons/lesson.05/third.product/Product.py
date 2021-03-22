@@ -28,7 +28,7 @@ nokia = MobilePhone("Nokia 3310", 50)
 
 basket = 0
 # почему ошибка и почему именно эта ошибка
-# basket = samsung_note_10 + mac_pro + nokia
+# getattribute = samsung_note_10 + mac_pro + nokia
 basket = samsung_note_10 + mac_pro
 
 basket = basket + nokia
