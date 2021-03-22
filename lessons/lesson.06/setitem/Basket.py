@@ -10,6 +10,6 @@ class Basket:
 banana_count = 10
 basket = Basket()
 basket['banana'] = banana_count
-#apple_count = 10
-#basket['apple'] = apple_count
+apple_count = 7
+basket['apple'] = apple_count
 print(basket.count)

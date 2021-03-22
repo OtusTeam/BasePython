@@ -6,6 +6,7 @@ class ProductMeta(type):
         return new_class
 
 
+# metaclass - type -> class -> instance
 class BaseProduct(metaclass=ProductMeta):
     type = None
 

@@ -9,9 +9,12 @@ class Basket:
 
     @discount.setter
     def discount(self, percentage):
+        # if percentage < 0:
+        #     raise PriceValueError()
         try:
             self._discount = float(percentage)
-        except Exception:
+        except Exception as ex:
+            print(ex)
             raise PriceValueError(percentage)
 
 
@@ -25,7 +28,8 @@ if __name__ == '__main__':
         basket = Basket()
         basket.discount = 'hello'
     except (PriceValueError, AttributeError) as e:
-        print(f'PriceValueError is raised for value: {e.args[0]}')
+        print(e)
+        print(f'Exception is raised for value: {e.args[0]}')
     except Exception as e:
         print(f'Exception is raised: {e.args}')
     else:

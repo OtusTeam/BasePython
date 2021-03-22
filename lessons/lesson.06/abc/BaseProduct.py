@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 # abc - Abstract Base Classes
 class BaseProduct(ABC):
 

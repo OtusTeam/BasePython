@@ -15,14 +15,19 @@ class BaseProduct:
     def convert_price(price, ratio):
         return price * ratio
 
+    @staticmethod
+    def test():
+        print("test method is called")
+
 
 
 class Phone(BaseProduct):
     pass
 
 
-phone = Phone(BaseProduct.convert_price(1, 44))
-print(phone.price)
+# phone = Phone(BaseProduct.convert_price(1, 44))
+BaseProduct.test()
+# print(phone.price)
 
 
 

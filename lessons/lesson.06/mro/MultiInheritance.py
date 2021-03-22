@@ -1,5 +1,6 @@
 class Product:
     def __init__(self, price):
+        self.price = price
         print('Product Initializer is called')
 
     def test(self):
@@ -17,9 +18,11 @@ class Milk(Drink, Product):
         super().__init__(price)
         self.calories = calories
 
-    def super_test(self):
-        super().test()
+    def test(self):
+        print('Milk')
 
 
 milk = Milk(1, 10)
+milk.test()
+# MRO - Method Resolution Order
 print(Milk.mro())

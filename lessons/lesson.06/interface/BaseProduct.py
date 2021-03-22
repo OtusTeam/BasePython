@@ -24,7 +24,7 @@ class Phone(BaseProduct):
 class Notebook(BaseProduct):
     pass
 
-phone = Phone(10)
+phone = Phone(100)
 print(phone.price)
-notebook = Notebook(10)
+notebook = Notebook(1000)
 print(notebook.price)
