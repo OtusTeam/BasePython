@@ -15,7 +15,7 @@ class BaseProduct(ABC):
     def price(self, price):
         self._price = price
 
-    @abstractmethod     # дубинка
+    @abstractmethod  # дубинка
     def _calc_price(self):
         pass
 

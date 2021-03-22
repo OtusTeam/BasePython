@@ -17,5 +17,3 @@ class Phone(BaseProduct):
 
 
 phone = Phone(1000)
-
-

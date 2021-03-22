@@ -20,7 +20,6 @@ class BaseProduct:
         print("test method is called")
 
 
-
 class Phone(BaseProduct):
     pass
 
@@ -28,6 +27,3 @@ class Phone(BaseProduct):
 # phone = Phone(BaseProduct.convert_price(1, 44))
 BaseProduct.test()
 # print(phone.price)
-
-
-

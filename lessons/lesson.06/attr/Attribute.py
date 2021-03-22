@@ -1,5 +1,4 @@
 class Student:
-
     is_annoyed = True
 
     def __init__(self, name, surname, faculty, year):

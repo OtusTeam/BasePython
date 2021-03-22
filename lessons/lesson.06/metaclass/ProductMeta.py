@@ -23,4 +23,3 @@ class Phone(BaseProduct):
 phone = Phone('Samsung Galaxy Note 10', 1000)
 phone.screen_size = 5
 print(phone.screen_size)
-
