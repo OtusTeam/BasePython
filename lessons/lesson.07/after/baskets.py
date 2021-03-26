@@ -10,8 +10,9 @@ class PriceValueError(Exception):
 # from baskets import Basket, PriceValueError
 # print("testing imports")
 
-# print(__name__)
+
+print('из baskets.py модуль app.py виден как ', __name__)
 
 # Если запускать из app.py - не выполнится код в конструкции main
-# if __name__ == '__main__':
-#     print('testing imports')
+if __name__ == '__main__':
+    print('testing imports')

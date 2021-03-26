@@ -1,6 +1,7 @@
 
-from corepackage.baskets import Basket, PriceValueError
-# from corepackage import Basket, PriceValueError
+# from corepackage.baskets import Basket, PriceValueError
+from corepackage import Basket, PriceValueError
+# import corepackage
 
 print(__name__)
 
