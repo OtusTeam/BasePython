@@ -2,9 +2,9 @@
 #### Задача:
 - скопируйте папку `homework_02` для этой домашки (Памятка: https://github.com/OtusTeam/BasePython/tree/homeworks)
 - в модуле `exceptions` объявите следующие исключения:
-    - LowFuelError
-    - NotEnoughFuel
-    - CargoOverload
+    - `LowFuelError`
+    - `NotEnoughFuel`
+    - `CargoOverload`
 - доработайте базовый класс `base.Vehicle`:
     - добавьте атрибуты `weight`, `started`, `fuel`, `fuel_consumption` со значениями по умолчанию
     - добавьте инициализатор для установки `weight`, `fuel`, `fuel_consumption`
@@ -20,6 +20,6 @@
     - добавьте атрибуты `cargo` и `max_cargo` классу `Plane`
     - добавьте `max_cargo` в инициализатор (переопределите родительский)
     - объявите метод `load_cargo`, который принимает число, проверяет, что в сумме с текущим `cargo` не будет перегруза, и обновляет значение, в ином случае выкидывает исключение `exceptions.CargoOverload`
-    - объявите метод `remove_all_cargo`, который принимает число, обнуляет значение `cargo` и возвращает значение `cargo`, которое было до обнуления
+    - объявите метод `remove_all_cargo`, который обнуляет значение `cargo` и возвращает значение `cargo`, которое было до обнуления
 #### Критерии оценки:
 - автоматический тест `test_homework_02` проходит
