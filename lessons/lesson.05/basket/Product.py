@@ -26,7 +26,6 @@ class MobilePhone(BaseProduct):
 phone = MobilePhone('Samsung Galaxy Note 10', 1000)
 laptop = Laptop('Macbook Pro 16"', 3500)
 
-
 # Перегрузка оператора
 # В Python нет перегрузки методов, есть overriding, но есть перегрузка операторов
 basket = 0

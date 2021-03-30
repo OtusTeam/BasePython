@@ -14,8 +14,10 @@ class BaseProduct:
     def make_discount(self, discount):
         self.price *= (100 - discount) / 100
 
+
 class Laptop(BaseProduct):
     type = 'Laptop'
+
 
 class MobilePhone(BaseProduct):
     type = 'Mobile Phone'

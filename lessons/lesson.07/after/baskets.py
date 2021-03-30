@@ -5,6 +5,7 @@ class Basket:
 class PriceValueError(Exception):
     pass
 
+
 # Если делать import baskets, будет ли выполняться этот код ?
 # А если делать from baskets import *
 # from baskets import Basket, PriceValueError

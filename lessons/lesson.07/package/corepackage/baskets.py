@@ -4,4 +4,3 @@ class Basket:
 
 class PriceValueError(Exception):
     pass
-

@@ -55,5 +55,3 @@ basket.add(nokia)
 
 print(basket.items)
 print(len(basket.items))
-
-

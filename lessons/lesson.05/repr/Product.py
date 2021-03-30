@@ -5,10 +5,10 @@ class BaseProduct:
         self.name = name
         self.price = price
 
-    def __str__(self): # user view
+    def __str__(self):  # user view
         return f"{self.name} (type = {self.type}, price = {self.price})"
 
-    def __repr__(self): # python view
+    def __repr__(self):  # python view
         return f"{self.name} (price = {self.price})"
 
     def __add__(self, other):

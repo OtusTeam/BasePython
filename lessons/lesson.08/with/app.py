@@ -7,7 +7,7 @@ if __name__ == '__main__':
     teddy = Bear('Teddy', 2, honey)
 
     print(teddy)
-    #zoo = Zoo([teddy])
+    # zoo = Zoo([teddy])
     zoo = Zoo([])
-    #zoo.animals.append(teddy)
+    # zoo.animals.append(teddy)
     print(zoo)

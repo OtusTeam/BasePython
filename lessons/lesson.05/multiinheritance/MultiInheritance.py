@@ -7,7 +7,6 @@ class Product:
     def test(self):
         print('Product')
 
-
     def product_test(self):
         print('Product Test')
 
@@ -18,7 +17,6 @@ class Drink:
     #     print("Drink Initializer is called")
     #     self.price = price
     #     self.calories = calories
-
 
     def test(self):
         print('Drink')
@@ -34,7 +32,6 @@ class Milk(Drink, Product):
     def super_test(self):
         super().test()
         super().product_test()
-
 
 
 milk = Milk(1, 10)

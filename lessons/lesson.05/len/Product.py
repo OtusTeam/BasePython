@@ -57,4 +57,3 @@ basket.add(mac_pro)
 basket.add(nokia)
 
 print(len(basket))
-

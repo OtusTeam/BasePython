@@ -43,5 +43,3 @@ owner = User('Nigar', 'Movsumova', 'Baku, Azerbaijan', '+994xxxxxxxxx', '1234')
 cat = Pet('Richard', 'Scottish Straight', 'Cat', '2020')
 owner.pets.append(cat)
 cat.owner = owner
-
-
