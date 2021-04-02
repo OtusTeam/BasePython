@@ -20,4 +20,3 @@ def with_open_file():
 
 write_to_file()
 with_open_file()
-

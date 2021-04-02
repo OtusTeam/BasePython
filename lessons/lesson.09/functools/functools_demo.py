@@ -1,7 +1,9 @@
 from functools import wraps, partial
 
+
 def trace(func):
     func.level = 0
+
     @wraps(func)
     def inner(*args, **kwargs):
         args_str = ', '.join(map(str, args))
@@ -10,7 +12,9 @@ def trace(func):
         res = func(*args, **kwargs)
         print(f"{func.level} <-- {func.__name__}({args_str}) = {res}")
         return res
+
     return inner
+
 
 @trace
 def is_even(n):
@@ -29,6 +33,5 @@ add_part = partial(add, c=2, b=1)
 
 # Calling partial function
 print(add_part(3))
-
 
 print(is_even(4))
