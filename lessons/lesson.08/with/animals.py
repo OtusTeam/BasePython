@@ -18,6 +18,8 @@ class Bear:
 
 if __name__ == '__main__':
     honey = Food('Honey', 'Sweets')
-    bear = Bear('Teddy', 5, honey)
     print(honey)
+    # bear = Bear('Teddy', 5, honey)
+    bear = Bear('Teddy', -5)
+    bear.food = honey
     print(bear)
