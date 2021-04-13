@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  pg:
+    image: postgres # use latest official postgres version
+    env_file:
+      - postgres.env # configure postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db-data/pg-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - 6379:6379
+    volumes:
+      - ./db-data/redis-data/redis-data:/var/lib/redis
+
+  mongo:
+    image: mongo
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: user
+#      MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db-data/mongo-data:/data/db
