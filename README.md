@@ -26,3 +26,4 @@
 - [Урок 24. Docker. Системы контроля зависимостей](lessons/lesson.24/)
 - [Урок 25. docker-compose, Flask-SQLAlchemy, Flask-Migrate](lessons/lesson.25/)
 - [Урок 33. FastAPI, pydantic](lessons/lesson.33/)
+- [Урок 34. webscrapping: BeautifulSoup4, scrapy](lessons/lesson.34/)
