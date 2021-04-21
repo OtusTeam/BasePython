@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Products list
+{% endblock %}
+
+
+{% block body %}
+  <h1>Products list</h1>
+{#  <small>Method (request.method): {{ request.method }}</small>#}
+{#  <small>endpoint {request.endpoint}: {{ request.endpoint }}</small>#}
+  <div>
+    <ul>
+      {% for product_id in products %}
+        <li>
+          <a href="{{ url_for('product_app.details', product_id=product_id) }}"
+          >{{ products[product_id] }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div>
+    <a href="{{ url_for('product_app.add') }}">Add product</a>
+  </div>
+{% endblock %}
