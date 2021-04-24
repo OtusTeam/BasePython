@@ -28,3 +28,4 @@
 - [Урок 33. FastAPI, pydantic](lessons/lesson.33/)
 - [Урок 34. webscrapping: BeautifulSoup4, scrapy](lessons/lesson.34/)
 - [Урок 35. GitHub actions](lessons/lesson.35/)
+- [Урок 36. Gitlab CI](lessons/lesson.36/)

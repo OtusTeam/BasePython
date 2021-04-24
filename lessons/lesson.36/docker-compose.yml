@@ -1,0 +1,27 @@
+version: "3.5"
+
+services:
+  my-shop:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: python main.py
+    environment:
+      SQLALCHEMY_DATABASE_URI: "postgresql+psycopg2://user:password@pg:5432/shop"
+    ports:
+      - 5000:5000
+    volumes:
+      - ./my-shop:/var/app
+    depends_on:
+      - pg
+
+  pg:
+    image: postgres:11
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: user
+      POSTGRES_DB: shop
+    volumes:
+    - ./pg-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
