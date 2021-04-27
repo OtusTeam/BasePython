@@ -12,3 +12,4 @@
 - [Урок 13. ORM, SQLAlchemy, relationships](lessons/lesson.13/)
 - [Урок 14. Миграции SQLAlchemy: alembic. Связи Many to Many](lessons/lesson.14/)
 - [Урок 15. asyncio, aiohttp](lessons/lesson.15/)
+- [Урок 16. async DB: asyncpg, asyncpgsa, GINO, Tortoise ORM, sqlalchemy 1.4](lessons/lesson.16/)
