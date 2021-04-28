@@ -2,12 +2,17 @@ import pytest
 import requests
 from faker import Faker
 
+from sqlalchemy import select
+from sqlalchemy.orm import selectinload, joinedload
+
 fake = Faker()
 
 homework = pytest.importorskip("homework_03")
 module_models = homework.models
 module_main = homework.main
 module_jsonplaceholder_requests = homework.jsonplaceholder_requests
+
+pytestmark = pytest.mark.asyncio
 
 
 def get_data(url):
@@ -44,11 +49,26 @@ def check_data_match(items_from_db, items_from_remote, args_mapping: dict):
     assert db_data == remote_data
 
 
-def test_main(users_data, posts_data):
-    module_main.main()
-    session = module_models.Session()
-    users = session.query(module_models.User).all()
-    posts = session.query(module_models.Post).all()
+async def test_main(users_data, posts_data):
+    await module_main.async_main()
+
+    stmt_query_users = select(module_models.User).options(selectinload(module_models.User.posts))
+    stmt_query_posts = select(module_models.Post).options(joinedload(module_models.Post.user))
+
+    users = []
+    posts = []
+
+    async with module_models.Session() as session:
+        # there're problems with asyncio.gather in pytest :/
+        # res_users, res_posts = await asyncio.gather(
+        #     session.execute(stmt_query_users),
+        #     session.execute(stmt_query_posts),
+        # )
+        res_users = await session.execute(stmt_query_users)
+        res_posts = await session.execute(stmt_query_posts)
+
+        users.extend(res_users.scalars())
+        posts.extend(res_posts.scalars())
 
     assert len(posts) == len(posts_data)
 

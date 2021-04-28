@@ -10,7 +10,7 @@
 
 import os
 
-PG_CONN_URI = os.environ.get("PG_CONN_URI") or "postgresql://postgres:password@localhost/postgres"
+PG_CONN_URI = os.environ.get("SQLALCHEMY_PG_CONN_URI") or "postgresql+asyncpg://postgres:password@localhost/postgres"
 
 Base = None
 Session = None
