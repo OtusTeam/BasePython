@@ -29,3 +29,4 @@
 - [Урок 34. webscrapping: BeautifulSoup4, scrapy](lessons/lesson.34/)
 - [Урок 35. GitHub actions](lessons/lesson.35/)
 - [Урок 36. Gitlab CI](lessons/lesson.36/)
+- [Урок 37. Gitlab CD](lessons/lesson.37/)

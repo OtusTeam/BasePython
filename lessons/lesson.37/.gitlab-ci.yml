@@ -1,0 +1,76 @@
+image: python:3.9-buster
+
+stages:
+  - testing
+  - deploy
+
+
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+# Pip's cache doesn't store the python packages
+# https://pip.pypa.io/en/stable/reference/pip_install/#caching
+#
+# If you want to also cache the installed packages, you have to install
+# them in a virtualenv and cache it as well.
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+run_tests:
+  stage: testing
+  only:
+    - master
+    - merge_requests
+  services:
+    - postgres:11
+  variables:
+    POSTGRES_PASSWORD: password
+    POSTGRES_USER: user
+    POSTGRES_DB: shop
+    PG_HOST: postgres
+    POSTGRES_HOST_AUTH_METHOD: trust
+    SQLALCHEMY_DATABASE_URI: "postgresql+psycopg2://user:password@postgres:5432/shop"
+    COVERAGE_DIR: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+  when: always
+  before_script:
+    - python -V               # Print out python version for debugging
+    - pip install virtualenv
+    - virtualenv venv
+    - source venv/bin/activate
+    - pip install poetry
+    - cd my-shop
+    - poetry install
+  script:
+    - pytest -vv --color=yes --cov=my_shop --cov-report=html:$COVERAGE_DIR tests/
+  artifacts:
+    name: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+    paths:
+      - my-shop/$COVERAGE_DIR
+    expire_in: 1 week
+    when: on_success
+
+deploy_app:
+  image: docker:19.03.12
+  stage: deploy
+  services:
+    - name: docker:19.03.12-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: ""
+  dependencies:
+    - run_tests
+  only:
+    - master
+  before_script:
+    - apk add --no-cache docker-compose
+    - docker login --username mahenzon -p $DOCKER_HUB_PASSWORD
+  script:
+    - docker-compose build my-shop
+    - docker-compose push my-shop
+    - echo "Deploy me!"
+#    - curl "my-host/restart-app"

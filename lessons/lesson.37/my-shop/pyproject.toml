@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "my-shop"
+version = "0.1.0"
+description = ""
+authors = ["Suren Khorenyan <surenkhorenyan@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Flask = "^1.1.2"
+Flask-SQLAlchemy = "^2.4.4"
+psycopg2 = "^2.8.6"
+Flask-Migrate = "^2.7.0"
+SQLAlchemy = "<1.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pytest-cov = "^2.11.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
