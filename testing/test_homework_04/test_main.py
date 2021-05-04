@@ -7,7 +7,7 @@ from sqlalchemy.orm import selectinload, joinedload
 
 fake = Faker()
 
-homework = pytest.importorskip("homework_03")
+homework = pytest.importorskip("homework_04")
 module_models = homework.models
 module_main = homework.main
 module_jsonplaceholder_requests = homework.jsonplaceholder_requests
