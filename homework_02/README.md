@@ -9,7 +9,7 @@
 > **но не так** `from base import Vehicle`.
 
 #### Задача:
-- скопируйте папку `homework_02` для этой домашки (Памятка: https://github.com/OtusTeam/BasePython/tree/homeworks)
+- скопируйте папку `homework_02` для этой домашки (Памятка: https://github.com/OtusTeam/BasePython/tree/homeworks-new)
 - в модуле `exceptions` объявите следующие исключения:
     - `LowFuelError`
     - `NotEnoughFuel`

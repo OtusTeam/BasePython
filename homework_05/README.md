@@ -1,6 +1,6 @@
 ### Домашнее задание "Веб-приложение на Flask"
 #### Задача:
-- скопируйте папку `homework_05` для этой домашки (Памятка: https://github.com/OtusTeam/BasePython/tree/homeworks)
+- скопируйте папку `homework_05` для этой домашки (Памятка: https://github.com/OtusTeam/BasePython/tree/homeworks-new)
 - используйте следующие пакеты:
     - Flask
 - в модуле `app` создайте базовое приложение на Flask
