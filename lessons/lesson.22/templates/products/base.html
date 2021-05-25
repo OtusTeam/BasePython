@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+        font-family: Open Sans, serif;
+        font-size: 20px;
+    }
+    .text-decoration-none {
+        text-decoration: none;
+    }
+    #label-input-product-name {
+        font-size: 1.1em;
+    }
+    .product-link {
+        text-decoration: none;
+        color: green;
+    }
+    body > div > a {
+      font-size: 1.2em;
+    }
+    #input-product-name {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    button[type="submit"] {
+        font-size: 1.2em;
+        padding: 7px;
+        margin-left: 10px;
+        border: 5px dotted aquamarine;
+    }
+    button[type="submit"]:focus {
+        border-color: red;
+    }
+    #click-btn {
+        font-size: 22px;
+        padding: 6px;
+    }
+  </style>
+  <title>
+    {% block title %}
+      Base
+    {% endblock %}
+  </title>
+</head>
+<body>
+  <nav>
+    WIP
+  </nav>
+  {% block body %}
+  {% endblock %}
+</body>
+</html>

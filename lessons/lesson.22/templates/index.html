@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+{#  <link rel="preconnect" href="https://fonts.gstatic.com">#}
+{#  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">#}
+  <style>
+    html {
+        font-family: Helvetica, serif;
+        background-color: aliceblue;
+    }
+    h1 {
+        background-color: bisque;
+    }
+    a {
+        text-decoration: none;
+    }
+  </style>
+  <style>
+    /* animations */
+    .slide-in {
+        animation-duration: 2s;
+        animation-name: slidein;
+    }
+
+    @keyframes slidein {
+      from {
+        margin-left: 100%;
+        width: 300%;
+      }
+
+      to {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1><span style="background-color: aquamarine">Hello world!</span></h1>
+  <h1>
+    <span class="slide-in">Hello&nbsp;again!</span>
+  </h1>
+  <a href="{{ url_for('products_app.list') }}">
+    <strong>Products list</strong>
+  </a>
+</body>
+</html>

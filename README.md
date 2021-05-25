@@ -15,3 +15,4 @@
 - [Урок 16. async DB: asyncpg, asyncpgsa, GINO, Tortoise ORM, sqlalchemy 1.4](lessons/lesson.16/)
 - [Урок 17. Telegram Bot](lessons/lesson.17/)
 - [Урок 21. Flask, Blueprints, Templates](lessons/lesson.21/)
+- [Урок 22. Основы фронтенда](lessons/lesson.22/)
