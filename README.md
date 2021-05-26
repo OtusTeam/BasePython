@@ -10,3 +10,4 @@
 - [PythonBasic.2020-07](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2020-07)
 - [PythonBasic.2020-11](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2020-11)
 - [PythonBasic.2021-02](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2021-02)
+- [PythonBasic.2021-05](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2021-05)
