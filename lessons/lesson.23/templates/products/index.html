@@ -1,0 +1,221 @@
+{% extends 'products/base.html' %}
+
+{% block title %}
+  Products list
+{% endblock %}
+
+{% block body %}
+  <div>
+    <h1>Products list:</h1>
+    <p class="h1">Products list:</p>
+<div class="alert alert-primary d-flex align-items-center" role="alert">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </svg>
+  <div>
+    An example alert with an icon
+  </div>
+</div>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+    <ul>
+      {% for product_id, product_name in products.items() %}
+        <li>#{{ product_id }}.
+          <a class="product-link" href="{{ url_for('products_app.details', product_id=product_id) }}">
+            {{ product_name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div>
+    <a
+      class="text-decoration-none"
+      href="{{ url_for('products_app.add') }}">Add new product</a>
+  </div>
+
+  <div class="container my-3">
+
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#table-collapse"
+        aria-expanded="false"
+        aria-controls="table-collapse"
+      >
+        Toggle table
+      </button>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">
+            <div class="container" id="table-collapse">
+              <div>Larry the Bird 1</div>
+              <div>Larry the Bird 2</div>
+            </div>
+          </td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="container my-3">
+    <p>
+      <a
+        class="btn btn-primary"
+        data-bs-toggle="collapse"
+        href="#my-collapse"
+        role="button"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Link with href
+      </a>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#my-collapse"
+        aria-expanded="false"
+        aria-controls="my-collapse"
+      >
+        Button with data-bs-target
+      </button>
+    </p>
+    <div class="collapse" id="my-collapse">
+      <div class="card card-body">
+        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row row-cols-2 row-cols-lg-4">
+    <div class="col text-light bg-dark">
+      Hello there 1
+    </div>
+    <div class="col bg-info">
+      Hello there 2
+    </div>
+    <div class="col bg-success">
+      Hello there 3
+    </div>
+    <div class="col bg-primary">
+      Hello there 4
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col-sm-6 col-md-3 col-lg-2 col-xl-1 text-light bg-dark">
+      Hello
+    </div>
+  </div>
+  <div class="row">
+    <div class="col bg-primary">
+      1 of 2
+    </div>
+    <div class="col bg-info">
+      <div class="row">
+        <div class="col bg-danger">
+          1 of 3
+        </div>
+        <div class="col bg-warning">
+          2 of 3
+        </div>
+        <div class="col bg-success">
+          <div class="row">
+            <div class="col bg-danger">
+              1 of 3
+            </div>
+            <div class="col bg-warning">
+              2 of 3
+            </div>
+            <div class="col bg-success">
+              3 of 3
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row row-cols-6">
+    <div class="col bg-danger">
+      1 of 3
+    </div>
+    <div class="col bg-warning">
+      2 of 3
+    </div>
+    <div class="col bg-success">
+      3 of 3
+    </div>
+    <div class="col bg-danger">
+      1 of 3
+    </div>
+    <div class="col bg-success">
+      3 of 3
+    </div>
+    <div class="col bg-danger">
+      1 of 3
+    </div>
+    <div class="col bg-warning">
+      2 of 3
+    </div>
+    <div class="col bg-warning">
+      2 of 3
+    </div>
+    <div class="col bg-success">
+      3 of 3
+    </div>
+    <div class="col bg-danger">
+      1 of 3
+    </div>
+    <div class="col bg-warning">
+      2 of 3
+    </div>
+    <div class="col bg-success">
+      123
+    </div>
+    <div class="col bg-success">
+      qwe
+    </div>
+    <div class="col bg-success">
+      abc
+    </div>
+  </div>
+  <div class="row">
+    <div class="col bg-danger">
+      1 of 3
+    </div>
+    <div class="col bg-warning">
+      2 of 3
+    </div>
+    <div class="col bg-success">
+      3 of 3
+    </div>
+  </div>
+</div>
+{% endblock %}

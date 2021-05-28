@@ -16,3 +16,4 @@
 - [Урок 17. Telegram Bot](lessons/lesson.17/)
 - [Урок 21. Flask, Blueprints, Templates](lessons/lesson.21/)
 - [Урок 22. Основы фронтенда](lessons/lesson.22/)
+- [Урок 23. Знакомство с Bootstrap](lessons/lesson.23/)
