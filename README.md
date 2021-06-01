@@ -17,3 +17,4 @@
 - [Урок 21. Flask, Blueprints, Templates](lessons/lesson.21/)
 - [Урок 22. Основы фронтенда](lessons/lesson.22/)
 - [Урок 23. Знакомство с Bootstrap](lessons/lesson.23/)
+- [Урок 24. Poetry, Pipenv; Docker](lessons/lesson.24/)
