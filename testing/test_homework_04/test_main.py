@@ -1,4 +1,8 @@
 import pytest
+
+# import homework package and skip the whole test if not available
+homework = pytest.importorskip("homework_04")
+
 import requests
 from faker import Faker
 
@@ -7,7 +11,6 @@ from sqlalchemy.orm import selectinload, joinedload
 
 fake = Faker()
 
-homework = pytest.importorskip("homework_04")
 module_models = homework.models
 module_main = homework.main
 module_jsonplaceholder_requests = homework.jsonplaceholder_requests
