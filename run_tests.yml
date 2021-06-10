@@ -35,6 +35,18 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest Faker requests pytest-asyncio
+    - name: Install inner (homework-level) dependencies
+      run: |
+        for d in homework_* ; do
+          HW_REQUIREMENTS_PATH="$d/requirements.txt"
+            if [ -f "$HW_REQUIREMENTS_PATH" ];
+            then
+              echo file \'"$HW_REQUIREMENTS_PATH"\' exists, installing...
+              pip install -r "$HW_REQUIREMENTS_PATH";
+            fi
+        done
+    - name: Install project-level dependencies
+      run: |
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
     - name: Lint with flake8
