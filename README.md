@@ -18,3 +18,4 @@
 - [Урок 22. Основы фронтенда](lessons/lesson.22/)
 - [Урок 23. Знакомство с Bootstrap](lessons/lesson.23/)
 - [Урок 24. Poetry, Pipenv; Docker](lessons/lesson.24/)
+- [Урок 25. Знакомство с docker-compose, Flask-SQLAlchemy, Flask-Migrate](lessons/lesson.25/)
