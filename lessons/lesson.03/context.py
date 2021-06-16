@@ -2,7 +2,7 @@
 #     print(file.read())
 
 
-# file = open('o')
+# file = open('otus')
 # print(file.read())
 # file.close()
 
@@ -14,3 +14,8 @@
 # finally:
 #     file.close()
 
+try:
+    with open('o', 'r') as file:
+        print(file.read())
+except FileNotFoundError as e:
+    print(e)
