@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="python-core-tutorials" />
     <orderEntry type="module" module-name="python_bootcamp_classwork" />
+    <orderEntry type="module" module-name="lesson-materials" />
   </component>
 </module>
