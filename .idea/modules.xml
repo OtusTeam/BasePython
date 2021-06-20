@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/BasePython.iml" filepath="$PROJECT_DIR$/.idea/BasePython.iml" />
       <module fileurl="file://$PROJECT_DIR$/../lesson-materials/.idea/lesson-materials.iml" filepath="$PROJECT_DIR$/../lesson-materials/.idea/lesson-materials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../otus-open-lessons/.idea/otus-open-lessons.iml" filepath="$PROJECT_DIR$/../otus-open-lessons/.idea/otus-open-lessons.iml" />
       <module fileurl="file://$PROJECT_DIR$/../python-core-tutorials/.idea/python-core-tutorials.iml" filepath="$PROJECT_DIR$/../python-core-tutorials/.idea/python-core-tutorials.iml" />
       <module fileurl="file://$PROJECT_DIR$/../python_bootcamp_classwork/.idea/python_bootcamp_classwork.iml" filepath="$PROJECT_DIR$/../python_bootcamp_classwork/.idea/python_bootcamp_classwork.iml" />
     </modules>
