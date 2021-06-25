@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+{{object.name}}
+{% endblock %}
+
+{% block content %}
+<div class="bg-light p-5 rounded">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <hr>
+<!--        {% for field in form %}-->
+<!--            {{field.name}}-->
+<!--            <div>-->
+<!--                ...-->
+<!--            </div>-->
+<!--            <p></p>-->
+<!--            {{field}}-->
+<!--        {% endfor %}-->
+        <button class="btn btn-primary" type="submit">Сохранить</button>
+    </form>
+</div>
+{% endblock %}
