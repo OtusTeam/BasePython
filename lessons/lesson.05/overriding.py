@@ -1,29 +1,26 @@
-class BaseProduct:
+class ParentPoint:
+    is_parent = True
 
-    def __init__(self, name, price):
-        self.name = name
-        self.price = price
+    def test(self):
+        print("test")
 
-    def __str__(self):
-        return f"{self.name} ({self.type})"
-
-    def __add__(self, other):
-        return self.price + other.price
+    def print_stuff(self):
+        print('I am a parent')
 
 
-class Laptop(BaseProduct):
-    pass
+class ChildPoint(ParentPoint):
+    is_parent = False
+
+    def print_stuff(self):
+        print('I am a child')
 
 
-class MobilePhone(BaseProduct):
-    pass
+parent = ParentPoint()
+parent.print_stuff()
+parent.test()
+print(parent.is_parent)
 
-
-phone = MobilePhone('Samsung Galaxy Note 10', 1000)
-laptop = Laptop('Macbook Pro 16"', 3500)
-
-# Перегрузка оператора
-# В Python нет перегрузки методов, есть overriding, но есть перегрузка операторов
-basket = 0
-basket = phone + laptop
-print(basket)
+child = ChildPoint()
+child.print_stuff()
+child.test()
+print(child.is_parent)
