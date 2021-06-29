@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+    Контакты
+{% endblock %}
+
+{% block content %}
+<div class="bg-light p-5 rounded">
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Связаться с нами</button>
+    </form>
+</div>
+{% endblock %}

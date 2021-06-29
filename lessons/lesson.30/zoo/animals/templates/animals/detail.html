@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+{{object.name}}
+{% endblock %}
+
+{% block content %}
+<div class="bg-light p-5 rounded">
+    <h1>{{object.name}}</h1>
+    {% if object.img %}
+    <img src="{{object.img.url}}" width="300px">
+    {% endif %}
+</div>
+{% endblock %}
