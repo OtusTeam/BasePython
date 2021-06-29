@@ -8,11 +8,14 @@ base = homework.base
 exceptions = homework.exceptions
 
 
+CONSUMPTION_MIN = fake.pyint(9, 13)
+
+
 @pytest.fixture
 def vehicle():
     weight = fake.pyint(150, 1000)
     fuel = fake.pyint(30, 80)
-    fuel_consumption = fake.pyint(7, 15)
+    fuel_consumption = fake.pyint(CONSUMPTION_MIN, 18)
     vehicle = base.Vehicle(weight, fuel, fuel_consumption)
     return vehicle
 
@@ -51,8 +54,12 @@ class TestVehicle:
         vehicle.move(distance)
         assert vehicle.fuel == expected
 
-    def test_move_not_enough_fuel(self, vehicle):
-        vehicle.fuel = 0
+    @pytest.mark.parametrize("fuel", [
+        pytest.param(0, id="move_when_zero_fuel"),
+        pytest.param((CONSUMPTION_MIN - 1), id="fuel_is_lower_than_min_consumption"),
+    ])
+    def test_move_not_enough_fuel(self, fuel, vehicle):
+        vehicle.fuel = fuel
         assert vehicle.fuel_consumption > 0
 
         with pytest.raises(exceptions.NotEnoughFuel):
