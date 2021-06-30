@@ -24,3 +24,4 @@
 - [Урок 28. Django и отложенные задачи](lessons/lesson.28/)
 - [Урок 29. More Django](lessons/lesson.29/)
 - [Урок 30. Работа с пользователями и права в Django](lessons/lesson.30/)
+- [Урок 31. Дополнительное занятие по Django](lessons/lesson.31/)
