@@ -58,9 +58,17 @@ class TestVehicle:
         pytest.param(0, id="move_when_zero_fuel"),
         pytest.param((CONSUMPTION_MIN - 1), id="fuel_is_lower_than_min_consumption"),
     ])
-    def test_move_not_enough_fuel(self, fuel, vehicle):
+    def test_move_low_fuel(self, fuel, vehicle):
         vehicle.fuel = fuel
         assert vehicle.fuel_consumption > 0
 
         with pytest.raises(exceptions.NotEnoughFuel):
             vehicle.move(1)
+
+    def test_move_not_enough_fuel(self, vehicle):
+        # set fuel enough only for 2
+        assert vehicle.fuel_consumption > 1
+        vehicle.fuel = vehicle.fuel_consumption * 2 + 1
+
+        with pytest.raises(exceptions.NotEnoughFuel):
+            vehicle.move(3)
