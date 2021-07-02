@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+ Регистрация
+{% endblock %}
+
+{% block content %}
+<div class="bg-light p-5 rounded">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <hr>
+        <button class="btn btn-primary" type="submit">Зарегистрировать</button>
+    </form>
+</div>
+{% endblock %}

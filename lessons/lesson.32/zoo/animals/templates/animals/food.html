@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}
+Главная
+{% endblock %}
+
+{% block content %}
+<div class="bg-light p-5 rounded">
+    <h1>Navbar example</h1>
+    <p class="lead">This example is a quick exercise to illustrate how
+        fixed to top navbar works. As you scroll, it will remain fixed to the
+        top of your browser’s viewport.</p>
+    <ul>
+        {% for food in object_list %}
+        <li>
+            {{food.name}}
+            (
+            {% for kind in food.kinds.all %}
+                {{kind.name}},
+            {% endfor %}
+            )
+            Количество: {{food.kinds_count}}
+        </li>
+        {% endfor %}
+    </ul>
+    <hr>
+    <a href="animal/create/" class="btn btn-primary">Создать</a>
+    <hr>
+    {{news}}
+</div>
+{% endblock %}

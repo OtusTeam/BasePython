@@ -1,0 +1,28 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    {% block title %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+
+{% include "inc-menu.html" %}
+
+<main class="container">
+
+    <p></p>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    {% block content %}
+    {% endblock %}
+</main>
+
+
+<script src="{% static 'css/bootstrap.min.js' %}"></script>
+</body>
+</html>
