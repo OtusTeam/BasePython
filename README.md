@@ -13,3 +13,4 @@
 - [Урок 9. Автоматическое тестирование](lessons/lesson.09/)
 - [Урок 10. Знакомство со встроенными модулями](lessons/lesson.10/)
 - [Урок 11. Файлы и сеть. WSGI, csv, ini](lessons/lesson.11/)
+- [Урок 12. FastAPI](lessons/lesson.12/)
