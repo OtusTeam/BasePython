@@ -28,3 +28,4 @@
 - [Урок 32. Тестирование Django приложения](lessons/lesson.32/)
 - [Урок 33. Фабрики](lessons/lesson.33/)
 - [Урок 34. FastAPI](lessons/lesson.34/)
+- [Урок 35. Парсинг сайтов: bs4, scrapy](lessons/lesson.35/)
