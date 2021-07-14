@@ -1,0 +1,52 @@
+asgiref @ file:///Users/surenkhorenyan/Library/Caches/pypoetry/artifacts/c3/92/1c/3d42ce7ad1e9e2aa1621c3fa8ebc5e21bd880a768bd691fb4f0356baa8/asgiref-3.4.1-py3-none-any.whl
+attrs==21.2.0
+backports.entry-points-selectable==1.1.0
+CacheControl==0.12.6
+cachy==0.3.0
+certifi==2021.5.30
+charset-normalizer==2.0.1
+cleo==0.8.1
+click @ file:///Users/surenkhorenyan/Library/Caches/pypoetry/artifacts/ae/32/83/e159324c1bd58177322f4e45f598d500fe22544bff20f53f55cf749da8/click-8.0.1-py3-none-any.whl
+clikit==0.6.2
+coverage==5.5
+crashtest==0.3.1
+distlib==0.3.2
+fastapi==0.66.0
+filelock==3.0.12
+h11 @ file:///Users/surenkhorenyan/Library/Caches/pypoetry/artifacts/bc/67/35/dab5a305c7a43c7a517d86674f35006dbb43c6746d19f419698f568164/h11-0.12.0-py3-none-any.whl
+html5lib==1.1
+idna==3.2
+iniconfig==1.1.1
+keyring==21.8.0
+lockfile==0.12.2
+more-itertools @ file:///Users/surenkhorenyan/Library/Caches/pypoetry/artifacts/47/d4/7d/526affa62eb0c76eec19004cbbf18cc4e55f51c665e92b88bb2ed25752/more_itertools-8.8.0-py3-none-any.whl
+msgpack==1.0.2
+packaging @ file:///Users/surenkhorenyan/Library/Caches/pypoetry/artifacts/f9/4f/09/c91a145b26102e014fd6e33bd8c7b87306c8e1d4a771158f34dd13210e/packaging-21.0-py3-none-any.whl
+pastel==0.2.1
+pexpect==4.8.0
+pipenv==2021.5.29
+pkginfo==1.7.1
+platformdirs==2.0.2
+pluggy==0.13.1
+poetry==1.1.7
+poetry-core==1.0.3
+ptyprocess==0.7.0
+py==1.10.0
+pydantic==1.8.2
+pylev==1.4.0
+pyparsing==2.4.7
+pytest @ file:///Users/surenkhorenyan/Library/Caches/pypoetry/artifacts/e4/88/dd/3dbff42e3c4462dc3d027f5024025571166cb35edee215ce93852a968c/pytest-5.4.3-py3-none-any.whl
+requests==2.26.0
+requests-toolbelt==0.9.1
+shellingham==1.4.0
+six==1.16.0
+starlette==0.14.2
+toml==0.10.2
+tomlkit==0.7.2
+typing-extensions==3.10.0.0
+urllib3==1.26.6
+uvicorn @ file:///Users/surenkhorenyan/Library/Caches/pypoetry/artifacts/63/e1/44/c04424b79c0045e96812e1761ad643a5c3a58747640d7cf4cf06793a8e/uvicorn-0.14.0-py3-none-any.whl
+virtualenv==20.5.0
+virtualenv-clone==0.5.4
+wcwidth @ file:///Users/surenkhorenyan/Library/Caches/pypoetry/artifacts/7d/f4/60/0737157bb9711fec72c70dff523aa54491eef317e0d586cf5388ff0908/wcwidth-0.2.5-py2.py3-none-any.whl
+webencodings==0.5.1

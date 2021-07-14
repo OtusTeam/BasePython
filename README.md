@@ -14,3 +14,4 @@
 - [Урок 10. Знакомство со встроенными модулями](lessons/lesson.10/)
 - [Урок 11. Файлы и сеть. WSGI, csv, ini](lessons/lesson.11/)
 - [Урок 12. FastAPI](lessons/lesson.12/)
+- [Урок 13. Docker, pipenv, poetry](lessons/lesson.13/)
