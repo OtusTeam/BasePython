@@ -15,3 +15,4 @@
 - [Урок 11. Файлы и сеть. WSGI, csv, ini](lessons/lesson.11/)
 - [Урок 12. FastAPI](lessons/lesson.12/)
 - [Урок 13. Docker, pipenv, poetry](lessons/lesson.13/)
+- [Урок 14. Работа с базами данных: PostgreSQL, Redis, MongoDB](lessons/lesson.14/)
