@@ -1,0 +1,43 @@
+image: python:3.9.6
+
+stages:
+  - test
+  - deploy
+
+
+unit-test-job:   # This job runs in the test stage.
+  stage: test    # It only starts when the job in the build stage completes successfully.
+  only:
+    - master
+    - merge_requests
+  services:
+    - postgres:12
+  variables:
+    POSTGRES_DB: app
+    POSTGRES_USER: user
+    POSTGRES_PASSWORD: password
+    PG_HOST: postgres
+    SQLALCHEMY_DATABASE_URI: postgresql://user:password@postgres:5432/app
+    COVERAGE_DIR: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+  before_script:
+    - python -V
+    - pip install poetry
+    - poetry config virtualenvs.create false
+    - cd web-app
+    - poetry install --no-interaction --no-ansi
+    - flask db upgrade
+  script:
+    - echo "Running unit tests... This will take about 10 seconds."
+    - pytest -s -vv -rsx --cov=web_app --cov-report=html:$COVERAGE_DIR tests/
+  artifacts:
+    name: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+    paths:
+      - web-app/$COVERAGE_DIR
+    expire_in: 1 week
+    when: on_success
+
+deploy-job:      # This job runs in the deploy stage.
+  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  script:
+    - echo "Deploying application..."
+    - echo "Application successfully deployed."

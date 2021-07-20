@@ -1,0 +1,75 @@
+{% extends 'products/base.html' %}
+
+{% block title %}
+  Add Product
+{% endblock %}
+
+{% block body %}
+  <div>
+    <h1>Add new product</h1>
+    <form method="post">
+      <label id="label-input-product-name" for="input-product-name">Product name:</label>
+      <input
+        id="input-product-name"
+        name="product-name"
+        type="text"
+        placeholder="Desktop"
+        required
+      >
+      <button type="submit">Add</button>
+    </form>
+  </div>
+  <br>
+  <div>
+    <h4>Clicker</h4>
+    <div>
+      <small>Bored? Click!</small>
+    </div>
+    <div>
+      <p>
+        Count: <span id="count-value">0</span>
+      </p>
+      <button id="click-btn">Loading...</button>
+    </div>
+
+  </div>
+  <br>
+  <div>
+    <a href="{{ url_for('products_app.list') }}">Back to products list</a>
+  </div>
+
+  <script>
+    console.log('Hello world!')
+
+    const submitProduct = document.querySelector('button[type="submit"]')
+    console.log('submit button:', submitProduct)
+    submitProduct.disabled = 'disabled'
+    const productInput = document.getElementById('input-product-name')
+    productInput.addEventListener('input', function () {
+      submitProduct.disabled = !productInput.value
+    })
+
+
+    // clicker
+    const clickerButton = document.getElementById('click-btn')
+    console.log('button:', clickerButton)
+    clickerButton.textContent = 'Start clicking!'
+    let count = 0
+    const counter = document.getElementById('count-value')
+    clickerButton.addEventListener('click', function () {
+      count += 1
+      counter.textContent = count
+      if (count === 1) {
+        clickerButton.textContent = 'Click more!'
+      } else if (count === 10) {
+        clickerButton.textContent = 'Over 10 already'
+      } else if (count === 100) {
+        clickerButton.textContent = 'wow, over 100!'
+      }
+
+      // for (let i = 0; i < 100; i++) {
+      //  clickerButton.click()
+      // }
+    })
+  </script>
+{% endblock %}

@@ -30,3 +30,4 @@
 - [Урок 34. FastAPI](lessons/lesson.34/)
 - [Урок 35. Парсинг сайтов: bs4, scrapy](lessons/lesson.35/)
 - [Урок 36. GitHub Actions](lessons/lesson.36/)
+- [Урок 37. GitLab CI](lessons/lesson.37/)
