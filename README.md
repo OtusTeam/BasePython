@@ -18,3 +18,4 @@
 - [Урок 14. Работа с базами данных: PostgreSQL, Redis, MongoDB](lessons/lesson.14/)
 - [Урок 15. ORM: SQLAlchemy](lessons/lesson.15/)
 - [Урок 16. SQLAlchemy. Связи One-To-One и One-To-Many](lessons/lesson.16/)
+- [Урок 17. Миграции схем, alembic](lessons/lesson.17/)
