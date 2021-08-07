@@ -19,3 +19,4 @@
 - [Урок 15. ORM: SQLAlchemy](lessons/lesson.15/)
 - [Урок 16. SQLAlchemy. Связи One-To-One и One-To-Many](lessons/lesson.16/)
 - [Урок 17. Миграции схем, alembic](lessons/lesson.17/)
+- [Урок 18. Связь Many-To-Many](lessons/lesson.18/)
