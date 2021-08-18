@@ -22,3 +22,4 @@
 - [Урок 18. Связь Many-To-Many](lessons/lesson.18/)
 - [Урок 19. Знакомство с asyncio, aiohttp](lessons/lesson.19/)
 - [Урок 20. Асинхронная работа с БД: SQLAlchemy 1.4, asyncpg, Tortoise ORM, GINO ORM](lessons/lesson.20/)
+- [Урок 21. Асинхронная работа API с БД](lessons/lesson.21/)
