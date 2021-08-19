@@ -3,6 +3,7 @@
 ### Открытые уроки:
 - [Основы ООП от 11.06.2020](open-lessons/oop.base.11.06.2020/)
 - [Введение в автотесты, pytest от 18.11.2020](open-lessons/pytest.18.11.2020/)
+- [Быстрая разработка JSON API приложений на Flask (день 1) от 19.08.2021](open-lessons/flask-jsonapi.19.08.2021/)
 
 
 ### Курсы Python Basic:
