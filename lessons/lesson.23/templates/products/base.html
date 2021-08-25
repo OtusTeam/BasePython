@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block title %}
+      Base title
+    {% endblock %}
+  </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        h1 {
+            background-color: rgba(0, 255, 0, 0.6);
+            /*color: #add8e6;*/
+            color: rgb(0, 255, 200)
+        }
+
+        body {
+            font-size: 24px;
+            font-family: Open Sans;
+        }
+
+        #contacts {
+            font-size: 8px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2, h6 {
+
+        }
+
+        /*.slide-in {*/
+        /*    background-color: aqua;*/
+        /*    color: black;*/
+        /*    animation-duration: 5s;*/
+        /*    animation-name: slidein*/
+        /*}*/
+
+        /*@keyframes slidein {*/
+        /*    from {*/
+        /*        margin-left: 100%;*/
+        /*        !*width: 300%;*!*/
+        /*    }*/
+        /*    to {*/
+        /*        margin-left: 0;*/
+        /*        !*width: 100%;*!*/
+        /*    }*/
+        /*}*/
+        /*!*.text-color {*!*/
+        /*!*    color: crimson;*!*/
+        /*!*}*!*/
+        /*h2, h6 {*/
+        /*    color: blueviolet;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('products_app.list') }}">
+<!--        style="font-size:60px;" -->
+       Products</a>
+  </nav>
+<!--  <h1>-->
+<!--      <span class = "slide-in">Slide&nbspIn</span>-->
+<!--  </h1>-->
+<!--  <h2 style="border: blueviolet 1px double; color:red;"> Contacts: otus.ru</h2>-->
+<!--  <h2 id="contacts">Contacts: otus.ru</h2>-->
+<!--  <h2 class="text-color">Contacts: otus.ru</h2>-->
+<!--  <h6 class="text-color">test</h6>-->
+  {% block body %}
+    Hello body
+  {% endblock %}
+</body>
+</html>

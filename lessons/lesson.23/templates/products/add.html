@@ -1,0 +1,76 @@
+{% extends 'products/base.html' %}
+
+{% block title -%}
+  Add product
+{%- endblock %}
+
+{% block body %}
+  <div>
+    <h3>Add new product</h3>
+    <form method="post">
+      <label for="product-name-id">Product name:</label>
+      <input id="product-name-id" name="product-name" type="text" required>
+      <button type="submit">Add</button>
+        <button type="button">Test Button</button>
+    </form>
+  </div>
+
+<div>
+    <p>
+        Count: <span id="count">0</span>
+    </p>
+    <h4>Clicker</h4>
+    <small>Bored? Click. </small>
+    <div>
+        <button id = "loading-btn">Loading...</button>
+    </div>
+</div>
+<script>
+    const loadingButton = document.getElementById('loading-btn')
+    let counter = document.getElementById('count')
+    let count = 0
+    loadingButton.addEventListener('click', function () {
+        count += 1
+        counter.textContent = count
+        // 1. 10 - Good Job!
+        // 2. 20 - Excellent!
+        if (count === 10) {
+            loadingButton.textContent = 'Good Job!'
+        } else if (count === 20) {
+            loadingButton.textContent = 'Excellent!'
+        } else if (count >= 30) {
+            loadingButton.textContent = 'Wow!'
+        }
+    })
+    const testButton = document.querySelector('button[type="button"]')
+    console.log(testButton)
+    const productNameInput = document.getElementById('product-name-id')
+    testButton.addEventListener('click', function () {
+        console.log(productNameInput.value)
+    })
+
+    const submitButton = document.querySelector('button[type="submit"]')
+    submitButton.disabled = true
+    productNameInput.addEventListener('input', function (e) {
+        if (e.data) {
+            submitButton.disabled = false
+        }
+        if (!productNameInput.value) {
+            submitButton.disabled = true
+        }
+    })
+
+    // for (let i = 0; i < 100; i++) {
+    //     console.log('Otus.ru')
+    // }
+    // const submitProduct = document.querySelector('button[type="submit"]')
+    // // submitProduct.disabled = true, "disabled"
+    // const productInput = document.getElementById('product-name-id')
+    // productInput.addEventListener('input', function (e) {
+    //     if (e.data) {
+    //         submitProduct.disabled = false
+    //     }
+    //     submitProduct.disabled = !e.data
+    // })
+</script>
+{% endblock %}
