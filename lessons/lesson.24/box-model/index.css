@@ -1,0 +1,15 @@
+.top {
+  background-color: #0d6efd;
+  /*margin: 10px 20px 30px 40px;*/
+  /*margin: 40px;*/
+  margin: 20px 40px;
+  /*padding: 3px 3px 3px 100px;*/
+  padding-left: 100px;
+  /*border: #0f5132 solid 2px;*/
+  border-left: #0f5132 solid 2px;
+}
+
+
+.bottom{
+  margin: 60px;
+}
