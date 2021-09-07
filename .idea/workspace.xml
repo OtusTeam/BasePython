@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7a258baa-3ac6-4120-95ef-f63838061d29" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="PythonBasic.2021-05" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="aab52222-eec3-412d-9f68-5f2caeba0678" />
+  <component name="ProjectId" id="1wd5w6yTHG2ojy29k1AbSnz5Q6C" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lessons/lesson.24/static/img" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lessons/lesson.24/box-model" />
+      <recent name="$PROJECT_DIR$/lessons/lesson.24" />
+      <recent name="$PROJECT_DIR$/lessons/lesson.24/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lessons/lesson.24/static/img" />
+      <recent name="$PROJECT_DIR$/lessons/lesson.24/static/js" />
+      <recent name="$PROJECT_DIR$/lessons/lesson.24/static/css" />
+      <recent name="$PROJECT_DIR$/lessons/lesson.24" />
+      <recent name="$PROJECT_DIR$/lessons/lesson.23" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.arguments">
+    <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BasePython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lessons/lesson.24" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lessons/lesson.24/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BasePython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lessons/lesson.23" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lessons/lesson.23/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="arguments" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BasePython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lessons/lesson.03" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lessons/lesson.03/arguments.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="decorators" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BasePython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lessons/lesson.03" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lessons/lesson.03/decorators.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.arguments" />
+        <item itemvalue="Python.decorators" />
+        <item itemvalue="Python.app (1)" />
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a258baa-3ac6-4120-95ef-f63838061d29" name="Default Changelist" comment="" />
+      <created>1628775861050</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628775861050</updated>
+      <workItem from="1628775862715" duration="2655000" />
+      <workItem from="1628862563090" duration="3034000" />
+      <workItem from="1629904288824" duration="21782000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="643" y="419" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1629919220321">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="643" y="419" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1629919220321" />
+    <state width="1750" height="329" key="GridCell.Tab.0.bottom" timestamp="1631032435020">
+      <screen x="0" y="25" width="1792" height="1015" />
+    </state>
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1630134537622" />
+    <state width="1750" height="329" key="GridCell.Tab.0.bottom/0.25.1792.1006@0.25.1792.1006" timestamp="1630191450750" />
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom/1792.0.1920.1200/0.0.1792.1120@0.0.1792.1120" timestamp="1629911176295" />
+    <state width="1750" height="329" key="GridCell.Tab.0.bottom/1792.25.1920.1175/0.25.1792.1015@0.25.1792.1015" timestamp="1631032435020" />
+    <state width="1750" height="329" key="GridCell.Tab.0.center" timestamp="1631032435019">
+      <screen x="0" y="25" width="1792" height="1015" />
+    </state>
+    <state width="1750" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1630134537621" />
+    <state width="1750" height="329" key="GridCell.Tab.0.center/0.25.1792.1006@0.25.1792.1006" timestamp="1630191450748" />
+    <state width="1750" height="318" key="GridCell.Tab.0.center/1792.0.1920.1200/0.0.1792.1120@0.0.1792.1120" timestamp="1629911176294" />
+    <state width="1750" height="329" key="GridCell.Tab.0.center/1792.25.1920.1175/0.25.1792.1015@0.25.1792.1015" timestamp="1631032435019" />
+    <state width="1750" height="329" key="GridCell.Tab.0.left" timestamp="1631032435018">
+      <screen x="0" y="25" width="1792" height="1015" />
+    </state>
+    <state width="1750" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1630134537620" />
+    <state width="1750" height="329" key="GridCell.Tab.0.left/0.25.1792.1006@0.25.1792.1006" timestamp="1630191450748" />
+    <state width="1750" height="318" key="GridCell.Tab.0.left/1792.0.1920.1200/0.0.1792.1120@0.0.1792.1120" timestamp="1629911176293" />
+    <state width="1750" height="329" key="GridCell.Tab.0.left/1792.25.1920.1175/0.25.1792.1015@0.25.1792.1015" timestamp="1631032435018" />
+    <state width="1750" height="329" key="GridCell.Tab.0.right" timestamp="1631032435019">
+      <screen x="0" y="25" width="1792" height="1015" />
+    </state>
+    <state width="1750" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1630134537621" />
+    <state width="1750" height="329" key="GridCell.Tab.0.right/0.25.1792.1006@0.25.1792.1006" timestamp="1630191450749" />
+    <state width="1750" height="318" key="GridCell.Tab.0.right/1792.0.1920.1200/0.0.1792.1120@0.0.1792.1120" timestamp="1629911176294" />
+    <state width="1750" height="329" key="GridCell.Tab.0.right/1792.25.1920.1175/0.25.1792.1015@0.25.1792.1015" timestamp="1631032435019" />
+    <state x="597" y="315" width="597" height="490" key="find.popup" timestamp="1630140213624">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="597" y="315" width="597" height="490" key="find.popup/1792.0.1920.1200/0.0.1792.1120@0.0.1792.1120" timestamp="1630140213624" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BasePython$decorators.coverage" NAME="decorators Coverage Results" MODIFIED="1631031553533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lessons/lesson.03" />
+    <SUITE FILE_PATH="coverage/BasePython$app.coverage" NAME="app Coverage Results" MODIFIED="1629911120239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lessons/lesson.23" />
+    <SUITE FILE_PATH="coverage/BasePython$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1630134537609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lessons/lesson.24" />
+    <SUITE FILE_PATH="coverage/BasePython$arguments.coverage" NAME="arguments Coverage Results" MODIFIED="1631032435011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lessons/lesson.03" />
+  </component>
+</project>
