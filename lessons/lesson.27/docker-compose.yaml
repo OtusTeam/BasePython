@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  web-app: &web-app-config
+#    image: web-app-products
+#    container_name: web-app-products
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+#    command: flask run --host=0.0.0.0
+    command: gunicorn --bind 0.0.0.0:5000 app:app
+    environment:
+      DB_CONN_URI: postgresql+psycopg2://user:password@pg:5432/shop
+      FLASK_ENV: development
+    ports:
+      - 5000:5000
+    volumes:
+      - ./:/app
+    depends_on:
+      - pg
+#      pg:
+#        condition: service_healthy
+
+#  web-app-prod:
+#    <<: *web-app-config
+#    environment:
+#      DB_CONN_URI: postgres+psycopg2://user:password@pg:5432/shop
+#      FLASK_ENV: production
+
+  web-app-example:
+    build:
+      context: ./docker-build/web-app
+
+  spa-nginx:
+    build:
+      context: ./docker-build/spa-nginx
+#      dockerfile: ./Dockerfile
+  pg:
+    image: postgres # use latest official postgres version
+    env_file:
+      - postgres.env # configure postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - pg-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready shop -U user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pg-data:

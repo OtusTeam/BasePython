@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  api:
+    image: nginx:latest
+    depends_on:
+      pg:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  pg:
+    image: postgres:13.3-buster
+    environment:
+      POSTGRES_DB: "app"
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "password"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-q", "-d", "${POSTGRES_USER}", "-U", "${POSTGRES_PASSWORD}" ]
+      timeout: 45s
+      interval: 5s
+      retries: 10
+
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+    volumes:
+      - redis-data:/data
+
+
+volumes:
+  pg-data:
+  redis-data:
