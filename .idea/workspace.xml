@@ -21,11 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7a258baa-3ac6-4120-95ef-f63838061d29" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lessons/lesson.03/arguments.py" beforeDir="false" afterPath="$PROJECT_DIR$/lessons/lesson.03/arguments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lessons/lesson.03/context.py" beforeDir="false" afterPath="$PROJECT_DIR$/lessons/lesson.03/context.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lessons/lesson.03/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/lessons/lesson.03/decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lessons/lesson.03/generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/lessons/lesson.03/generators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lessons/lesson.03/loops.py" beforeDir="false" afterPath="$PROJECT_DIR$/lessons/lesson.03/loops.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,6 +213,8 @@
       <workItem from="1628775862715" duration="2655000" />
       <workItem from="1628862563090" duration="3034000" />
       <workItem from="1629904288824" duration="31964000" />
+      <workItem from="1631639252034" duration="3000" />
+      <workItem from="1631639272003" duration="18000" />
     </task>
     <servers />
   </component>
@@ -249,6 +246,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="643" y="419" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1629919220321" />
+    <state x="100" y="125" width="1592" height="806" key="DiffContextDialog" timestamp="1631635852941">
+      <screen x="0" y="25" width="1792" height="1006" />
+    </state>
+    <state x="100" y="125" width="1592" height="806" key="DiffContextDialog/0.25.1792.1006@0.25.1792.1006" timestamp="1631635852941" />
     <state width="1750" height="335" key="GridCell.Tab.0.bottom" timestamp="1631309340134">
       <screen x="0" y="25" width="1792" height="1015" />
     </state>
@@ -305,6 +306,10 @@
     </state>
     <state width="1750" height="335" key="GridCell.Tab.1.right/0.25.1792.1015@0.25.1792.1015" timestamp="1631309340135" />
     <state width="1750" height="335" key="GridCell.Tab.1.right/1792.25.1920.1175/0.25.1792.1015@0.25.1792.1015" timestamp="1631035929642" />
+    <state x="639" y="266" key="VcsDiffUtil.ChangesDialog" timestamp="1631635734033">
+      <screen x="0" y="25" width="1792" height="1006" />
+    </state>
+    <state x="639" y="266" key="VcsDiffUtil.ChangesDialog/0.25.1792.1006@0.25.1792.1006" timestamp="1631635734033" />
     <state x="597" y="315" width="597" height="490" key="find.popup" timestamp="1630140213624">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -316,9 +321,12 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BasePython$decorators.coverage" NAME="decorators Coverage Results" MODIFIED="1631041500628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lessons/lesson.03" />
+    <SUITE FILE_PATH="coverage/BasePython$demo_aiohttp.coverage" NAME="demo_aiohttp Coverage Results" MODIFIED="1631434305680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework_04" />
+    <SUITE FILE_PATH="coverage/BasePython$jsonplaceholder_requests.coverage" NAME="jsonplaceholder_requests Coverage Results" MODIFIED="1631435893197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework_04" />
     <SUITE FILE_PATH="coverage/BasePython$loops.coverage" NAME="loops Coverage Results" MODIFIED="1631041880631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lessons/lesson.03" />
     <SUITE FILE_PATH="coverage/BasePython$generators.coverage" NAME="generators Coverage Results" MODIFIED="1631040495069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lessons/lesson.03" />
     <SUITE FILE_PATH="coverage/BasePython$app.coverage" NAME="app Coverage Results" MODIFIED="1629911120239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lessons/lesson.23" />
+    <SUITE FILE_PATH="coverage/BasePython$dictionary.coverage" NAME="dictionary Coverage Results" MODIFIED="1631437045706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework_04" />
     <SUITE FILE_PATH="coverage/BasePython$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1630134537609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lessons/lesson.24" />
     <SUITE FILE_PATH="coverage/BasePython$context.coverage" NAME="context Coverage Results" MODIFIED="1631037520061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lessons/lesson.03" />
     <SUITE FILE_PATH="coverage/BasePython$arguments.coverage" NAME="arguments Coverage Results" MODIFIED="1631039447583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lessons/lesson.03" />
