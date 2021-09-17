@@ -10,5 +10,5 @@ class Point:
 
     def __str__(self):
         point_name = "Geometric Point"
-        "{name}".format(name=point_name)
+        # "{name}".format(name=point_name)
         return f'Point name = {point_name}, x = {self.x}'

@@ -2,6 +2,7 @@ class Point:
     class_attribute = True
 
     def __init__(self, x, y):
+        # self.z = 0
         self.x = x
         self.y = y
 
