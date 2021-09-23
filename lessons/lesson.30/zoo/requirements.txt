@@ -1,0 +1,5 @@
+Django==3.1
+Pillow
+django-debug-toolbar
+django-celery
+celery==5
