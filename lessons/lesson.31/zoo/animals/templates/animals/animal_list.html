@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animals</title>
+</head>
+<body>
+
+<h1>Animals</h1>
+<ul>
+    {% for animal in object_list %}
+        <li>
+            <a href="{% url 'animal_detail' animal.pk %}">{{ animal }}</a>
+            <a href="{% url 'animals_update' animal.pk %}">edit</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'animals_create' %}">Create</a>
+
+</body>
+</html>
