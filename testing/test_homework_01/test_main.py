@@ -47,7 +47,7 @@ def test_filter_numbers (f, m ):
 @pytest .mark .parametrize ("p", [
     (homework.ODD, [1,2,3,4,5,6,7,8,9], [1,3,5,7,9]),
     (homework.EVEN, [2,3,4,5,6,7,8,9,10], [2,4,6,8,10]),
-    (homework.PRIME, [3,4,5,6,7,8,9,11], [3,5,7,11]),
+    (homework.PRIME, [0,3,4,5,6,7,8,9,11], [3,5,7,11]),
 ])
 def test_filter_numbers_consts(p):
     OO0OOOOOO0O0OOOO0 ,OO0O0O000OO00OO0O ,OO000OO0OO0OOOO0O =p
