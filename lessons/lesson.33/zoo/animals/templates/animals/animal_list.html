@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animals</title>
+</head>
+<body>
+<div>
+    <a href="{% url 'food_view' %}">
+        food view
+    </a>
+    <br>
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">
+            {{ user.username }} выход
+        </a>
+    {% else %}
+        <a href="{% url 'login' %}">
+            вход
+        </a>
+        <br>
+        <a href="{% url 'user_create' %}">
+            новый пользователь
+        </a>
+    {% endif %}
+</div>
+<h1>Animals</h1>
+<ul>
+    {% for animal in object_list %}
+        <li>
+            <a href="{% url 'animal_detail' animal.pk %}">{{ animal }}</a>
+            <a href="{% url 'animal_update' animal.pk %}">edit</a>
+            <a href="{% url 'animal_delete' animal.pk %}">delete</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'animal_create' %}">Create</a>
+
+</body>
+</html>

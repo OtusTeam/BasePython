@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal delete</title>
+</head>
+<body>
+
+<h1>Sure to delete {{ object }}?</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" value="yes">
+</form>
+<a href="{% url 'main_page' %}">cancel</a>
+</body>
+</html>
