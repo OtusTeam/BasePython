@@ -1,0 +1,20 @@
+{% load static %}
+<html lang="en">
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+<main class="container">
+    <div class="bg-light p-5 rounded">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <hr>
+            <button class="btn btn-primary" type="submit">Вход</button>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>
