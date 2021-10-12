@@ -14,3 +14,4 @@
 - [Урок 10. Автоматическое тестирование](lessons/lesson.10/)
 - [Урок 12. Файлы и сеть. WSGI, csv, ini](lessons/lesson.12/)
 - [Урок 13. Знакомство с FastAPI](lessons/lesson.13/)
+- [Урок 14. Docker, Pipenv, poetry](lessons/lesson.14/)
