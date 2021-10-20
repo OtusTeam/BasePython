@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block title %}
+      Base title
+    {% endblock %}
+  </title>
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('products_app.list') }}">Products</a>
+  </nav>
+  {% block body %}
+    Hello body
+  {% endblock %}
+</body>
+</html>
