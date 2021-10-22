@@ -16,3 +16,4 @@
 - [Урок 13. Знакомство с FastAPI](lessons/lesson.13/)
 - [Урок 14. Docker, Pipenv, poetry](lessons/lesson.14/)
 - [Урок 16. ORM: SQLAlchemy](lessons/lesson.16/)
+- [Урок 17. SQLAlchemy, base model, mixins](lessons/lesson.17/)
