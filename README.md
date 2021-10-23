@@ -39,3 +39,4 @@
 - [Урок 36. Pandas. Ещё одна библиотека для работы с данными?](lessons/lesson.36)
 - [Урок 37. OpenCV](lessons/lesson.37)
 - [Урок 38. GitHub Actions, Flask testing, TDD, mitmproxy](lessons/lesson.38)
+- [Урок 39. GitLab CI](lessons/lesson.39)

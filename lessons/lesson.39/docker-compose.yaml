@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  web-app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      DB_CONN_URI: postgresql+psycopg2://user:password@pg:5432/shop
+      FLASK_ENV: development
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/app
+    depends_on:
+      pg:
+        condition: service_healthy
+
+  pg:
+    image: postgres # use latest official postgres version
+    env_file:
+      - postgres.env # configure postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pg-data:

@@ -1,0 +1,31 @@
+{% extends 'products/base.html' %}
+
+{% block title -%}
+  Product {{ product.id }} details
+{%- endblock %}
+
+{% block body %}
+  <div>
+    <h3>{{ product.name }}</h3>
+    <h5>Added {{ product.created_at }}</h5>
+    <div>
+      <button class="btn btn-danger my-2" onclick="deleteProduct()">
+        Delete product
+      </button>
+    </div>
+    <a class="" href="{{ url_for('products_app.list') }}">Back to list</a>
+  </div>
+  <script>
+    function deleteProduct() {
+      console.log('delete product');
+
+      // Delete product
+      const xhr = new XMLHttpRequest();
+      xhr.open("DELETE", document.URL, true);
+      xhr.onload = function () {
+        window.location.href = "{{ url_for('products_app.list') }}"
+      }
+      xhr.send(null);
+    }
+  </script>
+{% endblock %}
