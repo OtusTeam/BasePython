@@ -17,3 +17,4 @@
 - [Урок 14. Docker, Pipenv, poetry](lessons/lesson.14/)
 - [Урок 16. ORM: SQLAlchemy](lessons/lesson.16/)
 - [Урок 17. SQLAlchemy, base model, mixins](lessons/lesson.17/)
+- [Урок 18. Миграции схем: alembic](lessons/lesson.18/)
