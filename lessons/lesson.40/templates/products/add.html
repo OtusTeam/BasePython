@@ -1,0 +1,16 @@
+{% extends 'products/base.html' %}
+
+{% block title -%}
+  Add product
+{%- endblock %}
+
+{% block body %}
+  <div>
+    <h3>Add new product</h3>
+    <form method="post">
+      <label for="product-name-id">Product name:</label>
+      <input class="" id="product-name-id" name="product-name" type="text" required>
+      <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+  </div>
+{% endblock %}
