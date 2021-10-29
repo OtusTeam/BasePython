@@ -18,3 +18,4 @@
 - [Урок 16. ORM: SQLAlchemy](lessons/lesson.16/)
 - [Урок 17. SQLAlchemy, base model, mixins](lessons/lesson.17/)
 - [Урок 18. Миграции схем: alembic](lessons/lesson.18/)
+- [Урок 19. M2M, Poetry, знакомство с asyncio](lessons/lesson.19/)
