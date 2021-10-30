@@ -57,3 +57,10 @@ class TestPlane:
         res = plane.remove_all_cargo()
         assert res == cargo
         assert plane.cargo == 0
+
+    def test_load_cargo_fits_exact(self, plane):
+        assert plane.cargo == 0
+        assert plane.max_cargo > 0
+        cargo = plane.max_cargo
+        plane.load_cargo(cargo)
+        assert plane.cargo == cargo
