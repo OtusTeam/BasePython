@@ -20,3 +20,4 @@
 - [Урок 18. Миграции схем: alembic](lessons/lesson.18/)
 - [Урок 19. M2M, Poetry, знакомство с asyncio](lessons/lesson.19/)
 - [Урок 20. asyncio, aiohttp](lessons/lesson.20/)
+- [Урок 21. Асинхронная работа с БД](lessons/lesson.21/)
