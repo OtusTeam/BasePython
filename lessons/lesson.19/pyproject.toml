@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "19.orm-and-more"
+version = "0.1.0"
+description = ""
+authors = ["OTUS"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+SQLAlchemy = "^1.4.26"
+psycopg2 = "^2.9.1"
+
+[tool.poetry.dev-dependencies]
+alembic = "^1.7.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Add product
+{% endblock %}
+
+{% block body %}
+<form method="post">
+    <label for="field-name">Product name:</label>
+    <input id="field-name" type="text" name="product-name" required="required">
+    <input type="submit" value="Add product">
+    <button type="button">Test Button</button>
+</form>
+<!-- <div>
+    <a href="{{ url_for("products_app.list") }}">
+        Back to products list
+    </a>
+</div> -->
+<div>
+    <p>
+        Count: <span id="count">0</span>
+    </p>
+    <h4>Clicker</h4>
+    <small>Bored? Click. </small>
+    <div>
+        <button id="loading-btn">Loading...</button>
+    </div>
+</div>
+<script>
+    // console.log('hello world')
+    // for (let i = 0; i < 10; i++) {
+    //     console.log('test')
+    // }
+    const loadingButton = document.getElementById("loading-btn")
+    let counter = document.getElementById("count")
+    let count = 0
+    /*
+    10 - good job
+    20 - excellent
+    >30 - wow 
+    */
+
+    loadingButton.addEventListener('click', function () {
+        count += 1
+        counter.textContent = count
+        if (count === 10) {
+            loadingButton.textContent = "Good job!"
+        } else if (count === 20) {
+            loadingButton.textContent = "Excellent!"
+        } else if (count >= 30) {
+            loadingButton.textContent = "Wow!"
+        }
+    })
+
+    const testButton = document.querySelector('button[type="button"]')
+    const productName = document.getElementById('field-name')
+    testButton.addEventListener('click', function (e) {
+        console.log(productName.value)
+    })
+
+    const submitButton = document.querySelector('input[type="submit"]')
+    submitButton.disabled = true
+    productName.addEventListener('input', function (e) {
+        if (e.data) {
+            submitButton.disabled = false
+        }
+
+        if (!productName.value) {
+            submitButton.disabled = true
+        }
+
+    })
+
+</script>
+{% endblock %}

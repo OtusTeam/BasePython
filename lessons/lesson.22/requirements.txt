@@ -1,0 +1,6 @@
+SQLAlchemy[asyncio]==1.4.27
+asyncpg==0.24.0
+fastapi==0.70.0
+uvicorn==0.15.0
+starlette==0.16.0
+pydantic==1.8.2

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        Base title
+        {% endblock %}
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        h1 {
+            /* background-color: green; */
+            background-color: rgb(0, 0, 255, 0.1);
+            color: rgb(0, 0, 250, 0.4)
+        }
+
+        /* #contacts {
+            font-size: 48px;
+        } */
+
+        .font-48px {
+            font-size: 40px;
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        ul {
+            list-style-type: lower-alpha;
+        }
+
+        body {
+            font-family: Open Sans;
+        }
+
+
+        .slide-in {
+            background-color: aqua;
+            color: black;
+            animation-duration: 5s;
+            animation-name: slidein
+        }
+
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="{{ url_for('products_app.list') }}" style="font-size:60px;">
+            Products</a>
+    </nav>
+    <h4 class="font-48px">Welcome to the Products page</h4>
+    <h1>
+        <span class="slide-in">Slide&nbspIn</span>
+    </h1>
+    <div>
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
+
+<footer>
+    <br>
+    <small>
+        Created at 19.11.2021
+    </small>
+    <!-- <h1 id="contacts">Contacts: otus.ru</h1> -->
+    <h2 id="contacts" class="font-48px">Contacts: otus.ru</h2>
+    <!-- <h6 id="contacts">Contacts: otus.ru</h6> -->
+
+</footer>
+
+</html>

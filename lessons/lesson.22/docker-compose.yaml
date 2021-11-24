@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  pg:
+    image: postgres # use latest official postgres version
+    env_file:
+      - postgres.env # configure postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+
+
+volumes:
+  pg-data:

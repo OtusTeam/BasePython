@@ -1,0 +1,3 @@
+alembic==1.7.4
+Mako==1.1.5
+MarkupSafe==2.0.1
