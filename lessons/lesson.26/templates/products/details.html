@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  Product #{{ product.id }}
+{% endblock %}
+
+{% block body %}
+  <h1>Products details</h1>
+  <div>
+    <h3>
+      {{ product.name }}
+      {% if product.is_new %}
+        <span class="badge bg-secondary">New</span>
+      {% endif %}
+    </h3>
+    Created at {{ product.created_at }}
+  </div>
+  {#{% if product.updated_at %}#}
+  {#  <div>#}
+  {#    Updated at: {{ product.updated_at }}#}
+  {#  </div>#}
+  {#{% endif %}#}
+  <div>
+    Updated at:
+    {% if product.updated_at %}
+      {{ product.updated_at }}
+    {% else %}
+      {{ product.created_at }}
+    {% endif %}
+  </div>
+  <br>
+  <div>
+    <form method="post">
+      <label for="update-name">Update product name with</label>
+      <input
+        id="update-name"
+        type="text"
+        name="product-name"
+        value="{{ product.name }}"
+        required
+      >
+      <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+  </div>
+  <div>
+    <a href="{{ url_for("products_app.list") }}">
+      Back to products list
+    </a>
+  </div>
+{% endblock %}

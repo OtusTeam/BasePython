@@ -24,3 +24,4 @@
 - [Урок 22. Асинхронная работа API с БД](lessons/lesson.22/)
 - [Урок 23. Знакомство с werkzeug, Flask](lessons/lesson.23/)
 - [Урок 24. Основы фронтенда](lessons/lesson.24/)
+- [Урок 26. Flask-SQLAlchemy, Flask-Migrate. SQLAlchemy defaults on INSERT/UPDATE Bootstrap, forms](lessons/lesson.26/)

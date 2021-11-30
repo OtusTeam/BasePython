@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Add product
+{% endblock %}
+
+{% block body %}
+<form method="post">
+    <label for="field-name" class="form-label">Product name:</label>
+    <input
+      id="field-name"
+      class="form-control"
+      type="text"
+      name="product-name"
+      required="required">
+
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value="on"
+      name="is-new"
+      id="is-new-checkbox">
+    <label
+      class="form-check-label"
+      for="is-new-checkbox"
+    >Is new product</label>
+  <br>
+    <input class="btn btn-success my-2" type="submit" value="Add product">
+</form>
+<div>
+    <a href="{{ url_for("products_app.list") }}">
+        Back to products list
+    </a>
+</div>
+
+{% endblock %}
