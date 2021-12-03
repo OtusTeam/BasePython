@@ -25,3 +25,4 @@
 - [Урок 23. Знакомство с werkzeug, Flask](lessons/lesson.23/)
 - [Урок 24. Основы фронтенда](lessons/lesson.24/)
 - [Урок 26. Flask-SQLAlchemy, Flask-Migrate. SQLAlchemy defaults on INSERT/UPDATE Bootstrap, forms](lessons/lesson.26/)
+- [Урок 27. Взаимодействие приложений между контейнерами, docker compose. uwsgi-nginx-flask, configs; Flask-WTF](lessons/lesson.27/)

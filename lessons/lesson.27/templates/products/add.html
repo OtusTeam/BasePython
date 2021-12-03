@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Add product
+{% endblock %}
+
+{% block body %}
+<form method="post">
+    {{ form.csrf_token }}
+    {{ form.name.label(class="form-label") }}
+    {{ form.name(class="form-control") }}
+    {{ form.is_new.label(class="form-check-label") }}
+    {{ form.is_new(class="form-check-input") }}
+  <br>
+    <input class="btn btn-success my-2" type="submit" value="Add product">
+</form>
+{% if form.name.errors %}
+  <div class="alert alert-danger">
+      <ul class="errors">
+      {% for error in form.name.errors %}
+          <li>{{ error }}</li>
+      {% endfor %}
+      </ul>
+  </div>
+{% endif %}
+<div>
+    <a href="{{ url_for("products_app.list") }}">
+        Back to products list
+    </a>
+</div>
+
+{% endblock %}

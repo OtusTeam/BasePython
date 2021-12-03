@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  shop:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      CONFIG: DevelopmentConfig
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://app:password@pg:5432/shop
+    volumes:
+      - ./:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - pg
+
+  shop-prod:
+    build:
+      context: .
+      dockerfile: ./docker-build/shop-prod/Dockerfile
+    environment:
+      CONFIG: ProductionConfig
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://app:password@pg:5432/shop
+    ports:
+      - "5080:80"
+    depends_on:
+      - pg
+
+  pg:
+    image: postgres # use latest official postgres version
+    environment:
+      POSTGRES_DB: shop
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: password
+#    ports:
+#      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+
+
+volumes:
+  pg-data:
