@@ -27,3 +27,4 @@
 - [Урок 26. Flask-SQLAlchemy, Flask-Migrate. SQLAlchemy defaults on INSERT/UPDATE Bootstrap, forms](lessons/lesson.26/)
 - [Урок 27. Взаимодействие приложений между контейнерами, docker compose. uwsgi-nginx-flask, configs; Flask-WTF](lessons/lesson.27/)
 - [Урок 28. Знакомство с Django](lessons/lesson.28/)
+- [Урок 29. Django ORM, django-debug-toolbar](lessons/lesson.29/)
