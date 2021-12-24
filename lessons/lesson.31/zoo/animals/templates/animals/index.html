@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoo</title>
+</head>
+<body>
+<h1>Hello!</h1>
+<ul>
+    <li>
+        <a href="/">Main</a>
+    </li>
+    <li>
+        <a href="/animals/">Animals</a>
+    </li>
+    <li>
+        <a href="{% url 'animals:about' %}">About</a>
+    </li>
+</ul>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">send mail</button>
+</form>
+<hr>
+{% if task_id %}
+    <a href="{% url 'animals:status_view' task_id %}">{{ task_id }}</a>
+{% endif %}
+
+</body>
+</html>
