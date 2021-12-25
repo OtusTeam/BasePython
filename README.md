@@ -9,3 +9,4 @@
 - [Урок 4. Работа с shell, git. Ветки, commit, rebase, merge, cherry-pick, reset](lessons/lesson.04/)
 - [Урок 5. Основы ООП](lessons/lesson.05/)
 - [Урок 9. Виртуальное окружение. Датаклассы, pydantic](lessons/lesson.09/)
+- [Урок 10. Тестирование, pytest, coverage](lessons/lesson.10/)
