@@ -13,7 +13,7 @@ homework_0X = folder_test_homework_0X.name.replace("test_", "")
 homework_0X_path = folder_test_homework_0X.parent.parent / homework_0X
 dockerfile_path = homework_0X_path / "Dockerfile"
 
-if not (dockerfile_path.is_file() and len(dockerfile_path.read_text().splitlines()) > 5):
+if not (dockerfile_path.is_file() and len(dockerfile_path.read_text(encoding="utf-8").splitlines()) > 5):
     pytestmark = pytest.mark.skip("Dockerfile is not ready")
 
 
