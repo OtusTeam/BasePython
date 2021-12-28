@@ -1,0 +1,4 @@
+django==3.2
+django-debug-toolbar
+celery>=5
+django-celery
