@@ -1,0 +1,15 @@
+@startuml
+
+participant "Browser" as browser
+participant "Server" as server
+participant "Application" as app
+
+
+browser -> server : запрашивает сервер
+server -> app : передаёт запрос в веб-приложение
+app -> app : ищет маршрут. маршрут не найден.
+server <- app : приложение возвращает статус код 404
+browser <- server : передаёт ответ
+
+
+@enduml

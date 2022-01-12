@@ -13,3 +13,4 @@
 - [Урок 8. Продвинутый ООП, часть 2](lessons/lesson.08/)
 - [Урок 9. Виртуальное окружение. Датаклассы, pydantic](lessons/lesson.09/)
 - [Урок 10. Тестирование, pytest, coverage](lessons/lesson.10/)
+- [Урок 12. Файлы и сеть. HTTP методы и статус коды. WSGI, csv](lessons/lesson.12/)
