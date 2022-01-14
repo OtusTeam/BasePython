@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoo</title>
+</head>
+<body>
+
+<a href="{% url 'animals:index' %}">Main</a>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="save">
+</form>
+
+</body>
+</html>
