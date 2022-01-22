@@ -16,3 +16,4 @@
 - [Урок 12. Файлы и сеть. HTTP методы и статус коды. WSGI, csv](lessons/lesson.12/)
 - [Урок 13. Файлы .ini, configparser. FastAPI: валидация данных, зависимости](lessons/lesson.13/)
 - [Урок 14. Pipenv. Poetry. Docker](lessons/lesson.14/)
+- [Урок 15. Хранение данных в реляционных БД. Язык SQL](lessons/lesson.15/)
