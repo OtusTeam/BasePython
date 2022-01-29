@@ -18,3 +18,4 @@
 - [Урок 14. Pipenv. Poetry. Docker](lessons/lesson.14/)
 - [Урок 15. Хранение данных в реляционных БД. Язык SQL](lessons/lesson.15/)
 - [Урок 16. ORM: SQLAlchemy](lessons/lesson.16/)
+- [Урок 17. SQLAlchemy: связи между таблицами One-To-One и One-To-Many](lessons/lesson.17/)
