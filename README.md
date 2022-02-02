@@ -19,3 +19,4 @@
 - [Урок 15. Хранение данных в реляционных БД. Язык SQL](lessons/lesson.15/)
 - [Урок 16. ORM: SQLAlchemy](lessons/lesson.16/)
 - [Урок 17. SQLAlchemy: связи между таблицами One-To-One и One-To-Many](lessons/lesson.17/)
+- [Урок 18. Миграции схем: alembic](lessons/lesson.18/)
