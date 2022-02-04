@@ -38,3 +38,4 @@
 - [Урок 37. OpenCV](lessons/lesson.37/)
 - [Урок 38. GitHub Actions, Flask tests](lessons/lesson.38/)
 - [Урок 39. GitLab CI](lessons/lesson.39/)
+- [Урок 40. GitLab CD: сборка и публикация docker образа](lessons/lesson.40)
