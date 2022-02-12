@@ -1,0 +1,8 @@
+alembic==1.7.6
+asn1crypto==1.4.0
+asyncpg==0.25.0
+Mako==1.1.6
+MarkupSafe==2.0.1
+pg8000==1.24.0
+scramp==1.4.1
+SQLAlchemy==1.4.31
