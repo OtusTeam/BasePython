@@ -1,0 +1,7 @@
+{% macro back_to_products_list() -%}
+<div style="margin-top: 2em">
+  <a href="{{ url_for('products_app.products_list') }}">
+    Back to products list
+  </a>
+</div>
+{%- endmacro %}

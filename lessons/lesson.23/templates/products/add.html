@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% from 'macros/back_to_products_list.html' import back_to_products_list %}
+
+{% block title %}
+Add product
+{% endblock %}
+
+{% block body %}
+  <form method="post">
+    <label for="input-product-name-id">
+      Product name:
+    </label>
+    <input
+      type="text"
+      id="input-product-name-id"
+      name="product-name"
+      required
+    >
+    <input type="submit" value="Add product">
+  </form>
+
+  {{ back_to_products_list() }}
+
+{% endblock %}

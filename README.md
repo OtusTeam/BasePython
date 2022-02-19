@@ -24,3 +24,4 @@
 - [Урок 20. Асинхронное программирование в Python](lessons/lesson.20/)
 - [Урок 21. Асинхронная работа с БД](lessons/lesson.21/)
 - [Урок 22. Асинхронная работа API с БД](lessons/lesson.22/)
+- [Урок 23. Знакомство с werkzeug, Flask](lessons/lesson.23/)
