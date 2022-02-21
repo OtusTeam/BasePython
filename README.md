@@ -6,6 +6,7 @@
 - [Быстрая разработка JSON API приложений на Flask (день 1) от 19.08.2021](open-lessons/flask-jsonapi.19.08.2021/)
 - [Быстрая разработка JSON API приложений на Flask (день 2) от 20.08.2021](open-lessons/flask-jsonapi.20.08.2021/)
 - [Декораторы в Python от 15.02.2022](open-lessons/decorators.15.02.2022/)
+- [Функции-помощники: map, filter, reduce от 21.02.2022](open-lessons/helper-funcs.21.02.2022/)
 
 
 ### Курсы Python Basic:
