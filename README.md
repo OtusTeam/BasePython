@@ -17,3 +17,4 @@
 - [PythonBasic.2021-05](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2021-05)
 - [PythonBasic.2021-08](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2021-08)
 - [PythonBasic.2021-11](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2021-11)
+- [PythonBasic.2022-02](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2022-02)
