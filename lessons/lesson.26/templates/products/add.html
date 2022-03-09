@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% from 'macros/back_to_products_list.html' import back_to_products_list %}
+
+{% block title %}
+Add product
+{% endblock %}
+
+{% block body %}
+  <form method="post" class="my-2">
+
+    {{ form.hidden_tag() }}
+
+    {{ form.name.label(class="form-label") }}
+    {{ form.name(size=20, class="form-control") }}
+
+    {{ form.is_new(class="form-check-input") }}
+    {{ form.is_new.label(class="form-check-label") }}
+
+    {% if form.errors %}
+      <ul class="alert alert-danger">
+        {% for field_name, values in form.errors.items() %}
+            <li>
+              <strong>{{ field_name }}</strong>
+                <ul>
+                  {% for error_text in values %}
+                    <li>{{ error_text }}</li>
+                  {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <button class="btn btn-primary" type="submit">
+       Add product
+    </button>
+  </form>
+
+  {{ back_to_products_list() }}
+
+{% endblock %}
