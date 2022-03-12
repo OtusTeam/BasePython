@@ -26,3 +26,4 @@
 - [Урок 22. Асинхронная работа API с БД](lessons/lesson.22/)
 - [Урок 23. Знакомство с werkzeug, Flask](lessons/lesson.23/)
 - [Урок 26. Flask-SQLAlchemy, Flask-Migrate, Flask-WTF; static files](lessons/lesson.26/)
+- [Урок 27. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.27/)
