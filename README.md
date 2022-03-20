@@ -27,3 +27,4 @@
 - [Урок 23. Знакомство с werkzeug, Flask](lessons/lesson.23/)
 - [Урок 26. Flask-SQLAlchemy, Flask-Migrate, Flask-WTF; static files](lessons/lesson.26/)
 - [Урок 27. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.27/)
+- [Урок 28. Занятие «Знакомство с Django»](lessons/lesson.28/)
