@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoo</title>
+</head>
+<body>
+<h1>Hello!</h1>
+<ul>
+    {% for el in all_animals %}
+        <li>{{ el }}</li>
+    {% endfor %}
+</ul>
+
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">send mail</button>
+</form>
+
+<hr>
+
+{% if task_id %}
+    {#    <a href="{% url 'status_view' task_id %}">{{ task_id }}</a>#}
+    <a href="/status/{{ task_id }}/">
+        get status of {{ task_id }}
+    </a>
+{% endif %}
+
+</body>
+</html>
