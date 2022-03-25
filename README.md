@@ -9,3 +9,4 @@
 - [Урок 4. Работа с shell, git. Ветки, commit, rebase, merge, cherry-pick, reset](lessons/lesson.04/)
 - [Урок 5. Основы ООП](lessons/lesson.05/)
 - [Урок 6. Продвинутый ООП, исключения](lessons/lesson.06/)
+- [Урок 7. Модули и импорты](lessons/lesson.07/)
