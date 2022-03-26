@@ -30,3 +30,4 @@
 - [Урок 28. Занятие «Знакомство с Django»](lessons/lesson.28/)
 - [Урок 29. Занятие «Django ORM, django-debug-toolbar»](lessons/lesson.29/)
 - [Урок 30. Django и отложенные задачи](lessons/lesson.30/)
+- [Урок 31. Django Class Based Views, generics, Forms](lessons/lesson.31/)

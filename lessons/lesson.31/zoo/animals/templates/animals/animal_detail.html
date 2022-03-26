@@ -1,0 +1,8 @@
+{% extends 'animals/base.html' %}
+
+{% block main_content %}
+    <a href="{% url 'animal_update' object.pk %}">update</a>
+    <p>
+        {{ object }}
+    </p>
+{% endblock %}

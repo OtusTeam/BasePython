@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_title|default:"Zoo" }}</title>
+</head>
+<body>
+
+{% block menu %}
+    <ul>
+        <li><a href="{% url 'main' %}">main</a></li>
+    </ul>
+{% endblock %}
+
+{% block main_content %}
+{% endblock %}
+
+</body>
+</html>
