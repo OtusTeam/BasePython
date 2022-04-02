@@ -1,0 +1,33 @@
+{% extends 'animals/base.html' %}
+
+{% block main_content %}
+    <h1>Hello {{ user }}!</h1>
+    <p>
+        <a href="{% url 'animals:create' %}">new animal</a>
+    </p>
+    <ul>
+        {% for el in all_animals %}
+            <li>
+                <a href="{% url 'animals:detail' el.pk %}">
+                    {{ el }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">send mail</button>
+    </form>
+
+    <hr>
+
+    {% if task_id %}
+        <a href="{% url 'task_status' task_id=task_id %}">
+            get status of {{ task_id }}
+        </a>
+    {% endif %}
+
+{% endblock %}
