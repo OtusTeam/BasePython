@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_title|default:"Zoo" }}</title>
+</head>
+<body>
+
+{% block menu %}
+    <ul>
+        <li><a href="{% url 'main' %}">main</a></li>
+        <li><a href="{% url 'myauth:register' %}">user register</a></li>
+        <li>
+            {% if user.is_anonymous %}
+                <a href="{% url 'myauth:login' %}">login</a>
+            {% else %}
+                <a href="{% url 'myauth:logout' %}">logout</a>
+            {% endif %}
+        </li>
+    </ul>
+{% endblock %}
+
+{% block main_content %}
+{% endblock %}
+
+</body>
+</html>
