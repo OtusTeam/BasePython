@@ -14,3 +14,4 @@
 - [Урок 9. Тестирование, pytest, coverage, фикстуры, моки](lessons/lesson.09/)
 - [Урок 10. Знакомство со встроенными модулями](lessons/lesson.10/)
 - [Урок 11. Файлы и сеть](lessons/lesson.11/)
+- [Урок 12. FastAPI: быстрая разработка API](lessons/lesson.12/)
