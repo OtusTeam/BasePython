@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  pg:
+    image: postgres
+#    build:
+#      dockerfile: ./Dockerfile
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: john
+      POSTGRES_PASSWORD: passwd!
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - pg-data:/var/lib/postgresql/data/pgdata
+#      - /home/users/suren/pg-data:/var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+
+volumes:
+  pg-data:
