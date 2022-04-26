@@ -1,0 +1,4 @@
+asn1crypto==1.5.1
+pg8000==1.26.1
+scramp==1.4.1
+SQLAlchemy==1.4.35
