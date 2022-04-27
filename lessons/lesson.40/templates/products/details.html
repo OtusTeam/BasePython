@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% from 'macros/back_to_products_list.html' import back_to_products_list %}
+
+{% block title %}
+Product #{{ product.id }}
+{% endblock %}
+
+{% block body %}
+  <h3>Product #{{ product.id }} details</h3>
+  <div>
+    Product name: <strong>{{ product.name }}</strong>
+  {% if product.is_new %}
+    <span class="badge bg-secondary">New</span>
+  {% endif %}
+  </div>
+  {{ back_to_products_list() }}
+{% endblock %}

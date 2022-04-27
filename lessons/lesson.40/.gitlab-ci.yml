@@ -1,0 +1,149 @@
+# This file is a template, and might need editing before it works on your project.
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
+
+# This is a sample GitLab CI/CD configuration file that should run without any modifications.
+# It demonstrates a basic 3 stage CI/CD pipeline. Instead of real tests or scripts,
+# it uses echo commands to simulate the pipeline execution.
+#
+# A pipeline is composed of independent jobs that run scripts, grouped into stages.
+# Stages run in sequential order, but jobs within stages run in parallel.
+#
+# For more information, see: https://docs.gitlab.com/ee/ci/yaml/index.html#stages
+
+stages:          # List of stages for jobs, and their order of execution
+#  - build
+  - testing
+  - build
+  - deploy
+#
+#build-job:       # This job runs in the build stage, which runs first.
+#  stage: build
+#  script:
+#    - echo "Compiling the code..."
+#    - echo "Compile complete."
+#
+#unit-test-job:   # This job runs in the test stage.
+#  stage: test    # It only starts when the job in the build stage completes successfully.
+#  script:
+#    - echo "Running unit tests... This will take about 60 seconds."
+#    - sleep 60
+#    - echo "Code coverage is 90%"
+#
+#lint-test-job:   # This job also runs in the test stage.
+#  stage: test    # It can run at the same time as unit-test-job (in parallel).
+#  script:
+#    - echo "Linting code... This will take about 10 seconds."
+#    - sleep 10
+#    - echo "No lint issues found."
+#
+#deploy-job:      # This job runs in the deploy stage.
+#  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+#  script:
+#    - echo "Deploying application..."
+#    - echo "Application successfully deployed."
+
+
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml
+
+# ==================================
+# ==================================
+# ==================================
+
+# Official language image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/python/tags/
+image: python:3.9.12
+
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+# Pip's cache doesn't store the python packages
+# https://pip.pypa.io/en/stable/topics/caching/
+#
+# If you want to also cache the installed packages, you have to install
+# them in a virtualenv and cache it as well.
+cache:
+  paths:
+    - .cache/pip
+#    - venv/
+
+before_script:
+  - python --version  # For debugging
+  - pip install -U pip
+  - pip install -r requirements.txt
+  - pip install -r requirements-dev.txt
+#  - pip install virtualenv
+#  - virtualenv venv
+#  - source venv/bin/activate
+
+lint:
+  stage: testing
+  script:
+#    - pylint $(git ls-files '*.py')
+    - echo "todo lint!"
+
+test:
+  stage: testing
+  services:
+    - postgres:14
+  variables:
+    POSTGRES_DB: testingdb
+    POSTGRES_USER: app
+    POSTGRES_PASSWORD: passwordqwert
+    SQLALCHEMY_DATABASE_URI: "postgresql+psycopg2://app:passwordqwert@postgres/testingdb"
+    COVERAGE_DIR: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+  script:
+    - flask db upgrade
+    - pytest -s -vv -rsx --cov=views --cov=models --cov=app --cov-report=html:$COVERAGE_DIR
+  artifacts:
+    name: "coverage-report"
+    paths:
+      - $COVERAGE_DIR
+    expire_in: 1 week
+    when: on_success
+
+
+build-and-push:
+  stage: build
+  image: docker:20.10.7
+  only:
+    - master
+  services:
+    - docker:20.10.7-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_BUILDKIT: 1
+  before_script:
+    - docker info
+    - apk add --no-cache docker-compose
+    - docker-compose --version
+    - docker login -u mahenzon -p $DOCKER_HUB_PASSWORD
+  script:
+    - echo "Build and push image"
+    - docker-compose pull shop-prod || true
+    - docker-compose build --build-arg BUILDKIT_INLINE_CACHE=1 shop-prod
+    - docker-compose push shop-prod
+    - echo "done!"
+
+deploy-remote:
+  stage: deploy
+  script:
+    - echo "Deploy"
+    - curl -X POST https://httpbin.org/post -h "x-commit-sha:${CI_COMMIT_SHORT_SHA}" -d 'foo=bar'
+#    - pip install sphinx sphinx-rtd-theme
+#    - cd doc
+#    - make html
+#    - mv build/html/ ../public/
+#  artifacts:
+#    paths:
+#      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

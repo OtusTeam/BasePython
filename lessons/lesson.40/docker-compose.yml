@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  pg:
+    image: postgres # use latest official postgres version
+    environment:
+      POSTGRES_DB: shop
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+
+  shop-prod:
+    image: mahenzon/base-python-shop-2021-11:latest
+    build:
+      context: .
+      dockerfile: ./docker-build/shop-prod/Dockerfile
+    environment:
+      CONFIG: ProductionConfig
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://app:password@pg/shop
+    ports:
+      - "5000:80"
+    depends_on:
+      - pg
+
+
+volumes:
+  pg-data:
