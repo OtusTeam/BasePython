@@ -1,0 +1,10 @@
+alembic==1.7.7
+asn1crypto==1.5.1
+importlib-metadata==4.11.3
+importlib-resources==5.7.1
+Mako==1.2.0
+MarkupSafe==2.1.1
+pg8000==1.26.1
+scramp==1.4.1
+SQLAlchemy==1.4.35
+zipp==3.8.0
