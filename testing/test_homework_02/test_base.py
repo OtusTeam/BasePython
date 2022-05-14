@@ -85,6 +85,11 @@ class TestVehicle:
         # set fuel enough only for 2
         assert vehicle.fuel_consumption > 1
         vehicle.fuel = vehicle.fuel_consumption * 2 + 1
+        # store how much fuel is before trying to move
+        fuel = vehicle.fuel
 
         with pytest.raises(exceptions.NotEnoughFuel):
             vehicle.move(3)
+        
+        # check no fuel was spent on a faulty attempt
+        assert vehicle.fuel == fuel, 'lost some fuel after a faulty attempt to move!'
