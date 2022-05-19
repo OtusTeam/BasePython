@@ -21,3 +21,4 @@
 - [Урок 16. SQLAlchemy: связи между таблицами в БД](lessons/lesson.16/)
 - [Урок 17. Миграции схем: alembic](lessons/lesson.17/)
 - [Урок 18. Асинхронное программирование в Python](lessons/lesson.18/)
+- [Урок 19. Сложные связи в БД: Many-To-Many](lessons/lesson.19/)
