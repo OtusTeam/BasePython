@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block title %}
+      Base Title
+    {% endblock %}
+  </title>
+</head>
+<body>
+{% block body %}
+  Base Body
+{#  <small>#}
+{#  {% block small %}#}
+{#  small text#}
+{#  {% endblock %}#}
+{#  </small>#}
+{% endblock %}
+</body>
+<footer>
+  <small>
+    OTUS &copy; 2022
+  </small>
+</footer>
+</html>
