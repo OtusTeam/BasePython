@@ -1,6 +1,7 @@
 FROM python:3.9-bullseye
 
-ENV PYTHONBUFFERED=1
+# https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUNBUFFERED
+ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
