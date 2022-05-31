@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Product #{{ product_id }}
+{% endblock %}
+
+
+{% block body %}
+  <h1>Product {{ product_name }}</h1>
+
+  <br>
+  <div>
+    <a href="{{ url_for('products_app.list') }}">
+      Back to products list
+    </a>
+  </div>
+
+  <br>
+  <div>
+    <button id="delete-product">Delete!</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/product-details.js') }}"></script>
+
+{% endblock %}

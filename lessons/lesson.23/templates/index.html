@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <style>
+    html {
+      /* font-size: 25px; */
+      background: antiquewhite;
+    }
+
+    body {
+      /* font-size: 1.5em; */
+      background: aquamarine;
+    }
+
+    h1, h2 {
+      font-family: ".AppleSystemUIFont", "Comic Sans MS", serif;
+    }
+
+    p {
+      font-family: "Bangla MN", serif;
+    }
+
+    p.lorem-paragraph {
+      font-family: Damascus, serif;
+    }
+
+    .green-button {
+      background-color: #008CBA; /* Green */
+      /* border: none; */
+      border: 3px double darkblue;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      margin: 25px 2px;
+      cursor: pointer;
+
+      /* display: inline-block; */
+      /* font-size: 16px; */
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+    .button:hover {
+      background-color: #3e8e41
+    }
+
+    .button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+
+    #click-btn {
+      background-color: #3e6e8e;
+    }
+
+    #click-btn:active {
+      background-color: #203e54;
+    }
+
+    div > p > span {
+      color: blueviolet;
+    }
+
+    /*
+    ul > li:nth-child(2) > a, button {
+      background-color: #3e8e41;
+    }
+     */
+  </style>
+{% endblock %}
+
+{% block title %}
+  Index
+{% endblock %}
+
+{% block body %}
+  <div>
+    <h1>Index page</h1>
+    <span>Hello span in div!</span>
+    <p style="font-family: Arial, serif">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cumque
+      maiores non sit tempore! Architecto autem cumque eos hic impedit, iste modi quisquam saepe sapiente soluta
+      voluptate voluptatum. Exercitationem, sint?
+      <span>Hello span inside a paragraph inside a div!</span>
+    </p>
+    <p class="lorem-paragraph">2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cumque maiores non
+      sit tempore! Architecto autem cumque eos hic impedit, iste modi quisquam saepe sapiente soluta voluptate
+      voluptatum. Exercitationem, sint?</p>
+    <p>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cumque maiores non sit tempore! Architecto
+      autem cumque eos hic impedit, iste modi quisquam saepe sapiente soluta voluptate voluptatum. Exercitationem,
+      sint?</p>
+  </div>
+  <div>
+    <ul>
+      <li>
+        <div class="green-button">It's a div</div>
+      </li>
+      <li>
+        <button class="green-button">It's a button</button>
+      </li>
+      <li>
+        <a class="green-button" href="#">It's a link (<code>a href</code>)</a>
+      </li>
+      <li>
+        <button class="green-button">It's a button</button>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <p>Clicked <span id="click-count">0</span> time(s)!</p>
+    <button id="click-btn" class="button">Click me!</button>
+    <button class="button" onclick="handleClick()">Click me!</button>
+  </div>
+  <br/>
+
+  <script>
+    // window.onload = function () {
+      // alert('Hello!');
+      console.log('Hello world!');
+
+      // const answer = 42;
+      // let numberOfClicks = 0;
+      // numberOfClicks += 1
+      // numberOfClicks += 1
+
+      /*
+      const countSpan = document.getElementById('click-count');
+      console.log(String(countSpan));
+      console.log(countSpan);
+      countSpan.innerText = "123";
+      console.log(countSpan);
+      console.log(answer, numberOfClicks, answer / numberOfClicks);
+
+    */
+      let numberOfClicks = 0;
+      const countSpan = document.getElementById('click-count');
+
+      function increaseCounter() {
+        numberOfClicks += 1;
+      }
+      function displayCurrentCount() {
+        countSpan.innerText = numberOfClicks;
+      }
+
+      function handleClick() {
+        increaseCounter();
+        displayCurrentCount();
+      }
+
+      // document.getElementById('click-btn').addEventListener('click', handleClick)
+
+      const clickBtnElem = document.getElementById('click-btn');
+      // clickBtnElem.onclick = handleClick
+      // clickBtnElem.addEventListener('click', handleClick)
+      // clickBtnElem.addEventListener('mouseover', handleClick)
+      clickBtnElem.addEventListener('click', function () {
+        console.log('handling click');
+        handleClick();
+      })
+
+      // init();
+      // doSomethingElse();
+    // };
+  </script>
+
+  <noscript>
+    We need JS to work properly!
+  </noscript>
+{% endblock %}

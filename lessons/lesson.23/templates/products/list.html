@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+  <h1>Products:</h1>
+  {% if products %}
+    <ul>
+      {% for product_id, product_name in products %}
+        <li>
+          <a href="{{ url_for('products_app.details', product_id=product_id) }}">
+            {{ product_name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <div><strong>No products</strong></div>
+  <br>
+  <div>
+    <a href="{{ url_for('products_app.add') }}">
+      Add product
+    </a>
+  </div>
+{% endblock %}
+
+{% block title %}
+  Products list
+{% endblock %}
