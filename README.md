@@ -27,3 +27,4 @@
 - [Урок 22. Знакомство с веб разработкой на Flask](lessons/lesson.22/)
 - [Урок 23. Основы фронтенда](lessons/lesson.23)
 - [Урок 24. Знакомство с Bootstrap](lessons/lesson.24)
+- [Урок 25. Flask-SQLAlchemy, Flask-Migrate](lessons/lesson.25)
