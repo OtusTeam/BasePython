@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Add product
+{% endblock %}
+
+{% block body %}
+  <h1>Add product</h1>
+  <form method="post">
+
+    {{ form.hidden_tag() }}
+
+    {{ form.name.label(class='form-label') }}
+    {{ form.name(class='form-control', placeholder='Desktop') }}
+
+    <div class="form-check">
+
+      {{ form.is_new.label(class='form-check-label') }}
+      {{ form.is_new(class='form-check-input') }}
+    </div>
+
+    {% if form.errors %}
+      <div class="errors my-2">
+        {% for name, errors in form.errors.items() %}
+          <div class="alert alert-danger">
+            {% if name %}
+              <strong>{{ name }}</strong>
+            {% endif %}
+            <ul>
+              {% for error in errors %}
+                <li>{{ error }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    <button type="submit" class="btn btn-primary my-2">Create</button>
+  </form>
+  <br>
+  <div>
+    <a href="{{ url_for('products_app.list') }}">
+      Back to products list
+    </a>
+  </div>
+{% endblock %}
