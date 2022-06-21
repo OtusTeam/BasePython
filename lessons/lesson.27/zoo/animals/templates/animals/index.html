@@ -1,0 +1,23 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Animals list
+{% endblock %}
+
+
+{% block body %}
+  <h1>Hello Animals!</h1>
+  <div>
+    <code>{{ request.method }}</code>
+    <code>{{ request.path }}</code>
+    <ul>
+      {% for animal in animals %}
+        <li>
+          <a href="{% url 'animals:details' animal.id %}">
+            {{ animal.name }}</a>
+           ({{ animal.kind }})
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
