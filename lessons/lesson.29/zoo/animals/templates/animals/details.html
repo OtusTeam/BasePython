@@ -1,0 +1,37 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Animal {{ animal.name }}
+{% endblock %}
+
+{% block body %}
+  <h1>Animal {{ animal.name }}</h1>
+  <div>
+    <ul>
+      <li>Age: {{ animal.age }}</li>
+      <li>Kind: {{ animal.kind }}</li>
+    </ul>
+    <div>
+      <strong>Description:</strong>
+      <p>{{ animal.description }}</p>
+    </div>
+
+    <div>
+      <strong>Biography:</strong>
+      <p>{{ animal.details.biography }}</p>
+    </div>
+
+    <div>
+      <strong>Food:</strong>
+      <ul>
+        {% for food in animal.food.all %}
+          <li>{{ food.name }}</li>
+        {% endfor %}
+
+      </ul>
+    </div>
+
+    <a href="{% url 'animals:list' %}">Back to animals</a>
+  </div>
+
+{% endblock %}
