@@ -1,0 +1,21 @@
+version: "3.2"
+services:
+  rabbitmq:
+    image: rabbitmq:3-alpine
+    ports:
+        - "5672:5672"
+#        - "15672:15672"
+    volumes:
+        - rmq-data:/var/lib/rabbitmq
+        - rmq-log:/var/log/rabbitmq
+
+  maildev:
+    image: maildev/maildev
+    restart: on-failure
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+
+volumes:
+  rmq-data:
+  rmq-log:

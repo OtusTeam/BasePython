@@ -1,0 +1,15 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Create Animal
+{% endblock %}
+
+{% block body %}
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+{#    {{ form.as_ul }}#}
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}

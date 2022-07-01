@@ -1,0 +1,32 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Animals list
+{% endblock %}
+
+
+{% block body %}
+  <h1>Hello Animals!</h1>
+  <div>
+    <ul>
+       {% for animal in object_list %}
+      {# {% for animal in animal_list %} #}
+{#      {% for animal in animals %}#}
+        <li>
+          <a href="{% url 'animals:details' animal.id %}">
+            {{ animal.name }}</a>
+          ({{ animal.kind.name }})
+          <form action="{% url 'animals:delete' animal.pk %}" method="post">
+            {% csrf_token %}
+            {# onclick="document.getElementById('my_form') #}
+            <input type="submit" value="Delete">
+          </form>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <hr>
+  <div>
+    <a href="{% url 'animals:create' %}">Create animal</a>
+  </div>
+{% endblock %}

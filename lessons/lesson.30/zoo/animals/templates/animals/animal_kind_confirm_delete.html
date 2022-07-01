@@ -1,0 +1,21 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Archive animal kind {{ kind.name }}
+{% endblock %}
+
+{% block body %}
+  <h1>Archive animal kind {{ kind.name }}?</h1>
+  <form method="post">
+    {% csrf_token %}
+
+{#    <p>Are you sure you want to delete "{{ object }}"?</p>#}
+    {{ form }}
+    <input type="submit" value="Archive">
+  </form>
+
+  <br>
+  <div>
+    <a href="{% url 'animals:animal-kinds' %}">Animals kinds</a>
+  </div>
+{% endblock %}
