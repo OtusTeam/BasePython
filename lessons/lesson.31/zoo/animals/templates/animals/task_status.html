@@ -1,0 +1,11 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Task status
+{% endblock %}
+
+
+{% block body %}
+  <h1>{{ task_id }}</h1>
+  <h2>Status: <code>{{ status }}</code></h2>
+{% endblock %}
