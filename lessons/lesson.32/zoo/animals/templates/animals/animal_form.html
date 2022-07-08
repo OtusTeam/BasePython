@@ -1,0 +1,20 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Create Animal
+{% endblock %}
+
+{% block body %}
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {#    {{ form.as_ul }}#}
+    <input type="submit" value="Save">
+  </form>
+
+  <br>
+  <div>
+    <a href="{% url 'animals:list' %}">Back to animals</a>
+  </div>
+{% endblock %}

@@ -34,3 +34,4 @@
 - [Урок 29. Django и отложенные задачи](lessons/lesson.29)
 - [Урок 30. Django Class Based Views, generics, Forms](lessons/lesson.30)
 - [Урок 31. Django Auth. User, Permissions](lessons/lesson.31)
+- [Урок 32. Тестирование Django приложения](lessons/lesson.32)

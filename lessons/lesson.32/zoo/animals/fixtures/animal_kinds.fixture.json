@@ -1,0 +1,65 @@
+[
+  {
+    "model": "animals.animalkind",
+    "pk": 1,
+    "fields": {
+      "name": "cat",
+      "description": "All cats",
+      "deleted": false
+    }
+  },
+  {
+    "model": "animals.animalkind",
+    "pk": 2,
+    "fields": {
+      "name": "dog",
+      "description": "all good boys",
+      "deleted": false
+    }
+  },
+  {
+    "model": "animals.animalkind",
+    "pk": 3,
+    "fields": {
+      "name": "parrot",
+      "description": "parrots",
+      "deleted": false
+    }
+  },
+  {
+    "model": "animals.animalkind",
+    "pk": 4,
+    "fields": {
+      "name": "mice",
+      "description": "",
+      "deleted": false
+    }
+  },
+  {
+    "model": "animals.animalkind",
+    "pk": 5,
+    "fields": {
+      "name": "bears",
+      "description": "",
+      "deleted": true
+    }
+  },
+  {
+    "model": "animals.animalkind",
+    "pk": 6,
+    "fields": {
+      "name": "birds",
+      "description": "",
+      "deleted": false
+    }
+  },
+  {
+    "model": "animals.animalkind",
+    "pk": 7,
+    "fields": {
+      "name": "stones",
+      "description": "",
+      "deleted": true
+    }
+  }
+]
