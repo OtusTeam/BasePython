@@ -14,3 +14,4 @@
 - [Урок 9. Датаклассы. Виртуальное окружение](lessons/lesson.09/)
 - [Урок 10. Тесты](lessons/lesson.10/)
 - [Урок 11. Знакомство со встроенными модулями: os, pathlib, functools, itertools](lessons/lesson.11/)
+- [Урок 12. Файлы и сеть](lessons/lesson.12/)
