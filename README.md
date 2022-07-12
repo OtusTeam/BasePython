@@ -35,3 +35,4 @@
 - [Урок 30. Django Class Based Views, generics, Forms](lessons/lesson.30)
 - [Урок 31. Django Auth. User, Permissions](lessons/lesson.31)
 - [Урок 32. Тестирование Django приложения](lessons/lesson.32)
+- [Урок 33. Фабрики: Faker, mixer, Factory Boy](lessons/lesson.33)
