@@ -16,3 +16,4 @@
 - [Урок 11. Знакомство со встроенными модулями: os, pathlib, functools, itertools](lessons/lesson.11/)
 - [Урок 12. Файлы и сеть](lessons/lesson.12/)
 - [Урок 13. FastAPI](lessons/lesson.13/)
+- [Урок 14. Docker, системы контроля зависимостей](lessons/lesson.14/)
