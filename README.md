@@ -37,3 +37,4 @@
 - [Урок 32. Тестирование Django приложения](lessons/lesson.32)
 - [Урок 33. Фабрики: Faker, mixer, Factory Boy](lessons/lesson.33)
 - [Урок 34. NumPy](lessons/lesson.34)
+- [Урок 35. Pandas: аналитика данных](lessons/lesson.35)
