@@ -38,3 +38,4 @@
 - [Урок 33. Фабрики: Faker, mixer, Factory Boy](lessons/lesson.33)
 - [Урок 34. NumPy](lessons/lesson.34)
 - [Урок 35. Pandas: аналитика данных](lessons/lesson.35)
+- [Урок 36. OpenCV](lessons/lesson.36)
