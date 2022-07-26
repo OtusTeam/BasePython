@@ -39,3 +39,4 @@
 - [Урок 34. NumPy](lessons/lesson.34)
 - [Урок 35. Pandas: аналитика данных](lessons/lesson.35)
 - [Урок 36. OpenCV](lessons/lesson.36)
+- [Урок 37. GitHub Actions](lessons/lesson.37)
