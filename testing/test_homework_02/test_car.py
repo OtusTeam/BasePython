@@ -35,3 +35,15 @@ class TestCar:
         engine_attr = getattr(module_car.Car, "engine", None)
         if engine_attr:
             assert (not isinstance(engine_attr, module_engine.Engine)), "please don't set mutables (instances) on the class-level"
+
+    def test_car_is_based_only_on_vehicle(self):
+        """
+        No extra parents!
+        """
+        car_mro = module_car.Car.mro()
+        assert car_mro == [
+            module_car.Car,
+            module_base.Vehicle,
+            module_base.ABC,
+            object,
+        ]
