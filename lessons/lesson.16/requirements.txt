@@ -1,0 +1,5 @@
+asn1crypto==1.5.1
+greenlet==1.1.2
+pg8000==1.26.0
+scramp==1.4.1
+SQLAlchemy==1.4.35

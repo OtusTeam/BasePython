@@ -18,4 +18,8 @@
 - [Урок 13. FastAPI](lessons/lesson.13/)
 - [Урок 14. Docker, системы контроля зависимостей](lessons/lesson.14/)
 - [Урок 15. Базы данных. Знакомство с языком SQL](lessons/lesson.15/)
+- [Урок 16. ORM: SQLAlchemy](lessons/lesson.16/)
+- [Урок 17. SQLAlchemy: связи между таблицами в БД](lessons/lesson.17/)
+- [Урок 18. Миграции схем: alembic](lessons/lesson.18/)
+- [Урок 19. Сложные связи в БД](lessons/lesson.19/)
 - [Урок 20. Асинхронное программирование в Python](lessons/lesson.20/)
