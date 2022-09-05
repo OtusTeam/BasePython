@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <style>
+    /*
+      html {
+        font-size: 22px;
+        background-color: lightgray;
+      }
+
+      body {
+        padding: 1em;
+      }
+
+     */
+
+    footer {
+      /*font-size: 80%;*/
+      font-size: 0.8em;
+      color: darkgray;
+    }
+  </style>
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/homepage.css') }}">
+{% endblock %}
+
+{% block title %}
+  Index page
+{% endblock %}
+
+{% block body %}
+  <div>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+    <p>
+      At eius fuga id maiores, numquam omnis totam vero voluptas!
+      Delectus doloremque earum, esse natus nesciunt
+      pariatur placeat quae rem unde voluptatibus!
+    </p>
+    <p>
+      Duis consequat metus at magna mattis, <strong>in pulvinar dolor eleifend</strong>. Cras <em>faucibus magna mi</em>,
+      interdum vestibulum
+      metus fermentum quis. Maecenas sed sapien odio. Praesent dapibus, risus et ultrices convallis, risus tortor
+      vestibulum mauris, <strong>posuere <em>porttitor massa</em></strong> justo et nulla. <u>Praesent vel</u> mauris
+      quis arcu consectetur ultricies.
+      Proin vitae urna fringilla, pretium nisi vel, <s>hendrerit nunc</s>. In tincidunt nec sem et commodo.
+    </p>
+    <h2>Curabitur vulputate faucibus turpis, eu placerat diam volutpat fermentum.</h2>
+    <ol>
+      {#      {% for name in ['Apple', 'Orange', 'Strawberry'] %}#}
+      {#        <li>{{ name }}</li>#}
+      {#      {% endfor %}#}
+
+      <li>
+        In lobortis elit nulla, at <s>porttitor</s> quam bibendum fringilla.
+      </li>
+      <li>
+        Aenean est felis, <strong>dapibus non sodales</strong> nec, congue ac ipsum.
+      </li>
+      <li>
+        Nunc condimentum <em>nec sapien <strong>a viverra</strong></em>.
+      </li>
+
+    </ol>
+
+    <p>
+      Ясность нашей позиции очевидна: повышение уровня гражданского сознания создаёт необходимость включения в
+      производственный план целого ряда внеочередных мероприятий с учётом комплекса новых предложений. Безусловно,
+      консультация с широким активом, в своём классическом представлении, допускает внедрение экспериментов, поражающих
+      по своей масштабности и грандиозности. Задача организации, в особенности же постоянный количественный рост и сфера
+      нашей активности напрямую зависит от существующих финансовых и административных условий.
+    </p>
+
+
+    <button
+      id="btn-click"
+      {#      onclick="handleClick()"#}
+      class="push-btn">
+      Click Me
+    </button>
+    <div style="margin-top: 10px;">
+      Clicked times: <span id="click-count" class="big-number">0</span>
+    </div>
+    <button id="counter-reset">Reset counter</button>
+
+  </div>
+
+  <script>
+
+    /*
+      console.log('Hello world!');
+      const date = new Date();
+      console.log(date);
+      console.log(date.toUTCString());
+      console.log(date.getTime());
+  */
+
+    const btnClick = document.getElementById('btn-click');
+    const clickCount = document.getElementById('click-count');
+    const counterReset = document.getElementById('counter-reset');
+
+    // btnClick.onclick(handleClick)
+
+    /*
+    btnClick.addEventListener('click', function () {
+      console.log('hello again')
+    })
+     */
+
+    btnClick.addEventListener('click', handleClick);
+
+    // clickCount.innerText = 'None';
+    // console.log(btnClick);
+
+    let clickedTimes = 0;
+
+    function applyCounter() {
+      clickCount.innerText = clickedTimes.toString();
+
+    }
+
+    function handleClick() {
+      // clickedTimes++;
+      clickedTimes += 1;
+      // console.log('clicked button!', clickedTimes);
+      // clickCount.innerText = clickedTimes.toString();
+      applyCounter();
+    }
+
+    counterReset.addEventListener('click', function () {
+      clickedTimes = 0;
+      applyCounter();
+    })
+
+  </script>
+
+{% endblock %}
