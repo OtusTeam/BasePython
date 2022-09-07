@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Product #{{ product_id }}
+{% endblock %}
+
+{% block body %}
+  <h1>Product #{{ product_id }}
+    <code>{{ product_name }}</code></h1>
+
+  {#  #}
+
+  <a class="btn btn-sm btn-danger"
+     href="{{ url_for('products_app.confirm-delete', product_id=product_id) }}">
+    Delete product (with confirmation page)
+  </a>
+
+  <!-- Button trigger modal -->
+  <button
+    type="button"
+    class="btn btn-sm btn-danger my-2"
+    data-bs-toggle="modal"
+    data-bs-target="#delete-product-modal">
+    Delete product (with modal)
+  </button>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="delete-product-modal"
+    tabindex="-1"
+    aria-labelledby="delete-product-modal-label"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="delete-product-modal-label">
+            Delete product #{{ product_id }}</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2>Delete product {{ product_name }}?</h2>
+          <p>Are you sure you want to delete product <code>{{ product_name }}</code>?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal">
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+{#            data-bs-toggle="modal"#}
+            onclick="handleDeleteProduct()"
+            id="btn-confirm-delete"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/product-details.js') }}">
+  </script>
+  <script>
+    function handleDeleteProduct() {
+      sendDeleteRequest(window.location.href, function (data) {
+        console.log('success!', data);
+        window.location.href = data.url || '/';
+      })
+    }
+
+  </script>
+{% endblock %}
