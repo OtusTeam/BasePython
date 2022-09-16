@@ -18,6 +18,7 @@
   - `.gitignore`
   - `requirements.txt`
   - `requirements-dev.txt`
+  - `pytest.ini`
 - проинициализируйте git репозиторий в данном проекте. Выполните добавление файлов и коммит
 - ваш репозиторий готов к публикации
 > Убедитесь, что в вашем репозитории присутствует файл `.github/workflows/run_tests.yml` для GitHub Actions,
