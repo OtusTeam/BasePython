@@ -30,3 +30,4 @@
 - [Урок 25. Фронтенд разработка (Bootstrap, JS)](lessons/lesson.25/)
 - [Урок 26. Flask-SQLAlchemy, Flask-Migrate](lessons/lesson.26/)
 - [Урок 27. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.27/)
+- [Урок 28. Знакомство с Django: модели, админка, шаблоны](lessons/lesson.28/)

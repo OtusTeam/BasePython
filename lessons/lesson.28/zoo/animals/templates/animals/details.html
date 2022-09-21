@@ -1,0 +1,15 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  {{ animal.name }} details
+{% endblock %}
+
+{% block body %}
+  <h1>Animal <strong>{{ animal.name }}</strong></h1>
+  <div>
+    <p>Age: {{ animal.age }}</p>
+    <p>Kind: {{ animal.kind }}</p>
+    <p>Description: {{ animal.description }}</p>
+  </div>
+  <a href="{% url 'animals:index' %}">Back to animals list</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Animals list
+{% endblock %}
+
+{% block body %}
+  <h1>Hello Animals!</h1>
+  <ul class="list-group">
+    {% for animal in animals %}
+      <li class="list-group-item">
+        <a href="{% url 'animals:details' animal.pk %}"
+        >{{ animal.name }} [{{ animal.kind }}] ({{ animal.age }})</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
