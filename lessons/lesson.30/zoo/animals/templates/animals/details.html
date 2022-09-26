@@ -1,0 +1,52 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  {{ animal.name }} details
+{% endblock %}
+
+{% block body %}
+  <h1>Animal <strong>{{ animal.name }}</strong></h1>
+  <div>
+    <p>Age: {{ animal.age }}</p>
+    <p>Kind: {{ animal.kind }}</p>
+    <p>Description: {{ animal.description }}</p>
+  </div>
+  <div>
+    <h2>Profile:</h2>
+    <div>
+
+      <div class="row">
+        <div class="col col-2">
+          <strong>Animal's Origin:</strong>
+        </div>
+        <div class="col">
+          {{ animal.profile.origin }}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-2">
+          <strong>Animal's Biography:</strong>
+        </div>
+        <div class="col">
+          {{ animal.profile.biography }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div>
+    <h2>Food</h2>
+    <ul class="list-group">
+      {% for food in animal.food.all %}
+        <li class="list-group-item">
+          {{ food.name }}{% if food.description %}: <em>{{ food.description }}</em>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="my-2">
+    <a href="{% url 'animals:index' %}">Back to animals list</a>
+  </div>
+{% endblock %}
