@@ -2,8 +2,8 @@ from django.http import HttpRequest
 from django.shortcuts import render, HttpResponse, get_object_or_404
 
 from celery.result import AsyncResult
-from zoo import celery_app
 from .models import Animal
+from .tasks import new_animal_created_notification
 
 
 def index(request: HttpRequest):
@@ -28,7 +28,7 @@ def details(request: HttpRequest, pk: int):
 
 
 def task_status(request: HttpRequest, task_id: str):
-    task: AsyncResult = celery_app.AsyncResult(task_id)
+    task: AsyncResult = new_animal_created_notification.AsyncResult(task_id)
 
     print(task, task.id, task.status, task.backend, task._get_task_meta())
     context = {
