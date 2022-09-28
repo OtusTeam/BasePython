@@ -1,0 +1,22 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Delete animal {{ animal }}
+{% endblock %}
+
+{% block body %}
+  <h1>Delete animal</h1>
+  <form method="post">
+    {% csrf_token %}
+    <p>Are you sure you want to delete animal "{{ animal }}"?</p>
+    {{ form }}
+    <a
+      class="btn btn-secondary"
+      href="{% url 'animals:details' animal.pk %}">
+      Back to animal
+    </a>
+    <button class="btn btn-warning" type="submit">
+      Archive
+    </button>
+  </form>
+{% endblock %}

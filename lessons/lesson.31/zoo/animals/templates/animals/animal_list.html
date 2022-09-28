@@ -1,0 +1,39 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Animals list
+{% endblock %}
+
+{% block body %}
+  <h1>Hello {% firstof view.kwargs.animal_kind 'Animals' %}!</h1>
+  <ul class="list-group">
+    {% for animal in object_list %}
+      <li class="list-group-item">
+        <a href="{% url 'animals:details' animal.pk %}"
+        >{{ animal.name }} [{{ animal.kind }}] ({{ animal.age }})</a>
+      Food: {{ animal.food.all|join:", " }}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="my-2">
+    <a
+      class="btn btn-outline-info"
+      href="{% url 'animals:create' %}">
+      Create animal
+    </a>
+  </div>
+  <div class="my-2">
+    <a
+      href="{% url 'animals:kinds' %}">
+      Animals kinds</a>
+  </div>
+  {% url 'animals:index' as target_url %}
+  {% if request.path != target_url %}
+    <div>
+      <a
+        href="{% url 'animals:index' %}">
+        All Animals</a>
+    </div>
+  {% endif %}
+{% endblock %}
