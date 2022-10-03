@@ -1,0 +1,52 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Login
+{% endblock %}
+
+{% block body %}
+
+  {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
+
+  {% if next %}
+    {% if user.is_authenticated %}
+      <p class="alert alert-danger my-2">
+        Your account doesn't have access to this page. To proceed,
+        please login with an account that has access.</p>
+    {% else %}
+      <p class="alert alert-secondary my-2">
+        Please login to see this page.</p>
+    {% endif %}
+  {% endif %}
+
+  {% if user.is_authenticated %}
+    <div class="alert alert-info my-2" role="alert">
+      You're already authenticated as {{ user }}
+      <br>
+      You can visit your page at <a href="{% url 'myauth:me' %}">my info</a>
+    </div>
+  {% endif %}
+
+
+  <form method="post" action="{% url 'myauth:login' %}">
+    {% csrf_token %}
+    {#    <table>#}
+    {#      <tr>#}
+    {#        <td>{{ form.username.label_tag }}</td>#}
+    {#        <td>{{ form.username }}</td>#}
+    {#      </tr>#}
+    {#      <tr>#}
+    {#        <td>{{ form.password.label_tag }}</td>#}
+    {#        <td>{{ form.password }}</td>#}
+    {#      </tr>#}
+    {#    </table>#}
+
+    {{ form.as_p }}
+
+    <input class="btn btn-primary" type="submit" value="Login">
+    <input type="hidden" name="next" value="{{ next }}">
+  </form>
+
+{% endblock %}

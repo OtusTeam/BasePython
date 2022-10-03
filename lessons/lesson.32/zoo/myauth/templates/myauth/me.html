@@ -1,0 +1,17 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  User info
+{% endblock %}
+
+{% block body %}
+  <h1>Hello {% firstof user.first_name user.email user.username user %}</h1>
+  <h3>Bio:</h3>
+  <p>
+    {% if user.profile.bio %}
+      {{ user.profile.bio }}
+    {% else %}
+      <span>no bio</span>
+    {% endif %}
+  </p>
+{% endblock %}
