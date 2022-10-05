@@ -1,0 +1,42 @@
+[
+  {
+    "model": "animals.animalkind",
+    "pk": 1,
+    "fields": {
+      "name": "tiger",
+      "description": "Tiger"
+    }
+  },
+  {
+    "model": "animals.animalkind",
+    "pk": 2,
+    "fields": {
+      "name": "bear",
+      "description": "Bear"
+    }
+  },
+  {
+    "model": "animals.animalkind",
+    "pk": 3,
+    "fields": {
+      "name": "dog",
+      "description": "Dogs"
+    }
+  },
+  {
+    "model": "animals.animalkind",
+    "pk": 5,
+    "fields": {
+      "name": "bird",
+      "description": "some birds can fly"
+    }
+  },
+  {
+    "model": "animals.animalkind",
+    "pk": 6,
+    "fields": {
+      "name": "cat",
+      "description": "nice cats"
+    }
+  }
+]

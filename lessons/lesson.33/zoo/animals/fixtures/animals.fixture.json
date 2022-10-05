@@ -1,0 +1,74 @@
+[
+  {
+    "model": "animals.animal",
+    "pk": 1,
+    "fields": {
+      "name": "Maria",
+      "age": 10,
+      "kind": 2,
+      "description": "Brown Bear",
+      "archived": true,
+      "food": [
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "model": "animals.animal",
+    "pk": 2,
+    "fields": {
+      "name": "Bob",
+      "age": 1,
+      "kind": 1,
+      "description": "The tiger (Panthera tigris) is the largest living cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange fur with a white underside. An apex predator, it primarily preys on ungulates, such as deer and wild boar. It is territorial and generally a solitary but social predator, requiring large contiguous areas of habitat to support its requirements for prey and rearing of its offspring. Tiger cubs stay with their mother for about two years and then become independent, leaving their mother's home range to establish their own.\r\n\r\nThe tiger was first scientifically described in 1758. It once ranged widely from the Eastern Anatolia Region in the west to the Amur River basin in the east, and in the south from the foothills of the Himalayas to Bali in the Sunda Islands. Since the early 20th century, tiger populations have lost at least 93% of their historic range and have been extirpated from Western and Central Asia, the islands of Java and Bali, and in large areas of Southeast and South Asia and China. What remains of the range where tigers still roam free is fragmented, stretching in spots from Siberian temperate forests to subtropical and tropical forests on the Indian subcontinent, Indochina and a single Indonesian island, Sumatra.",
+      "archived": false,
+      "food": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "animals.animal",
+    "pk": 3,
+    "fields": {
+      "name": "Spot",
+      "age": 4,
+      "kind": 3,
+      "description": "Good Boy",
+      "archived": false,
+      "food": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "animals.animal",
+    "pk": 4,
+    "fields": {
+      "name": "Bell",
+      "age": 1,
+      "kind": 6,
+      "description": "cat cat",
+      "archived": true,
+      "food": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "animals.animal",
+    "pk": 5,
+    "fields": {
+      "name": "Martin",
+      "age": 2,
+      "kind": 6,
+      "description": "Black cat",
+      "archived": true,
+      "food": [
+        1
+      ]
+    }
+  }
+]

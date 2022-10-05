@@ -1,0 +1,38 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Register
+{% endblock %}
+
+{% block body %}
+
+  <h2>Register</h2>
+
+  {% if form.errors %}
+    <div class="alert alert-danger">
+      {{ form.errors }}
+    </div>
+  {% endif %}
+
+  {% if user.is_authenticated %}
+    <div class="alert alert-info my-2" role="alert">
+      You're already authenticated as {{ user }}
+      <br>
+      You can visit your page at <a href="{% url 'myauth:me' %}">my info</a>
+    </div>
+  {% else %}
+
+    <div class="row">
+      <div class="col col-12 col-md-8 col-lg-6">
+        <form method="post" action="{% url 'myauth:register' %}">
+          {% csrf_token %}
+
+          {{ form.as_p }}
+
+          <input class="btn btn-primary" type="submit" value="Register">
+        </form>
+      </div>
+    </div>
+  {% endif %}
+
+{% endblock %}
