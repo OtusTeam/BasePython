@@ -12,3 +12,4 @@
 - [Урок 7. Модули и импорты](lessons/lesson.07/)
 - [Урок 8. Датаклассы. Виртуальное окружение](lessons/lesson.08/)
 - [Урок 9. Тесты](lessons/lesson.09/)
+- [Урок 10. Знакомство со встроенными модулями: os, pathlib, functools, itertools](lessons/lesson.10/)
