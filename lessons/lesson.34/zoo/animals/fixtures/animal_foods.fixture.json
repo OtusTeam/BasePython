@@ -1,0 +1,26 @@
+[
+  {
+    "model": "animals.animalfood",
+    "pk": 1,
+    "fields": {
+      "name": "meat",
+      "description": "red meat"
+    }
+  },
+  {
+    "model": "animals.animalfood",
+    "pk": 2,
+    "fields": {
+      "name": "porridge",
+      "description": ""
+    }
+  },
+  {
+    "model": "animals.animalfood",
+    "pk": 3,
+    "fields": {
+      "name": "honey",
+      "description": ""
+    }
+  }
+]
