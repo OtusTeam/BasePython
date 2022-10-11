@@ -14,3 +14,4 @@
 - [Урок 9. Тесты](lessons/lesson.09/)
 - [Урок 10. Знакомство со встроенными модулями: os, pathlib, functools, itertools](lessons/lesson.10/)
 - [Урок 11. Файлы и сеть](lessons/lesson.11/)
+- [Урок 12. FastAPI](lessons/lesson.12/)
