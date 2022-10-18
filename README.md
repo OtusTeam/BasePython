@@ -16,3 +16,4 @@
 - [Урок 11. Файлы и сеть](lessons/lesson.11/)
 - [Урок 12. FastAPI](lessons/lesson.12/)
 - [Урок 13. Docker; системы контроля зависимостей](lessons/lesson.13/)
+- [Урок 14. Базы данных. Знакомство с языком SQL](lessons/lesson.14/)
