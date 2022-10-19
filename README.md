@@ -37,3 +37,4 @@
 - [Урок 32. Работа с пользователями и права в Django](lessons/lesson.32/)
 - [Урок 33. Тестирование Django приложения](lessons/lesson.33/)
 - [Урок 34. Фабрики: Faker, mixer, Factory Boy](lessons/lesson.34)
+- [Урок 37. OpenCV](lessons/lesson.37)
