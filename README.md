@@ -17,3 +17,4 @@
 - [Урок 12. FastAPI](lessons/lesson.12/)
 - [Урок 13. Docker; системы контроля зависимостей](lessons/lesson.13/)
 - [Урок 14. Базы данных. Знакомство с языком SQL](lessons/lesson.14/)
+- [Урок 15. ORM: SQLAlchemy](lessons/lesson.15/)

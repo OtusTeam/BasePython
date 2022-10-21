@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  pg:
+    container_name: "pg-blog-db"
+    image: postgres
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: passwd!
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
