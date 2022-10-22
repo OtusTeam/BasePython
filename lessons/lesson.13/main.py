@@ -14,7 +14,7 @@ app.include_router(users_router)
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"Hello": "World!"}
 
 
 @app.get("/hello")
