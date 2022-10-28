@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  pg:
+    image: postgres
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: otus
+      POSTGRES_PASSWORD: pass
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5433:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data/pgdata
+
+volumes:
+  db-data:
