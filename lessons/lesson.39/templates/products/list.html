@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Products list
+{% endblock %}
+
+{% block body %}
+  {% if products %}
+    <h1>List of products:</h1>
+    <ul class="list-group">
+      {% for product in products %}
+        <li class="list-group-item">
+          <a class="text-decoration-none"
+             href="{{ url_for('products_app.details', product_id=product.id) }}">
+            {{ product.name }}
+          </a>
+
+            {% if product.is_new %}
+              <span class="badge bg-secondary">New</span>
+            {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <h1>No products yet</h1>
+  {% endif %}
+
+{% endblock %}

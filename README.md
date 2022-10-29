@@ -39,3 +39,4 @@
 - [Урок 34. Фабрики: Faker, mixer, Factory Boy](lessons/lesson.34)
 - [Урок 37. OpenCV](lessons/lesson.37)
 - [Урок 38. GitHub Actions](lessons/lesson.38)
+- [Урок 39. GitLab CI](lessons/lesson.39)
