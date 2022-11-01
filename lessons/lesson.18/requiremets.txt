@@ -1,0 +1,4 @@
+SQLAlchemy==1.4.35
+pg8000==1.26.1
+alembic==1.8.1
+black==22.10.0
