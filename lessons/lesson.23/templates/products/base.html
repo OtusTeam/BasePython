@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block title %}
+
+    {% endblock %}
+  </title>
+
+  <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/products-base.css') }}">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto">
+  <style>
+
+    body {
+      font-family: 'Roboto', serif;
+    }
+
+    .red-text {
+      color: red;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  {% block header %}
+    Products app
+  {% endblock %}
+</header>
+
+{% block body %}
+
+{% endblock %}
+
+<script>
+  const nowTime = new Date();
+  console.log('Hello world! Now is', nowTime);
+</script>
+</body>
+</html>

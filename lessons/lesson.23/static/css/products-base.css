@@ -1,0 +1,36 @@
+body {
+  background-color: aliceblue;
+}
+
+li {
+  font-size: 20px;
+}
+
+
+/*
+li.odd {
+  background-color: azure;
+}
+li.even {
+  background-color: lightgray;
+}
+ */
+
+li.product-list-item:nth-child(odd) {
+  background-color: lightgray;
+  list-style-type: circle;
+}
+
+li.product-list-item {
+  list-style-type: square;
+}
+
+a.product-item-link {
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+
+.green-text {
+  color: green;
+}
