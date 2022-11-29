@@ -23,3 +23,4 @@
 - [PythonBasic.2022-02](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2022-02)
 - [PythonBasic.2022-05](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2022-05)
 - [PythonBasic.2022-08](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2022-08)
+- [PythonBasic.2022-11](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2022-11)
