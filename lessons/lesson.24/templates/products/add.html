@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Add product
+{% endblock %}
+
+{% block body %}
+    <div>
+        <div class="h3">Create a new product</div>
+
+        <form method="post">
+            {{ form.hidden_tag() }}
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(size=20, class="form-control") }}
+
+            {% if form.name.errors %}
+                <ul class="errors">
+                    {% for error in form.name.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            <button class="btn btn-outline-primary my-2"
+                    type="submit">
+                Create
+            </button>
+        </form>
+    </div>
+
+{% endblock %}
