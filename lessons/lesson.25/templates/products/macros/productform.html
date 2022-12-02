@@ -1,0 +1,30 @@
+{% macro productform(form, buttontext='Create') %}
+  <form method="post">
+    {{ form.hidden_tag() }}
+    {{ form.name.label(class="form-label") }}
+    {{ form.name(size=20, class="form-control") }}
+
+    {{ form.description.label(class="form-label") }}
+    {{ form.description(class="form-control") }}
+
+    {% if form.errors %}
+      <ul class="alert alert-danger my-3">
+        {% for name, errors in form.errors.items() %}
+          <li>
+            <strong>{{ name }}</strong>
+            <ul>
+              {% for error in errors %}
+                <li>{{ error }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <button class="btn btn-outline-primary my-2"
+            type="submit">
+      {{ buttontext }}
+    </button>
+  </form>
+{% endmacro %}
