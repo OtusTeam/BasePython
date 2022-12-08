@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% from 'products/macros/productform.html' import productform %}
+
+{% set createpath = url_for('products_app.add') %}
+{% set iscreate = request.path == createpath %}
+{% if iscreate %}
+  {% set buttontext = 'Create' %}
+{% else %}
+  {% set buttontext = 'Update' %}
+{% endif %}
+
+{% block title %}
+  {% if iscreate %}
+    Add
+  {% else %}
+    Update {{ product.id }}
+  {% endif %}
+  product
+{% endblock %}
+
+{% block body %}
+  <div>
+    <div class="h3">{% if iscreate %}
+      Create a new product
+    {% else %}
+      Update product <code>{{ product.name }}</code>
+    {% endif %}
+    </div>
+    {{ productform(form, buttontext) }}
+  </div>
+
+{% endblock %}

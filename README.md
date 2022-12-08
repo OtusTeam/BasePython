@@ -29,3 +29,4 @@
 - [Урок 23. Основы фронтенда](lessons/lesson.23/)
 - [Урок 24. Базовый фронтенд](lessons/lesson.24/)
 - [Урок 25. Flask + SQLAlchemy, миграции, формы, CSRF](lessons/lesson.25/)
+- [Урок 26. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.26/)
