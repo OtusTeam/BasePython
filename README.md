@@ -30,3 +30,4 @@
 - [Урок 24. Базовый фронтенд](lessons/lesson.24/)
 - [Урок 25. Flask + SQLAlchemy, миграции, формы, CSRF](lessons/lesson.25/)
 - [Урок 26. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.26/)
+- [Урок 28. Django ORM, django-debug-toolbar](lessons/lesson.28/)
