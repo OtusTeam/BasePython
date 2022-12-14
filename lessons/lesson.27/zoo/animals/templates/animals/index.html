@@ -1,0 +1,10 @@
+{% extends 'root.html' %}
+
+{% block content %}
+    <h1>Hello, {{ user.username|default:"Stranger" }}!</h1>
+    <ul>
+        {% for el in animals %}
+            <li>{{ el.kind }} ({{ el.age }})</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
