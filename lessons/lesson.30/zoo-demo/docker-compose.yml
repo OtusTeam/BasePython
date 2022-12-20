@@ -1,0 +1,11 @@
+version: "3"
+
+
+services:
+  rabbit-mq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"
+      - "8080:15672"
+  worker-email:
+    build: "DockerfileWorkerEmail"
