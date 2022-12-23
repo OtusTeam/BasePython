@@ -1,0 +1,30 @@
+{% extends 'root.html' %}
+
+{% block content %}
+    <h1>Список животных</h1>
+    <ul class="list-group">
+      {% for animal in animals %}
+      <li class="list-group-item">
+        <a class="btn btn-info" href="{% url 'animal' pk=animal.pk %}">{{animal.name}} / {{animal.category.name}}</a>
+          {% if user.is_superuser or user.is_staff %}
+          /
+          <span>
+              <a class="btn btn-warning" href="{% url 'animal_update' pk=animal.pk %}">Изменить</a>
+          </span> /
+          <span>
+              <a class="btn btn-danger" href="{% url 'animal_delete' pk=animal.pk %}">Удалить</a>
+          </span>
+          {% endif %}
+
+      </li>
+      {% endfor %}
+    </ul>
+
+    <p>
+        {{help_text}}
+    </p>
+
+{% if user.is_superuser or user.is_staff %}
+    <a class="btn btn-primary" href="{% url 'animal_create' %}">Создать</a>
+{% endif %}
+{% endblock %}
