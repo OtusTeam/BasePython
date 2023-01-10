@@ -36,3 +36,4 @@
 - [Урок 30. Django Class Based Views, generics, Forms](lessons/lesson.30/)
 - [Урок 31. Работа с пользователями и права в Django](lessons/lesson.31/)
 - [Урок 32. Тестирование Django приложения](lessons/lesson.32/)
+- [Урок 33. Фабрики](lessons/lesson.33/)

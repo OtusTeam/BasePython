@@ -1,0 +1,24 @@
+{% extends 'root.html' %}
+
+{% block content %}
+    <form method="post">
+      {% csrf_token %}
+      {# {{form.as_p}} #}
+
+        {% for field in form %}
+            <div>{{field.label_tag}}</div>
+            <div>
+            {{field}}
+                </div>
+        <hr>
+        {% if field.errors %}
+            {{field.errors}}
+        {% endif %}
+        {% endfor %}
+        {% if form.errors %}
+            {{form.errors}}
+        {% endif %}
+
+      <button class="btn btn-success" type="submit">Сохранить</button>
+    </form>
+{% endblock %}

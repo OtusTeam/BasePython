@@ -1,0 +1,23 @@
+{% extends 'root.html' %}
+
+{% block content %}
+    <h1>Hello, {{ user.username|default:"Guest" }}!</h1>
+    <ul>
+        {% for food in foods %}
+        <li>
+            <div>
+                <h2>{{food.name}}</h2>
+                <ul>
+                    {% for animal in food.animals.all %}
+                        <li>
+                            <div>
+                                <h3>{{animal.name}} ({{animal.category.name}})</h3>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
