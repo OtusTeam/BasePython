@@ -15,3 +15,4 @@
 - [Урок 12. Файлы и сеть](lessons/lesson.12/)
 - [Урок 13. FastAPI](lessons/lesson.13/)
 - [Урок 15. Docker and FastAPI dependencies](lessons/lesson.15/)
+- [Урок 16. Базы данных. Знакомство с языком SQL](lessons/lesson.16/)
