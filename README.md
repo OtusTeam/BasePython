@@ -16,3 +16,4 @@
 - [Урок 13. FastAPI](lessons/lesson.13/)
 - [Урок 15. Docker and FastAPI dependencies](lessons/lesson.15/)
 - [Урок 16. Базы данных. Знакомство с языком SQL](lessons/lesson.16/)
+- [Урок 17. Работа с БД на языке SQL. Системы контроля Python зависимостей](lessons/lesson.17/)
