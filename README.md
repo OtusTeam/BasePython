@@ -10,6 +10,7 @@
 - [Знакомство с веб-разработкой на Flask от 23.05.2022](open-lessons/flask.23.05.2022/)
 - [Основы ООП на Python от 18.08.2022](open-lessons/oop.18.08.2022/)
 - [Продвинутый ООП и исключения в Python от 25.08.2022](open-lessons/oop.25.08.2022/)
+- [Декораторы в Python от 25.01.2023](open-lessons/decorators.25.01.2023/)
 
 
 ### Курсы Python Basic:
