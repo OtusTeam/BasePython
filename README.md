@@ -38,3 +38,4 @@
 - [Урок 32. Тестирование Django приложения](lessons/lesson.32/)
 - [Урок 33. Фабрики](lessons/lesson.33/)
 - [Урок 36. OpenCV](lessons/lesson.36)
+- [Урок 37. GitHub Actions](lessons/lesson.37)
