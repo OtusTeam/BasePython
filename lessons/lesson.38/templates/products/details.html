@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Product #{{ product.id }}
+{% endblock %}
+
+{% block body %}
+  <h1>Product <code>{{ product.name }}</code> details</h1>
+
+  <div><strong>Description:</strong></div>
+  <p>
+    <em>{{ product.description }}</em>
+  </p>
+
+  <div>
+    <a class="btn btn-info text-light"
+      href="{{ url_for('products_app.update', product_id=product.id) }}"
+    >Update product</a>
+  </div>
+
+
+  <!-- Button trigger modal -->
+  <button
+    type="button"
+    class="btn btn-danger my-2"
+    data-bs-toggle="modal"
+    data-bs-target="#deleteProductModal">
+    Delete product {{ product.name }}
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade"
+       id="deleteProductModal"
+       tabindex="-1"
+       aria-labelledby="exampleModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fs-5" id="exampleModalLabel">
+            Delete product #{{ product.id }}
+          </h5>
+          <button type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure?
+        </div>
+        <div class="modal-footer">
+          <button type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal">Close
+          </button>
+          <button type="button"
+                  class="btn btn-danger"
+                  onclick="handleDeleteProduct()"
+                  id="btn-confirm-delete">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/product-details.js') }}"></script>
+  <script>
+    function handleDeleteProduct() {
+      sendDeleteRequest(window.location.href, "{{ csrf_token() }}", function (data) {
+        console.log('success!', data);
+        window.location.href = data.url || '/';
+      })
+    }
+  </script>
+
+{% endblock %}

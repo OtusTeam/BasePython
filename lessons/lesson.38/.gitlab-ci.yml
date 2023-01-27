@@ -1,0 +1,65 @@
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml
+
+# Official language image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/python/tags/
+image: python:3.10
+
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+# Pip's cache doesn't store the python packages
+# https://pip.pypa.io/en/stable/topics/caching/
+#
+# If you want to also cache the installed packages, you have to install
+# them in a virtualenv and cache it as well.
+cache:
+  paths:
+    - .cache/pip
+
+before_script:
+  - python --version  # For debugging
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+  - pip install -r requirements-dev.txt
+
+stages:
+  - testing
+  - build
+  - deploy
+
+test:
+  stage: testing
+  services:
+    - postgres:15
+  variables:
+    POSTGRES_DB: "blog"
+    POSTGRES_USER: "demouser"
+    POSTGRES_PASSWORD: "demopass"
+    COVERAGE_DIR: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+  script:
+    - flask db upgrade
+    - pytest -s -vv -rsx --cov=main --cov=views --cov=models --cov-report=html:./$COVERAGE_DIR
+  artifacts:
+    name: "coverage-report-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+    paths:
+      - $COVERAGE_DIR
+    when: on_success
+    expire_in: 1 week
+
+lint:
+  stage: testing
+  script: echo "Pylint is OK :)"
+
+make_build:
+  stage: build
+  script: echo "Build"
+
+deploy:
+  stage: deploy
+  script: echo "Deploy"
+

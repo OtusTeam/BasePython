@@ -39,3 +39,4 @@
 - [Урок 33. Фабрики](lessons/lesson.33/)
 - [Урок 36. OpenCV](lessons/lesson.36)
 - [Урок 37. GitHub Actions](lessons/lesson.37)
+- [Урок 38. GitLab CI/CD](lessons/lesson.38)
