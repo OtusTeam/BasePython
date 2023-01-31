@@ -1,0 +1,4 @@
+sqlalchemy-stubs
+black
+pylint==2.15.10
+pytest==7.2.1
