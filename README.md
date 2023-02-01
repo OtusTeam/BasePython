@@ -19,3 +19,4 @@
 - [Урок 17. Работа с БД на языке SQL. Системы контроля Python зависимостей](lessons/lesson.17/)
 - [Урок 18. ORM: SQLAlchemy](lessons/lesson.18/)
 - [Урок 19. SQLAlchemy: связи между таблицами в БД](lessons/lesson.19/)
+- [Урок 20. Миграции схем: alembic](lessons/lesson.20/)
