@@ -20,7 +20,6 @@
 - [Урок 15. ORM: SQLAlchemy](lessons/lesson.15/)
 - [Урок 16. SQLAlchemy: связи между таблицами в БД](lessons/lesson.16/)
 - [Урок 17. Миграции схем: alembic](lessons/lesson.17/)
-- [Урок 17. Миграции схем: alembic](lessons/lesson.17/)
 - [Урок 18. Сложные связи в БД](lessons/lesson.18/)
 - [Урок 19. Асинхронное программирование в Python](lessons/lesson.19/)
 - [Урок 20. Асинхронная работа с БД](lessons/lesson.20/)
