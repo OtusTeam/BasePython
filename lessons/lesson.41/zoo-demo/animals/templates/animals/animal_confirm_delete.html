@@ -1,0 +1,17 @@
+{% extends 'root.html' %}
+
+{% block content %}
+
+    Вы действительно хотите удалить:
+    <p>{{object.name}}</p>
+    <p>
+      {{object.category.name}}
+    </p>
+     ?
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Да</button>
+    <a href="{% url 'animals' %}">Нет</a>
+  </form>
+
+{% endblock %}

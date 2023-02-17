@@ -40,3 +40,4 @@
 - [Урок 37. GitHub Actions](lessons/lesson.37)
 - [Урок 38. GitLab CI](lessons/lesson.38)
 - [Урок 39. GitLab CD](lessons/lesson.39)
+- [Урок 41. Консультация, пример Django](lessons/lesson.41)
