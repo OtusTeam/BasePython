@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Hello page
+{% endblock %}
+
+{% block body %}
+  <h1>Hello {{ name }}</h1>
+  <h2>Time <span id="time">0</span></h2>
+  <div>
+  <pre id="product-data"></pre>
+  </div>
+  <script>
+  const spanTimer = document.getElementById("time")
+  const productInfo = document.getElementById("product-data")
+  let seconds = 0
+    setInterval(() => {
+      seconds += 1
+      spanTimer.innerText = seconds.toString()
+      fetch(`/items/${seconds}/`).then(response => response.json()).then(data => {
+        const prettyData = JSON.stringify(data, null, 2)
+        console.log('item data:', data)
+        productInfo.innerText = prettyData
+      })
+    }, 1000)
+  </script>
+{% endblock %}

@@ -12,6 +12,7 @@
 - [Продвинутый ООП и исключения в Python от 25.08.2022](open-lessons/oop.25.08.2022/)
 - [Декораторы в Python от 25.01.2023](open-lessons/decorators.25.01.2023/)
 - [Функции-помощники: map, filter, reduce от 09.02.2023](open-lessons/helper-funcs.09.02.2023/)
+- [Знакомство с веб разработкой на Flask 21.02.2023](open-lessons/flask-.21.02.2023/)
 
 
 ### Курсы Python Basic:
