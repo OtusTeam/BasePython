@@ -1,0 +1,107 @@
+body {
+  background-color: #f7f7f7;
+  /*background-color: darkgray;*/
+}
+
+li::marker {
+  content: '+';
+}
+
+
+a {
+  color: darkblue;
+}
+
+a.product {
+  text-decoration: none;
+  color: blue;
+}
+
+h1.product, h2.product, h3.product {
+  color: green;
+}
+
+#btn-create {
+  background-color: green;
+  /*min-width: 80px;*/
+  /*min-height: 50px;*/
+  margin: 5px 20px 15px 10px;
+  /*padding: 10px;*/
+  /*padding-top: 10px;*/
+  /*padding: 10px 15px 5px;*/
+  padding: 10px 15px 30px 5px;
+  /*margin-left: 10px;*/
+  /*margin-right: 20px;*/
+  /*margin-top: 5px;*/
+  /*margin-bottom: 15px;*/
+
+  border: 5px double darkred;
+}
+
+.button-wrapper {
+  background-color: aquamarine;
+}
+
+
+.push-button {
+  /*display: inline-block;*/
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  /*text-decoration: none;*/
+  /*outline: none;*/
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.push-button:hover {
+  background-color: #3e8e41;
+}
+
+.push-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* animation */
+.slide-in {
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: 100%;
+    /*margin-right: 100%;*/
+    width: 150%;
+    position: absolute;
+  }
+
+  50% {
+    margin-left: 60%;
+    width: 120%;
+  }
+
+
+  75% {
+    margin-right: 50%;
+    width: 110%;
+  }
+
+  100% {
+    margin-left: 0%;
+    /*margin-right: 0%;*/
+    width: 100%;
+    position: unset;
+  }
+}
+
+footer {
+  margin-top: 30px;
+}

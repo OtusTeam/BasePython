@@ -1,0 +1,18 @@
+{% extends 'products/products-base.html' %}
+
+{% block title %}
+  Delete product #{{ product.id }}
+{% endblock %}
+
+{% block body %}
+  <h2>Are you sure you want to delete product {{ product.name }}?</h2>
+
+  <form method="post">
+    <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+  </form>
+  <div>
+    <a href="{{ url_for('products_app.details', product_id=product.id) }}">
+      Back to product
+    </a>
+  </div>
+{% endblock %}

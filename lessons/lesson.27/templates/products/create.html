@@ -1,0 +1,26 @@
+{% extends 'products/products-base.html' %}
+
+{% block title %}
+  Create Product
+{% endblock %}
+
+{% block body %}
+  <h2>Create a new product</h2>
+
+  <form method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label class="form-label" for="product-name-id">Product name</label>
+      <input id="product-name-id" class="form-control" type="text" name="product-name" required>
+    </div>
+    <div class="button-wrapper">
+      <button id="btn-create" class="btn btn-primary" type="submit">Create</button>
+    </div>
+  </form>
+
+  <div class="my-3">
+    <a class="btn btn-secondary" href="{{ url_for('products_app.list') }}">
+      Back to products list
+    </a>
+  </div>
+{% endblock %}
+

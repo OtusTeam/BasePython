@@ -1,0 +1,34 @@
+{% extends 'products/products-base.html' %}
+
+{% block title %}
+  Products list
+{% endblock %}
+
+{% block body %}
+  <h1>Products:</h1>
+  <div>
+    <ul class="list-group">
+      {% for product in products %}
+        <li class="list-group-item">
+          <a
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            data-bs-title="{{ product.short_description }}"
+            class="product slide-in text-decoration-none"
+            href="{{ url_for('products_app.details', product_id=product.id) }}">
+            {{ product.name }}
+          </a>
+          <a class="btn btn-sm btn-danger float-end"
+             href="{{ url_for('products_app.delete', product_id=product.id) }}">
+            Delete
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div>
+    <a href="{{ url_for('products_app.create') }}">Create a new product</a>
+  </div>
+
+{% endblock %}
