@@ -1,0 +1,11 @@
+{% macro form_errors_list(errors_list) %}
+
+  {% if errors_list %}
+    <ul class="alert alert-danger">
+      {% for error in errors_list %}
+        <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+{% endmacro %}
