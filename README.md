@@ -1,4 +1,4 @@
-# Python Basic
+# Python Basic 2023-02
 
 
 ### Занятия
