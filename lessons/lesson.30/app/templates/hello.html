@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Hello View
+{% endblock %}
+
+{% block body %}
+  <h1>Hello {{ name }}!</h1>
+
+  <div onclick="console.log('clicked div')">
+    <p>Count: <span id="count-span">0</span></p>
+    {#    <button onclick="handleClick()" class="push-button">#}
+    <button id="click-button" class="push-button btn btn-outline-primary">
+      Click me
+    </button>
+  </div>
+
+  <div>
+    <h3>Product <span id="product-id"></span> info:</h3>
+    <pre id="product-info">
+    </pre>
+  </div>
+
+  <div class="text-center my-3">
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row">
+      <div class="col-md-8 alert alert-info border border-1 border-dark">.col-md-8</div>
+      <div class="col-6 col-md-4 alert alert-info border border-1 border-dark">.col-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row">
+      <div class="col-6 col-md-4 alert alert-info border border-1 border-warning">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4 alert alert-info border border-1 border-warning">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4 alert alert-info border border-1 border-warning">.col-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <div class="row">
+      <div class="col-6 alert alert-info border border-1 border-success">.col-6</div>
+      <div class="col-6 alert alert-info border border-1 border-success">.col-6</div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/hello-page.js') }}">
+  </script>
+{% endblock %}

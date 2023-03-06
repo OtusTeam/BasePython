@@ -1,0 +1,67 @@
+version: "3.9"
+
+services:
+
+  app: &app-config
+#    image: https://mydomainname.com/my-docker-registry/reponame:latest
+    build:
+      dockerfile: docker-build/app/Dockerfile
+      context: ./
+#      args:
+#        foo: bar
+    environment:
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://username:${POSTGRES_PASSWORD}@pg:5432/blog
+      CONFIG_NAME: ProductionConfig
+    ports:
+      - "1080:80"
+    depends_on:
+      pg:
+        condition: service_healthy
+
+  app-dev:
+    <<: *app-config
+    environment:
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://username:${POSTGRES_PASSWORD}@pg:5432/blog
+      CONFIG_NAME: DevelopmentConfig
+    command:
+      - "python"
+      - "main.py"
+    ports:
+      - "5100:5000"
+    volumes:
+      - ./app:/app
+
+  pg:
+    image: postgres
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - db-data:/var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 5s
+      timeout: 3s
+      retries: 7
+
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+
+  pgadmin:
+    image: "dpage/pgadmin4"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: pgadmin@pgadmin.org
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+       - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+
+volumes:
+  db-data:
+  pgadmin:
