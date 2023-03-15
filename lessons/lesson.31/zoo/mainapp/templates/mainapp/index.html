@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ol>
+        {% for animal in animals %}
+            <li>
+                {{animal.name}} | {{animal.category.name}}
+                <ul>
+                    {% for food in animal.category.foods.all %}
+                        <li>
+                            {{food.name}}
+                        </li>
+
+                    {% endfor %}
+                </ul>
+            </li>
+
+        {% endfor %}
+    </ol>
+</body>
+</html>
