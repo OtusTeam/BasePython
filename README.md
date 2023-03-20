@@ -30,3 +30,4 @@
 - [Урок 29. Flask + SQLAlchemy, миграции, формы, CSRF](lessons/lesson.29/)
 - [Урок 30. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.30/)
 - [Урок 31. Знакомство с Django](lessons/lesson.31/)
+- [Урок 32. Django ORM, django-debug-toolbar](lessons/lesson.32/)
