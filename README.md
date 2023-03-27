@@ -32,3 +32,4 @@
 - [Урок 31. Знакомство с Django](lessons/lesson.31/)
 - [Урок 32. Django ORM, django-debug-toolbar](lessons/lesson.32/)
 - [Урок 33. Django и отложенные задачи](lessons/lesson.33/)
+- [Урок 34. Django Class Based Views, generics, Forms](lessons/lesson.34/)

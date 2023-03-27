@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+        <hr>
+        <p>
+            {{field.label}}
+            {{field}}
+            {% if field.errors %}
+                <ul>
+                    {% for error in field.errors %}
+                        <li>
+                            <div class="text-danger">{{error}}</div>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+            {% endif %}
+        </p>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>
+
+{% endblock %}
