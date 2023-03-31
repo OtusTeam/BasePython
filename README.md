@@ -34,3 +34,4 @@
 - [Урок 33. Django и отложенные задачи](lessons/lesson.33/)
 - [Урок 34. Django Class Based Views, generics, Forms](lessons/lesson.34/)
 - [Урок 35. Работа с пользователями и права в Django](lessons/lesson.35/)
+- [Урок 36. Обновленный пример Flask + SQLAlchemy, диаграмма взаимодействия с приложением](lessons/lesson.36/)

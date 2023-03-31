@@ -1,0 +1,38 @@
+@startuml
+
+actor "User" as user
+participant "Browser" as web_browser
+participant "outer nginx (with SSL)" as outer_nginx
+participant "inner nginx" as inner_nginx
+participant "gunicorn wsgi" as gunicorn_wsgi
+participant "uvicorn worker" as uvicorn_worker
+participant "Python Web App" as pyapp
+
+== Init request ==
+user -> web_browser : "Visit online shop"
+web_browser -> outer_nginx : "Get page /products (HTTPS)"
+outer_nginx -> inner_nginx : "proxy get /products"
+
+== Process request ==
+inner_nginx -> gunicorn_wsgi : "here's web request to /products"
+gunicorn_wsgi -> uvicorn_worker : "pass request to worker \n\
+(gunicorn worker for wsgi app \n\
+or uvicorn worker for asgi app)"
+uvicorn_worker -> pyapp : "process this request"
+
+== Python app process request ==
+pyapp -> pyapp : "processes requests, requests, db.., \n\
+generates response"
+pyapp -> uvicorn_worker : "send response to worker"
+
+== Provide response ==
+uvicorn_worker -> gunicorn_wsgi : "pass response to wsgi"
+gunicorn_wsgi -> inner_nginx : "response goes to inner nginx"
+inner_nginx -> outer_nginx : "nginx proxies response"
+outer_nginx -> web_browser : "here's your response"
+web_browser -> web_browser : "renders response"
+web_browser -> user : "shows response"
+user -> user : "user is happy"
+
+
+@enduml
