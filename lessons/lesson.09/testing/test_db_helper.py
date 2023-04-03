@@ -1,5 +1,6 @@
 from string import ascii_letters
 from random import randint, choices
+from unittest import mock
 
 from pytest import fixture
 
@@ -7,6 +8,7 @@ from db_helper import (
     User,
     get_engine,
     get_connection,
+    get_user,
     Engine,
     Connection,
 )
@@ -55,3 +57,18 @@ class TestUser:
         assert user.age != some_age
         user.set_age(some_age)
         assert user.age == some_age
+
+
+@mock.patch("db_helper.get_connection", autospec=True)
+def test_get_user(mocked_get_connection, user):
+
+    mock_conn = mocked_get_connection.return_value
+    mock_conn.get_user.return_value = user
+
+    username = user.username
+    u = get_user(username)
+
+    assert u is user
+
+    mocked_get_connection.assert_called_once_with()
+    mock_conn.get_user.assert_called_once_with(username)
