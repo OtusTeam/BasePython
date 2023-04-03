@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    <ol>
+        {% for animal in animals %}
+            <li>
+                {{animal.name}} | {{animal.category.name}}
+                <ul>
+                    {% for food in animal.category.foods.all %}
+                        <li>
+                            {{food.name}}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+
+        {% endfor %}
+    </ol>
+{% endblock %}
