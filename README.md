@@ -36,3 +36,4 @@
 - [Урок 35. Работа с пользователями и права в Django](lessons/lesson.35/)
 - [Урок 36. Обновленный пример Flask + SQLAlchemy, диаграмма взаимодействия с приложением](lessons/lesson.36/)
 - [Урок 37. Тестирование Django приложения](lessons/lesson.37/)
+- [Урок 41. OpenCV](lessons/lesson.41/)
