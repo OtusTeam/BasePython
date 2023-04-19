@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Index page
+{% endblock %}
+
+{% block body %}
+  <h1>Hello Index!</h1>
+  <div>
+    <ul>
+      {% for name in ['Bob', 'Alice', 'Jim'] %}
+        <li>{{ name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div>
+    <ul>
+      {% for feature in features %}
+        <li>{{ feature }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div>
+    <p>Links:</p>
+    <ul>
+      <li>
+        <a href="{{ url_for('products_app.list') }}">
+          Products
+        </a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}

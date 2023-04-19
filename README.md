@@ -37,3 +37,4 @@
 - [Урок 36. Обновленный пример Flask + SQLAlchemy, диаграмма взаимодействия с приложением](lessons/lesson.36/)
 - [Урок 37. Тестирование Django приложения](lessons/lesson.37/)
 - [Урок 41. OpenCV](lessons/lesson.41/)
+- [Урок 42. GitHub Actions](lessons/lesson.42/)
