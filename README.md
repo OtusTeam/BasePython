@@ -17,3 +17,4 @@
 - [Урок 13. FastAPI](lessons/lesson.13/)
 - [Урок 14. Docker; системы контроля зависимостей](lessons/lesson.14/)
 - [Урок 15. Базы данных. Знакомство с языком SQL](lessons/lesson.15/)
+- [Урок 16. Линтеры в Python проекте](lessons/lesson.16/)
