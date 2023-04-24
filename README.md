@@ -38,3 +38,4 @@
 - [Урок 37. Тестирование Django приложения](lessons/lesson.37/)
 - [Урок 41. OpenCV](lessons/lesson.41/)
 - [Урок 42. GitHub Actions](lessons/lesson.42/)
+- [Урок 43. GitLab CI](lessons/lesson.43/)
