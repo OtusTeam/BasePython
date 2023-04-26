@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  pg:
+    image: postgres
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: passwd!
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 5s
+      timeout: 3s
+      retries: 7
+
+  shop-prod:
+    image: danteonline/python-base-2022-11
+    build:
+      context: .
+      dockerfile: ./docker-build/shop-prod/Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      pg:
+        condition: service_healthy
+
+volumes:
+  db-data:
