@@ -40,3 +40,4 @@
 - [Урок 42. GitHub Actions](lessons/lesson.42/)
 - [Урок 43. GitLab CI](lessons/lesson.43/)
 - [Урок 44. GitLab CD](lessons/lesson.44/)
+- [Урок 45. Консультация. Асинхронная загрузка, обработка форм в Django, частичная загрузка данных через CSV в Flask](lessons/lesson.45/)

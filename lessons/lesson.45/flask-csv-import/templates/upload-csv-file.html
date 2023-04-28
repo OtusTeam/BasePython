@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Upload file
+{% endblock %}
+
+{% block body %}
+
+  <form method="post" enctype="multipart/form-data">
+    <label for="id-file">Upload CSV</label>
+    <input id="id-file" type="file" name="csv-file">
+    <input type="submit" value="Next">
+  </form>
+{% endblock %}

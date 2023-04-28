@@ -1,0 +1,14 @@
+{% extends 'products/base.html' %}
+
+{% block title %}
+  Card Form
+{% endblock %}
+
+{% block body %}
+  <h2>Card</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create">
+  </form>
+{% endblock %}

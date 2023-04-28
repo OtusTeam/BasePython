@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Select products
+{% endblock %}
+
+{% block body %}
+  <h1>Select what to save:</h1>
+  <div>
+    <form action="{{ url_for('confirm-upload') }}" method="post">
+      <ul>
+
+        {% for product in products %}
+          <li>
+
+            <input type="checkbox" name="product-check" value="{{ product.code }}">
+            <input name="product-code" value="{{ product.code }}">
+            <input name="product-name" value="{{ product.name }}">
+            <input name="product-description" value="{{ product.description }}">
+{#            <input type="hidden" value="json-product-value">#}
+          </li>
+        {% endfor %}
+      </ul>
+
+      <input type="submit" name="Save">
+    </form>
+  </div>
+{% endblock %}

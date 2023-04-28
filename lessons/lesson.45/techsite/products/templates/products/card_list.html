@@ -1,0 +1,18 @@
+{% extends 'products/base.html' %}
+
+{% block title %}
+  Cards
+{% endblock %}
+
+{% block body %}
+  <h2>Cards:</h2>
+  <ul>
+  {% for card in object_list %}
+    <li>
+    {{ card.extra_info }},
+    {{ card.device_type }},
+    {{ card.device_name }}
+    </li>
+  {% endfor %}
+  </ul>
+{% endblock %}
