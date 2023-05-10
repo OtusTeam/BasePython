@@ -20,3 +20,4 @@
 - [Урок 16. Линтеры в Python проекте](lessons/lesson.16/)
 - [Урок 17. ORM: SQLAlchemy](lessons/lesson.17/)
 - [Урок 18. SQLAlchemy: связи между таблицами в БД](lessons/lesson.18/)
+- [Урок 19. Миграции схем: alembic](lessons/lesson.19/)
