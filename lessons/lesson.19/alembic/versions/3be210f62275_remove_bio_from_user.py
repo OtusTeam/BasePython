@@ -83,4 +83,20 @@ def downgrade() -> None:
         .where(authors_table.c.user_id == users_table.c.id)
         .values({users_table.c.bio: authors_table.c.bio})
     )
+
+    # another example:
+
+    metadata = sa.MetaData()
+    metadata.reflect(bind=op.get_bind())
+
+    users_table = metadata.tables["blog_users"]
+    authors_table = metadata.tables["blog_authors"]
+
+    update_stmt = (
+        sa.update(users_table)
+        .where(authors_table.c.user_id == users_table.c.id)
+        .values({users_table.c.bio: authors_table.c.bio})
+    )
+    op.execute(update_stmt)
+
     # ### end Alembic commands ###
