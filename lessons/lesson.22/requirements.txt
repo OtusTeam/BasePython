@@ -1,0 +1,6 @@
+alembic==1.10.4
+asyncpg==0.27.0
+black==23.3.0
+pg8000==1.29.5
+SQLAlchemy==1.4.47
+greenlet==2.0.2

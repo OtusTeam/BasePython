@@ -23,3 +23,4 @@
 - [Урок 19. Миграции схем: alembic](lessons/lesson.19/)
 - [Урок 20. Сложные связи в БД: Many-to-Many](lessons/lesson.20/)
 - [Урок 21. Асинхронное программирование в Python](lessons/lesson.21/)
+- [Урок 22. Асинхронная работа с БД](lessons/lesson.22/)
