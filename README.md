@@ -1,6 +1,6 @@
-# Python Basic
+# Python Basic 2023-05
 
 
 ### Занятия
 
-- [Урок название](lessons/lesson.folder/)
+- [Урок 1. Базовые типы и структуры данных](lessons/lesson.01/)
