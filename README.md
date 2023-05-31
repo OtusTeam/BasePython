@@ -27,3 +27,4 @@
 - [Урок 23. Асинхронная работа API с БД](lessons/lesson.23/)
 - [Урок 24. Очереди в asyncio](lessons/lesson.24/)
 - [Урок 25. Знакомство с веб разработкой на Flask](lessons/lesson.25/)
+- [Урок 26. Основы фронтенда](lessons/lesson.26/)

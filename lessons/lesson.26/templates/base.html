@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Title{% endblock %}</title>
+  {% block head %}
+
+  {% endblock %}
+
+  <style>
+    html {
+      font-size: 20pt;
+    }
+
+    .space-top {
+      margin-top: 1em;
+    }
+
+    .no-underline {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+{% block body %}
+  Base body
+{% endblock %}
+
+<br>
+&copy; OTUS 2023
+</body>
+</html>

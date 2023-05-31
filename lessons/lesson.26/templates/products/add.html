@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Create Product
+{% endblock %}
+
+{% block head %}
+  <style>
+    #prod-name-id {
+      font-size: 0.9em;
+    }
+    #btn-submit-new-product {
+      font-weight: bold;
+    }
+    input[type="submit"] {
+      font-family: Arial, serif;
+      font-size: 1.2em;
+    }
+    a.space-top {
+      color: purple;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <h3>Create a new product:</h3>
+  <div>
+    <form method="post">
+      <label for="prod-name-id">Product name:</label>
+      <input id="prod-name-id" type="text" name="product-name" required="required">
+      <input id="btn-submit-new-product" type="submit" value="Add">
+    </form>
+  </div>
+  <div class="space-top">
+    Some info
+    <a class="space-top" href="{{ url_for('products_app.list') }}">
+      Back to products list
+    </a>
+  </div>
+{% endblock %}
