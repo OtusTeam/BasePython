@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "shop-project"
+version = "0.1.0"
+description = "Flask Shop App"
+authors = ["Suren Khorenyan <surenkhorenyan@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3.2"
+flask-sqlalchemy = "^3.0.3"
+sqlalchemy = "<2"
+flask-migrate = "^4.0.4"
+flask-wtf = "^1.1.1"
+psycopg2 = "^2.9.6"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
