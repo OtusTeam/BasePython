@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Index page
+{% endblock %}
+
+{% block head %}
+  <style>
+    /* CSS - cascade style sheets */
+    /*
+    html {
+      font-size: 22pt;
+    }
+     */
+  </style>
+{% endblock %}
+
+{% block body %}
+  <p class="h2">Hello Index</p>
+
+{#  <button onclick="handleClick()" id="btn-click">#}
+  <button id="btn-click" class="btn btn-secondary">
+    Clicked <span id="click-count">0</span> times
+  </button>
+  <script>
+    const btnClick = document.getElementById('btn-click');
+    const clickCountSpan = document.getElementById('click-count');
+    // btnClick.innerText = 'Click me';
+    let clickCount = 0;
+    function handleClick() {
+      clickCount += 1;
+      console.log('Clicked on button')
+      {#btnClick.innerText = 'Click registered';#}
+      // btnClick.innerText = `Clicked ${clickCount} times`;
+      clickCountSpan.innerText = clickCount.toString();
+    }
+    btnClick.addEventListener('click', handleClick)
+
+  </script>
+  <p class="h4">Links:</p>
+  <ul>
+    <li>
+      <a href="{{ url_for('products_app.list') }}">Products</a>
+    </li>
+    <li>
+      <a href="{{ url_for('items_app.next-item') }}">Items loader</a>
+    </li>
+  </ul>
+{% endblock %}
