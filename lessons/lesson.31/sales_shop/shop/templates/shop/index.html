@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Shop Index
+{% endblock %}
+
+{% block body %}
+  <div>
+    <h1>Shop index</h1>
+    <h3>Products</h3>
+    <ul>
+      {% for product in products %}
+        <li>
+          <code>${{ product.price }}</code>
+          [{{ product.category.name }}]
+{#          [{{ product.category_id }}]#}
+          -
+          {{ product.name }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
