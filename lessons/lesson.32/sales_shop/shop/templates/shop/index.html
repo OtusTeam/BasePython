@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Shop Index
+{% endblock %}
+
+{% block body %}
+  <div>
+    <h1>Shop index</h1>
+    <ul>
+      <li>
+        <a href="{% url 'shop:products' %}">Products</a>
+      </li>
+      <li>
+        <a href="{% url 'shop:orders' %}">Orders</a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}

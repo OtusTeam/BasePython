@@ -33,3 +33,4 @@
 - [Урок 29. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.29/)
 - [Урок 30. Знакомство с Django](lessons/lesson.30/)
 - [Урок 31. Django ORM, django-debug-toolbar](lessons/lesson.31/)
+- [Урок 32. Django O2O, M2M, select_related, prefetch_related; отложенные задачи через Celery](lessons/lesson.32)
