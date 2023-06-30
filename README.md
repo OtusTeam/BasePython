@@ -34,3 +34,4 @@
 - [Урок 30. Знакомство с Django](lessons/lesson.30/)
 - [Урок 31. Django ORM, django-debug-toolbar](lessons/lesson.31/)
 - [Урок 32. Django O2O, M2M, select_related, prefetch_related; отложенные задачи через Celery](lessons/lesson.32)
+- [Урок 33. Django приложения и отложенные задачи, RabbitMQ, HTML письма](lessons/lesson.33/)
