@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Category #{{ category.pk }}
+{% endblock %}
+
+{% block body %}
+  <h1>Category #{{ category.pk }} details</h1>
+  <h2><code>{{ category.name }}</code></h2>
+  <h3>Description:</h3>
+  <p>{{ category.description }}</p>
+
+  <div>
+    <a class="btn btn-success" href="{% url 'shop:update-category' pk=category.pk %}">Update</a>
+    <a class="btn btn-warning" href="{% url 'shop:confirm-delete-category' pk=category.pk %}">Archive</a>
+    <ul>
+      <li>
+        <a href="{% url 'shop:categories' %}">Back to categories</a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}

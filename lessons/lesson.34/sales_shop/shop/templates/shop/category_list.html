@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Categories
+{% endblock %}
+
+{% block body %}
+  <h1>Categories:</h1>
+  <div>
+    <ul>
+      {% for category in category_list %}
+        <li><a class="text-decoration-none"
+               href="{% url 'shop:category' pk=category.pk %}"
+        >{{ category.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <li>
+        <a href="{% url 'shop:create-category' %}">Create a new category</a>
+      </li>
+      <li>
+        <a href="{% url 'shop:index' %}">Back to shop</a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}
