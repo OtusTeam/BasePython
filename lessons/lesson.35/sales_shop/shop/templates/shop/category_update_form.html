@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Update Category #{{ category.pk }}
+{% endblock %}
+
+{% block body %}
+  <h2>Update category #{{ category.pk }} from name <code>{{ category.name }}</code></h2>
+  <form class="my-3" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input class="btn btn-primary" type="submit" value="Update">
+  </form>
+
+  <div>
+    <a class="btn btn-sm btn-info" href="{% url 'shop:category' pk=category.pk %}">Back to category details</a>
+  </div>
+{% endblock %}

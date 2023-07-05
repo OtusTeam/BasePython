@@ -1,0 +1,13 @@
+{% extends "mail_templated/base.tpl" %}
+
+{% block subject %}
+Order {{ order_pk }} updated
+{% endblock %}
+
+{% block html %}
+  <h3>Hi, manager.</h3>
+  <h4>Order {{ order_pk }} got updated</h4>
+  <div>
+    Promocode used: <code>{{ order_promocode }}</code>
+  </div>
+{% endblock %}
