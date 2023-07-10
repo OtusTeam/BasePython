@@ -1,0 +1,9 @@
+{% extends "mail_templated/base.tpl" %}
+
+{% block subject %}
+Welcome {{ user.username }}!
+{% endblock %}
+
+{% block html %}
+  <h3>Hi, {{ user.username }}.</h3>
+{% endblock %}
