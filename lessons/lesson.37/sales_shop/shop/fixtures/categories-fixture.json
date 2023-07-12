@@ -1,0 +1,65 @@
+[
+  {
+    "model": "shop.category",
+    "pk": 1,
+    "fields": {
+      "name": "default",
+      "description": "default category",
+      "archived": false
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 2,
+    "fields": {
+      "name": "Laptops",
+      "description": "Portative computers",
+      "archived": false
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 3,
+    "fields": {
+      "name": "Smartphones",
+      "description": "Smart computer in your pocket",
+      "archived": false
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 4,
+    "fields": {
+      "name": "PC",
+      "description": "Desktop PCs (computers)",
+      "archived": false
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 6,
+    "fields": {
+      "name": "speakers",
+      "description": "audio devices",
+      "archived": false
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 7,
+    "fields": {
+      "name": "qwerty",
+      "description": "abc",
+      "archived": true
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 8,
+    "fields": {
+      "name": "keyboards",
+      "description": "typing devices",
+      "archived": false
+    }
+  }
+]

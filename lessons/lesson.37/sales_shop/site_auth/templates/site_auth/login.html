@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Login to Site
+{% endblock %}
+
+{% block body %}
+  <!-- Pills content -->
+  <form method="post">
+    {% csrf_token %}
+
+    {% if form.errors %}
+      <p class="alert alert-danger">
+        Something is not right
+      </p>
+    {% endif %}
+
+    {{ form.as_p }}
+
+    <input type="hidden" name="next" value="{{ next }}">
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+    <!-- Register buttons -->
+    <div class="text-center">
+      <p>Not a member? <a href="{% url 'site_auth:register' %}">Register</a></p>
+    </div>
+  </form>
+  <!-- Pills content -->
+{% endblock %}

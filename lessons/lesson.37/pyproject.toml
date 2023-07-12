@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "sales-shop"
+version = "0.1.0"
+description = ""
+authors = ["Suren Khorenyan <surenkhorenyan@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^4.2.2"
+celery = "^5.3.1"
+django-celery-results = "^2.5.1"
+django-mail-templated = "^2.6.5"
+
+[tool.poetry.group.dev.dependencies]
+django-debug-toolbar = "^4.1.0"
+faker = "^19.1.0"
+faker-music = "^0.4"
+factory-boy = "^3.2.1"
+#mixer = "^7.2.2"

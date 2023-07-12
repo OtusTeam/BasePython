@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Create Category
+{% endblock %}
+
+{% block body %}
+  <h2>Create a new category</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+{#    {% for field in form %}#}
+{#      <p>#}
+{#        <label class="form-label" for="{{ field.auto_id }}">{{ field.label }}</label>#}
+{#      {{ field }}#}
+{#      </p>#}
+{#    {% endfor %}#}
+
+    <input class="btn btn-primary" type="submit" value="Create">
+  </form>
+{% endblock %}

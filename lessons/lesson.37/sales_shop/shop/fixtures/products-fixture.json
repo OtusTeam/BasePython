@@ -1,0 +1,67 @@
+[
+  {
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+      "name": "Gaming Laptop",
+      "price": "1399.99",
+      "description": "A new laptop",
+      "category": 2,
+      "status": 1,
+      "created_at": "2023-06-21T18:25:05.391Z",
+      "updated_at": "2023-06-26T17:58:40.751Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+      "name": "New Galaxy Smartphone",
+      "price": "999.00",
+      "description": "Great smartphone",
+      "category": 3,
+      "status": 1,
+      "created_at": "2023-06-21T18:27:38.806Z",
+      "updated_at": "2023-06-26T17:59:31.623Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 3,
+    "fields": {
+      "name": "Chair",
+      "price": "59.50",
+      "description": "A comfy chair",
+      "category": 1,
+      "status": 1,
+      "created_at": "2023-06-21T18:30:56.742Z",
+      "updated_at": "2023-06-21T18:30:56.742Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 4,
+    "fields": {
+      "name": "Desktop",
+      "price": "2999.00",
+      "description": "New PC",
+      "category": 4,
+      "status": 0,
+      "created_at": "2023-06-26T18:00:51.552Z",
+      "updated_at": "2023-06-26T18:28:40.440Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 5,
+    "fields": {
+      "name": "Office Desktop",
+      "price": "1999.00",
+      "description": "A new PC for Office tasks",
+      "category": 4,
+      "status": 1,
+      "created_at": "2023-06-26T18:02:39.166Z",
+      "updated_at": "2023-06-26T18:02:39.166Z"
+    }
+  }
+]
