@@ -41,3 +41,4 @@
 - [Урок 37. Фабрики: Faker, mixer, Factory Boy](lessons/lesson.37)
 - [Урок 38. NumPy](lessons/lesson.38)
 - [Урок 40. OpenCV](lessons/lesson.40/)
+- [Урок 42. GitHub Actions](lessons/lesson.42/)
