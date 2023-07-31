@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+    environment:
+      CONFIG_CLASS: ProductionConfig
+      SQLALCHEMY_DATABASE_URI: postgresql://username:passwd@pg:5432/blog
+    ports:
+      - "8080:80"
+    depends_on:
+      pg:
+        condition: service_healthy
+
+  app-dev:
+    build:
+      dockerfile: ./Dockerfile-local
+      context: ./
+    environment:
+      CONFIG_CLASS: DevelopmentConfig
+      SQLALCHEMY_DATABASE_URI: postgresql://username:passwd@pg:5432/blog
+
+    volumes:
+      - ./:/app
+    ports:
+      - "5050:5000"
+
+  pg:
+    image: postgres
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: passwd
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  db-data:

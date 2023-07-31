@@ -1,0 +1,15 @@
+{% macro show_flashed_messages_with_categories(default_category="primary") %}
+  {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="my-2 alert alert-
+        {%- if category == 'message' -%}
+          {{ default_category }}
+        {%- else -%}
+          {{ category }}
+        {%- endif -%}
+">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+{% endmacro %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Loading next item
+{% endblock %}
+
+
+{% block body %}
+  <h3>Next item is <span id="next-item-id">...</span></h3>
+  <div>
+    <pre id="item-data">
+      Loading...
+    </pre>
+  </div>
+
+  <div class="space-top">
+    <a class="no-underline" href="{{ url_for('index') }}">
+      Back to index
+    </a>
+  </div>
+
+
+  <script src="{{ url_for('static', filename='js/next-item.js') }}">
+  </script>
+  <script>
+    const itemsUrl = "{{ url_for('items_app.list') }}";
+    getNextItem(itemsUrl)
+  </script>
+{% endblock %}
