@@ -1,0 +1,48 @@
+image: python:3.10
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+  - pip install -r requirements-dev.txt
+
+stages:          # List of stages for jobs, and their order of execution
+  - testing
+  - build
+  - deploy
+
+test:       # This job runs in the build stage, which runs first.
+  stage: testing
+  services:
+    - postgres
+  variables:
+    POSTGRES_DB: "blog"
+    POSTGRES_USER: "username"
+    POSTGRES_PASSWORD: "passwd"
+    COVERAGE_DIR: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+  script:
+    - flask db upgrade
+    - pytest -s -vv -rsx --cov=app --cov=views --cov=models --cov-report=html:$COVERAGE_DIR
+  artifacts:
+    name: "coverage-report-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+    paths:
+      - $COVERAGE_DIR
+    when: on_success
+    expire_in: 1 week
+
+
+lint:   # This job runs in the test stage.
+  stage: testing    # It only starts when the job in the build stage completes successfully.
+  script:
+    - echo "RUN pylint. OK :) ..."
+
+make-build:   # This job also runs in the test stage.
+  stage: build    # It can run at the same time as unit-test-job (in parallel).
+  script:
+    - echo "make build ..."
+
+
+deploy:      # This job runs in the deploy stage.
+  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  script:
+    - echo "Deploy..."
