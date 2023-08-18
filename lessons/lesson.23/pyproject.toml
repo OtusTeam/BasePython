@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "sqla-async-queries"
+version = "0.1.0"
+description = ""
+authors = ["Suren Khorenyan <surenkhorenyan@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlalchemy = {version = "<2", extras = ["asyncio"]}
+asyncpg = "^0.28.0"
+alembic = "^1.11.2"
+pg8000 = "^1.30.1"
+fastapi = "^0.101.1"
+uvicorn = "^0.23.2"
+psycopg2 = "^2.9.7"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+sqlalchemy-stubs = "^0.4"
+locust = "^2.16.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
