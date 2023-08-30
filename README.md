@@ -31,3 +31,4 @@
 - [PythonBasic.2022-11](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2022-11)
 - [PythonBasic.2023-02](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2023-02)
 - [PythonBasic.2023-05](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2023-05)
+- [PythonBasic.2023-08](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2023-08)
