@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block title %}
+      Base
+    {% endblock %}</title>
+
+  {% block head %}
+
+  {% endblock %}
+  <style>
+    html {
+      font-size: 20px;
+    }
+    div {
+      border: 1px solid aquamarine;
+    }
+
+    #form-block {
+      {# hello #}
+      /* border: 0.25rem dotted purple; */
+      {#border: 0.15rem dotted purple;#}
+      background-color: azure;
+    }
+  </style>
+</head>
+<body>
+{% block body %}
+
+{% endblock %}
+{% block footer %}
+{% endblock %}
+{# after footer abc #}
+<!-- hello comment -->
+</body>
+</html>

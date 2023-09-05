@@ -1,0 +1,55 @@
+{% extends 'products/base.html' %}
+
+{% block head %}
+  <style>
+    .underlined {
+      text-decoration: underline coral;
+    }
+    .border-underline {
+      border-bottom: solid coral;
+    }
+    .font-weight-bold {
+      font-weight: bold;
+    }
+    .text-decoration-line-through {
+      text-decoration: line-through;
+    }
+  </style>
+{% endblock %}
+
+{% block title %}
+  Products List
+{% endblock %}
+
+{% block body %}
+  <h1>Products list</h1>
+  <ul>
+    {% for product in products %}
+      <li><a
+        href="{{ url_for('products_app.detail', product_id=product.id) }}"
+      >{{ product.name }}</a></li>
+    {% endfor %}
+  </ul>
+  <div>
+    <a href="{{ url_for('products_app.add') }}">Create new</a>
+  </div>
+
+  <div>
+  <ol reversed>
+    <li class="underlined">first <strong>item</strong></li>
+    <li class="underlined">подъез<span class="border-underline">д</span></li>
+    <li>
+      <span class="underlined">second <span style="border-bottom: solid red">hello</span> item</span>
+      <!-- closing </li> tag is not here! -->
+      <ul>
+        <li><del>second</del> item first subitem <span class="underlined">qwe</span></li>
+        <li><span class="text-decoration-line-through">second</span> item second <b>subitem</b></li>
+        <li>second <i>item</i> third <em>subitem</em></li>
+      </ul>
+    </li>
+    <!-- Here's the closing </li> tag -->
+    <li class="font-weight-bold">third item</li>
+  </ol>
+  </div>
+
+{% endblock %}
