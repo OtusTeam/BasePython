@@ -1,0 +1,28 @@
+html {
+  font-size: 20px;
+}
+
+div {
+  border: 1px solid aquamarine;
+}
+
+#form-block {
+  /* border: 0.25rem dotted purple; */
+  background-color: azure;
+}
+
+.underlined {
+  text-decoration: underline coral;
+}
+
+.border-underline {
+  border-bottom: solid coral;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
