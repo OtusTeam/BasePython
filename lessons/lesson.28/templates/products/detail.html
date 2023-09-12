@@ -1,0 +1,20 @@
+{% extends 'products/base.html' %}
+
+{% block title %}
+  Product #{{ product.id }}
+{% endblock %}
+
+{% block body %}
+	<h2>Product {{ product.name }}</h2>
+
+  <div>
+    <a
+      class="btn btn-danger"
+      href="{{ url_for('products_app.confirm_delete', product_id=product.id) }}"
+    >Delete product</a>
+    <a
+{#      class="link-underline link-underline-opacity-0"#}
+      class="btn btn-primary"
+       href="{{ url_for('products_app.list') }}">Back to products list</a>
+  </div>
+{% endblock %}
