@@ -1,0 +1,26 @@
+# img 1
+# prepare req.txt
+
+
+# img 2
+# copy from img1 req.txt
+# install dep...
+
+# one image for all
+
+FROM python:3.11.4-bullseye
+
+WORKDIR /app
+
+RUN pip install --upgrade pip "poetry==1.5.1"
+RUN poetry config virtualenvs.create false --local
+
+COPY poetry.lock pyproject.toml ./
+
+RUN poetry install --no-ansi --only main
+
+COPY . .
+
+RUN chmod +x ./prestart-dev.sh
+ENTRYPOINT ["./prestart-dev.sh"]
+CMD ["python", "app.py"]

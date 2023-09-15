@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Title{% endblock %}</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  {% block head %}
+  {% endblock %}
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-sm bg-body-tertiary my-0 my-md-1">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+        {% for endpoint, label in [
+          ('items_app.next-item', 'Next item'),
+          ('products_app.list', 'Products'),
+        ] %}
+
+          <li class="nav-item">
+            <a
+              class="nav-link
+              {% if endpoint == request.endpoint %}
+                active
+              {% endif %}
+              "
+              href="{{ url_for(endpoint) }}">{{ label }}
+            </a>
+          </li>
+        {% endfor %}
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Products actions
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{ url_for('products_app.add') }}">Add</a></li>
+            <li><a class="dropdown-item disabled" href="#">Coming soon</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+
+  {% block body %}
+    Base body
+  {% endblock %}
+</div>
+
+<div class="mt-md-3">
+  &copy; OTUS 2023
+</div>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
