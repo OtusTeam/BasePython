@@ -29,3 +29,4 @@
 - [Урок 27. Знакомство с bootstrap](lessons/lesson.27/)
 - [Урок 28. Flask-SQLAlchemy, Flask-Migrate, flash](lessons/lesson.28/)
 - [Урок 29. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.29/)
+- [Урок 30. Знакомство с Django](lessons/lesson.30/)
