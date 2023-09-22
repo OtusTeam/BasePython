@@ -1,0 +1,21 @@
+{% extends "root.html" %}
+
+{% block title %}
+  Animal kinds
+{% endblock %}
+
+{% block main %}
+  <h1>Animal kinds with animals</h1>
+
+  <ul>
+    {% for animal_kind in animal_kinds %}
+      <li>{{ animal_kind.name }}
+        <ul>
+          {% for animal in animal_kind.animals.all %}
+            <li>{{ animal.name }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
