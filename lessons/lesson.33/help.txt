@@ -1,0 +1,5 @@
+sudo apt install rabbitmq-server
+pip install celery
+
+python manage.py runserver
+celery -A zoo worker -c 2 -l INFO
