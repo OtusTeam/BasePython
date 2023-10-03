@@ -1,0 +1,16 @@
+{% extends 'root.html' %}
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+
+{% block main %}
+    <h2>Animals</h2>
+    <a href="{% url 'animals:create' %}">New</a>
+    <ul>
+        {% for animal in animal_list %}
+            <li>{{ animal }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
