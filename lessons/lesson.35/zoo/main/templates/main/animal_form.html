@@ -1,0 +1,16 @@
+{% extends 'root.html' %}
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+
+{% block main %}
+    <h2>Animal create</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="create">
+    </form>
+    <a href="{% url 'animals:index' %}">Back to list</a>
+
+{% endblock %}

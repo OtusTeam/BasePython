@@ -33,3 +33,4 @@
 - [Урок 31. Django ORM, django-debug-toolbar; select_related, prefetch_related](lessons/lesson.31/)
 - [Урок 33. Django и отложенные задачи](lessons/lesson.33/)
 - [Урок 34. Django Class Based Views, generics, Forms](lessons/lesson.34/)
+- [Урок 35. Работа с пользователями и права в Django](lessons/lesson.35/)
