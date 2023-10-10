@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>
+        {% block title %}
+            {{ user.username }}
+        {% endblock %}
+    </title>
+
+
+    {% block css %}
+    {% endblock %}
+
+    {% block js %}
+    {% endblock %}
+</head>
+<body>
+
+{% block main %}
+{% endblock %}
+
+<footer>
+    Otus, 2023
+</footer>
+</body>
+</html>
