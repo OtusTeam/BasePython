@@ -1,0 +1,7 @@
+Django==3.2
+celery==5.3
+pillow
+faker
+faker_music
+mixer
+factory_boy

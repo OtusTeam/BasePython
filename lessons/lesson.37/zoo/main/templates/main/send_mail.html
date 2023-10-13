@@ -1,0 +1,11 @@
+{% extends 'root.html' %}
+
+{% block main %}
+    {% if task_id %}
+        {#    <a href="{% url 'status_view' task_id %}">{{ task_id }}</a>#}
+        <a href="/status/{{ task_id }}/">
+{#        <a href="/status/?task_id={{ task_id }}/">#}
+            get status of {{ task_id }}
+        </a>
+    {% endif %}
+{% endblock %}
