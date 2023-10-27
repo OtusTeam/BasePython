@@ -36,3 +36,4 @@
 - [Урок 35. Работа с пользователями и права в Django](lessons/lesson.35/)
 - [Урок 36. Тестирование Django приложения](lessons/lesson.36/)
 - [Урок 37. Фабрики](lessons/lesson.37/)
+- [Урок 39. NumPy](lessons/lesson.39)
