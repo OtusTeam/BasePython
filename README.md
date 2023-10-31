@@ -37,3 +37,4 @@
 - [Урок 36. Тестирование Django приложения](lessons/lesson.36/)
 - [Урок 37. Фабрики](lessons/lesson.37/)
 - [Урок 39. NumPy](lessons/lesson.39)
+- [Урок 40. Pandas](lessons/lesson.40)
