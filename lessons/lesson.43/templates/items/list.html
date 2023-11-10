@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Items grid
+{% endblock %}
+
+{% block body %}
+  <div class="text-center my-2">
+    <div class="row bg-secondary">
+      <div class="col">
+        1 of 2
+      </div>
+      <div class="col">
+        2 of 2
+      </div>
+    </div>
+    <div class="row bg-primary">
+      <div class="col">
+        1 of 3
+      </div>
+      <div class="col bg-success">
+        2 of 3
+      </div>
+      <div class="col">
+        3 of 3
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8 col-md-4 bg-dark text-light">col-8</div>
+      <div class="col-sm-4 col-md-2 bg-info">col-4</div>
+      <div class="col-sm-8 col-md-4 bg-dark text-light">col-8 - 2</div>
+      <div class="col-sm-4 col-md-2 bg-info">col-4 - 2</div>
+    </div>
+  </div>
+{% endblock %}

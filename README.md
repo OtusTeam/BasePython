@@ -39,4 +39,5 @@
 - [Урок 39. NumPy](lessons/lesson.39)
 - [Урок 40. Pandas](lessons/lesson.40)
 - [Урок 41. OpenCV](lessons/lesson.41/)
-- [Урок 41. GitHub Actions](lessons/lesson.42/)
+- [Урок 42. GitHub Actions](lessons/lesson.42/)
+- [Урок 43. GitLab CI](lessons/lesson.43/)
