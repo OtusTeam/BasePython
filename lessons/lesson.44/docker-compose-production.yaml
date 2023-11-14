@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  app:
+    image: danteonline/base-python-2023-05
+    environment:
+      CONFIG_CLASS: ProductionConfig
+      SQLALCHEMY_DATABASE_URI: "postgresql://username:${POSTGRES_PASSWORD}@pg:5432/blog"
+    ports:
+      - "80:80"
+    depends_on:
+      pg:
+        condition: service_healthy
+
+  pg:
+    image: postgres
+#    env_file:
+#      - ./pg.env
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: /var/lib/postgresql/data/pgdata
+      PGUSER: postgres
+      user: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready --dbname=blog --username=username"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  db-data:

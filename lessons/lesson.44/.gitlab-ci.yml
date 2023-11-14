@@ -1,0 +1,68 @@
+image: python:3.10
+
+stages:
+  - testing
+  - build
+  - deploying
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+  - pip install -r dev-requirements.txt
+
+lint:       # This job runs in the build stage, which runs first.
+  stage: testing
+  script:
+    - pylint $(git ls-files '*.py')
+
+test:   # This job runs in the test stage.
+  stage: testing    # It only starts when the job in the build stage completes successfully.
+  services:
+    - postgres
+  variables:
+    CONFIG_CLASS: TestingConfig
+    POSTGRES_DB: blog
+    POSTGRES_USER: username
+    POSTGRES_PASSWORD: passwd
+    PGDATA: /var/lib/postgresql/data/pgdata
+    PGUSER: postgres
+    user: postgres
+    COVERAGE_DIR: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+  script:
+    - flask db upgrade
+    - pytest -s --cov --cov-report html:$COVERAGE_DIR --cov-fail-under 70
+  artifacts:
+    name: $COVERAGE_DIR
+    paths:
+      - $COVERAGE_DIR
+    when: on_success
+    expire_in: 1 week
+
+
+make-build:   # This job also runs in the test stage.
+  stage: build    # It can run at the same time as unit-test-job (in parallel).
+  image: docker:24.0.5
+  only:
+    - main
+  services:
+    - docker:24.0.5-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  before_script:
+    - docker info
+    - apk add --no-cache docker-compose
+    - docker-compose --version
+    - docker login -u danteonline -p $DOCKER_HUB_PASSWORD
+  script:
+    - echo "Build and push image"
+    - docker-compose pull app || true
+    - docker-compose build app
+    - docker-compose push
+    - echo "Done"
+
+deploy:      # This job runs in the deploy stage.
+  stage: deploying  # It only runs when *both* jobs in the test stage complete successfully.
+  script:
+    - echo "Deploy to production"
