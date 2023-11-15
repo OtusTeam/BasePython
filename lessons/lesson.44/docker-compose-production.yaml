@@ -5,7 +5,7 @@ services:
     image: danteonline/base-python-2023-05
     environment:
       CONFIG_CLASS: ProductionConfig
-      SQLALCHEMY_DATABASE_URI: "postgresql://username:${POSTGRES_PASSWORD}@pg:5432/blog"
+      SQLALCHEMY_DATABASE_URI: "postgresql://username:${POSTGRES_PWD}@pg:5432/blog"
     ports:
       - "80:80"
     depends_on:
@@ -19,7 +19,7 @@ services:
     environment:
       POSTGRES_DB: blog
       POSTGRES_USER: username
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_PASSWORD: ${POSTGRES_PWD}
       PGDATA: /var/lib/postgresql/data/pgdata
       PGUSER: postgres
       user: postgres
