@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}
+    Base Title
+  {% endblock %}</title>
+
+  <style>
+
+    html {
+      font-size: 20px;
+    }
+
+    div {
+      font-size: 120%;
+    }
+
+    a {
+      font-size: 21px;
+    }
+
+    /*
+    ul > li > a {
+      text-decoration: none;
+    }
+     */
+
+  </style>
+
+  {% block head %}
+
+  {% endblock %}
+</head>
+<body>
+  <main>
+    {% block main %}
+    	Base body
+    {% endblock %}
+  </main>
+  <!-- end of main tag -->
+
+
+  <!--
+</body>
+</html>
+ -->
+</body>
+</html>

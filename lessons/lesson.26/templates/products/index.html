@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Products List
+{% endblock %}
+
+{% block head %}
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/hover-highlight.css') }}"
+  >
+  <style>
+    h1 {
+      font-style: italic;
+    }
+
+    .product-link {
+      text-decoration: none;
+      font-size: 22px
+    }
+
+    #links-block {
+      border: 2px dotted black;
+    }
+
+    #links-block > a {
+      color: burlywood;
+      /* cursor: none; */
+      text-decoration: none;
+    }
+
+    .text-green {
+      color: green;
+    }
+
+    .text-bold {
+      font-weight: bold;
+    }
+
+  </style>
+{% endblock %}
+{% block main %}
+  <h1 id="">Products:</h1>
+
+  {% if products %}
+    <ul>
+    {% for product in products %}
+    	<li><a
+        class="product-link text-green text-bold"
+        href="{{ url_for('products_app.details', product_id=product.id) }}"
+      >{{ product.name }}</a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <h2>No products yet</h2>
+  {% endif %}
+
+  <div id="links-block">
+    <a class="text-bold" href="{{ url_for('products_app.create') }}">Add a new product</a>
+  </div>
+
+{% endblock %}
