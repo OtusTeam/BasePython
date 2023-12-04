@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            Base Title
+        {% endblock %}
+    </title>
+
+    <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+    >
+
+    {#    <link#}
+    {#            rel="stylesheet"#}
+    {#            href="{{ url_for('static', filename='css/main.css') }}"#}
+    {#    >#}
+
+    {% block head %}
+
+    {% endblock %}
+</head>
+<body>
+<main>
+    <div class="container my-3 mt-5 p-1">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Shop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-content">
+                    <ul class="navbar-nav me-auto">
+                        {% for endpoint, title in [
+                              ('index', 'Home page'),
+                              ('products_app.list', 'Products'),
+                            ] %}
+
+                            {% set path = url_for(endpoint) %}
+                            {% set is_current_path = path == request.path %}
+
+                            <li class="nav-item">
+                                <a
+                                        class="nav-link {{ 'active' if is_current_path }}"
+                                        aria-current="page"
+                                        href="{{ path }}"
+                                >{{ title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Actions
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a
+                                        class="dropdown-item"
+                                        href="{{ url_for('products_app.create') }}">Add item</a></li>
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="bottom"
+                            data-bs-title="Search is not ready yet.."
+                            {#        data-bs-delay='{"show":200,"hide":150}'#}
+                            data-bs-delay="200"
+
+                            class="d-flex"
+                            role="search"
+                    >
+                        <input
+                                class="form-control me-2"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                                disabled
+                        >
+                        <button
+                                disabled
+                                class="btn btn-outline-success"
+                                type="submit"
+                        >Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        {% block main %}
+            Base body
+        {% endblock %}
+    </div>
+</main>
+
+<!-- end of main tag -->
+
+
+<!--
+</body>
+</html>
+-->
+</body>
+<script
+        src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"
+>
+</script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+</html>
