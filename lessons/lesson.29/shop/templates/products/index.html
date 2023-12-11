@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Products List
+{% endblock %}
+
+{% block head %}
+    <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/hover-highlight.css') }}"
+    >
+{% endblock %}
+{% block main %}
+    <h1 id="">Products:</h1>
+
+    {% if products %}
+        <ul class="list-group">
+            {% for product in products %}
+                <li class="list-group-item">
+                    <a class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                       href="{{ url_for('products_app.details', product_id=product.id) }}"
+                    >{{ product.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h2>No products yet</h2>
+    {% endif %}
+
+    <div id="links-block">
+        <a class="text-bold" href="{{ url_for('products_app.create') }}">Add a new product</a>
+    </div>
+
+{% endblock %}
