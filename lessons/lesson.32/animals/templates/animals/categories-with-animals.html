@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Categories w/ animals
+{% endblock %}
+
+{% block body %}
+  <h1>Categories</h1>
+  <h2>With animals</h2>
+
+  {% if categories %}
+    <ul>
+      {% for category in categories %}
+        <li>
+          <strong>{{ category }}</strong>
+          <ul>
+            {% for animal in category.animals.all %}
+              <li>{{ animal }}</li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <h3>No categories yet</h3>
+  {% endif %}
+
+  {% include 'common/footer-common.html' %}
+{% endblock %}

@@ -29,3 +29,4 @@
 - [Урок 28. Flask-SQLAlchemy, Flask-Migrate, flash](lessons/lesson.28/)
 - [Урок 29. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.29/)
 - [Урок 31. Знакомство с Django](lessons/lesson.31/)
+- [Урок 32. Django ORM, django-debug-toolbar; select_related, prefetch_related](lessons/lesson.32/)

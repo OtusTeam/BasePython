@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Animals
+{% endblock %}
+
+{% block body %}
+  <h1>Animals:</h1>
+  {% if animals %}
+    <ul>
+      {% for animal in animals %}
+        <li>
+          <strong>{{ animal.name }}</strong> <em>({{ animal.category.name }})</em>.
+          {% if animal.meals.all %}
+            Bring food:
+              {% for food in animal.meals.all %}
+              	{{ food }}{% if not forloop.last %},{% endif %}
+              {% endfor %}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <h2>No animals yet!</h2>
+  {% endif %}
+
+  {% include 'common/footer-common.html' %}
+{% endblock %}
