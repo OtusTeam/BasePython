@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}
+  	Base title
+  {% endblock %}</title>
+</head>
+<body>
+  <ul>
+    <li><a href="{% url 'animals:index' %}"
+    >Animals</a></li>
+    <li><a href="{% url 'animals:categories-with-animals' %}"
+    >Categories</a></li>
+      <li><a href="{% url 'animals:contact' %}"
+    >Contact</a></li>
+  </ul>
+{% block body %}
+	Base body
+{% endblock %}
+</body>
+</html>

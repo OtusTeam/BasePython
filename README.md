@@ -30,3 +30,4 @@
 - [Урок 29. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.29/)
 - [Урок 31. Знакомство с Django](lessons/lesson.31/)
 - [Урок 32. Django ORM, django-debug-toolbar; select_related, prefetch_related](lessons/lesson.32/)
+- [Урок 33. Django и отложенные задачи](lessons/lesson.33/)
