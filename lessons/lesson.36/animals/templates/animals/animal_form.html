@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  New Animal
+{% endblock %}
+
+{% block body %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary" type="submit">Save</button>
+    </form>
+
+  {% include 'common/footer-common.html' %}
+{% endblock %}
