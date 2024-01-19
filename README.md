@@ -13,3 +13,4 @@
 - [Урок 10. Тесты](lessons/lesson.10/)
 - [Урок 11. Знакомство со встроенными модулями](lessons/lesson.11/)
 - [Урок 13. Файлы csv, ini. FastAPI](lessons/lesson.13/)
+- [Урок 14. Docker; системы контроля зависимостей](lessons/lesson.14/)
