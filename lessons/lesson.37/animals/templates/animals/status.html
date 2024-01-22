@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Contact
+{% endblock %}
+
+{% block body %}
+  <h1>Status</h1>
+  <h2>{{id}}</h2>
+  <h2>Is ready {{is_ready}}</h2>
+  <h2>Current status {{status}}</h2>
+  <h2>Current result {{result}}</h2>
+  {% include 'common/footer-common.html' %}
+{% endblock %}

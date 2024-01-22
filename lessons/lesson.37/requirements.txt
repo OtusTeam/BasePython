@@ -1,0 +1,7 @@
+django==5.0
+django-debug-toolbar==4.2.0
+celery==5.3.6
+faker
+faker_music
+mixer
+factory_boy

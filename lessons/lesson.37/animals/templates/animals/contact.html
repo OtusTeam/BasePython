@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Contact
+{% endblock %}
+
+{% block body %}
+  <h1>Contact</h1>
+  <form method="post">
+    {% csrf_token %}
+    <input name="message" />
+    <button type="submit">Send</button>
+  </form>
+  {% include 'common/footer-common.html' %}
+{% endblock %}
