@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Animals list
+{% endblock %}
+
+{% block body %}
+  <h1>Animals:</h1>
+  {% if object_list %}
+    <ul>
+      {% for animal in object_list %}
+        <li>
+          <strong>
+            <a href="{% url 'animals:detail' pk=animal.pk %}">
+              {{ animal.name }}
+            </a>
+            <span>
+              <a href="{% url 'animals:update' pk=animal.pk %}">
+              update
+            </a>
+            </span>
+            <span>
+              <a href="{% url 'animals:delete' pk=animal.pk %}">
+              delete
+            </a>
+            </span>
+          </strong>
+          <em>({{ animal.category.name }})</em>.
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <h2>No animals yet!</h2>
+  {% endif %}
+<p></p>
+  {{some_var}}
+<p></p>
+  <a href="{% url 'animals:create' %}">Create</a>
+  {% include 'common/footer-common.html' %}
+{% endblock %}

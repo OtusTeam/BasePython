@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Delete {{object.name}}
+{% endblock %}
+
+{% block body %}
+  <h1>{{object.name}}</h1>
+    {{object.category.name}}
+    will be deleted
+    <p></p>
+    Are you shore?
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes</button>
+    </form>
+
+  {% include 'common/footer-common.html' %}
+{% endblock %}
