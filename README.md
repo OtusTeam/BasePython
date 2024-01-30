@@ -18,3 +18,4 @@
 - [Урок 15. FastAPI: APIRouter, Dependencies](lessons/lesson.15/)
 - [Урок 16. Базы данных. Знакомство с языком SQL](lessons/lesson.16/)
 - [Урок 18. ORM: SQLAlchemy](lessons/lesson.18/)
+- [Урок 19. SQLAlchemy: связи между таблицами в БД](lessons/lesson.19/)
