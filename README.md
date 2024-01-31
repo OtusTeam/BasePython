@@ -37,3 +37,4 @@
 - [Урок 37. Фабрики](lessons/lesson.37/)
 - [Урок 38. NumPy](lessons/lesson.38/)
 - [Урок 39. Pandas](lessons/lesson.39/)
+- [Урок 41. OpenCV](lessons/lesson.41/)
