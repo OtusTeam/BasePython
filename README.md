@@ -20,3 +20,4 @@
 - [Урок 18. ORM: SQLAlchemy](lessons/lesson.18/)
 - [Урок 19. SQLAlchemy: связи между таблицами в БД](lessons/lesson.19/)
 - [Урок 20. Миграции схем: alembic](lessons/lesson.20/)
+- [Урок 21. Сложные связи в БД](lessons/lesson.21/)
