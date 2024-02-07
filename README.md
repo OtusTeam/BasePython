@@ -38,3 +38,5 @@
 - [Урок 38. NumPy](lessons/lesson.38/)
 - [Урок 39. Pandas](lessons/lesson.39/)
 - [Урок 41. OpenCV](lessons/lesson.41/)
+- [Урок 43. GitHub Actions](lessons/lesson.43/)
+

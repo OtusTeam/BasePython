@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Create product
+{% endblock %}
+
+{% block main %}
+	<h1>Create a new product</h1>
+
+  <form method="post">
+    <label for="product-name-id">Product name:</label>
+    <input type="text" id="product-name-id" name="product_name">
+
+    <input type="submit" value="Create">
+  </form>
+
+  <br>
+  <div>
+    <a href="{{ url_for('products_app.list') }}">Back to products list</a>
+  </div>
+{% endblock %}
