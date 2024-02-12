@@ -1,0 +1,9 @@
+[MASTER]
+ignore=migrations
+disable=
+    C0116, #  method
+    C0114, #  module
+    C0115, #  class
+    W0621, # pytest
+    R0903, # too-few-public-methods
+

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Homepage
+{% endblock %}
+
+
+{% block main %}
+  <h1>Hello Index Page</h1>
+
+  <ul>
+    {% for word in words %}
+      <li>{{ word }}</li>
+    {% endfor %}
+  </ul>
+
+  <div style="margin-top: 25px;">
+    <div>Clicked times: <span id="click-count">0</span></div>
+    <button id="click-btn">Click</button>
+  </div>
+
+  <script>
+    const clickBtn = document.getElementById('click-btn');
+    const clickCount = document.getElementById('click-count');
+    // console.log(clickBtn);
+
+    /*
+    clickBtn.addEventListener("click", function () {
+      console.log('clicked button');
+    })
+     */
+
+    let counter = 0;
+    function showCounter() {
+      clickCount.innerText = counter.toString();
+    }
+    function handleClick() {
+      counter += 1;
+      showCounter();
+    }
+    clickBtn.addEventListener('click', handleClick);
+
+  </script>
+{% endblock %}

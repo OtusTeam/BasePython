@@ -1,0 +1,43 @@
+image: python:3.11
+
+
+stages:          # List of stages for jobs, and their order of execution
+  - testing
+  - build
+  - deploy
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+  - pip install -r dev-requirements.txt
+
+lint:       # This job runs in the build stage, which runs first.
+  stage: testing
+  script:
+    - echo "all good..."
+
+test:   # This job runs in the test stage.
+  stage: testing    # It only starts when the job in the build stage completes successfully.
+  services:
+    - postgres
+  variables:
+    CONFIG_NAME: TestingConfig
+    POSTGRES_DB: blog
+    POSTGRES_USER: user
+    POSTGRES_PASSWORD: example
+    PGDATA: /var/lib/postgresql/data/pgdata
+  script:
+    - flask db upgrade
+    - pytest
+
+make-build:   # This job also runs in the test stage.
+  stage: build    # It can run at the same time as unit-test-job (in parallel).
+  script:
+    - echo "Building..."
+
+deploy-job:      # This job runs in the deploy stage.
+  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  script:
+    - echo "Deploying application..."
+    - echo "Application successfully deployed."
