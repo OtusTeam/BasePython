@@ -1,0 +1,53 @@
+html {
+    font-size: 20px;
+}
+
+div {
+    font-size: 120%;
+}
+
+a {
+    font-size: 21px;
+}
+
+/*
+ul > li > a {
+  text-decoration: none;
+}
+ */
+
+h1 {
+    font-style: italic;
+}
+
+.product-link {
+    text-decoration: none;
+    font-size: 22px
+}
+
+#links-block {
+    border: 2px dotted black;
+}
+
+#links-block > a {
+    color: burlywood;
+    /* cursor: none; */
+    text-decoration: none;
+}
+
+.text-green {
+    color: green;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.d-under {
+    border-bottom: 2px solid black;
+}
+
+#click-btn {
+    padding: 2% 4%;
+    font-size: 1.5em;
+}

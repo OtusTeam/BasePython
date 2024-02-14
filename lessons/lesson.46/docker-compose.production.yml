@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  app:
+    image: danteonline/base-python-2023-08
+
+    environment:
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg://username:password@pg:5432/shop
+    ports:
+#      - "5050:5000"
+      - "5050:80"
+    volumes:
+      - ./shop/templates:/app/templates
+    restart: always
+    depends_on:
+      pg:
+        condition: service_healthy
+
+  pg:
+#    image: postgres
+#    image: postgres:latest
+    image: postgres:16
+    environment:
+      POSTGRES_DB: shop
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  db-data:
