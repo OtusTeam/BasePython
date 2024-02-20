@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Product #{{ product.id }}
+{% endblock %}
+
+{% block body %}
+  <h1>Product #{{ product.id }} {{ product.name }} details</h1>
+  {% include 'products/back-to-products-list.html' %}
+{% endblock %}
