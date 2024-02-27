@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Products
+{% endblock %}
+
+
+{% block body %}
+	<h1>Products</h1>
+  <ul>
+    {% for p in products %}
+    	<li><a
+        class="pretty-link"
+        href="{{ url_for('products_app.details', product_id=p.id) }}"
+      >{{ p.name }}</a></li>
+      <!-- sadfasdfas -->
+      {#
+      sdfsdfsdf
+
+      dfsadfa
+      #}
+      {# {{ '{{' }}#}
+      {# {{ '}}' }}#}
+      {# {p}#}
+      {# { p }#}
+    {% endfor %}
+  </ul>
+
+  <div>
+    <a
+      class="green"
+      href="{{ url_for('products_app.add') }}"
+    >Add a new product</a>
+  </div>
+{% endblock %}

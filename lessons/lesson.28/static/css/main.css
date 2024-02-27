@@ -1,0 +1,72 @@
+body {
+  background-color: aliceblue;
+  /*font-size: 20px;*/
+}
+
+a {
+  /*color: green;*/
+  color: #ff73cc;
+}
+
+.pretty-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: '.AppleSystemUIFont', 'Times New Roman', serif;
+}
+
+.green {
+  color: darkgreen;
+}
+
+h1.green {
+  color: #0ba300;
+}
+
+footer.green {
+  color: green;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.text-upper-case {
+  text-transform: uppercase;
+}
+
+#span-text-clicked-times {
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+#main-header {
+  text-decoration: underline;
+}
+
+
+.push-button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.push-button:hover {background-color: #3e8e41}
+
+.push-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.margin-top-md {
+  margin-top: 1em;
+}
