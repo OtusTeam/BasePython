@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Products
+{% endblock %}
+
+
+{% block body %}
+  <h1>Products</h1>
+  <div class="list-group my-3">
+    {% for p in products %}
+      <a
+        class="
+          list-group-item
+          link-primary
+          list-group-item-action
+          list-group-item-light
+        "
+        href="{{ url_for('products_app.details', product_id=p.id) }}"
+      >{{ p.name }}</a>
+      <!-- sadfasdfas -->
+      {#
+      sdfsdfsdf
+
+      dfsadfa
+      #}
+      {# {{ '{{' }}#}
+      {# {{ '}}' }}#}
+      {# {p}#}
+      {# { p }#}
+    {% endfor %}
+  </div>
+  <div>
+    <a
+      class="green"
+      href="{{ url_for('products_app.add') }}"
+    >Add a new product</a>
+  </div>
+{% endblock %}
