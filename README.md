@@ -11,3 +11,4 @@
 - [Урок 6. Git, shell](lessons/lesson.06/)
 - [Урок 7. Основы ООП](lessons/lesson.07/)
 - [Урок 8. Продвинутый ООП, исключения](lessons/lesson.08/)
+- [Урок 10. Модули и импорты](lessons/lesson.10/)

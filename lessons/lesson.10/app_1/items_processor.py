@@ -1,0 +1,2 @@
+class ItemsProcessor:
+    pass
