@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "flask-mini-app"
+version = "0.1.0"
+description = ""
+authors = ["Suren Khorenyan <surenkhorenyan@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.2"
+psycopg = "^3.1.18"
+sqlalchemy = "^2.0.28"
+flask-sqlalchemy = "^3.1.1"
+flask-migrate = "^4.0.5"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

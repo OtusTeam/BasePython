@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Product #{{ product.id }}
+{% endblock %}
+
+{% block body %}
+  <h1>Product #{{ product.id }} {{ product.name }} details</h1>
+    <span
+      class="d-inline-block"
+      tabindex="0"
+      data-bs-toggle="tooltip"
+      data-bs-title="Update feature is not ready yet"
+    >
+    <a
+      class="btn btn-outline-success disabled"
+      href="#"
+    >Update</a>
+    </span>
+    <a
+      class="btn btn-outline-danger"
+      href="{{ url_for('products_app.delete', product_id=product.id) }}"
+    >Delete</a>
+  {% include 'products/back-to-products-list.html' %}
+{% endblock %}

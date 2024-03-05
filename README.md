@@ -28,3 +28,4 @@
 - [Урок 27. Знакомство с веб разработкой на Flask](lessons/lesson.27/)
 - [Урок 28. Основы фронтенда](lessons/lesson.28/)
 - [Урок 29. Базовый фронтенд](lessons/lesson.29/)
+- [Урок 30. Flask-SQLAlchemy, Flask-Migrate](lessons/lesson.30/)
