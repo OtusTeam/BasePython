@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Create product
+{% endblock %}
+
+{% block body %}
+  <h1>Create a new product</h1>
+
+  <form method="post">
+    <div class="mb-3">
+      <label
+        for="product-name-id"
+        class="form-label"
+      >Product name</label>
+      <input
+        type="text"
+        maxlength="32"
+        class="form-control"
+        id="product-name-id"
+        name="product-name"
+        placeholder="Desktop"
+        required
+      >
+    </div>
+    <button type="submit" class="btn btn-lg btn-primary">Add</button>
+  </form>
+  {% include 'products/back-to-products-list.html' %}
+
+{% endblock %}

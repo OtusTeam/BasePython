@@ -29,3 +29,4 @@
 - [Урок 28. Основы фронтенда](lessons/lesson.28/)
 - [Урок 29. Базовый фронтенд](lessons/lesson.29/)
 - [Урок 30. Flask-SQLAlchemy, Flask-Migrate](lessons/lesson.30/)
+- [Урок 31. Docker-compose adv](lessons/lesson.31/)
