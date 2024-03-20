@@ -1,0 +1,40 @@
+{
+  "data": {
+    "users": [
+      {
+        "id": 1,
+        "name": "Иван",
+        "email": "john@localhost.com"
+      },
+      {
+        "id": 2,
+        "name": "Арсений",
+        "email": null
+      }
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "title": "P1",
+        "published": true,
+        "created_at": "2024-03-20T17:30:23.235427+00:00"
+      },
+      {
+        "id": 2,
+        "title": "P2",
+        "published": false,
+        "created_at": "2024-03-19T17:30:23.235709"
+      },
+      {
+        "id": 3,
+        "title": "P3",
+        "published": true,
+        "created_at": "2024-03-20T20:30:23.235719+03:00"
+      }
+    ]
+  },
+  "meta": {
+    "page": 1,
+    "per_page": 10
+  }
+}
