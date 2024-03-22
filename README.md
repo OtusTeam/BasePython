@@ -31,3 +31,4 @@
 - [Урок 30. Flask-SQLAlchemy, Flask-Migrate](lessons/lesson.30/)
 - [Урок 31. Docker-compose adv](lessons/lesson.31/)
 - [Урок 32. Django. Initial](lessons/lesson.32/)
+- [Урок 33. Django. ORM, debug toolbar](lessons/lesson.33/)

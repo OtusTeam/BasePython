@@ -1,0 +1,14 @@
+{% extends 'animals/base.html' %}
+
+{% block content %}
+    <h3>Animals ({{ animals_qty }})</h3>
+    <ul>
+        {% for item in animals %}
+            <li>
+                {{ item.name }} ({{ item.kind }})
+            </li>
+        {% endfor %}
+    </ul>
+    <h4>First</h4>
+    <p>{{ animals.0.name }}</p>
+{% endblock %}
