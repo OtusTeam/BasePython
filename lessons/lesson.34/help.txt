@@ -1,0 +1,11 @@
+sudo apt install redis-server
+
+!we were using rabbit on the lesson, not redis
+amqp://localhost
+
+sudo apt install rabbitmq-server
+
+celery -A zoo worker -l INFO
+celery -A zoo worker -c 3 -l INFO
+
+sudo rabbitmqctl list_queues
