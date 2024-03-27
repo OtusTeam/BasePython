@@ -1,0 +1,18 @@
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+fastapi = "^0.110.0"
+uvicorn = "^0.29.0"
+pydantic = {extras = ["email"], version = "^2.6.4"}
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+pytest = "^8.1.1"
+
+[tool.poetry.group.lint.dependencies]
+mypy = "^1.9.0"
+ruff = "^0.3.4"
+
