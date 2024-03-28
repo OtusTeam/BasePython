@@ -1,6 +1,6 @@
-# Python Basic
+# Python Basic 2024-03
 
 
 ### Занятия
 
-- [Урок название](lessons/lesson.folder/)
+- [Урок 1. Базовые типы данных](lessons/lesson.01/)
