@@ -33,3 +33,4 @@
 - [Урок 32. Django. Initial](lessons/lesson.32/)
 - [Урок 33. Django. ORM, debug toolbar](lessons/lesson.33/)
 - [Урок 34. Celery](lessons/lesson.34/)
+- [Урок 35. Django CBV](lessons/lesson.35/)
