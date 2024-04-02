@@ -1,0 +1,45 @@
+{% extends 'animals/base.html' %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        {{ user.username }}
+        <a href="/auth/logout/">Log out</a>
+    {% else %}
+        <a href="{% url 'myauth:login' %}">Log in</a>
+    {% endif %}
+
+    <div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+    </div>
+    <h3>Animals ({{ object_list|length }})</h3>
+    <ul>
+        {% for item in object_list %}
+            <li>
+                {{ item.name }}
+                (
+                {% for food in item.food_set.all %}
+                    {{ food }},
+                {% endfor %}
+                )
+                {#                ({{ item.kind }})#}
+                {#                <p>{{ item.animalprofile.biography }}</p>#}
+            </li>
+        {% endfor %}
+    </ul>
+    <h4>First</h4>
+    <p>{{ animals.0.name }}</p>
+{% endblock %}
