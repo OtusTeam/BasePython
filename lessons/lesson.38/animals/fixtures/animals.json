@@ -1,0 +1,108 @@
+[
+  {
+    "model": "animals.kind",
+    "pk": 3,
+    "fields": {
+      "name": "Медведь"
+    }
+  },
+  {
+    "model": "animals.kind",
+    "pk": 4,
+    "fields": {
+      "name": "Тигр"
+    }
+  },
+  {
+    "model": "animals.animal",
+    "pk": 4,
+    "fields": {
+      "name": "Leo",
+      "kind": 3,
+      "age": null
+    }
+  },
+  {
+    "model": "animals.animal",
+    "pk": 5,
+    "fields": {
+      "name": "Boris",
+      "kind": 3,
+      "age": null
+    }
+  },
+  {
+    "model": "animals.animal",
+    "pk": 6,
+    "fields": {
+      "name": "Kate",
+      "kind": 4,
+      "age": null
+    }
+  },
+  {
+    "model": "animals.animal",
+    "pk": 7,
+    "fields": {
+      "name": "sadfsaf",
+      "kind": 3,
+      "age": 1
+    }
+  },
+  {
+    "model": "animals.animal",
+    "pk": 8,
+    "fields": {
+      "name": "aaaaa",
+      "kind": 3,
+      "age": 1
+    }
+  },
+  {
+    "model": "animals.animal",
+    "pk": 9,
+    "fields": {
+      "name": "Jelly 3",
+      "kind": 4,
+      "age": 2
+    }
+  },
+  {
+    "model": "animals.food",
+    "pk": 1,
+    "fields": {
+      "name": "meat",
+      "animal": []
+    }
+  },
+  {
+    "model": "animals.food",
+    "pk": 2,
+    "fields": {
+      "name": "berry",
+      "animal": []
+    }
+  },
+  {
+    "model": "animals.food",
+    "pk": 3,
+    "fields": {
+      "name": "meat",
+      "animal": [
+        4,
+        6
+      ]
+    }
+  },
+  {
+    "model": "animals.food",
+    "pk": 4,
+    "fields": {
+      "name": "berry",
+      "animal": [
+        4,
+        5
+      ]
+    }
+  }
+]

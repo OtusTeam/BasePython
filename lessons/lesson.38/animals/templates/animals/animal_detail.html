@@ -1,0 +1,14 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}
+  Super {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<h3>{{ animal.name }}</h3>
+<ul>
+    {% for food in object.food_set.all %}
+        <li>{{ food }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
