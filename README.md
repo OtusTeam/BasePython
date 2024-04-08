@@ -20,3 +20,4 @@
 - [Урок 17. Системы контроля зависимостей. Docker](lessons/lesson.17/)
 - [Урок 18. Базы данных. Знакомство с языком SQL](lessons/lesson.18/)
 - [Урок 19. ORM: SQLAlchemy](lessons/lesson.19/)
+- [Урок 21. SQLAlchemy: связи между таблицами в БД](lessons/lesson.21/)
