@@ -36,3 +36,4 @@
 - [Урок 35. Django CBV](lessons/lesson.35/)
 - [Урок 36. Django auth](lessons/lesson.36/)
 - [Урок 38. Testing Django](lessons/lesson.38/)
+- [Урок 39. Factories](lessons/lesson.39/)

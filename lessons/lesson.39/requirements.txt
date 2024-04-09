@@ -1,0 +1,6 @@
+Django==4.0
+django-debug-toolbar
+celery==5.3.6
+mixer
+faker
+factory-boy
