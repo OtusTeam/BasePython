@@ -21,3 +21,4 @@
 - [Урок 18. Базы данных. Знакомство с языком SQL](lessons/lesson.18/)
 - [Урок 19. ORM: SQLAlchemy](lessons/lesson.19/)
 - [Урок 21. SQLAlchemy: связи между таблицами в БД](lessons/lesson.21/)
+- [Урок 22. Миграции схем: alembic](lessons/lesson.22/)

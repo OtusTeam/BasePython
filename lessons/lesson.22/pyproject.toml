@@ -1,0 +1,11 @@
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+psycopg = "3.1.18"
+sqlalchemy = "2.0.29"
+alembic = "^1.13.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
