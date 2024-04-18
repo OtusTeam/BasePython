@@ -8,3 +8,4 @@
 - [Урок 3. Работа с функциями и данными](lessons/lesson.03/)
 - [Урок 4. Декораторы. Неограниченное количество аргументов функции](lessons/lesson.04/)
 - [Урок 5. Shell, git](lessons/lesson.05/)
+- [Урок 6. Generators](lessons/lesson.06/)
