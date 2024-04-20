@@ -37,3 +37,5 @@
 - [Урок 36. Django auth](lessons/lesson.36/)
 - [Урок 38. Testing Django](lessons/lesson.38/)
 - [Урок 39. Factories](lessons/lesson.39/)
+- [Урок 42. NumPy. Это лишь продвинутые массивы или что-то большее?](lessons/lesson.42/)
+- [Урок 43. Pandas. Ещё одна библиотека для работы с данными?](lessons/lesson.43/)
