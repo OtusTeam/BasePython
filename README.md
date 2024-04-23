@@ -9,3 +9,4 @@
 - [Урок 4. Декораторы. Неограниченное количество аргументов функции](lessons/lesson.04/)
 - [Урок 5. Shell, git](lessons/lesson.05/)
 - [Урок 6. Generators](lessons/lesson.06/)
+- [Урок 7. OOP basics](lessons/lesson.07/)
