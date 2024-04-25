@@ -10,3 +10,4 @@
 - [Урок 5. Shell, git](lessons/lesson.05/)
 - [Урок 6. Generators](lessons/lesson.06/)
 - [Урок 7. OOP basics](lessons/lesson.07/)
+- [Урок 8. OOP adv, exceptions](lessons/lesson.08/)
