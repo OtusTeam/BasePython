@@ -40,3 +40,4 @@
 - [Урок 42. NumPy. Это лишь продвинутые массивы или что-то большее?](lessons/lesson.42/)
 - [Урок 43. Pandas. Ещё одна библиотека для работы с данными?](lessons/lesson.43/)
 - [Урок 44. OpenCV](lessons/lesson.44/)
+- [Урок 45. GitHub Actions](lessons/lesson.45/)
