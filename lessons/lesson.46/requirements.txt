@@ -1,0 +1,4 @@
+Flask==3.0.3
+Flask-Migrate==4.0.7
+psycopg==3.1.18
+psycopg-binary==3.1.18

@@ -41,3 +41,4 @@
 - [Урок 43. Pandas. Ещё одна библиотека для работы с данными?](lessons/lesson.43/)
 - [Урок 44. OpenCV](lessons/lesson.44/)
 - [Урок 45. GitHub Actions](lessons/lesson.45/)
+- [Урок 46. GitLab CI](lessons/lesson.46/)
