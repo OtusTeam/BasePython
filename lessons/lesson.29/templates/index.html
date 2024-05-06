@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Index page
+{% endblock %}
+
+{% block body %}
+  <h1>Hello World!</h1>
+
+
+  {# Hello jinja comment #}
+  <!-- hello index -->
+  {#
+multi line
+comment in Jinja
+#}
+
+  <h3>Special chars:</h3>
+
+  <pre>
+  {% raw %}
+    {# Hello jinja comment #}
+    {{  }}
+  {% endraw %}
+  </pre>
+  <ul>
+    <li>{{ '{{' }}</li>
+    <li>{{ '}}' }}</li>
+    <li>{{ '{# Comment #}' }}</li>
+  </ul>
+
+
+{% endblock %}
