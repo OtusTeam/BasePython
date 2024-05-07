@@ -1,0 +1,72 @@
+image: python:3.11
+
+stages:          # List of stages for jobs, and their order of execution
+  - testing
+  - build
+  - deploy
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+
+lint:       # This job runs in the build stage, which runs first.
+  stage: testing
+  script:
+    - echo "All done..."
+#    - pip install pytest
+#    - pip install pylint
+#    - pylint $(git ls-files '*.py')
+
+test:   # This job runs in the test stage.
+  stage: testing    # It only starts when the job in the build stage completes successfully.
+  services:
+    - postgres
+  variables:
+    POSTGRES_DB: shop
+    POSTGRES_USER: user
+    POSTGRES_PASSWORD: example
+    PGDATA: /var/lib/postgresql/data
+    SQLALCHEMY_DATABASE_URI: postgresql+psycopg://user:example@postgres:5432/shop
+    COVERAGE_DIR: "coverage--$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+  script:
+    - export
+    - pip install pytest
+    - pip install pytest-cov
+    - cd app
+    - flask db upgrade
+    - cd ..
+    - pytest -s --cov --cov-report html:$COVERAGE_DIR --cov-fail-under 73
+  artifacts:
+    name: $COVERAGE_DIR
+    paths:
+      - $COVERAGE_DIR
+    when: on_success
+    expire_in: 1 week
+
+make-build:   # This job also runs in the test stage.
+  stage: build    # It can run at the same time as unit-test-job (in parallel).
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+  only:
+    - main
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  before_script:
+    - docker info
+    - apk add --no-cache docker-compose
+    - docker-compose --version
+    - docker login -u danteonline -p $DOCKERHUB_TOKEN
+  script:
+    - echo "Make build..."
+    - docker-compose pull app || true
+    - docker-compose build app
+    - docker-compose push
+    - echo "Done"
+
+deploy-job:      # This job runs in the deploy stage.
+  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  script:
+    - echo "Deploy to production server..."

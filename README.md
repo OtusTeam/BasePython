@@ -42,3 +42,4 @@
 - [Урок 44. OpenCV](lessons/lesson.44/)
 - [Урок 45. GitHub Actions](lessons/lesson.45/)
 - [Урок 46. GitLab CI](lessons/lesson.46/)
+- [Урок 47. GitLab CD](lessons/lesson.47/)
