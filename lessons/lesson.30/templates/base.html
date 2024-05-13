@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block title %}
+      Base title
+    {% endblock %}
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/main.css') }}"
+  >
+
+  {% block head %}
+
+  {% endblock %}
+
+</head>
+<body>
+{% block body %}
+  Base body
+{% endblock %}
+<footer class="margin-top">
+  {% block footer %}
+    &copy; OTUS 2024
+  {% endblock %}
+</footer>
+</body>
+</html>
