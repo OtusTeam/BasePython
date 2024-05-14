@@ -13,3 +13,4 @@
 - [Урок 8. OOP adv, exceptions](lessons/lesson.08/)
 - [Урок 9. Модули и импорты](lessons/lesson.09/)
 - [Урок 10. Датаклассы. Виртуальное окружение](lessons/lesson.10/)
+- [Урок 12. Тесты](lessons/lesson.12/)
