@@ -1,0 +1,48 @@
+{% extends 'products/base.html' %}
+
+
+{% block title %}
+  Products list
+{% endblock %}
+
+{% block body %}
+  <h1>Products</h1>
+  <div class="row">
+
+    <div class="col-12 col-sm-6 col-lg-8">
+      <div class="list-group">
+        {% for product in products %}
+          {# Show name of product #}
+          <a
+            class="list-group-item link-primary link-underline"
+            href="{{ url_for('products_app.details', product_id=product.id) }}"
+          >{{ product.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card mt-3 mt-sm-0">
+        <img
+          src="https://cdn-icons-png.freepik.com/512/186/186239.png"
+          class="card-img-top my-3 w-25"
+          alt="phone-picture"
+        >
+        <div class="card-body">
+          <h5 class="card-title">Product of the day!</h5>
+          <p class="card-text">Great smartphone. Buy today and get some gifts!</p>
+          <a href="#" class="btn btn-info">Proceed to purchase</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div>
+    <a
+      href="{{ url_for('products_app.add') }}"
+    >Add a new product</a>
+  </div>
+  {# Hello jinja comment #}
+  <!-- hello world -->
+{% endblock %}
