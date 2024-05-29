@@ -17,3 +17,4 @@
 - [Урок 13. Знакомство со встроенными модулями](lessons/lesson.13/)
 - [Урок 15. Файлы и сеть](lessons/lesson.15/)
 - [Урок 16. Знакомство с FastAPI](lessons/lesson.16/)
+- [Урок 17. FastAPI: APIRouter, HTTPBearer, тело запроса](lessons/lesson.17/)
