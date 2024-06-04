@@ -18,3 +18,4 @@
 - [Урок 15. Файлы и сеть](lessons/lesson.15/)
 - [Урок 16. Знакомство с FastAPI](lessons/lesson.16/)
 - [Урок 17. FastAPI: APIRouter, HTTPBearer, тело запроса](lessons/lesson.17/)
+- [Урок 18. Системы контроля зависимостей](lessons/lesson.18/)
