@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Animal List
+{% endblock %}
+
+{% block main %}
+
+    <a href="{% url 'animals:create' %}">Create</a>
+
+    <hr>
+
+    {% for animal in object_list %}
+        <li>
+            <a href="{% url 'animals:detail' pk=animal.pk %}">
+                {{animal}}
+            </a>
+            /
+            <a href="{% url 'animals:update' pk=animal.pk %}">
+                update
+            </a>
+            /
+            <a href="{% url 'animals:delete' pk=animal.pk %}">
+                delete
+            </a>
+        </li>
+    {% endfor %}
+
+{% endblock %}
