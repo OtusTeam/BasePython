@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    {% for animal in animals %}
+        <li>{{animal}}
+            <ol>
+                {% for food in animal.food.all %}
+                    <li>
+                        {{food.name}}
+                    </li>
+                {% endfor %}
+            </ol>
+        </li>
+    {% endfor %}
+
+{% endblock %}
