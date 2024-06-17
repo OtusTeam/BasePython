@@ -37,3 +37,4 @@
 - [Урок 37. Django и отложенные задачи](lessons/lesson.37/)
 - [Урок 38. Django Class Based Views, generics, Forms](lessons/lesson.38/)
 - [Урок 39. Работа с пользователями и права в Django](lessons/lesson.39/)
+- [Урок 40. Тестирование Django приложения](lessons/lesson.40/)
