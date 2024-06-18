@@ -20,3 +20,4 @@
 - [Урок 17. FastAPI: APIRouter, HTTPBearer, тело запроса](lessons/lesson.17/)
 - [Урок 18. Системы контроля зависимостей](lessons/lesson.18/)
 - [Урок 19. Знакомство с Docker](lessons/lesson.19/)
+- [Урок 20. Базы данных. Знакомство с языком SQL](lessons/lesson.20/)
