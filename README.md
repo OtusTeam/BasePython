@@ -22,3 +22,4 @@
 - [Урок 19. Знакомство с Docker](lessons/lesson.19/)
 - [Урок 20. Базы данных. Знакомство с языком SQL](lessons/lesson.20/)
 - [Урок 21. ORM: SQLAlchemy](lessons/lesson.21/)
+- [Урок 22. SQLAlchemy: связи между таблицами в БД](lessons/lesson.22/)
