@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Products list
+{% endblock %}
+
+{% block body %}
+  <h1>Products</h1>
+
+  <ul>
+    {% for product in products %}
+      <li>
+        <a href="{{ url_for('products:details', product_id=product.id) }}"
+        >{{ product.name }}</a> ¢{{ product.price }}</li>
+
+    {% endfor %}
+  </ul>
+
+  <div>
+    <a href="{{ url_for('main:index') }}">Back to main page</a>
+  </div>
+{% endblock %}
