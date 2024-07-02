@@ -24,3 +24,4 @@
 - [Урок 21. ORM: SQLAlchemy](lessons/lesson.21/)
 - [Урок 23. SQLAlchemy: связи между таблицами в БД](lessons/lesson.23/)
 - [Урок 24. Миграции схем: alembic](lessons/lesson.24/)
+- [Урок 25. Сложные связи в БД: Many-to-Many](lessons/lesson.25/)
