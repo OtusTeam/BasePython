@@ -39,3 +39,4 @@
 - [Урок 39. Работа с пользователями и права в Django](lessons/lesson.39/)
 - [Урок 40. Тестирование Django приложения](lessons/lesson.40/)
 - [Урок 44. NumPy](lessons/lesson.44/)
+- [Урок 45. Pandas: аналитика данных](lessons/lesson.45)
