@@ -1,0 +1,17 @@
+{% extends 'products/base.html' %}
+
+
+{% block title %}
+  Product #{{ product.id }}
+{% endblock %}
+
+{% block body %}
+  <h1>Product #{{ product.id }} details</h1>
+  <div>
+    <strong>Name:</strong> {{ product.name }}
+  </div>
+  <div>
+    <strong>Price:</strong> {{ product.price }}
+  </div>
+  {% include 'products/components/back-to-products-list.html' %}
+{% endblock %}
