@@ -1,0 +1,6 @@
+Single-database configuration for Flask.
+
+
+curl -i 'http://127.0.0.1:5000/products/add/' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  --data-raw 'product-name=PyCharm'
