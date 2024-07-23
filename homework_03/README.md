@@ -1,7 +1,7 @@
 ### Домашнее задание "Docker контейнер c веб-приложением"
 #### Задача:
 - скопируйте папку `homework_03` для этой домашки 
-  (Памятка: https://github.com/OtusTeam/BasePython/tree/homeworks-new)
+  (Памятка: https://github.com/OtusTeam/BasePython/tree/homeworks)
 - обязательно используйте виртуальное окружение
 - никогда не добавляйте в репозиторий своё локальное виртуальное окружение
 - установите `FastAPI` и `uvicorn`

@@ -23,6 +23,9 @@ fake = Faker()
 PORT = 8000
 LOCAL_PORT = 12345
 
+RETRIES_TIMEOUT = 10  # seconds
+TRY_TIMEOUT = 0.5  # seconds
+
 
 @pytest.fixture
 def docker_client():
@@ -55,7 +58,17 @@ def run_image(docker_client, build_image):
     container: Container = docker_client.containers.run(build_image, detach=True, ports={PORT: LOCAL_PORT})
     print("running docker container detached")
     # give some time to for the web app to start
-    sleep(1)
+
+    timeout = 0
+    while timeout < RETRIES_TIMEOUT:
+        sleep(TRY_TIMEOUT)
+        timeout += TRY_TIMEOUT
+        container.reload()
+        if container.status == 'running':
+            print("Container is ready!")
+            break
+    else:
+        pytest.fail("Timed out waiting for container")
     yield container
     print("stopping docker container")
     container.stop()

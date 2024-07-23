@@ -1,6 +1,6 @@
 ### Домашнее задание "Асинхронная работа с сетью и БД"
 #### Задача:
-- скопируйте папку `homework_04` для этой домашки (Памятка: https://github.com/OtusTeam/BasePython/tree/homeworks-new)
+- скопируйте папку `homework_04` для этой домашки (Памятка: https://github.com/OtusTeam/BasePython/tree/homeworks)
 - используйте следующие пакеты: 
     - aiohttp
     - SQLAlchemy>=1.4

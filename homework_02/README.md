@@ -12,7 +12,7 @@
 > Есть смысл переопределять методы только если вы меняете их поведение (добавляете новые аргументы, устанавливаете новые свойства).
 
 #### Задача:
-- скопируйте папку `homework_02` для этой домашки (Памятка: https://github.com/OtusTeam/BasePython/tree/homeworks-new)
+- скопируйте папку `homework_02` для этой домашки (Памятка: https://github.com/OtusTeam/BasePython/tree/homeworks)
 - в модуле `exceptions` объявите следующие исключения:
     - `LowFuelError`
     - `NotEnoughFuel`
