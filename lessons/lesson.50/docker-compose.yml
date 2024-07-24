@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+
+  pg:
+    image: postgres
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: example
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d blog -U user" ]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  app:
+    image: danteonline/basepython-2024-01
+    build:
+      dockerfile: ./build/Dockerfile
+      context: ./
+    environment:
+      SQLALCHEMY_DATABASE_URI: "postgresql+psycopg2://user:example@pg:5432/blog"
+#    command:
+#      - flask
+#      - run
+    ports:
+      - "3000:80"
+#    entrypoint:
+#      - bash
+#      - "entrypoint.sh"
+#    network_mode: host
+    depends_on:
+      pg:
+        condition: service_healthy

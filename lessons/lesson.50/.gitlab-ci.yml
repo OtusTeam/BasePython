@@ -1,0 +1,65 @@
+image: python:3.11
+
+stages:
+  - testing
+  - build
+  - deploy
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+  - pip install -r dev_requirements.txt
+
+lint:
+  stage: testing
+  script:
+    # - pylint $(git ls-files '*.py')
+    - echo "lint done ..."
+
+test:
+  stage: testing
+  services:
+    - postgres
+  variables:
+    POSTGRES_DB: blog
+    POSTGRES_USER: user
+    POSTGRES_PASSWORD: example
+    SQLALCHEMY_DATABASE_URI: "postgresql+psycopg2://user:example@postgres:5432/blog"
+    COVERAGE_DIR: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+  script:
+    - flask db upgrade
+    - pytest -s --cov --cov-report html:$COVERAGE_DIR --cov-fail-under 71
+  artifacts:
+    name: $COVERAGE_DIR
+    paths:
+      - $COVERAGE_DIR
+    when: on_success
+    expire_in: 1 week
+
+make-build:
+  stage: build
+  image: docker:24.0.5
+  only:
+    - main
+  services:
+    - docker:24.0.5-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  before_script:
+    - docker info
+    - apk add --no-cache docker-compose
+    - docker-compose --version
+    - docker login -u danteonline -p $DOCKERHUB_PASSWORD
+  script:
+    - echo "Build and push image"
+    - docker-compose pull app || true
+    - docker-compose build app
+    - docker-compose push
+    - echo "Done"
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying application..."
