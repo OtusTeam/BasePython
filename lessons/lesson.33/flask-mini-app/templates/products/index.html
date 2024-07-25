@@ -1,0 +1,49 @@
+{% extends 'products/base.html' %}
+
+{% block title %}
+  Products list
+{% endblock %}
+
+{% block body %}
+  <h1>Products:</h1>
+
+  <div class="row">
+    <div class="col-12 col-sm-8 col-lg-9">
+
+      <div class="list-group">
+        {% for product in products %}
+          <a
+            class="list-group-item text-primary link-opacity-100-hover"
+            href="{{ url_for('products_app.details', product_id=product.id) }}"
+          >{{ product.name }} ${{ product.price }}</a>
+        {% endfor %}
+      </div>
+
+
+      <div>
+        <a class="btn btn-primary mt-3" href="{{ url_for('products_app.add') }}"
+        >Add a new product</a>
+      </div>
+      <!-- end col -->
+    </div>
+
+    <div class="col-12 col-sm-4 col-lg-3">
+      <div class="card mt-2 mt-sm-0">
+        <img
+          src="https://cdn.vox-cdn.com/thumbor/ydpDueGnP1NlVJEpbGCYbTg6bjA=/0x0:2700x1800/768x768/filters:focal(1350x900:1351x901)/cdn.vox-cdn.com/uploads/chorus_asset/file/25229534/246963_Samsung_Galaxy_S24_JPorter_0003.jpg"
+          class="card-img-top"
+          alt="phone"
+        >
+        <div class="card-body">
+          <h5 class="card-title">New arrivals!</h5>
+          <p class="card-text">New Smartphone just arrived!</p>
+          <a href="#" class="btn btn-primary">Go buy</a>
+        </div>
+      </div>
+
+      <!-- end col -->
+    </div>
+
+  </div>
+
+{% endblock %}

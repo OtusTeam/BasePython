@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Index page
+{% endblock %}
+
+{% block body %}
+  <h1>Hello index page</h1>
+
+  <div>
+    <a href="{{ url_for('products_app.index') }}">Products</a>
+  </div>
+{% endblock %}

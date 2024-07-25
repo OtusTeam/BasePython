@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        {% for endpoint, title in (
+          ('index', 'Home'),
+          ('products_app.index', 'Products'),
+        ) %}
+
+          {% set path = url_for(endpoint) %}
+
+          <li class="nav-item">
+            <a
+              class="nav-link {{ 'active' if request.path == path }}"
+              aria-current="page"
+              href="{{ path }}"
+            >{{ title }}</a>
+          </li>
+        {% endfor %}
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{ url_for('products_app.add') }}">Add product</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item disabled" href="#">Work in progress</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <span
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-title="Work in progress"
+          ><a
+            class="nav-link disabled"
+            aria-disabled="true"
+          >Search</a>
+            </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
