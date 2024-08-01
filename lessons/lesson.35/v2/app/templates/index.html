@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet and Owner Information</title>
+</head>
+<body>
+    <h1>Owners with Pets</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Phone</th>
+            <th>Pet Name</th>
+            <th>Pet Breed</th>
+            <th>Pet Age</th>
+        </tr>
+        {% for owner in owners_with_pets %}
+            {% for pet in owner.pets %}
+                <tr>
+                    <td>{{ owner.name }}</td>
+                    <td>{{ owner.age }}</td>
+                    <td>{{ owner.phone }}</td>
+                    <td>{{ pet.name }}</td>
+                    <td>{{ pet.breed }}</td>
+                    <td>{{ pet.age }}</td>
+                </tr>
+            {% endfor %}
+        {% endfor %}
+    </table>
+
+    <h1>Owners without Pets</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Phone</th>
+        </tr>
+        {% for owner in owners_without_pets %}
+            <tr>
+                <td>{{ owner.name }}</td>
+                <td>{{ owner.age }}</td>
+                <td>{{ owner.phone }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Pets without Owners</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Breed</th>
+            <th>Age</th>
+        </tr>
+        {% for pet in pets_without_owners %}
+            <tr>
+                <td>{{ pet.name }}</td>
+                <td>{{ pet.breed }}</td>
+                <td>{{ pet.age }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

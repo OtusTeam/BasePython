@@ -1,0 +1,40 @@
+services:
+  pg:
+    image: postgres
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: example
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d blog -U user" ]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  app:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+    environment:
+      DATABASE_URI: "postgresql+psycopg://user:example@localhost:5432/blog"
+      FLASK_APP: main.py
+      PYTHONPATH: ./
+    entrypoint:
+      - bash
+      - "entrypoint.sh"
+    command:
+      - flask
+      - run
+#    ports:
+#      - "5000:80"
+    network_mode: host
+    depends_on:
+      pg:
+        condition: service_healthy
+
+volumes:
+  db-data:

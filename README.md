@@ -30,3 +30,4 @@
 - [Урок 29. Асинхронная работа API с БД](lessons/lesson.29/)
 - [Урок 30. Знакомство с веб-разработкой на Flask](lessons/lesson.30/)
 - [Урок 33. Базовый фронтенд на Bootstrap](lessons/lesson.33/)
+- [Урок 35. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.35/)
