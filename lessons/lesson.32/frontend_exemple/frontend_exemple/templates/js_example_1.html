@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Clicker</h3>
+    <p>Clicked <span id="click-count">0</span></p>
+    <button id="click-button">Press me</button>
+    <script>
+        let clickCount = 0;
+        const clickCountSpan = document.getElementById('click-count')
+
+        const clickButton = document.getElementById('click-button')
+
+        function updateClickCountText() {
+            clickCountSpan.innerText = clickCount.toString();
+        }
+
+        function handleButtonClick() {
+            clickCount += 1;
+            updateClickCountText();
+        }
+
+        clickButton.addEventListener('click', handleButtonClick)
+    </script>
+</body>
+</html>
