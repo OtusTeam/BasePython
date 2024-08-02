@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Заголовок страницы -->
+        <title>Records</title>
+    </head>
+    <body>
+        <!-- Заголовок, полученный из контекста -->
+        <h1>{{ title }}</h1>
+        <!-- Сообщение, полученное из контекста -->
+        <p>{{ message }}</p>
+        
+        {% if records %}
+        <!-- Если есть записи, выводим их список -->
+        <h2>All Records</h2>
+        <ul>
+            <!-- Цикл по всем записям -->
+            {% for record in records %}
+            <li>ID: {{ record.id }}, Name: {{ record.name }}, Age: {{ record.age }}, City: {{ record.city }}</li>
+            {% endfor %}
+        </ul>
+        {% elif record %}
+        <!-- Если есть одна запись, выводим ее детали -->
+        <h2>Record Details</h2>
+        <p>ID: {{ record.id }}</p>
+        <p>Name: {{ record.name }}</p>
+        <p>Age: {{ record.age }}</p>
+        <p>City: {{ record.city }}</p>
+        {% endif %}
+        
+        <!-- Форма для добавления новой записи -->
+        <h2>Add New Record</h2>
+        <form action="/add-record" method="post">
+            <!-- Поле для ввода имени -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <!-- Поле для ввода возраста -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
+            <!-- Поле для ввода города -->
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required><br><br>
+            <!-- Кнопка для отправки формы -->
+            <button type="submit">Add Record</button>
+        </form>
+    </body>
+</html>
