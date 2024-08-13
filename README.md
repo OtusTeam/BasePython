@@ -31,3 +31,4 @@
 - [Урок 30. Знакомство с веб-разработкой на Flask](lessons/lesson.30/)
 - [Урок 33. Базовый фронтенд на Bootstrap](lessons/lesson.33/)
 - [Урок 35. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.35/)
+- [Урок 36. Знакомство с Django](lessons/lesson.36/)
