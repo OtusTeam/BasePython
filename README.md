@@ -33,3 +33,4 @@
 - [Урок 35. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.35/)
 - [Урок 36. Знакомство с Django](lessons/lesson.36/)
 - [Урок 37. Django ORM, django-debug-toolbar](lessons/lesson.37/)
+- [Урок 39. Django и отложенные задачи](lessons/lesson.39/)
