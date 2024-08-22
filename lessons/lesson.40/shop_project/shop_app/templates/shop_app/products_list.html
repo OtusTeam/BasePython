@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Products List
+{% endblock %}
+
+{% block body %}
+  <h1>Products</h1>
+
+  <ul>
+    {% for product in products %}
+      <li>{{ product }} ({{ product.category }})</li>
+    {% endfor %}
+  </ul>
+
+  {% include 'shop_app/components/back-to-shop-index.html' %}
+{% endblock %}

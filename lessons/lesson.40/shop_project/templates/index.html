@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Index page
+{% endblock %}
+
+{% block body %}
+	<h1>Hello World!</h1>
+
+  <h2>Apps:</h2>
+
+  <p>
+    <a href="{% url 'shop_app:products_index' %}">Products list</a>
+  </p>
+  <p>
+    <a href="{% url 'shop_app:orders_index' %}">Orders list</a>
+  </p>
+  <p>
+    <a href="{% url 'shop_app:list_category' %}">Category list</a>
+  </p>
+{% endblock %}

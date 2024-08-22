@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Task status
+{% endblock %}
+
+{% block body %}
+  <h1>Task <code>{{ task_id }}</code> status</h1>
+  <h2><strong>Is ready:</strong> {{ is_ready }}</h2>
+  <h2><strong>Status:</strong> {{ status }}</h2>
+  <h2><strong>Result:</strong> {{ result }}</h2>
+
+  <hr>
+  <form>
+    <label for="task-id">Task id:</label>
+    <input id="task-id" type="text" name="task_id" value="{{ task_id }}">
+    <button type="submit">Get status</button>
+  </form>
+{% endblock %}
