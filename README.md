@@ -9,3 +9,4 @@
 - [Урок 9. Модули и импорты](lessons/lesson.09/)
 - [Урок 10. Датаклассы. Виртуальное окружение](lessons/lesson.10/)
 - [Урок 19. Знакомство с Docker](lessons/lesson.19/)
+- [Урок 24. Миграции схем: alembic](lessons/lesson.24/)
