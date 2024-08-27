@@ -35,3 +35,4 @@
 - [Урок 37. Django ORM, django-debug-toolbar](lessons/lesson.37/)
 - [Урок 39. Django и отложенные задачи](lessons/lesson.39/)
 - [Урок 40. Django CBV. Django Forms](lessons/lesson.40/)
+- [Урок 41. Работа с пользователями и права в Django](lessons/lesson.41/)

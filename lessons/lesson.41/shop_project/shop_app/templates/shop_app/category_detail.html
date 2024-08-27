@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+
+{% block body %}
+    <h1>Category</h1>
+
+    <div>
+        <strong>{{ object.name }}</strong> <br>
+        ({{ object.description }})
+    </div>
+
+    {% include 'shop_app/components/back-to-shop-index.html' %}
+{% endblock %}
