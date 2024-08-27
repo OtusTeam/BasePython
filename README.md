@@ -20,6 +20,7 @@
 - [Декораторы в Python. Занятие от 06.03.2024](open-lessons/decorators.06.03.2024/)
 - [FastAPI-JSON:API. Занятие от 03.06.2024](open-lessons/fastapi-jsonapi.03.06.2024/)
 - [Шаблоны страниц Jinja в FastAPI приложении. Занятие от 27.06.2024](open-lessons/fastapi-and-jinja-27.06/)
+- [Интерфейсы и протоколы в Python. Занятие от 27.08.2024](open-lessons/interfaces-and-protocols-27.08/)
 
 
 ### Курсы Python Basic:
