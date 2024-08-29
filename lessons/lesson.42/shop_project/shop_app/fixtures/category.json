@@ -1,0 +1,26 @@
+[
+  {
+    "model": "shop_app.category",
+    "pk": 1,
+    "fields": {
+      "name": "laptop",
+      "description": ""
+    }
+  },
+  {
+    "model": "shop_app.category",
+    "pk": 2,
+    "fields": {
+      "name": "phone",
+      "description": ""
+    }
+  },
+  {
+    "model": "shop_app.category",
+    "pk": 3,
+    "fields": {
+      "name": "pc",
+      "description": ""
+    }
+  }
+]
