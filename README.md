@@ -37,3 +37,4 @@
 - [Урок 40. Django CBV. Django Forms](lessons/lesson.40/)
 - [Урок 41. Работа с пользователями и права в Django](lessons/lesson.41/)
 - [Урок 42. Тестирование Django приложения](lessons/lesson.42/)
+- [Урок 43. Фабрики Factory Boy; Faker](lessons/lesson.43/)
