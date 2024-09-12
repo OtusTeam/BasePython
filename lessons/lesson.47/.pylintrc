@@ -1,0 +1,6 @@
+[MAIN]
+disable=
+    C0114, #  Dynamic attributes
+    C0115, #  Line too long
+    C0116, #  __str__ does not return str
+    R0903, # too few public methods
