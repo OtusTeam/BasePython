@@ -1,0 +1,68 @@
+image: python:3.12
+
+stages:          # List of stages for jobs, and their order of execution
+  - testing
+  - build
+  - deploy
+
+before_script:
+  - python -m pip install --upgrade pip
+  - pip install -r requirements.txt
+  - pip install pytest-cov
+
+lint:       # This job runs in the build stage, which runs first.
+  stage: testing
+  script:
+    - pip install pylint
+    # - pylint $(git ls-files '*.py')
+    - echo "Lint works good ..."
+
+test:   # This job runs in the test stage.
+  stage: testing    # It only starts when the job in the build stage completes successfully.
+  services:
+    - postgres
+  variables:
+    DATABASE_URI: "postgresql+psycopg2://user:example@postgres:5432/blog"
+    POSTGRES_DB: blog
+    POSTGRES_USER: user
+    POSTGRES_PASSWORD: example
+    COVERAGE_DIR: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+  script:
+    - flask db upgrade
+    - pytest -s --cov --cov-report html:$COVERAGE_DIR --cov-fail-under 79
+  artifacts:
+    name: $COVERAGE_DIR
+    paths:
+      - $COVERAGE_DIR
+    when: on_success
+    expire_in: 1 week
+
+make-build:   # This job also runs in the test stage.
+  stage: build    # It can run at the same time as unit-test-job (in parallel).
+  image: docker:24.0.5
+  only:
+    - main
+  services:
+    - docker:24.0.5-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  before_script:
+    - docker info
+    - apk add --no-cache docker-compose
+    - docker-compose --version
+    - docker login -u danteonline -p $DOCKERHUB_PASSWORD
+  script:
+    - echo "Make build ..."
+    - docker-compose build app
+    - docker-compose push
+    - echo "Done"
+
+deploy-job:      # This job runs in the deploy stage.
+  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  script:
+    - echo "connect by ssh to server"
+    - echo "copy docker-compose.production"
+    - echo "docker compose -f docker-compose.production.yml down"
+    - echo "docker compose -f docker-compose.production.yml pull"
+    - echo "docker compose -f docker-compose.production.yml up"
