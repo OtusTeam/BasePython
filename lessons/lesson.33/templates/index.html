@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="conteiner">
+
+    <div class="row">
+        {% for student in students %}
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="111">
+                <div class="card-body">
+                    <h5 class="card-title">{{ student['name'] }}</h5>
+                    <p class="card-text">Это пример {{ student['group'] }}. Вы можете использовать её для отображения различного
+                        {{ student['course'] }}.</p>
+                    <a href="#" class="btn btn-primary">Перейти куда-то</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
