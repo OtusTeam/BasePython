@@ -1,0 +1,26 @@
+p {
+    color: yellow;
+    font-size: 30px;
+}
+
+/* Это комментарий */
+
+h2 {
+    color: yellow;
+}
+
+h1 {
+   text-align: center;
+}
+
+#ppp {
+    color: red;
+}
+
+.my_class {
+    color: lightslategray;
+}
+
+.my_class2 {
+    font-size: 40px;
+}
