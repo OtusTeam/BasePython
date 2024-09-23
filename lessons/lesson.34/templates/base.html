@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    {% block title %}
+      Base title
+    {% endblock %}
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+  >
+
+  {% block head %}
+
+  {% endblock %}
+
+</head>
+<body>
+
+<div class="container">
+
+  {% include "components/navbar.html" %}
+
+  <div class="my-2">
+
+    {% block body %}
+      Base body
+    {% endblock %}
+  </div>
+  <footer class="mt-3">
+    {% block footer %}
+      &copy; OTUS 2024
+    {% endblock %}
+  </footer>
+</div>
+
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}">
+
+</script>
+</body>
+</html>

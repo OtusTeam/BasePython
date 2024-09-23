@@ -1,0 +1,36 @@
+{% extends 'products/base.html' %}
+
+{% from 'macros/errors-list.html' import show_errors %}
+
+{% block title %}
+  Add new product
+{% endblock %}
+
+{% block body %}
+  <h1>Create a new product</h1>
+  <form method="post">
+    {{ form.csrf_token }}
+
+    <div class="my-2">
+      {{ form.name.label(class="form-label") }}
+      {{ form.name(size=20, class="form-control") }}
+      {% if form.name.errors %}
+        {{ show_errors(form.name.errors) }}
+      {% endif %}
+    </div>
+    <div class="my-2">
+      {{ form.price.label(class="form-label") }}
+      {{ form.price(size=20, class="form-control") }}
+      {% if form.price.errors %}
+        {{ show_errors(form.price.errors) }}
+      {% endif %}
+    </div>
+
+    <div>
+      {{ form.add(class="my-2 btn btn-primary") }}
+    </div>
+  </form>
+
+  {% include 'products/components/back-to-products-list.html' %}
+
+{% endblock %}
