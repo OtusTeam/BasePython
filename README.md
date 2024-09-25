@@ -21,6 +21,7 @@
 - [FastAPI-JSON:API. Занятие от 03.06.2024](open-lessons/fastapi-jsonapi.03.06.2024/)
 - [Шаблоны страниц Jinja в FastAPI приложении. Занятие от 27.06.2024](open-lessons/fastapi-and-jinja-27.06/)
 - [Интерфейсы и протоколы в Python. Занятие от 27.08.2024](open-lessons/interfaces-and-protocols-27.08/)
+- [Django Class-Based Views. Занятие от 25.09.2024](open-lessons/django-cbv-25.09/)
 
 
 ### Курсы Python Basic:
