@@ -1,0 +1,7 @@
+{% macro show_errors(errors) -%}
+  <ul class="errors alert alert-danger">
+    {% for error in errors %}
+      <li>{{ error }}</li>
+    {% endfor %}
+  </ul>
+{%- endmacro %}

@@ -1,0 +1,37 @@
+services:
+  pg:
+    image: postgres
+    environment:
+      POSTGRES_DB: shop
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: example
+#    ports:
+#      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d shop -U user" ]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  app:
+    build:
+      dockerfile: ./Dockerfile
+    environment:
+      SQLALCHEMY_DATABASE_URI: "postgresql+psycopg://user:example@pg:5432/shop"
+#    network_mode: host
+#    entrypoint:
+#      - bash
+#      - "entrypoint.sh"
+#    command:
+#      - flask
+#      - run
+    ports:
+      - "8080:80"
+    depends_on:
+      pg:
+        condition: service_healthy
+
+volumes:
+  pgdata:
