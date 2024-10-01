@@ -1,0 +1,12 @@
+h1 {
+    color: green;
+    font-size: 50px;
+}
+
+.h1_color {
+    color: yellow;
+}
+
+#my_id1 {
+    color: darkblue;
+}
