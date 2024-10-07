@@ -29,3 +29,4 @@
 - [Урок 33. Базовый фронтенд](lessons/lesson.33/)
 - [Урок 34. Flask-SQLAlchemy, Flask-Migrate. Flask-WTF](lessons/lesson.34/)
 - [Урок 35. Взаимодействие приложений между контейнерами, docker compose ](lessons/lesson.35/)
+- [Урок 36. Знакомство с Django](lessons/lesson.36/)
