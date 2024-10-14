@@ -1,0 +1,27 @@
+{% extends 'blogapp/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock  %}
+
+
+{% block content %}
+
+    <h1>Hello, world. You\'re at the blog index.</h1>
+    <p>{{ data }}</p>
+
+    {% if age < 18 %}
+        <p>Школьник</p>
+    {% elif age < 45 %}
+        <p>Взрослый</p>
+    {% else %}
+        <p>Пенсионер</p>
+    {% endif %}
+
+    {% for author in authors %}
+        <p>{{ author.name }}</p>
+        <p>{{ author.age }}</p>
+    {% endfor %}
+
+
+{% endblock  %}

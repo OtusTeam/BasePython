@@ -1,0 +1,18 @@
+{% extends 'blogapp/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock  %}
+
+
+{% block content %}
+
+
+    {% for author in authors %}
+        <p>{{ author.name }} </p>
+        <p>{{ author.age }}</p>
+        <p>{{ author.email }}</p>
+        <p>{{ author.bio }}</p>
+    {% endfor %}
+
+{% endblock  %}
