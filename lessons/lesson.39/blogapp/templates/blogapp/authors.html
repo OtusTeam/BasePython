@@ -1,0 +1,21 @@
+{% extends 'blogapp/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock  %}
+
+
+{% block content %}
+
+
+    {% for author in authors %}
+        <p><a href="{% url 'author' author.id %}">{{ author.name }} </a></p>
+        <p>{{ author.age }}</p>
+        <p>{{ author.email }}</p>
+        <p>{{ author.bio }}</p>
+
+{% include 'blogapp/inc/hello_world.html' %}
+    {% endfor %}
+
+{% endblock  %}
+
