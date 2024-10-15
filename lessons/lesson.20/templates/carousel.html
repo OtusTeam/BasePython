@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Carousel</h2>
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="https://media.4-paws.org/f/8/0/5/f8055215b5cdc5dee5494c255ca891d7b7d33cd1/Molly_006-2829x1886-2726x1886.jpg" class="d-block w-100" alt="First slide">
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzQV6u6qBsB5ENmyw2JvRqoNrMYXFbij0DLw&s" class="d-block w-100" alt="Second slide">
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://png.pngtree.com/png-vector/20230928/ourmid/pngtree-cute-cat-animal-png-image_10149335.png" class="d-block w-100" alt="Third slide">
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<h2>Card Examples</h2>
+<div class="row">
+    <!-- Первая карточка -->
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card Image 1">
+            <div class="card-body">
+                <h5 class="card-title">Card Title 1</h5>
+                <p class="card-text">This is a brief description for the first card. It provides some insight into what this card is about.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <!-- Вторая карточка -->
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card Image 2">
+            <div class="card-body">
+                <h5 class="card-title">Card Title 2</h5>
+                <p class="card-text">This is a brief description for the second card. It provides some insight into what this card is about.</p>
+                <a href="#" class="btn btn-secondary">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <!-- Третья карточка -->
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card Image 3">
+            <div class="card-body">
+                <h5 class="card-title">Card Title 3</h5>
+                <p class="card-text">This is a brief description for the third card. It provides some insight into what this card is about.</p>
+                <a href="#" class="btn btn-success">Read more</a>
+            </div>
+        </div>
+    </div>
+    <!-- Четвертая карточка -->
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card Image 4">
+            <div class="card-body">
+                <h5 class="card-title">Card Title 4</h5>
+                <p class="card-text">This is a brief description for the fourth card. It provides some insight into what this card is about.</p>
+                <a href="#" class="btn btn-danger">Discover</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Кнопка выпадающего списка
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Действие</a></li>
+      <li><a class="dropdown-item" href="#">Другое действие</a></li>
+      <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+    </ul>
+</div>
+<h2>Clicker Game</h2>
+<p>Number of clicks: <span id="counter">0</span></p>
+
+<div class="clicker_game">
+<button class="button-82-pushable" role="button" id="click-button">
+    <span class="button-82-shadow"></span>
+    <span class="button-82-edge"></span>
+    <span class="button-82-front text">
+        Click me!
+    </span>
+  </button>
+</div>
+{% endblock %}

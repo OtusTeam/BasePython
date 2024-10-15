@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Forms</h2>
+<form>
+    <!-- Блок ввода для адреса электронной почты -->
+    <div class="mb-3">
+        <!-- Метка для поля ввода email -->
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <!-- Поле ввода с типом "email" -->
+        <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <!-- Дополнительный текст-подсказка под полем ввода -->
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    
+    <!-- Блок ввода для пароля -->
+    <div class="mb-3">
+        <!-- Метка для поля ввода пароля -->
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <!-- Поле ввода с типом "password" -->
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    
+    <!-- Кнопка отправки формы -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
