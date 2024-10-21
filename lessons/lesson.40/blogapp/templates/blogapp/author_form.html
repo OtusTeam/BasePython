@@ -1,0 +1,18 @@
+{% extends 'blogapp/base.html' %}
+
+{% block title %}
+    Добавить автора
+{% endblock  %}
+
+{% block content %}
+    <h1>Добавить автора</h1>
+    {% if form.errors %}
+        <p>Форма содержит ошибки</p>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Сохранить">
+    </form>
+
+{% endblock  %}

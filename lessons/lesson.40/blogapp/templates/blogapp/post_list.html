@@ -1,0 +1,16 @@
+{% extends 'blogapp/base.html' %}
+
+{% block title %}
+Посты
+{% endblock  %}
+
+
+{% block content %}
+<h1>Список статей</h1>
+<ul>
+    {% for post in posts %}
+        <li><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock  %}
