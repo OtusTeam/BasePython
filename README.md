@@ -33,3 +33,4 @@
 - [Урок 37. Django ORM, django-debug-toolbar](lessons/lesson.37/)
 - [Урок 39. Django ORM, Admin actions, template filters](lessons/lesson.39/)
 - [Урок 40. Django Class Based Views, generics, Forms](lessons/lesson.40/)
+- [Урок 41. Django CBV, модель пользователя](lessons/lesson.41/)
