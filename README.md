@@ -14,3 +14,4 @@
 - [Урок 21. Системы контроля зависимостей](lessons/lesson.21/)
 - [Урок 23. Docker](lessons/lesson.23/)
 - [Урок 24. SQL, MongoDB, Redis](lessons/lesson.24/)
+- [Урок 25. ORM: SQLAlchemy](lessons/lesson.25/)
