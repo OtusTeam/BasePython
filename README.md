@@ -34,3 +34,5 @@
 - [Урок 39. Django ORM, Admin actions, template filters](lessons/lesson.39/)
 - [Урок 40. Django Class Based Views, generics, Forms](lessons/lesson.40/)
 - [Урок 41. Django CBV, модель пользователя](lessons/lesson.41/)
+- [Урок 42. Django test, Тестирование приложений. Unittest, Pytest](lessons/lesson.42/)
+- [Урок 43. Отложенные задачи. Celery, redis](lessons/lesson.43/)
