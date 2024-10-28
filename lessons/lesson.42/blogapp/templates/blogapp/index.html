@@ -1,0 +1,33 @@
+{% extends 'blogapp/base.html' %}
+{% load custom_filters %}
+
+{% block title %}
+{{ title }}
+{% endblock  %}
+
+
+{% block content %}
+
+    <a href="{% url 'contacts' %}">Контакты</a>
+    <a href="{% url 'authors' %}">Авторы</a>
+
+
+ {% include 'blogapp/inc/hello_world.html' %}
+
+    <p>{{ data | truncatewords:5}}</p>
+
+    {% if age < 18 %}
+        <p>Школьник</p>
+    {% elif age < 45 %}
+        <p>Взрослый</p>
+    {% else %}
+        <p>Пенсионер</p>
+    {% endif %}
+
+    {% for author in authors %}
+        <p>{{ author.name | upper_name }}</p>
+        <p>{{ author.age }}</p>
+    {% endfor %}
+
+
+{% endblock  %}

@@ -1,0 +1,29 @@
+{% extends 'blogapp/base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+
+{% block content %}
+
+    <p>
+        {{ post.title }}
+    </p>
+    <p>
+        {{ post.content }}
+    </p>
+
+    <p>
+        {{ post.author }}
+    </p>
+    <p>
+     {{ post.category }}
+    </p>
+    <p>
+     {{ post.is_published }}
+    </p>
+
+
+{% endblock %}
+
