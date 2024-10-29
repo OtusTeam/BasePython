@@ -15,3 +15,4 @@
 - [Урок 23. Docker](lessons/lesson.23/)
 - [Урок 24. SQL, MongoDB, Redis](lessons/lesson.24/)
 - [Урок 25. ORM: SQLAlchemy](lessons/lesson.25/)
+- [Урок 26. SQLAlchemy: связи между таблицами в БД](lessons/lesson.26/)
