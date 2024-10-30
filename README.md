@@ -22,6 +22,7 @@
 - [Шаблоны страниц Jinja в FastAPI приложении. Занятие от 27.06.2024](open-lessons/fastapi-and-jinja-27.06/)
 - [Интерфейсы и протоколы в Python. Занятие от 27.08.2024](open-lessons/interfaces-and-protocols-27.08/)
 - [Django Class-Based Views. Занятие от 25.09.2024](open-lessons/django-cbv-25.09/)
+- [Декораторы в Python и как их аннотировать. Занятие от 30.10.2024](open-lessons/decorators.30.10.2024/)
 
 
 ### Курсы Python Basic:
