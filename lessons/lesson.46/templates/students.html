@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Студенты{% endblock %}
+
+{% block content %}
+
+  <table>
+    <tr>
+      <th>Имя</th>
+      <th>Курс</th>
+      <th>Группа</th>
+    </tr>
+    {% for student in students %}
+    <tr>
+      <td> {{ student['name'] }}</td>
+      <td> {{ student['course'] }}</td>
+      <td> {{ student['group'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+
+  <h2>Hello, World!</h2>
+  <form action="{{ url_for('about', name='Alex') }}">
+    <input type="submit" value="Отправить">
+  </form>
+
+{% endblock %}
