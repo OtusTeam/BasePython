@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+package hello;
+
+
+// The greeting service definition.
+service Greeter {
+    rpc Greet (HelloRequest) returns (HelloReply) {}
+//    rpc GreetStream (stream HelloRequest) returns (stream HelloReply) {}
+}
+
+
+message Hello {
+    required string text = 1;
+    optional int64 number = 2;
+}
+
+message HelloRequest {
+  required string name = 1;
+}
+
+message HelloReply {
+  required Hello hello = 1;
+}
