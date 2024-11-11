@@ -37,3 +37,4 @@
 - [Урок 42. Django test, Тестирование приложений. Unittest, Pytest](lessons/lesson.42/)
 - [Урок 43. Отложенные задачи. Celery, redis](lessons/lesson.43/)
 - [Урок 46. GitHub Actions](lessons/lesson.46/)
+- [Урок 47. GitLab CI](lessons/lesson.47/)
