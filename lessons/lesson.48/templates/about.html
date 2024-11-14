@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ context['title'] }}{% endblock %}
+
+{% block content %}
+<p>Телефон: {{ context['tel'] }}</p>
+<p>Адрес: {{ context['address'] }}</p>
+{% endblock %}

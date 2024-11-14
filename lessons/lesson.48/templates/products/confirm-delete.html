@@ -1,0 +1,27 @@
+{% extends 'products/base.html' %}
+
+{% block title %}
+  Delete Product #{{ product.id }}
+{% endblock %}
+
+{% block body %}
+  <h1>Delete <code>{{ product.name }}</code></h1>
+  <p>
+    Are you sure you want to delete product <code>{{ product.name }}</code>?
+  </p>
+
+  <form id="confirm-delete" method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+  </form>
+
+  <div class="btn-group" role="group" >
+    <a
+      class="btn btn-secondary"
+      href="{{ url_for('products_app.details', product_id=product.id) }}"
+    >Back to details</a>
+    <button
+      class="btn btn-danger"
+      type="submit"
+      form="confirm-delete">Delete</button>
+  </div>
+{% endblock %}

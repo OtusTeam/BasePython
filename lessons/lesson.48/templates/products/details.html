@@ -1,0 +1,27 @@
+{% extends 'products/base.html' %}
+
+{% block title %}
+Product #{{ product.id }}
+{% endblock %}
+
+{% block body %}
+
+<h1>Product #{{ product.id }} details</h1>
+<div>
+  <strong>Name:</strong> {{ product.name }}
+</div>
+<div>
+  <strong>Price:</strong> {{ product.price }}
+</div>
+<div class="mt-5">
+  <a
+    class="btn btn-secondary"
+    href="{{ url_for('products_app.list') }}"
+  >Back to products list</a>
+
+  <a
+    class="btn btn-warning"
+    href="{{ url_for('products_app.delete', product_id=product.id) }}"
+  >Delete</a>
+</div>
+{% endblock %}

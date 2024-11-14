@@ -1,0 +1,4 @@
+[MASTER]
+disable=
+    C0116, #  missing docstring
+    C0114,

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Index page
+{% endblock %}
+
+{% block body %}
+  <h1>Hello World!</h1>
+
+  <h3>Special chars:</h3>
+
+  <pre>
+  {% raw %}
+    {# Hello jinja comment #}
+    {{  }}
+  {% endraw %}
+  </pre>
+  <ul>
+    <li>{{ '{{' }}</li>
+    <li>{{ '}}' }}</li>
+    <li>{{ '{# Comment #}' }}</li>
+  </ul>
+
+  <hr>
+
+  <h3>Clicker</h3>
+
+  <p>Clicked times: <span id="click-count">0</span></p>
+
+  <button id="click-button" class="push-button margin-bottom">Click me!</button>
+
+
+  <hr>
+  <div>
+    <p>
+      Сайт <em>рыбатекст</em> поможет <i>дизайнеру</i>, верстальщику, вебмастеру сгенерировать несколько абзацев более менее
+      осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних
+      условиях. При создании генератора мы использовали <strong>небезызвестный</strong> универсальный код речей. Текст генерируется
+      абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более
+      привлекательным и живым для визуально-слухового восприятия.
+    </p>
+    <p>
+      По своей сути <u>рыбатекст</u> является альтернативой традиционному <mark>lorem ipsum</mark>, который вызывает у некторых людей
+      недоумение при попытках прочитать рыбу текст. В отличие от lorem ipsum, текст рыба на русском языке наполнит любой
+      макет непонятным смыслом и придаст <s>неповторимый</s> колорит советских времен.
+    </p>
+  </div>
+
+  <script>
+    let clickCount = 0;
+    const clickCountSpan = document.getElementById('click-count');
+    const clickButton = document.getElementById('click-button');
+
+    function updateClickCountText() {
+      clickCountSpan.innerText = clickCount.toString();
+    }
+
+    function handleButtonClick() {
+      clickCount += 1;
+      updateClickCountText();
+    }
+
+    clickButton.addEventListener('click', handleButtonClick)
+
+  </script>
+{% endblock %}
