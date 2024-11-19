@@ -1,0 +1,19 @@
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.5"
+pydantic = {extras = ["email"], version = "^2.9.2"}
+uvicorn = "^0.32.0"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.36"}
+psycopg = "^3.2.3"
+alembic = "^1.14.0"
+aiohttp = "^3.11.2"
+requests = "^2.32.3"
+asyncpg = "^0.30.0"
+gunicorn = "^23.0.0"
+
+[tool.poetry.group.dev.dependencies]
+locust = "^2.32.3"
+
