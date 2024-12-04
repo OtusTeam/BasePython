@@ -1,0 +1,21 @@
+body {
+    color: gray;
+}
+
+p {
+    color: #d53535;
+    background: rgb(0, 255, 0);
+    font-size: 20px;
+    animation: ;
+}
+h1 {
+    color: yellow;
+    background: #575727;
+    font-size: 30px;
+}
+
+.test {
+    color: burlywood;
+    background: #d53535;
+    font-size: 40px;
+}
