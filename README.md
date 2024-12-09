@@ -9,4 +9,4 @@
 - [Урок 16. Файлы и сеть](lessons/lesson.16/)
 - [Урок 18. FastAPI. Знакомство](lessons/lesson.18/)
 - [Урок 19. Основы HTML & CSS](lessons/lesson.19/)
-- [Урок 20. Unittest. Часть 2](lessons/lesson.20/)
+- [Урок 17. Unittest. Часть 2](lessons/lesson.17/)
