@@ -11,4 +11,4 @@
 - [Урок 18. FastAPI. Знакомство](lessons/lesson.18/)
 - [Урок 19. Основы HTML & CSS](lessons/lesson.19/)
 - [Урок 20. Bootstrap & Jinja2](lessons/lesson.20/)
-
+- [Урок 21. FastAPI - быстрая разработка API: тело и роутеры](lessons/lesson.21/)
