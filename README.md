@@ -26,3 +26,4 @@
 - [Урок 35. Знакомство с Django](lessons/lesson.35/)
 - [Урок 36. Django ORM](lessons/lesson.36/)
 - [Урок 37. Django Templates](lessons/lesson.37/)
+- [Урок 38. Работа с админкой, кастомные команды](lessons/lesson.38/)
