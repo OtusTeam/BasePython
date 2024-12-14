@@ -1,0 +1,19 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+        <h1>Список постов</h1>
+        <ul class="list-group">
+            {% for post in posts %}
+                <li class="list-group-item">
+                    <a href="{% url 'post_detail' post.id %}"> <h5>{{ post.title }}</h5> </a>
+                    <p>{{ post.content }}</p>
+                    <p>Автор: {{ post.author }}</p>
+                    <p>Рейтинг: {{ post.rating }}</p>
+                </li>
+            {% empty %}
+                <li class="list-group-item">Нет постов</li>
+            {% endfor %}
+        </ul>
+{% endblock %}
