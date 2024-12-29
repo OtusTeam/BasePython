@@ -1,0 +1,13 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.content }}</p>
+        <p>Автор: {{ post.author }}</p>
+        <p>Рейтинг: {{ post.rating }}</p>
+        <p>Дата создания: {{ post.created_date }}</p>
+        <a href="{% url 'delete_post' post.id %}" class="btn btn-primary">Удалить</a>
+
+{% endblock %}
