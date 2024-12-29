@@ -1,0 +1,94 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+
+<form method="get" class="row mb-4">
+    <div class="col-md-4">
+        <label for="author" class="form-label">Автор</label>
+        <select name="author" id="author" class="form-control">
+            <option value="">Все авторы</option>
+            {% for author in authors %}
+                <option value="{{ author.id }}" {% if request.GET.author == author.id|stringformat:"s" %}selected{% endif %}>
+                    {{ author.name }}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label for="rating" class="form-label">Минимальный рейтинг</label>
+        <input type="number" name="rating" id="rating" class="form-control" placeholder="Введите минимальный рейтинг"
+               value="{{ request.GET.rating }}">
+    </div>
+    <div class="col-md-4 d-flex align-items-end">
+        <button type="submit" class="btn btn-primary w-100">Фильтровать</button>
+    </div>
+</form>
+
+
+
+        <h1>Список постов</h1>
+        <ul class="list-group">
+            {% for post in posts %}
+                <li class="list-group-item">
+                    <a href="{% url 'post_detail' post.id %}"> <h5>{{ post.title }}</h5> </a>
+                    <p>{{ post.content }}</p>
+                    <p>Автор: {{ post.author }}</p>
+                    <p>Рейтинг: {{ post.rating }}</p>
+                    <a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Редактировать</a>
+
+                </li>
+            {% empty %}
+                <li class="list-group-item">Нет постов</li>
+            {% endfor %}
+        </ul>
+
+
+ <!-- Навигация пагинации -->
+    {% if is_paginated %}
+        <nav aria-label="Навигация по страницам">
+            <ul class="pagination justify-content-center mt-4">
+                <!-- Кнопка "Назад" -->
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Назад">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <span class="page-link">&laquo;</span>
+                    </li>
+                {% endif %}
+
+                <!-- Номера страниц -->
+                {% for num in paginator.page_range %}
+                    {% if num == page_obj.number %}
+                        <li class="page-item active">
+                            <span class="page-link">{{ num }}</span>
+                        </li>
+                    {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+
+                <!-- Кнопка "Вперёд" -->
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Вперёд">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <span class="page-link">&raquo;</span>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
+
+{% endblock %}
