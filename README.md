@@ -29,3 +29,6 @@
 - [Урок 38. Работа с админкой, кастомные команды](lessons/lesson.38/)
 - [Урок 40. Формы в Django](lessons/lesson.40/)
 - [Урок 41. CBV](lessons/lesson.41/)
+- [Урок 42. Тестирование Django-приложений с Pytest](lessons/lesson.42/)
+- [Урок 43. Django и отложенные задачи с Celery и Redis](lessons/lesson.43/)
+
