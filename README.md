@@ -13,3 +13,4 @@
 - [Урок 20. Bootstrap & Jinja2](lessons/lesson.20/)
 - [Урок 21. FastAPI - быстрая разработка API: тело и роутеры](lessons/lesson.21/)
 - [Урок 25. Хранение данных в реляционных БД. Язык SQL](lessons/lesson.25/)
+- [Урок 26. ORM: SQLAlchemy](lessons/lesson.26/)
