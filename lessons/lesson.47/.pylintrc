@@ -1,0 +1,4 @@
+[MASTER]
+disable=
+    C0116, #  function docstring
+    C0114, #  module docstring

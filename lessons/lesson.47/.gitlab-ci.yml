@@ -1,0 +1,50 @@
+image: python:3.12
+
+stages:          # List of stages for jobs, and their order of execution
+  - testing
+  - build
+  - deploy
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install poetry
+  - poetry install
+  - source `poetry env info --path`/bin/activate
+#  - pip install pytest-cov
+#  - pip install pylint
+#  - pip install httpx
+#  - pip install poetry
+#  - poetry install --with development
+#  - source `poetry env info --path`/bin/activate
+#   - pip install -r requirements.txt
+#  - pip install pytest-cov
+#  - pip install pylint
+
+lint:       # This job runs in the build stage, which runs first.
+  stage: testing
+  script:
+    - echo "make lint"
+
+test:   # This job runs in the test stage.
+  stage: testing    # It only starts when the job in the build stage completes successfully.
+  services:
+    - postgres
+  variables:
+    POSTGRES_DB: blog
+    POSTGRES_USER: user
+    POSTGRES_PASSWORD: password
+  script:
+    - cd fastapi-app
+    - alembic upgrade head
+    - pytest
+
+make-build:   # This job also runs in the test stage.
+  stage: build    # It can run at the same time as unit-test-job (in parallel).
+  script:
+    - echo "Build project ..."
+
+deploy-job:      # This job runs in the deploy stage.
+  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  script:
+    - echo "Deploying application..."
