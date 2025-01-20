@@ -1,0 +1,4 @@
+alembic==1.14.1
+black==24.10.0
+psycopg==3.2.4
+SQLAlchemy==2.0.37
