@@ -48,3 +48,4 @@
 - [PythonBasic.2024-07](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2024-07)
 - [PythonBasic.2024-09](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2024-09)
 - [PythonBasic.2024-11](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2024-11)
+- [PythonBasic.2025-01](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2025-01)
