@@ -7,5 +7,7 @@ convention = {
 }
 
 db_url = "postgresql+psycopg://app:apppassword@localhost:5432/blog"
+db_async_url = "postgresql+asyncpg://app:apppassword@localhost:5432/blog"
 db_echo = False
-db_echo = True
+db_pool_size = 50
+db_max_overflow = 0

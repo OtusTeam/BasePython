@@ -28,7 +28,7 @@ class UserRead(UserBase):
 
 def generate_user_token() -> str:
     token = str(uuid.uuid4())
-    print("New token:", token)
+    # print("New token:", token)
     return token
 
 
