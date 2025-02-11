@@ -1,0 +1,23 @@
+h1 {
+    color: red;
+    font-size: 44px;
+    text-align: center;
+}
+/*h2 {*/
+/*    color: yellow;*/
+/*}*/
+
+p {
+    color: blue;
+    line-height: 0.5;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
