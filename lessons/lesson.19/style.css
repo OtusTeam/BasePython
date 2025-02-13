@@ -1,0 +1,67 @@
+body {
+    background-color: bisque;
+}
+
+h1 {
+    color: red;
+    font-size: 44px;
+    text-align: center;
+}
+/*h2 {*/
+/*    color: yellow;*/
+/*}*/
+
+p {
+    color: blue;
+    line-height: 0.5;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+article p {
+    color: yellow;
+}
+
+nav > ul {
+    background-color: grey;
+}
+
+h2 + p {
+    font-size: 34px;
+}
+
+h1, h2 , h3 {
+    background-color: royalblue;
+}
+
+.tr1 {
+    background-color: green;
+}
+
+.tr2 {
+    background-color: red;
+}
+
+.tr3 {
+    background-color: blue;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+}
