@@ -9,3 +9,4 @@
 - [Урок 17. Файлы и сеть](lessons/lesson.17/)
 - [Урок 18. Основы фронтенда](lessons/lesson.18/)
 - [Урок 19. Базовый фронтенд. CSS & Bootstrap](lessons/lesson.19/)
+- [Урок 20. FastAPI. Знакомство](lessons/lesson.20/)
