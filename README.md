@@ -10,3 +10,4 @@
 - [Урок 18. Основы фронтенда](lessons/lesson.18/)
 - [Урок 19. Базовый фронтенд. CSS & Bootstrap](lessons/lesson.19/)
 - [Урок 20. FastAPI. Знакомство](lessons/lesson.20/)
+- [Урок 21. FastAPI — быстрая разработка API: тело, роутеры, шаблоны Jinja2](lessons/lesson.21/)

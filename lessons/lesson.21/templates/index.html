@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Home Page
+{% endblock %}
+
+{% block body %}
+	<h1>Hello World</h1>
+  <h2>ToDo List:</h2>
+  <ul>
+    {% for item in items %}
+    	<li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  <h3>Links:</h3>
+  <ul>
+    <li><a href="/docs">Interactive Docs</a></li>
+  </ul>
+{% endblock %}
