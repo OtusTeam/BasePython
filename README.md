@@ -22,3 +22,5 @@
 - [Урок 33. Асинхронная работа с БД](lessons/lesson.33/)
 - [Урок 34. Работа API с БД](lessons/lesson.34/)
 - [Урок 35. Взаимодействие приложений между контейнерами - Docker Compose](lessons/lesson.35/)
+- [Урок 36. Знакомство с Django](lessons/lesson.36/)
+- [Урок 37. Django ORM](lessons/lesson.37/)
