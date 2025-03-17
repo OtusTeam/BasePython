@@ -27,3 +27,4 @@
 - [Урок 38. Django Templates](lessons/lesson.38/)
 - [Урок 40. Работа с админкой, кастомные команды](lessons/lesson.40/)
 - [Урок 41. Django Forms](lessons/lesson.41/)
+- [Урок 42. Django CBV](lessons/lesson.42/)
