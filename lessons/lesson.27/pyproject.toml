@@ -1,0 +1,10 @@
+[project]
+name = "sql-project-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pg8000>=1.31.2",
+    "sqlalchemy>=2.0.39",
+]
