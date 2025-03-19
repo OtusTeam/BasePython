@@ -1,0 +1,47 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %} Список постов {% endblock %}
+
+{% block content %}
+    <h1>Список постов</h1>
+
+    <!-- Фильтр постов -->
+    <form method="get" class="row mb-4">
+        <div class="col-md-4">
+            <label for="author" class="form-label">Автор</label>
+            <select name="author" id="author" class="form-control">
+                <option value="">Все авторы</option>
+                {% for author in authors %}
+                    <option value="{{ author.id }}" {% if request.GET.author == author.id|stringformat:"s" %}selected{% endif %}>
+                        {{ author.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="rating" class="form-label">Минимальный рейтинг</label>
+            <input type="number" name="rating" id="rating" class="form-control" placeholder="Введите минимальный рейтинг"
+                   value="{{ request.GET.rating }}">
+        </div>
+        <div class="col-md-4 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100">Фильтровать</button>
+        </div>
+    </form>
+
+    <!-- Список постов -->
+    <ul class="list-group">
+      {% for post in posts %}
+      <li class="list-group-item">
+        <h5>{{ post.title }}</h5>
+        <p>{{ post.content|truncatewords:7}}</p>
+        <small>Автор: {{ post.author.name }} | Рейтинг: {{ post.rating }}</small>
+          <a href="{% url 'edit_post' post.id %}" class="btn btn-warning">Редактировать</a>
+          <a href="{% url 'delete_post' post.id %}" class="btn btn-danger">Удалить</a>
+      </li>
+    {% empty %}
+      <p>Посты не найдены.</p>
+    {% endfor %}
+
+
+    </ul>
+{% endblock %}
