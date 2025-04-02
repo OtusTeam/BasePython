@@ -30,3 +30,4 @@
 - [Урок 42. Django CBV](lessons/lesson.42/)
 - [Урок 43. Django pytest](lessons/lesson.43/)
 - [Урок 45. Django Celery & Redis](lessons/lesson.45/)
+- [Урок 47. GitHub Actions](lessons/lesson.47/)
