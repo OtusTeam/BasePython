@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">Каталог фильмов</h1>
+        <div class="row mt-4">
+            {% for movie in movies %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ movie.title }}</h5>
+                        <p class="card-text"><strong>Жанр:</strong> {{ movie.genre }}</p>
+
+                        <p class="card-text">
+                            <strong>Рейтинг:</strong>
+                            {% if movie.rating > 9.0 %}
+                                <span class="text-success"> {{ movie.rating }} </span>
+                            {% elif movie.rating < 5.0 %}
+                                <span class="text-warning"> {{ movie.rating }} </span>
+                            {% else %}
+                                {{ movie.rating }}
+                            {% endif %}
+                            </p>
+                        <a href="http://127.0.0.1:8000/movies/{{ movie.id }}" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
