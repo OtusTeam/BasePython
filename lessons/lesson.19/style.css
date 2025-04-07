@@ -1,0 +1,97 @@
+h2 {
+    color: rgb(255, 0, 0);
+    font-size: 40px;
+    text-align: center;
+    background-color: blue;
+}
+
+h1 {
+    color: #38ab70;
+    font-size: 50px;
+    text-align: left;
+}
+
+body {
+    /*background-image: url("tanos.jpeg");*/
+    background-color: deepskyblue;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: brown;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.my_class {
+    color: yellowgreen;
+    font-size: 30px;
+    text-align: right;
+    background-color: blue;
+}
+
+h3, h4, h5, h6 {
+    color: brown;
+}
+h3, h4 {
+    font-size: 25px;
+}
+h3 {
+    background-color: olive;
+}
+
+.my_class1 {
+    color: yellowgreen;
+    font-size: 30px;
+    text-align: right;
+    background-color: blue;
+}
+
+.my_class2 {
+    color: yellowgreen;
+    font-size: 30px;
+    text-align: right;
+    background-color: blue;
+}
+
+
+#name {
+    color: firebrick;
+}
+
+
+nav {
+    background-color: #01060a;
+    padding: 15px, 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: #38ab70;
+     ;
+
+}

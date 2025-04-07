@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Python</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bs_style.css">
+    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">-->
+    <!--    <style>-->
+    <!--        h2 {-->
+    <!--            color: red;-->
+    <!--        }-->
+    <!--        h1 {-->
+    <!--            color: gold;-->
+    <!--        }-->
+    <!--    </style>-->
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="https://google.com">Главная</a></li>
+            <li><a href="https://google.com">Путешествия</a></li>
+            <li><a href="https://google.com">Природа</a></li>
+            <li><a href="https://google.com">О блоге</a></li>
+            <li><a href="https://google.com">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <aside>
+        <ol>
+
+            <li><a href="#name">Путешествия</a></li>
+            <li><a href="https://google.com">О животных</a></li>
+            <li><a href="https://google.com">О еде</a></li>
+
+        </ol>
+    </aside>
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Привет мир!</h1>
+    <h2>Привет мир2!</h2>
+    <!--        <h1 style="color: blue; font-size: 50px">Привет мир!</h1> <h2>Привет мир2!</h2>-->
+    <h3>Привет мир h3!</h3>
+
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-secondary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-dark" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4 my_class">Блок1</div>
+            <div class="col-8">Блок2</div>
+    </div>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    <button type="button" class="btn btn-link">Link</button>
+
+    <div class="card" style="width: 18rem;">
+        <img src="tanos.jpeg" class="card-img-top" alt="Танос">
+        <div class="card-body">
+            <h5 class="card-title">Заголовок карточки</h5>
+            <p class="card-text">Небольшой пример <span class="my_class">текста, который</span> текста, который должен основываться на названии карточки и составлять
+                основную часть содержимого карты.</p>
+            <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+        </div>
+    </div>
+
+    <h4>Привет мир h4!</h4>
+    <h5>Привет мир h5!</h5>
+    <h6>Привет мир h5!</h6>
+    <h4 class="my_class my_class2">Привет мир4!</h4>
+    <h5>Привет мир5!</h5>
+    <h6 class="my_class">Привет мир6!</h6>
+    <!--        <h6  style="color: blue; font-size: 50px">Привет мир6!</h6>-->
+
+    <audio controls>
+        <source src="Led_Zeppelin1.mp3" type="audio/mp3">
+        Ваш браузер не поддерживает аудио
+    </audio>
+
+
+    <video controls with="400">
+        <source src="Led_Zeppelin1.mp4" type="video/mp4">
+        видео
+    </video>
+
+
+    <p>Lorem <b>ipsum dolor sit amet</b>, consectetur <strong>Aut dolore ducimus enim</strong> libero magnam obcaecati
+        officiis rerum sit vel. Ad alias magnam nemo neque, nostrum reprehenderit sit tenetur veritatis voluptatem?</p>
+    <hr>
+    <p>Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit.
+        <br>
+        Ab ad, aut est, hic id modi molestiae nihil <br>
+
+
+    <blockquote>nostrum odit, officiis placeat</blockquote>
+    <cite>Кто-то</cite>
+    <br>
+    <i>possimus quam </i>quibusdam recusandae <em>sint suscipit totam </em>vitae voluptas?</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/7/7b/Josh_Brolin_as_Thanos.jpeg/390px-Josh_Brolin_as_Thanos.jpeg"
+         alt="Tanos">
+
+
+    <img src="./tanos.jpeg" alt="Тоже Танос" width="200" height="400">
+    123456
+
+
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+</main>
+
+
+<footer>
+    <form action="submit.js" method="post">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Ваша почта:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="pass">Ваш пароль:</label>
+        <input type="password" id="pass" name="password">
+        <br>
+        <label for="message">Ваше сообщение:</label>
+        <textarea id="message" name="text" rows="10"> </textarea>
+
+
+        <button type="submit">Отправить</button>
+    </form>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+</html>
