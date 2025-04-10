@@ -1,0 +1,44 @@
+services:
+  pg:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: /var/lib/postgresql/data/pgdata
+#    ports:
+#      - "5432:5432"
+    volumes:
+      - postgresdata:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+  magazine:
+    build:
+      dockerfile: ./docker-build/magazine/Dockerfile
+      context: .
+    environment:
+      MAGAZINE_CONFIG__DB__NAME: blog
+      MAGAZINE_CONFIG__DB__HOST: pg
+      MAGAZINE_CONFIG__DB__USER: app
+      MAGAZINE_CONFIG__DB__PASSWORD: ${POSTGRES_PASSWORD}
+    command:
+      - gunicorn
+      - app:app
+      - --workers
+      - "2"
+      - --worker-class
+      - uvicorn.workers.UvicornWorker
+      - --bind
+      - 0.0.0.0:8080
+    ports:
+      - "8000:8080"
+    depends_on:
+      pg:
+        condition: service_healthy
+
+volumes:
+  postgresdata:
