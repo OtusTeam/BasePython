@@ -8,4 +8,5 @@
 - [Урок 16. Работа с HTTP и API](lessons/lesson.16/)
 - [Урок 17. HTTP-запросы, HttpClient, Proxy](lessons/lesson.17/)
 - [Урок 18. Основы фронтенда](lessons/lesson.18/)
-- [Урок 19. Базовый фронтенд](lessons/lesson.19/)
+- [Урок 19. Базовый фронтенд](lessons/lesson.19/) 
+- [Урок 20. FastAPI — быстрая разработка API: знакомство](lessons/lesson.20/)
