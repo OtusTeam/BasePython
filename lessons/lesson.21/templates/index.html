@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+
+    {% for movie in movies %}
+        <h3>{{ movie.title }}</h3>
+        <h4>{{ movie.genre }}</h4>
+
+        {% if movie.rating > 7.5 %}
+        <h5> Высокий рейтинг </h5>
+        {% else %}
+        <h5> Низкий рейтинг </h5>
+        {% endif %}
+
+        <h5><a href="/movies/{{ movies.id }}">Подробней</a></h5>
+
+        <br>
+    {% endfor %}
+
+{% endblock %}
