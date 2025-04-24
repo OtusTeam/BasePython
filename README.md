@@ -26,3 +26,4 @@
 - [Урок 36. Знакомство с Django](lessons/lesson.36/)
 - [Урок 37. Django ORM](lessons/lesson.37/)
 - [Урок 38. Django Templates](lessons/lesson.38/)
+- [Урок 39. Django admins](lessons/lesson.39/)
