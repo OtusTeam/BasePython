@@ -12,3 +12,4 @@
 - [Урок 20. FastAPI — быстрая разработка API: знакомство](lessons/lesson.20/)
 - [Урок 21. FastAPI — быстрая разработка API: тело и роутеры](lessons/lesson.21/)
 - [Урок 23. Docker](lessons/lesson.23/)
+- [Урок 25. Хранение данных в реляционных БД. Язык SQL](lessons/lesson.25/)
