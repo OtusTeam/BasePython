@@ -28,3 +28,4 @@
 - [Урок 38. Django Templates](lessons/lesson.38/)
 - [Урок 39. Django admins](lessons/lesson.39/)
 - [Урок 41. Django forms](lessons/lesson.41/)
+- [Урок 42. Django CBV](lessons/lesson.42/)
