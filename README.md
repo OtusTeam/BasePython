@@ -26,6 +26,7 @@
 - [Знакомство с Protobuf и gRPC. Работа с gRPC на Python. Занятие от 07.11.2024](open-lessons/pb-and-grpc.07.11.2024/)
 - [Знакомство с FastAPI. Занятие от 27.02.2025](open-lessons/fastapi-intro-27.02.2025/)
 - [Абстрактные классы и протоколы в Python. Занятие от 13.05.2025](open-lessons/abc-and-proto-13.05.2025/)
+- [Фоновые задачи в FastAPI — Background Tasks. Занятие от 20.05.2025](open-lessons/fastapi-bg-tasks-20.05.2025/)
 
 
 ### Курсы Python Basic:

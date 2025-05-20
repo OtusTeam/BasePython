@@ -1,0 +1,15 @@
+[project]
+name = "fastapi-bg-tasks-20-05"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiosmtplib>=4.0.1",
+    "fastapi[standard]>=0.115.12",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+]
