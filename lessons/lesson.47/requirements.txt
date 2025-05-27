@@ -1,0 +1,8 @@
+django
+faker
+factory-boy
+beautifulsoup4
+pytest-cov
+pytest-django
+pytest-mock
+pylint
