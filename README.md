@@ -53,3 +53,4 @@
 - [PythonBasic.2024-11](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2024-11)
 - [PythonBasic.2025-01](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2025-01)
 - [PythonBasic.2025-03](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2025-03)
+- [PythonBasic.2025-05](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2025-05)
