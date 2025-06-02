@@ -1,0 +1,24 @@
+[project]
+name = "blog-web-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.12.7",
+    "alembic>=1.16.1",
+    "asyncpg>=0.30.0",
+    "fastapi[standard]>=0.115.12",
+    "gunicorn>=23.0.0",
+    "psycopg[binary]>=3.2.9",
+    "pydantic[email]>=2.11.5",
+    "requests>=2.32.3",
+    "sqlalchemy[asyncio]>=2.0.41",
+    "typer>=0.16.0",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "locust>=2.37.6",
+]
