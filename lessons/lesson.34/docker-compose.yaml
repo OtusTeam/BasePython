@@ -1,0 +1,47 @@
+services:
+  pg:
+    image: postgres:17.5
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+        - pgdata:/var/lib/postgresql/data
+#    ports:
+#      - "5435:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 5s
+      timeout: 2s
+      retries: 3
+
+  blog-app:
+    build:
+      dockerfile: ./docker-build/blog-app/Dockerfile
+      context: .
+    environment:
+      BLOG_APP__FOO: secret-bar
+      BLOG_APP__DB__HOST: pg
+      BLOG_APP__DB__PORT: 5432
+      BLOG_APP__DB__USER: app
+      BLOG_APP__DB__PASSWORD: password
+      BLOG_APP__DB__DATABASE: blog
+
+    command:
+      - "gunicorn"
+      - "main:app"
+      - "--workers"
+      - "1"
+      - "--worker-class"
+      - "uvicorn.workers.UvicornWorker"
+      - "--bind"
+      - "0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    depends_on:
+      pg:
+        condition: service_healthy
+
+volumes:
+  pgdata:
