@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>OTUS</title>
+    <!--    <link rel="stylesheet" href="css/style.css">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        h1 {
+            color: chartreuse;
+            font-size: 50px;
+            text-align: right;
+        }
+
+        .my_color2 {
+            background-color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light my_color2">
+        <div class="container-fluid  my_color2">
+            <a class="navbar-brand" href="#">Туризм</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/tanos.jpeg" class="d-block w-100" alt="tanos1">
+    </div>
+    <div class="carousel-item">
+      <img src="images/tanos.jpeg" class="d-block w-100" alt="tanos2">
+    </div>
+    <div class="carousel-item">
+      <img src="images/tanos.jpeg" class="d-block w-100" alt="tanos3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+    <nav>
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#travel1">О нас</a></li>
+            <li><a href="#travel2">Контакты</a></li>
+            <li><a href="shop.html">Магазин</a></li>
+            <li><a href="https://google.com">Отзывы</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-danger">Left</button>
+        <button type="button" class="btn btn-warning">Middle</button>
+        <button type="button" class="btn btn-success">Right</button>
+    </div>
+
+    <a href="#">Просто ссылка</a>
+    <form action="/upload" method="post">
+        <label for="name">Ваше имя: </label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Ваша почта: </label>
+        <input type="email" id="email" name="email">
+
+        <label for="password">Ваш пароль: </label>
+        <input type="password" id="password" name="password">
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+
+    <h1 style="color: red; font-size: 40px; text-align: center" class="my_travel">Заголовок</h1>
+    <h2>Заголовок</h2>
+    <h3>Заголовок</h3>
+    <h4 class="my_travel">Заголовок</h4>
+    <h5>Заголовок</h5>
+    <h1>Заголовок</h1>
+
+
+    <div class="card" style="width: 18rem;">
+        <img src="images/tanos.jpeg" class="card-img-top" alt="Tanos">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore dolorem ex exercitationem expedita illo ipsam
+        odit perspiciatis quas, qui quo ratione repudiandae sequi similique sit vero voluptas! Facere, temporibus.</p>
+
+    <article id="travel1">
+        <h2 class="my_travel my_color my_color1">Мое путешествие 1</h2>
+        <iframe width="400" height="405" src="https://rutube.ru/play/embed/80b090281413b9ac30235f034980a99e/"
+                frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen
+                allowFullScreen></iframe>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis culpa ea exercitationem facilis id
+            iure mollitia necessitatibus neque nulla, perferendis perspiciatis quae quia quibusdam quis repellat
+            sapiente suscipit voluptates!</p>
+        <img src="https://i.pinimg.com/236x/c8/cc/24/c8cc24bba37a25c009647b8875aae0e3.jpg" alt="Котик" height="400"
+             width="200">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <q>Accusantium aliquam </q>animi esse et eveniet
+            ex excepturi exercitationem expedita ipsa laudantium, magni maxime nobis officia officiis reiciendis
+            reprehenderit sed sit tenetur?
+        </p>
+        <blockquote>eveniet ex excepturi exercitationem expedita ipsa laudantium,</blockquote>
+        <p>Автор цитаты: <cite> Боб Смит</cite></p>
+    </article>
+
+
+    <article id="travel2">
+        <h2>Мое путешествие 2</h2>
+        <video controls width="400">
+            <source src="media/temp_video.mp4" type="video/mp4">
+        </video>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis culpa ea exercitationem facilis id
+            iure mollitia necessitatibus neque nulla, perferendis perspiciatis quae quia quibusdam quis repellat
+            sapiente suscipit voluptates!</p>
+        <img src="images/tanos.jpeg" alt="Танос" width="600">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam animi esse et eveniet ex
+            excepturi exercitationem expedita ipsa laudantium, magni maxime nobis officia officiis reiciendis
+            reprehenderit sed sit tenetur?
+        </p>
+        <blockquote>eveniet ex excepturi exercitationem expedita ipsa laudantium,</blockquote>
+        <audio controls>
+            <source src="media/014-Metallica%20-%20Nothing%20Else%20Matters.mp3" type="audio/mp3">
+        </audio>
+    </article>
+
+
+    <dl>
+        <dt>Рим</dt>
+        <dd>Столица Италии</dd>
+
+        <dt>Париж</dt>
+        <dd>Столица Франции</dd>
+
+        <dt>Москва</dt>
+        <dd>Столица России</dd>
+    </dl>
+    <aside>
+        <h3>Категории</h3>
+        <ul>
+            <li><a href="#">Путешествие</a></li>
+            <li><a href="#">Природа</a></li>
+            <li><a href="#">Еда</a></li>
+        </ul>
+    </aside>
+
+    <table>
+        <caption>Топ-3: Туристические города</caption>
+        <tr>
+            <th>Место</th>
+            <th>Город</th>
+            <th>Страна</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Москва</td>
+            <td>Россия</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Казань</td>
+            <td>Россия</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Казань</td>
+            <td>Россия</td>
+        </tr>
+    </table>
+
+
+</main>
+
+<footer>
+    &copy; 2025 localhost
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
+
