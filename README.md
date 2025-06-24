@@ -11,3 +11,4 @@
 - [Урок 18. Знакомство с HTML](lessons/lesson.18/)
 - [Урок 19. Знакомство с CSS и Bootstrap](lessons/lesson.19/)
 - [Урок 20. Знакомство с FastAPI](lessons/lesson.20/)
+- [Урок 21. Шаблоны и роутеры в FastAPI](lessons/lesson.21/)
