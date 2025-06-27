@@ -12,3 +12,4 @@
 - [Урок 19. Знакомство с CSS и Bootstrap](lessons/lesson.19/)
 - [Урок 20. Знакомство с FastAPI](lessons/lesson.20/)
 - [Урок 21. Шаблоны и роутеры в FastAPI](lessons/lesson.21/)
+- [Урок 22. Системы контроля зависимостей](lessons/lesson.22/)
