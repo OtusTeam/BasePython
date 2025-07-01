@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <p>{{ text }}</p>
+
+
+    {% for movie in movies %}
+
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+               {% if movie.year > 1993 %}
+                <b> <h3 class="card-title">{{ movie.title }}</h3> </b>
+              {% else %}
+              <h5 class="card-title">{{ movie.title }}</h5>
+              {% endif %}
+
+            <p class="card-text">{{ movie.description }}</p>
+            <a href="#" class="btn btn-primary">{{ movie.year }}</a>
+          </div>
+        </div>
+
+    {% endfor %}
+{% endblock %}
