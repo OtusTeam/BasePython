@@ -13,3 +13,4 @@
 - [Урок 20. Знакомство с FastAPI](lessons/lesson.20/)
 - [Урок 21. Шаблоны и роутеры в FastAPI](lessons/lesson.21/)
 - [Урок 22. Системы контроля зависимостей](lessons/lesson.22/)
+- [Урок 23. Знакомство с Docker](lessons/lesson.23/)
