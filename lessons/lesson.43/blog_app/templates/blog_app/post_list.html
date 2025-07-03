@@ -1,0 +1,21 @@
+{% extends "blog_app/base.html" %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+        <h1>Список постов</h1>
+        <ul class="list-group">
+            {% for post in posts %}
+                 <li class="list-group-item">
+                     <a href="{% url 'post_detail' post.pk %}"><h3> {{ post.title }}</h3></a>
+                     <p>{{ post.content|truncatewords:50 }}</p>
+                     <small>Автор: {{ post.author.name }} | Рейтинг: {{ post.rating }} | Просмотров {{ post.views }}</small>
+                     <a href="{% url 'edit_post'  post.id %}" class="btn btm-sm btn-warning">Редактировать</a>
+                 </li>
+            {% empty %}
+                <li class="list-group-item">Нет постов</li>
+
+             {% endfor %}
+        </ul>
+{% endblock %}
+

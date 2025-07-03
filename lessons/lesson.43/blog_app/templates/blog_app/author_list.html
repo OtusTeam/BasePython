@@ -1,0 +1,25 @@
+{% extends "blog_app/base.html" %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+        <h1>{{ title }}</h1>
+        <ul class="list-group">
+            {% for author in authors %}
+                 <li class="list-group-item">
+                     <h3> {{ author.name }}</h3>
+
+                     {% if author.profile %}
+                         <p>{{ author.profile.bio }}</p>
+                         <p>{{ author.profile.website }}</p>
+                     {% else %}
+                        <p>Пользователь еще не заполнил профиль</p>
+                     {% endif %}
+                 </li>
+            {% empty %}
+                <li class="list-group-item">Нет авторов</li>
+
+             {% endfor %}
+        </ul>
+{% endblock %}
+
