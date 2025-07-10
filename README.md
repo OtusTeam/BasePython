@@ -29,3 +29,4 @@
 - [Урок 41. Django forms](lessons/lesson.41/)
 - [Урок 43. Django CBV](lessons/lesson.43/)
 - [Урок 44. Django tests](lessons/lesson.44/)
+- [Урок 45. Django Celery](lessons/lesson.45/)
