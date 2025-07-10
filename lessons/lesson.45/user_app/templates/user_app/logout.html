@@ -1,0 +1,14 @@
+{% extends "blog_app/base.html" %}
+
+{% block title %}Выход{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6 text-center">
+    <h2 class="mb-4">Вы вышли из аккаунта</h2>
+    <p class="mb-3">Вы успешно вышли из личного кабинета.</p>
+    <a href="{% url 'login' %}" class="btn btn-primary">Войти снова</a>
+    <a href="/" class="btn btn-secondary ms-2">На главную</a>
+  </div>
+</div>
+{% endblock %}

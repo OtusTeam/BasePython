@@ -1,0 +1,38 @@
+{% extends "blog_app/base.html" %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="mb-4">Вход в личный кабинет</h2>
+        <form method="post">
+            {% csrf_token %}
+            {% if form.non_field_errors %}
+            <div class="alert alert-danger">
+                {{ form.non_field_errors }}
+            </div>
+            {% endif %}
+
+
+            {% for field in form %}
+            <div class="mb-3">
+                {{ field.label_tag }}
+                {{ field }}
+
+                {% if field.errors %}
+                <div class="text-danger small">
+                    {{ field.errors }}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+
+            <button type="submit" class="btn btn-primary">Войти</button>
+        </form>
+        <p class="mt-3">
+            Нет аккаунта? <a href="{% url 'register' %}">Зарегистрироваться</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
