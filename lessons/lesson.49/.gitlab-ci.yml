@@ -1,0 +1,40 @@
+image: python:3.12
+
+stages:
+  - testing
+  - build
+  - deploy
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install poetry
+  - poetry install --no-root
+
+lint:
+  stage: testing
+  script:
+    - poetry run pylint $(git ls-files '*.py')
+
+test:
+  stage: testing
+  services:
+    - postgres
+  variables:
+    DATABASE_TYPE: postgres
+    POSTGRES_DB: blog_db
+    POSTGRES_USER: user1
+    POSTGRES_PASSWORD: dieciek20382
+    PGHOST: postgres
+  script:
+    - poetry run  pytest -s --cov --cov-report html --cov-fail-under 92
+
+build-job:
+  stage: build
+  script:
+    - echo "Building application ..."
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying application..."

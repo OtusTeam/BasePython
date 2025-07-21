@@ -31,3 +31,4 @@
 - [Урок 44. Django tests](lessons/lesson.44/)
 - [Урок 45. Django Celery](lessons/lesson.45/)
 - [Урок 48. GitHub Actions](lessons/lesson.48/)
+- [Урок 49. GitLab CI](lessons/lesson.49/)
