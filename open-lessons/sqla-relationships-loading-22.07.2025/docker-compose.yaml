@@ -1,0 +1,15 @@
+services:
+  pg:
+    image: postgres:17.5
+    environment:
+      POSTGRES_DB: blog
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: password
+      POSTGRES_DATA: /var/lib/postgresql/data
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pg_data:
