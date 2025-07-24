@@ -1,0 +1,51 @@
+#volumes:
+#  static:
+#  db-data:
+
+services:
+  db:
+    image: postgres:latest
+    # restart: always
+    ports:
+      - 5432:5432
+#    volumes:
+#      - db-data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      POSTGRES_DB: "${POSTGRES_DB}"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d ${POSTGRES_DB} -U ${POSTGRES_USER}" ]
+      interval: 5s
+      timeout: 3s
+      retries: 6
+  backend:
+    image: danteonline/python-base-2025-01
+    build:
+      context: .
+    ports:
+      - 8080:8080
+#    volumes:
+#      - static:/static/
+    environment:
+      DATABASE_TYPE: "postgres"
+      POSTGRES_DB: "${POSTGRES_DB}"
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      PGHOST: "db"
+    command: bash -c "
+      poetry run python manage.py migrate
+      && poetry run gunicorn config.wsgi -b 0.0.0.0:8080
+      "
+    depends_on:
+      db:
+        condition: service_healthy
+#  nginx:
+#    image: findsimilar/demo-nginx
+#    build: ./nginx
+#    ports:
+#      - 8000:80
+#    volumes:
+#      - static:/etc/nginx/static/
+#    depends_on:
+#      - demo
