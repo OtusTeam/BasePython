@@ -1,0 +1,54 @@
+body {
+    background-color: aquamarine;
+    font-family: Arial, sanf-serif;
+    color: #a57d7d;
+    margin: 0px;
+    padding: 0px;
+}
+
+h2 {
+    color: rgb(255, 123, 100);
+    font-size: 40px;
+}
+
+
+
+
+
+a:hover {
+    text-decoration: underline;
+    color: #61610e;
+}
+
+.my_class {
+    background-color: blue;
+}
+
+nav {
+    background-color: black;
+    padding: 15px 0px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0px, 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px, 20px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: blue;
+}
