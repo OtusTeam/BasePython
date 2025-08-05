@@ -1,0 +1,45 @@
+services:
+  pg:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: $PG_DB
+      POSTGRES_USER: $PG_USER
+      POSTGRES_PASSWORD: $PG_PASSWORD
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 5s
+      timeout: 2s
+      retries: 3
+
+  blog:
+    build:
+      context: ./
+      dockerfile: ./docker-build/blog/Dockerfile
+
+    environment:
+      BLOG__DB__URL: postgresql+psycopg://$PG_USER:$PG_PASSWORD@pg:5432/blog
+      BLOG__DB__ASYNC_URL: postgresql+asyncpg://$PG_USER:$PG_PASSWORD@pg:5432/blog
+
+    command:
+      - "gunicorn"
+      - "main:app"
+      - "--workers"
+      - "1"
+      - "--worker-class"
+      - "uvicorn.workers.UvicornWorker"
+      - "--bind"
+      - "0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      pg:
+        condition: service_healthy
+
+volumes:
+  pg_data:
