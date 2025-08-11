@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    {% for movie in movies %}
+        <h2>{{ movie.title }}</h2>
+        <p>{{ movie.description }}</p>
+        <p>{{ movie.year }}</p>
+        {% if movie.year > 2000 %}
+            <h3>Новый фильм</h3>
+        {% else %}
+            <h3>Старый фильм</h3>
+        {% endif %}
+        <hr>
+    {% endfor %}
+{% endblock %}
+
+
+
