@@ -73,8 +73,6 @@ EXPOSE 8000
 # Команда по умолчанию
 CMD ["python", "app.py"]
 
-# Точка входа (не перезаписывается)
-ENTRYPOINT ["python", "app.py"]
 ```
 
 ### Пример Dockerfile для Python/FastAPI:
