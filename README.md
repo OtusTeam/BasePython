@@ -26,3 +26,4 @@
 - [Урок 34. Взаимодействие приложений между контейнерами: Docker Compose. + Pydantic Settings](lessons/lesson.34/)
 - [Урок 36. Знакомство с Django](lessons/lesson.36/)
 - [Урок 37. Django ORM](lessons/lesson.37/)
+- [Урок 38. Django Templates](lessons/lesson.38/)
