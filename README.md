@@ -28,3 +28,4 @@
 - [Урок 37. Django ORM](lessons/lesson.37/)
 - [Урок 38. Django Templates](lessons/lesson.38/)
 - [Урок 39. Django Admin](lessons/lesson.39/)
+- [Урок 41. Django Forms](lessons/lesson.41/)
