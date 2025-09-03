@@ -1,0 +1,14 @@
+{% extends "blog_app/base.html" %}
+{% block title %}
+Логин
+{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Вход в личный кабинет</h2>
+<form method="post">
+    {% csrf_token %}
+<!--    {%for field in form % }-->
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Войти</button>
+</form>
+{% endblock %}
