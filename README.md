@@ -31,3 +31,4 @@
 - [Урок 41. Django Forms](lessons/lesson.41/)
 - [Урок 42. Django CustomUser](lessons/lesson.42/)
 - [Урок 43. Django CBV](lessons/lesson.43/)
+- [Урок 44. Django Tests](lessons/lesson.44/)
