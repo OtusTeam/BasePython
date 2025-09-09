@@ -1,0 +1,30 @@
+[
+    {
+        "model": "blog_app.tag",
+        "pk": 1,
+        "fields": {
+            "name": "Django"
+        }
+    },
+    {
+        "model": "blog_app.tag",
+        "pk": 2,
+        "fields": {
+            "name": "Python"
+        }
+    },
+    {
+        "model": "blog_app.tag",
+        "pk": 3,
+        "fields": {
+            "name": "Web Development"
+        }
+    },
+    {
+        "model": "blog_app.tag",
+        "pk": 4,
+        "fields": {
+            "name": "Programming"
+        }
+    }
+]
