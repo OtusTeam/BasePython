@@ -1,0 +1,10 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %}Список постов{% endblock %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <p><b>Автор: {{ post.author.name }}</p></b>
+    <p>{{ post.content }}</p>
+    <small>Рейтинг: {{ post.rating }}</small>
+{% endblock %}

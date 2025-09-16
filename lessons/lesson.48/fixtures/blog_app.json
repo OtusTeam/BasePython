@@ -1,0 +1,143 @@
+[
+    {
+        "model": "blog_app.author",
+        "pk": 1,
+        "fields": {
+            "name": "John Doe"
+        }
+    },
+    {
+        "model": "blog_app.author",
+        "pk": 2,
+        "fields": {
+            "name": "Jane Smith"
+        }
+    },
+    {
+        "model": "blog_app.author",
+        "pk": 3,
+        "fields": {
+            "name": "Alice Johnson"
+        }
+    },
+    {
+        "model": "blog_app.author",
+        "pk": 4,
+        "fields": {
+            "name": "Bob Brown"
+        }
+    },
+    {
+        "model": "blog_app.author",
+        "pk": 5,
+        "fields": {
+            "name": "Eve Davis"
+        }
+    },
+    {
+        "model": "blog_app.tag",
+        "pk": 1,
+        "fields": {
+            "name": "Django"
+        }
+    },
+    {
+        "model": "blog_app.tag",
+        "pk": 2,
+        "fields": {
+            "name": "Python"
+        }
+    },
+    {
+        "model": "blog_app.tag",
+        "pk": 3,
+        "fields": {
+            "name": "Web Development"
+        }
+    },
+    {
+        "model": "blog_app.tag",
+        "pk": 4,
+        "fields": {
+            "name": "Programming"
+        }
+    },
+    {
+        "model": "blog_app.post",
+        "pk": 1,
+        "fields": {
+            "title": "Getting Started with Django",
+            "content": "Django is a powerful framework for web development.",
+            "created": "2024-01-01T12:00:00Z",
+            "author": 1,
+            "rating": 5,
+            "tags": [1, 2]
+        }
+    },
+    {
+        "model": "blog_app.post",
+        "pk": 2,
+        "fields": {
+            "title": "Advanced Django Features",
+            "content": "Learn about Django ORM, middleware, and more.",
+            "created": "2024-01-02T15:00:00Z",
+            "author": 1,
+            "rating": 4,
+            "tags": [1, 3]
+        }
+    },
+    {
+        "model": "blog_app.post",
+        "pk": 3,
+        "fields": {
+            "title": "Python for Beginners",
+            "content": "Learn the basics of Python programming.",
+            "created": "2024-01-03T10:00:00Z",
+            "author": 2,
+            "rating": 5,
+            "tags": [2, 4]
+        }
+    },
+    {
+        "model": "blog_app.post",
+        "pk": 4,
+        "fields": {
+            "title": "Web Development with Python",
+            "content": "Combine Python and Django for powerful web apps.",
+            "created": "2024-01-04T16:30:00Z",
+            "author": 3,
+            "rating": 3,
+            "tags": [2, 3]
+        }
+    },
+    {
+        "model": "blog_app.comment",
+        "pk": 1,
+        "fields": {
+            "text": "Great article!",
+            "created": "2024-01-05T12:00:00Z",
+            "author": 1,
+            "post": 1
+        }
+    },
+    {
+        "model": "blog_app.comment",
+        "pk": 2,
+        "fields": {
+            "text": "Very helpful, thanks!",
+            "created": "2024-01-06T12:00:00Z",
+            "author": 2,
+            "post": 1
+        }
+    },
+    {
+        "model": "blog_app.comment",
+        "pk": 3,
+        "fields": {
+            "text": "This was a bit hard to follow.",
+            "created": "2024-01-07T12:00:00Z",
+            "author": 3,
+            "post": 2
+        }
+    }
+]
