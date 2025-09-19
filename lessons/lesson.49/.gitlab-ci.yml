@@ -1,0 +1,47 @@
+image: python:3.13
+
+
+stages:          # List of stages for jobs, and their order of execution
+  - testing
+  - build
+  - deploy
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install poetry
+  - poetry install
+
+lint:
+  stage: testing
+  script:
+    - poetry run pylint $(git ls-files '*.py')
+
+test:
+  stage: testing
+  services:
+    - postgres
+  variables:
+    POSTGRES_USER: gitlabuser
+    POSTGRES_PASSWORD: ii32cieIw3345
+    POSTGRES_DB: gitlabdb
+    DB_HOST: postgres
+    COVERAGE_DIR: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+  script:
+    - poetry run pytest -s --cov --cov-report html:$COVERAGE_DIR --cov-fail-under 86
+  artifacts:
+    name: $COVERAGE_DIR
+    paths:
+      - $COVERAGE_DIR
+    when: on_success
+    expire_in: 1 week
+
+build-job:
+  stage: build
+  script:
+    - echo "Building..."
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploy..."
