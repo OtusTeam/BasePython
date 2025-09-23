@@ -29,6 +29,7 @@
 - [Фоновые задачи в FastAPI — Background Tasks. Занятие от 20.05.2025](open-lessons/fastapi-bg-tasks-20.05.2025/)
 - [Подгрузка связей в SQLAlchemy. Занятие от 22.07.2025](open-lessons/sqla-relationships-loading-22.07.2025/)
 - [Декораторы и фабрики декораторов в Python. Занятие от 25.08.2025](open-lessons/decorators-intro-25.08.2025/)
+- [Зависимости в FastAPI. Занятие от 23.09.2025](open-lessons/fastapi-deps-23-sep-2025/)
 
 
 ### Курсы Python Basic:
