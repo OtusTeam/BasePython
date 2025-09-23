@@ -1,0 +1,31 @@
+services:
+  db:
+    # restart: always
+    image: postgres:latest
+    expose:
+      - 5432
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      POSTGRES_DB: "${POSTGRES_DB}"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d ${POSTGRES_DB} -U ${POSTGRES_USER}" ]
+      interval: 5s
+      timeout: 3s
+      retries: 6
+  backend:
+    # restart: always
+    image: danteonline/python-base-2025-03
+    ports:
+      - 8000:8000
+#    volumes:
+#      - static:/static/
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      POSTGRES_DB: "${POSTGRES_DB}"
+      DB_HOST: "${DB_HOST}"
+    command: bash -c "poetry run python manage.py migrate && poetry run python manage.py runserver"
+    depends_on:
+      db:
+        condition: service_healthy
