@@ -1,6 +1,6 @@
-# Python Basic
+# Python Basic 2025-09
 
 
 ### Занятия
 
-- [Урок название](lessons/lesson.folder/)
+- [Урок 1. Знакомство. Введение](lessons/lesson.01/)
