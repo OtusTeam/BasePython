@@ -1,0 +1,67 @@
+body {
+    background-color: aquamarine;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    color: darkblue;
+    font-size: 30px;
+}
+
+label {
+    color: chocolate;
+}
+
+a {
+    /*color: rgb(150, 22, 19);*/
+    color: #961613FF;
+    text-decoration: none;
+}
+
+a:hover {
+    /*color: rgb(150, 22, 19);*/
+    color: #d15b58;
+    text-decoration: underline;
+}
+
+h1:hover {
+    color: #d15b58;
+}
+
+nav {
+    background-color: black;
+    padding: 15px, 0px, 10px, 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+}
+
+nav ul li {
+    display: inline;
+    margin: 0px, 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 5px;
+
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: blue;
+}
+
+.my_class {
+    background-color: blue;
+    font-size: 20px;
+}
