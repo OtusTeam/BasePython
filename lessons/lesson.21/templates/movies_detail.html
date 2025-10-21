@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %} {{ movie.title }} {% endblock %}
+
+{% block header %}
+          <h1 class="display-4 fw-normal">{{ movie.title }}</h1>
+      <p class="fs-5 text-muted">{{ text }}. {{ movie.description }}</p>
+{% endblock %}
+
+{% block content %}
+<div class="col">
+<div class="card mb-4 rounded-3 shadow-sm">
+  <div class="card-header py-3">
+    <h4 class="my-0 fw-normal">{{ movie.title }}</h4>
+  </div>
+  <div class="card-body">
+    <h1 class="card-title pricing-card-title">{{ movie.year }}<small class="text-muted fw-light"></small></h1>
+    <ul class="list-unstyled mt-3 mb-4">
+      <li>{{ movie.description }}</li>
+      <li>{{ movie.description }}</li>
+        {% if movie.year > 1990 %}
+            <li>Новый фильм</li>
+        {% else %}
+            <li>Старый фильм</li>
+        {% endif %}
+    </ul>
+    <button type="button" class="w-100 btn btn-lg btn-outline-primary">Подробней</button>
+  </div>
+</div>
+</div>
+{% endblock %}
+
+
