@@ -28,3 +28,4 @@
 - [Урок 37. Django ORM](lessons/lesson.37/)
 - [Урок 38. Django Templates](lessons/lesson.38/)
 - [Урок 39. Работа с админкой, кастомные команды](lessons/lesson.39/)
+- [Урок 41. Django froms](lessons/lesson.41/)
