@@ -1,4 +1,4 @@
-# Python Basic 2025-03
+# Python Basic 2025-07
 
 
 ### Занятия
@@ -11,3 +11,4 @@
 - [Урок 19. Базовый фронтенд: CSS & Bootstrap](lessons/lesson.19/)
 - [Урок 20. FastAPI — быстрая разработка API: знакомство](lessons/lesson.20/)
 - [Урок 21. FastAPI — быстрая разработка API: тело, роутеры, шаблоны](lessons/lesson.21/)
+- [Урок 22. Системы контроля зависимостей](lessons/lesson.22/)
