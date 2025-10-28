@@ -1,0 +1,14 @@
+[project]
+name = "23-docker-intro"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.120.1",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.9.0",
+]
