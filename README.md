@@ -30,3 +30,4 @@
 - [Урок 39. Работа с админкой, кастомные команды](lessons/lesson.39/)
 - [Урок 41. Django froms](lessons/lesson.41/)
 - [Урок 42. Django CBV](lessons/lesson.42/)
+- [Урок 43. Django CustomUser](lessons/lesson.43/)
