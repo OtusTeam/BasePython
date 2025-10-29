@@ -31,3 +31,4 @@
 - [Урок 41. Django froms](lessons/lesson.41/)
 - [Урок 42. Django CBV](lessons/lesson.42/)
 - [Урок 43. Django CustomUser](lessons/lesson.43/)
+- [Урок 44. Django tests](lessons/lesson.44/)
