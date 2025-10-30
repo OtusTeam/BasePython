@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}
+  Home
+{% endblock %}
+
+{% block main %}
+  <h1>User info</h1>
+
+  <ul class="list-group my-3">
+    <li class="list-group-item">
+      <strong>E-mail:</strong>
+      <code>{{ user.email }}</code>
+    </li>
+    <li class="list-group-item">
+      <strong>Verified:</strong>
+      {% if user.is_verified %}
+        <span class="badge text-bg-success">Yes</span>
+      {% else %}
+        <span class="badge text-bg-warning">No</span>
+      {% endif %}
+    </li>
+  </ul>
+
+  {% if not user.is_verified %}
+    <div>
+      <button
+        id="verify-button"
+        type="button"
+        class="btn btn-primary"
+      >Verify e-mail
+      </button>
+    </div>
+
+    <div
+      id="loading-indicator"
+      class="spinner-border my-3 d-none"
+      role="status"
+    >
+      <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <div
+      id="verification-email-sent"
+      class="alert alert-success my-3 d-none"
+    >
+      <h5 class="alert-heading">
+        Verification request has been sent.
+      </h5>
+      Please check your e-mail and click on the verification link.
+    </div>
+
+    <div
+      id="verification-request-error"
+      class="alert alert-danger my-3 d-none"
+    >
+      <h5 class="alert-heading">
+        Failed to send verification e-mail.
+      </h5>
+      Please try again later.
+    </div>
+
+    <script>
+      const requestVerificationURL = "{{ url_for('verify:request-token') }}";
+
+      const verifyButton = document.getElementById("verify-button");
+      const verificationEmailSent = document.getElementById("verification-email-sent");
+      const verificationRequestError = document.getElementById("verification-request-error");
+      const loadingIndicator = document.getElementById("loading-indicator");
+
+      verifyButton.addEventListener("click", async () => {
+        verifyButton.classList.add("d-none");
+        loadingIndicator.classList.remove("d-none");
+
+        const response = await fetch(requestVerificationURL, {
+          method: "POST",
+          body: JSON.stringify({ email: "{{ user.email }}" }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+        loadingIndicator.classList.add("d-none");
+
+        if (response.ok) {
+          verificationEmailSent.classList.remove("d-none");
+        } else {
+          verificationRequestError.classList.remove("d-none");
+        }
+      })
+
+    </script>
+
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  E-mail Verification
+{% endblock %}
+
+{% block main %}
+
+  <div
+    class="d-flex flex-column align-items-center my-3"
+  >
+    <h3>Verifying your e-mail</h3>
+    <div
+      id="loading-indicator"
+      class="spinner-border"
+      role="status"
+    >
+      <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <div
+      id="missing-token-alert"
+      class="alert alert-danger my-3 d-none"
+      role="alert"
+    >
+      Missing verification token.
+    </div>
+
+    <div
+      id="verification-error-alert"
+      class="alert alert-danger my-3 d-none"
+      role="alert"
+    >
+      <h5 class="alert-header">
+        Something went wrong.
+      </h5>
+      Sorry, we could not verify your e-mail address.
+    </div>
+
+  </div>
+
+  <script>
+    const loadingIndicator = document.getElementById('loading-indicator');
+    (async () => {
+
+      const params = new URLSearchParams(window.location.search);
+      const token = params.get('token');
+
+      if (!token) {
+        loadingIndicator.classList.add('d-none');
+        document.getElementById('missing-token-alert').classList.remove('d-none');
+        return;
+      }
+
+      const verificationURL = "{{ url_for('verify:verify') }}";
+      const homeURL = "{{ url_for('home') }}";
+      const res = await fetch(verificationURL, {
+        method: 'POST',
+        body: JSON.stringify({ token }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      loadingIndicator.classList.add('d-none');
+
+      if (res.ok) {
+        window.location.href = homeURL;
+      } else {
+        document.getElementById('verification-error-alert').classList.remove('d-none');
+      }
+
+    })();
+  </script>
+
+{% endblock %}

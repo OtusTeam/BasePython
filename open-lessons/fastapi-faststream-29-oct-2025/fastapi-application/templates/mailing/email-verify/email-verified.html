@@ -1,0 +1,14 @@
+{% extends 'mailing/base.html' %}
+
+{% block title %}
+  Email confirmed
+{% endblock %}
+
+{% block main %}
+  <p>
+    Dear, {{ user.email }},
+  </p>
+  <p>
+    Email confirmed. Your email address has been verified.
+  </p>
+{% endblock %}
