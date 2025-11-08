@@ -1,0 +1,11 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <p>Автор: {{ post.author.name }}</p>
+    <p>Содержание: {{ post.content }}</p>
+    <p>Рейтинг: {{ post.rating }}</p>
+    <p>Дата создания: {{ post.created_at }}</p>
+{% endblock %}
