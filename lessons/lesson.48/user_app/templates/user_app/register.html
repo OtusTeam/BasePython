@@ -1,0 +1,14 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+    <h1>Регистрация</h1>
+    <form method="post" class="mt-4">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+
+    </form>
+        <a href="{% url 'login' %}" class="btn btn-secondary mt-3">Есть акаунта? Войти</a>
+{% endblock %}

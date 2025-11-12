@@ -33,3 +33,4 @@
 - [Урок 43. Django CustomUser](lessons/lesson.43/)
 - [Урок 44. Django tests](lessons/lesson.44/)
 - [Урок 45. Django и отложенные задачи с Celery и Redis](lessons/lesson.45/)
+- [Урок 48. GitHub Actions](lessons/lesson.48/)
