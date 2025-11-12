@@ -30,7 +30,7 @@
 - [Подгрузка связей в SQLAlchemy. Занятие от 22.07.2025](open-lessons/sqla-relationships-loading-22.07.2025/)
 - [Декораторы и фабрики декораторов в Python. Занятие от 25.08.2025](open-lessons/decorators-intro-25.08.2025/)
 - [Зависимости в FastAPI. Занятие от 23.09.2025](open-lessons/fastapi-deps-23-sep-2025/)
-- [Очереди задач в веб-приложении на Python: FastStream + FastAPI, RPC](open-lessons/fastapi-faststream-29-oct-2025/)
+- [Очереди задач в веб-приложении на Python: FastStream + FastAPI, RPC от 29.10.2025](open-lessons/fastapi-faststream-29-oct-2025/)
 
 
 ### Курсы Python Basic:
