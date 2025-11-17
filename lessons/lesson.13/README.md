@@ -1,4 +1,4 @@
-## window
+## windows
 python -m venv ./.venv #
 
 ## Linux/mac
@@ -7,7 +7,7 @@ python3 -m venv ./.myvenv
 ## Активация в Linux/mac
 source ./.venv/bin/activate
 
-## Активация в window
+## Активация в windows
 ./.venv/bin/activate  # cmd
 ./.venv/bin/Activate.ps1  # PowerShell
 
