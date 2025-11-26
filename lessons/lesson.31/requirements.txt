@@ -1,0 +1,10 @@
+aiohappyeyeballs==2.6.1
+aiohttp==3.13.2
+aiosignal==1.4.0
+attrs==25.4.0
+frozenlist==1.8.0
+idna==3.11
+multidict==6.7.0
+pip==25.2
+propcache==0.4.1
+yarl==1.22.0
