@@ -10,3 +10,4 @@
 - [Урок 17. Как работает сервер: HTTP-запросы, HttpClient](lessons/lesson.17/)
 - [Урок 18. Основы фронтенда](lessons/lesson.18/)
 - [Урок 19. Базовый фронтенд](lessons/lesson.19/)
+- [Урок 20. FastAPI — быстрая разработка API: знакомство](lessons/lesson.20/)
