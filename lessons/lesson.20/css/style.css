@@ -1,0 +1,75 @@
+:root {
+    --text-color: burlywood;;
+}
+
+body {
+    background-color: var(--text-color, red);
+    color: darkslategrey;
+    /*margin: 50px 100px 150px 200px;*/
+    margin: 0;
+    padding:0;
+}
+
+/*p {*/
+/*    color: #648464;*/
+/*    font-size: 30px;*/
+/*    text-align: center;*/
+/*}*/
+
+h1 {
+    /*color: rgb(112, 43, 43);*/
+    color: #537d53;
+    text-align: center;
+    background-color: darkblue;
+    padding:10px;
+}
+
+img {
+    margin: 30px;
+}
+
+/*a {*/
+/*    color: chocolate;*/
+/*    text-decoration: none;*/
+/*    font-size: 20px;*/
+/*}*/
+
+/*a:hover {*/
+/*    color: blue;*/
+/*    font-size: 30px;*/
+/*    text-decoration: underline;*/
+/*}*/
+
+.my_class {
+    background-color: blue;
+    font-size: 40px;
+}
+
+nav {
+    background-color: darkblue;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: yellow;
+    background-color: black;
+}
+
