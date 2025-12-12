@@ -42,26 +42,26 @@ first_post = all_post[0]
 first_post.title
 
 # Create OneToMany
-post1 = Post.objects.create(title='Важный пост', content='Завтра новая версия python', author='Admin')
-comment1 = Comment.objects.create(text='Отличная новость', author='User123', post=post1)
-omment2 = Comment.objects.create(text='Отличная новость2', author='User345', post=post1)
+post1 = Post.objects.create(title='Важный пост', content='Завтра новая версия python', author='Admin')   
+comment1 = Comment.objects.create(text='Отличная новость', author='User123', post=post1)   
+omment2 = Comment.objects.create(text='Отличная новость2', author='User345', post=post1)   
 
 # READ - получить связанный объект
-comment1.post.title
->>> 'Важный пост'
-
+comment1.post.title   
+> 'Важный пост'   
+   
 # READ - получить связанные объект
-post1.comments.all()
->>> <QuerySet [<Comment: Коммент автора User123>, <Comment: Коммент автора User345>]>
-
+post1.comments.all()    
+> <QuerySet [<Comment: Коммент автора User123>, <Comment: Коммент автора User345>]>   
+   
 # Create ManyToMany
-post = Post.objects.create(title='Еще пост', content='Еще контент', author='Админ123')
-tag1 = Tag.objects.create(name='Django')
-tag2 = Tag.objects.create(name='Python')
-post.tags.add(tag1, tag2)
-
+post = Post.objects.create(title='Еще пост', content='Еще контент', author='Админ123')   
+tag1 = Tag.objects.create(name='Django')   
+tag2 = Tag.objects.create(name='Python')   
+post.tags.add(tag1, tag2)   
+   
 # READ - получить связанные объект
-post.tags.all()
->>> <QuerySet [<Tag: Django>, <Tag: Python>]>
-tag2.posts.all()
->>> <QuerySet [<Post: Еще пост>, <Post: Еще пост11>]>
+post.tags.all()   
+> <QuerySet [<Tag: Django>, <Tag: Python>]>   
+tag2.posts.all()   
+> <QuerySet [<Post: Еще пост>, <Post: Еще пост11>]>   
