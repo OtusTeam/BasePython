@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    {{ title }}
+{% endblock %}
+
+
+{% block main %}
+
+
+        <div class="card-body">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            {% if movie.year > 2000 %}
+                <p class="card-text"><b>НОВЫЙ ФИЛЬМ {{ movie.year }}</b></p>
+            {% else %}
+                <p class="card-text"><b>СТАРЫЙ ФИЛЬМ {{ movie.year }}</b></p>
+            {% endif %}
+            <p class="card-text">{{ movie.description }}</p>
+            <a href="#" class="btn btn-primary">Назад</a>
+        </div>
+
+
+{% endblock %}
+
+
+{# Этот шаблон наследуется от базового #}

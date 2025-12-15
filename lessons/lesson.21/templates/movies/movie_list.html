@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    {{ title }}
+{% endblock %}
+
+
+{% block main %}
+    {% for movie in movies %}
+    <div class="card" style="width: 18rem;">
+        <img src="./images/cat.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            <p class="card-text"><b>{{ movie.year }}</b></p>
+            <p class="card-text">{{ movie.description }}</p>
+            <a href="{{ url_for('html_movie_detail', movie_id=movie.id) }}" class="btn btn-primary">Читать подробней</a>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
+
+
+{# Этот шаблон наследуется от базового #}
