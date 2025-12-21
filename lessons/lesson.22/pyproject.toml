@@ -1,0 +1,26 @@
+[project]
+name = "otus-m3-2025-09"
+version = "0.2.0"
+description = ""
+authors = [
+    {name = "Admin"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests (>=2.25,<2.29)",
+    "flask (>=3.1.2,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.lint.dependencies]
+ruff = "^0.14.10"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.2"
+
