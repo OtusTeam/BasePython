@@ -1,0 +1,3 @@
+Hi,
+it's a new example for text writing.
+Pathlib is the best!

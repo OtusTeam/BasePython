@@ -1,0 +1,3 @@
+Hello World from Pathlib
+Thanks!
+Bye-Bye!
