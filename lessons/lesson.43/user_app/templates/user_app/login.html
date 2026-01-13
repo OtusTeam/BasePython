@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+    <h1>Вход в личный кабинет</h1>
+    <form method="post" class="mt-4">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Войти</button>
+    </form>
+    <a href="{% url 'register' %}" class="btn btn-secondary mt-3">Нет акаунта? Зарегистрироваться</a>
+
+{% endblock %}

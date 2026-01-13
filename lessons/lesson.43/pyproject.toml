@@ -1,0 +1,19 @@
+[project]
+name = "otus-django-2025-07"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Stanislav"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django (>=6.0,<7.0)",
+    "faker (>=39.0.0,<40.0.0)",
+    "pillow (>=12.1.0,<13.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
