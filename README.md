@@ -28,3 +28,5 @@
 - [Урок 38. Django Templates](lessons/lesson.38/)
 - [Урок 39. Django Admin](lessons/lesson.39/)
 - [Урок 41. Django forms](lessons/lesson.41/)
+- [Урок 42. Django Class-Based Views](lessons/lesson.42/)
+- [Урок 43. Django Custom User](lessons/lesson.43/)
