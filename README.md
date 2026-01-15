@@ -16,3 +16,4 @@
 - [Урок 23. Docker](lessons/lesson.23/)
 - [Урок 25. Хранение данных в реляционных БД. Язык SQL](lessons/lesson.25/)
 - [Урок 26. SQLite, знакомство с SQLAlchemy](lessons/lesson.26/)
+- [Урок 27. SQLAlchemy: ORM, связи между таблицами в БД](lessons/lesson.27/)
