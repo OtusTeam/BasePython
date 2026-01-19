@@ -1,0 +1,16 @@
+[project]
+name = "blog-app-2025-09"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.18.1",
+    "psycopg[binary]>=3.3.2",
+    "sqlalchemy>=2.0.45",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.12.0",
+]
