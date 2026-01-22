@@ -18,3 +18,4 @@
 - [Урок 26. SQLite, знакомство с SQLAlchemy](lessons/lesson.26/)
 - [Урок 27. SQLAlchemy: ORM, связи между таблицами в БД](lessons/lesson.27/)
 - [Урок 28. Миграции схем: alembic](lessons/lesson.28/)
+- [Урок 29. Сложные связи в БД](lessons/lesson.29/)
