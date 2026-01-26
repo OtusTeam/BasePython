@@ -19,3 +19,4 @@
 - [Урок 27. SQLAlchemy: ORM, связи между таблицами в БД](lessons/lesson.27/)
 - [Урок 28. Миграции схем: alembic](lessons/lesson.28/)
 - [Урок 29. Сложные связи в БД](lessons/lesson.29/)
+- [Урок 30. Знакомство с асинхронным программированием в Python](lessons/lesson.30/)
