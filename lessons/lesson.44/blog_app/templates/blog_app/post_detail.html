@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <p>Автор: {{ post.author.name }}</p>
+    <p>Дата: {{ post.created_at }}</p>
+    <p>Рейтинг: {{ post.rating }}</p>
+    {% if post.rating > 4 %}
+        <p>Популярный пост</p>
+    {% else %}
+        <p>Не популярный пост</p>
+    {% endif %}
+    <p>{{ post.content }}</p>
+
+{% endblock %}
+
+
