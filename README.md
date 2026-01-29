@@ -33,3 +33,4 @@
 - [Урок 44. Тестирование Django-приложений с Pytest](lessons/lesson.44/)
 - [Урок 45. Django и отложенные задачи с Celery и Redis](lessons/lesson.45/)
 - [Урок 48. GitHub Actions](lessons/lesson.48/)
+- [Урок 49. GitLab CI](lessons/lesson.49/)
