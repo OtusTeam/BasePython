@@ -30,4 +30,6 @@
 - [Урок 41. Django forms](lessons/lesson.41/)
 - [Урок 42. Django Class-Based Views](lessons/lesson.42/)
 - [Урок 43. Django Custom User](lessons/lesson.43/)
+- [Урок 44. Тестирование Django-приложений с Pytest](lessons/lesson.44/)
+- [Урок 45. Django и отложенные задачи с Celery и Redis](lessons/lesson.45/)
 - [Урок 48. GitHub Actions](lessons/lesson.48/)
