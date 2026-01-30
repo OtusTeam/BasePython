@@ -20,7 +20,7 @@ pip install requests==2.31
 pip install --upgrade requests
 
 # Удалить зависимость с помощью pip 
-pip install requests
+pip uninstall requests
 
 # Посмотреть список зависимостей 
 pip list
