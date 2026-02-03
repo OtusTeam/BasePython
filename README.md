@@ -32,6 +32,7 @@
 - [Зависимости в FastAPI. Занятие от 23.09.2025](open-lessons/fastapi-deps-23-sep-2025/)
 - [Очереди задач в веб-приложении на Python: FastStream + FastAPI, RPC от 29.10.2025](open-lessons/fastapi-faststream-29-oct-2025/)
 - [Работа с базой данных на Python: SQLAlchemy и Alembic от 12.11.2025](open-lessons/sqla-and-alembic-12-nov-2025/)
+- [Pydantic-settings для удобного конфигурирования приложения на примере FastAPI от 03.02.2026](open-lessons/pydantic-settings-03-feb-2026/)
 
 
 ### Курсы Python Basic:
