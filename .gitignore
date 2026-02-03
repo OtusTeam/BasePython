@@ -138,3 +138,8 @@ dmypy.json
 cython_debug/
 
 .idea/
+
+# all db files
+**/*.db
+**/*.sqlite3
+**/*.sqlite3-journal
