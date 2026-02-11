@@ -1,0 +1,45 @@
+services:
+  blog:
+    build:
+      context: ./
+      dockerfile: docker-build/blog/Dockerfile
+    environment:
+      BLOG_APP__DB__HOST: pg
+      BLOG_APP__DB__PORT: 5432
+      BLOG_APP__DB__NAME: ${PG_DB}
+      BLOG_APP__DB__USER: ${PG_USER}
+      BLOG_APP__DB__PASSWORD: ${PG_PASSWORD}
+    command:
+      - "gunicorn"
+      - "app:app"
+      - "--workers"
+      - "2"
+      - "--worker-class"
+      - "uvicorn_worker.UvicornWorker"
+      - "--bind"
+      - "0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    depends_on:
+      pg:
+        condition: service_healthy
+
+  pg:
+    image: postgres:18.1-alpine
+    environment:
+      PGDATA: /var/lib/postgresql/18/docker
+      POSTGRES_DB: ${PG_DB}
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+#    ports:
+#      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 2s
+      timeout: 1s
+      retries: 3
+
+volumes:
+  pg-data:
