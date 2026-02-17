@@ -1,0 +1,87 @@
+:root {
+    --text-color: #702b2b;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial;
+    color: blue;
+    /*margin: 130px 30px 230px 0px;*/
+    /*margin: 230px 0px;*/
+    margin: 0;
+    padding: 0;
+
+}
+h2 {
+    background-color: orchid;
+    /*color: blue;*/
+    color: var(--text-color, red);
+    font-size: 20px;
+}
+h1 {
+    color: green;
+    font-size: 100px;
+    /*font-size: 40px;*/
+}
+h1 {
+    /*color: green;*/
+    font-size: 30px;
+}
+
+p {
+    font-size: 18px;
+    color: olive;
+}
+
+a {
+    color: orange;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1b0d07;
+    text-decoration: underline;
+}
+
+nav {
+    background-color: #1b0d07;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.my_class {
+    font-size: 10px;
+}
+
+.my_class1 {
+    font-size: 20px;
+}
+
+.my_class2 {
+    font-size: 100px;
+}
