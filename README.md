@@ -34,6 +34,7 @@
 - [Работа с базой данных на Python: SQLAlchemy и Alembic от 12.11.2025](open-lessons/sqla-and-alembic-12-nov-2025/)
 - [Pydantic-settings для удобного конфигурирования приложения на примере FastAPI от 03.02.2026](open-lessons/pydantic-settings-03-feb-2026/)
 - [Подключение OpenAPI Swagger к Django-REST-Framework 04.02.2026](open-lessons/drf-spectacular-swagger-04-feb-2026/)
+- [Запуск Python-приложения в Docker: FastAPI и база данных 17.02.2026](open-lessons/dockerized-fastapi-17-feb-2026/)
 
 
 ### Курсы Python Basic:

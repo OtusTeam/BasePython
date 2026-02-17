@@ -1,0 +1,47 @@
+services:
+
+  app:
+    build:
+      dockerfile: ./docker-build/books-library/Dockerfile
+      context: ./
+    environment:
+      BOOKS_LIB__DB__HOST: pg
+      BOOKS_LIB__DB__NAME: ${PG_NAME}
+      BOOKS_LIB__DB__USER: ${PG_USER}
+      BOOKS_LIB__DB__PASSWORD: ${PG_PASSWORD}
+    command:
+      - "gunicorn"
+      - "app:app"
+      - "--workers"
+      - "2"
+      - "--worker-class"
+      - "uvicorn_worker.UvicornWorker"
+      - "--bind"
+      - "0.0.0.0:8000"
+      - "--access-logfile"
+      - "-"
+    ports:
+      - "8000:8000"
+    depends_on:
+      pg:
+        condition: service_healthy
+
+  pg:
+    image: postgres:18.1-alpine
+    environment:
+      POSTGRES_DB: ${PG_NAME}
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+      PGDATA: /var/lib/postgresql/18/docker
+    volumes:
+      - books-library-postgres:/var/lib/postgresql
+    # ports:
+    #   - "5432:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 3s
+      timeout: 1s
+      retries: 5
+
+volumes:
+  books-library-postgres:
