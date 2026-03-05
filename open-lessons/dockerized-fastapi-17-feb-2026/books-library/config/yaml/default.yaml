@@ -1,5 +1,0 @@
-books-library:
-  logging:
-    level: INFO
-  db:
-    user: app

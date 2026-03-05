@@ -1,2 +1,0 @@
-from middlewares.middlewares import register_middlewares
-from middlewares.requests_count_middleware import requests_count_middleware_dispatch
