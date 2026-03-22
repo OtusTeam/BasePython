@@ -1,0 +1,15 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %} Автор - {{ author.name }} {% endblock %}
+
+{% block content %}
+    <h5> Автор - {{ author.name }}</h5>
+    {% if author.profile %}
+        <p>Биография: {{ author.profile.bio }}</p>
+        <p>website: {{ author.profile.wevsite }}</p>
+    {% else %}
+        <p>Биографии пока нет</p>
+    {% endif %}
+
+{% endblock content %}
+
