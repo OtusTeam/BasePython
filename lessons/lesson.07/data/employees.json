@@ -1,0 +1,19 @@
+{
+    "department": "Research & Development",
+    "employeeCount": 3,
+    "isRemoteTeam": false,
+    "members": [
+        {
+            "name": "Alice",
+            "age": 27
+        },
+        {
+            "name": "Bob",
+            "age": 34
+        },
+        {
+            "name": "Eve",
+            "age": 25
+        }
+    ]
+}
