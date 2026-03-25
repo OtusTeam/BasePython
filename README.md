@@ -32,3 +32,4 @@
 - [Урок 42. Django CBV](lessons/lesson.42/)
 - [Урок 43. Django CustomUser](lessons/lesson.43/)
 - [Урок 44. Тестирование Django-приложений с Pytest](lessons/lesson.44/)
+- [Урок 45. Django и отложенные задачи с Celery и Redis](lessons/lesson.45/)
