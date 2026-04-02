@@ -1,0 +1,45 @@
+image: python:3.12
+
+stages:
+  - testing
+  - build
+  - deploy
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install poetry
+  - poetry install
+
+lint:
+  stage: testing
+  script:
+    - make pylint
+
+test:
+  stage: testing
+  services:
+    - postgres
+  variables:
+    POSTGRES_USER: gitlabuser
+    POSTGRES_PASSWORD: somepassword
+    POSTGRES_DB: gitlabcidb
+    DB_HOST: postgres
+  script:
+    - make coverage
+  artifacts:
+    name: html_coverage
+    paths:
+      - "./htmlcov"
+    when: on_success
+    expire_in: 1 week
+
+build-job:
+  stage: build
+  script:
+    - echo "Building image"
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying application..."
