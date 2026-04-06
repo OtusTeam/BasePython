@@ -1,0 +1,41 @@
+#volumes:
+#  static:
+#  db-data:
+
+
+services:
+  db:
+    image: postgres:14.2
+    ports:
+      - "5432:5432"
+#    volumes:
+#      - db-data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      POSTGRES_DB: "${POSTGRES_DB}"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d ${POSTGRES_DB} -U ${POSTGRES_USER}" ]
+      interval: 5s
+      timeout: 3s
+      retries: 6
+  backend:
+    # image: danteonline/python-basic-2025-09
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+#    volumes:
+#      - static:/static/
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      POSTGRES_DB: "${POSTGRES_DB}"
+      DB_HOST: "db"
+    command: bash -c "
+      poetry run python manage.py migrate
+      && poetry run python manage.py runserver 0.0.0.0:8080
+      "
+    depends_on:
+      db:
+        condition: service_healthy

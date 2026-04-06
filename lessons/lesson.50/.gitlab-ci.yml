@@ -1,0 +1,62 @@
+image: python:3.12
+
+stages:
+  - testing
+  - build
+  - deploy
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install poetry
+  - poetry install
+
+lint:
+  stage: testing
+  script:
+    - make pylint
+
+test:
+  stage: testing
+  services:
+    - postgres
+  variables:
+    POSTGRES_USER: gitlabuser
+    POSTGRES_PASSWORD: somepassword
+    POSTGRES_DB: gitlabcidb
+    DB_HOST: postgres
+    COVERAGE_DIR: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+  script:
+    - poetry run pytest -s --cov --cov-report html:$COVERAGE_DIR --cov-fail-under 84
+  artifacts:
+    name: html_coverage
+    paths:
+      - $COVERAGE_DIR
+    when: on_success
+    expire_in: 1 week
+
+build-job:
+  stage: build
+  image: docker:24.0.5-cli
+  only:
+    - main
+  services:
+    - docker:24.0.5-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  before_script:
+    - docker info
+    - apk add --no-cache docker-compose
+    - docker-compose --version
+    - docker login -u danteonline -p $DOCKERHUB_TOKEN
+  script:
+    - echo "Building image"
+    - docker-compose build backend
+    - docker-compose push
+    - echo "Done"
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying application..."
