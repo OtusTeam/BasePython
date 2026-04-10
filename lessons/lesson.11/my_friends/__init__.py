@@ -1,0 +1,5 @@
+from .add_friend import add_f as add
+from .remove_friend import del_i as d_i, del_f as d_f
+
+
+__all__ = ["add", 'd_i', 'd_f']
