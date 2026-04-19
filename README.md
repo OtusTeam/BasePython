@@ -9,3 +9,4 @@
 - [Урок 7. Работа с файлами](lessons/lesson.07/)
 - [Урок 9. Продвинутый ООП. Продолжение](lessons/lesson.09/)
 - [Урок 11. Модули](lessons/lesson.11/)
+- [Урок 13. Pytest](lessons/lesson.13/)
