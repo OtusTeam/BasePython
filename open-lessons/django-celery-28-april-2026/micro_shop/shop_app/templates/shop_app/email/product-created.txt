@@ -1,0 +1,5 @@
+New product {{ product.title }} created.
+
+Description: {{ product.description }}
+
+Price: {{ product.price }}

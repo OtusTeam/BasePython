@@ -35,6 +35,7 @@
 - [Pydantic-settings для удобного конфигурирования приложения на примере FastAPI от 03.02.2026](open-lessons/pydantic-settings-03-feb-2026/)
 - [Подключение OpenAPI Swagger к Django-REST-Framework 04.02.2026](open-lessons/drf-spectacular-swagger-04-feb-2026/)
 - [Запуск Python-приложения в Docker: FastAPI и база данных 17.02.2026](open-lessons/dockerized-fastapi-17-feb-2026/)
+- [Фоновые задачи в Django: работа с Celery 28.04.2026](open-lessons/django-celery-28-april-2026/)
 
 
 ### Курсы Python Basic:
