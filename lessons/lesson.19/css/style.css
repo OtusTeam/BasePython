@@ -1,0 +1,77 @@
+h2 {
+    color: blue;
+    font-size: 75px;
+
+}
+
+h6 {
+    font-size: 75px;
+    margin: 120px 10px 0px 0px;
+    /*padding: 50;*/
+    background-color: blue;
+}
+
+h2:hover {
+    color: red;
+    font-size: 45px;
+}
+
+p {
+    font-size: 30px;
+    color: darkblue;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    font-size: 25px;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-size: 25px;
+    color: yellow;
+}
+
+body {
+    background-color: #ffa8a8;
+    color: #333
+    font-size: 55px;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.my_name {
+    background-color: yellow;
+}
+
+nav {
+    background-color: darkslategrey;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px 10px;
+    /*background-color: red;*/
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: yellow;
+    background-color: blue;
+}
