@@ -36,3 +36,4 @@
 - [Урок 41. Формы в Django](lessons/lesson.41/)
 - [Урок 42. Class-Based Views (CBV)](lessons/lesson.42/)
 - [Урок 43. Кастомный пользователь](lessons/lesson.43/)
+- [Урок 44. Тестирование Django-приложений с Pytest](lessons/lesson.44/)
