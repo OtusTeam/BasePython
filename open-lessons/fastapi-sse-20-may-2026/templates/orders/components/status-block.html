@@ -1,0 +1,3 @@
+{% from 'orders/macros/status.html' import status_block %}
+
+{{ status_block(order.status, order_statuses) }}

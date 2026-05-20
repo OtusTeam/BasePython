@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block title %}
+      SSE + HTMX Demo
+    {% endblock %}
+  </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
+    integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/htmx-ext-sse@2.2.4"
+    integrity="sha384-A986SAtodyH8eg8x8irJnYUk7i9inVQqYigD6qZ9evobksGNIXfeFvDwLSHcp31N"
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="container">
+  {% include 'components/navbar.html' %}
+  {% block body %}
+    Main Content
+  {% endblock %}
+</div>
+
+<script src="{{ url_for('static', path='js/theme.js') }}"></script>
+<script src="{{ url_for('static', path='js/sse-graceful-close.js') }}"></script>
+</body>
+</html>

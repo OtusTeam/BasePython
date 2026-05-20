@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% from 'orders/macros/status.html' import status_badge %}
+
+{% block title %}
+	Orders - SSE + HTMX Demo
+{% endblock %}
+
+{% block body %}
+	<h1>Orders</h1>
+
+  {% include 'orders/components/create-form.html' %}
+
+  {% if orders %}
+  	<div class="card">
+      <h2>Recent orders</h2>
+      <ul class="order-list">
+        {% for order in orders %}
+        	<li>
+            <a
+              href="{{ url_for('order_detail', order_id=order.id) }}"
+            >{{ order.name }}</a>
+            <span
+              hx-ext="sse"
+              sse-connect="{{ url_for('order_events', order_id=order.id) }}"
+              sse-swap="{{ sse_event_message }}"
+              sse-close="close"
+            >
+              {{ status_badge(order.status) }}
+            </span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+{% endblock %}

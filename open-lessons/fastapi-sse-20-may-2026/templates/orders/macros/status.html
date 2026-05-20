@@ -1,0 +1,20 @@
+{% macro status_badge(order_status) %}
+<span
+  class="status-badge status-{{ order_status }}"
+>{{ order_status }}</span>
+{% endmacro %}
+
+{% macro status_block(order_status, statuses) %}
+  {{ status_badge(order_status) }}
+
+  <ol class="timeline">
+    {% set current_pos = statuses.index(order_status) %}
+    {% for status in statuses %}
+      <li
+        class="{% if loop.index0 < current_pos %}done{% elif loop.index0 == current_pos %}active{% endif %}"
+      >
+        {{ status | capitalize }}
+      </li>
+    {% endfor %}
+  </ol>
+{% endmacro %}

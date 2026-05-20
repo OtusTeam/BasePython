@@ -1,0 +1,49 @@
+[[repos]]
+repo = "https://github.com/pre-commit/pre-commit-hooks"
+rev = "v6.0.0"
+
+[[repos.hooks]]
+id = "end-of-file-fixer"
+args = [
+    "--fix",
+]
+
+[[repos.hooks]]
+id = "trailing-whitespace"
+
+[[repos.hooks]]
+id = "check-json"
+
+[[repos.hooks]]
+id = "check-toml"
+
+[[repos.hooks]]
+id = "check-yaml"
+
+[[repos.hooks]]
+id = "check-added-large-files"
+
+[[repos.hooks]]
+id = "check-ast"
+
+
+[[repos]]
+repo = "https://github.com/astral-sh/ruff-pre-commit"
+rev = "v0.15.13" # Ruff version.
+
+[[repos.hooks]]
+id = "ruff-check"
+args = [
+    "--fix",
+]
+types_or = [
+    "python",
+    "pyi",
+]
+
+[[repos.hooks]]
+id = "ruff-format"
+types_or = [
+    "python",
+    "pyi",
+]

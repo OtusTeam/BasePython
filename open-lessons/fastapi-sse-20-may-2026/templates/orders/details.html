@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% from 'orders/macros/status.html' import status_block %}
+
+{% block title %}
+	Order {{ order.name }} [{{ order.id }}] - SSE + HTMX Demo
+{% endblock %}
+
+{% block body %}
+	<h1>{{ order.name }}</h1>
+  <p class="order-meta">Order <code>{{ order.id }}</code></p>
+
+  <div
+    id="order-status"
+    class="card"
+    hx-ext="sse"
+    sse-connect="{{ url_for('order_events', order_id=order.id) }}"
+    sse-swap="{{ sse_event_message }}"
+    sse-close="close"
+  >
+    {{ status_block(order.status, order_statuses) }}
+  </div>
+{% endblock %}
