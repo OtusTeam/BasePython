@@ -1,4 +1,4 @@
-# Python Basic 2025-11
+# Python Basic 2026-02
 
 
 ### Занятия
@@ -16,3 +16,4 @@
 - [Урок 18. Основы фронтенда](lessons/lesson.18/)
 - [Урок 19. Базовый фронтенд. CSS, Bootsrap](lessons/lesson.19/)
 - [Урок 20. FastAPI — быстрая разработка API: знакомство](lessons/lesson.20/)
+- [Урок 21. FastAPI — быстрая разработка API: тело, роутеры, шаблоны](lessons/lesson.21/)
