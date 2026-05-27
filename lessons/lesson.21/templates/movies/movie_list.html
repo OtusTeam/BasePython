@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <h1> {{ title }}</h1>
+    {% for movie in movies %}
+<a href="{{ url_for('html_movie_det', movie_id=1) }}">{{ movie.title }}</a>
+        <p>{{ movie.description }}</p>
+        <p>{{ movie.year }}</p>
+        <br>
+        <hr>
+    {% endfor %}
+
+{% endblock %}
+
