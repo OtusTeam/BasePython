@@ -1,0 +1,22 @@
+[project]
+name = "otus-poetry-2026-02"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Stanislav",email = "stanislav3@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "fastapi (>=0.136.3,<0.137.0)",
+    "requests (>=2.26.0,<2.32.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.lint.dependencies]
+black = "^26.5.1"
+
