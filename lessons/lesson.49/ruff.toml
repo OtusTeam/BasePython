@@ -1,0 +1,9 @@
+src = ["."]
+
+line-length = 88
+
+[lint]
+select = ["E", "F", "W", "I", "B"]
+
+[format]
+quote-style = "single"
