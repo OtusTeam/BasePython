@@ -1,0 +1,14 @@
+[project]
+name = "26-orm-intro"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "sqlalchemy>=2.0.50",
+]
+
+[dependency-groups]
+dev = [
+    "black>=26.5.1",
+]
