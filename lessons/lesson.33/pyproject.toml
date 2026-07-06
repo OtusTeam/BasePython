@@ -1,0 +1,24 @@
+[project]
+name = "blog-app-2026-02"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.14"
+dependencies = [
+    "aiohttp>=3.14.1",
+    "alembic>=1.18.5",
+    "asyncpg>=0.31.0",
+    "fastapi[standard]>=0.138.2",
+    "psycopg[binary]>=3.3.4",
+    "pydantic-settings>=2.14.2",
+    "requests>=2.34.2",
+    "sqlalchemy[asyncio]>=2.0.51",
+]
+
+[dependency-groups]
+dev = [
+    "black>=26.5.1",
+    "gunicorn>=26.0.0",
+]
+testing = [
+    "locust>=2.44.4",
+]

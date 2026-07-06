@@ -1,0 +1,40 @@
+services:
+  blog:
+    build:
+      context: ./
+      dockerfile: docker-build/blog-app/Dockerfile
+    environment:
+      BLOG_APP__DB__HOST: pg
+      BLOG_APP__DB__NAME: ${PG_DB}
+      BLOG_APP__DB__USER: ${PG_USER}
+      BLOG_APP__DB__PASSWORD: ${PG_PASSWORD}
+    command:
+      - "fastapi"
+      - "run"
+      - "--workers"
+      - "2"
+    ports:
+      - "8000:8000"
+    depends_on:
+      pg:
+        condition: service_healthy
+
+  pg:
+    image: postgres:18.3-alpine
+    environment:
+      PGDATA: /var/lib/postgresql/18/docker
+      POSTGRES_DB: ${PG_DB}
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+    volumes:
+      - pg-data:/var/lib/postgresql/18/docker
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 2s
+      timeout: 1s
+      retries: 3
+
+volumes:
+  pg-data:

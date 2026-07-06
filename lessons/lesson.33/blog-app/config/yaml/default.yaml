@@ -1,0 +1,5 @@
+blog-app:
+  logging:
+    level: INFO
+  db:
+    user: app
