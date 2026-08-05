@@ -1,0 +1,32 @@
+[
+{
+    "model": "blog_app.comment",
+    "pk": 1,
+    "fields": {
+        "text": "Great article!",
+        "author": 1,
+        "created_at": "2024-01-05T12:00:00Z",
+        "post": 1
+    }
+},
+{
+    "model": "blog_app.comment",
+    "pk": 2,
+    "fields": {
+        "text": "Very helpful, thanks!",
+        "author": 2,
+        "created_at": "2024-01-06T12:00:00Z",
+        "post": 1
+    }
+},
+{
+    "model": "blog_app.comment",
+    "pk": 3,
+    "fields": {
+        "text": "This was a bit hard to follow.",
+        "author": 3,
+        "created_at": "2024-01-07T12:00:00Z",
+        "post": 2
+    }
+}
+]
