@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title_otus</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#travel">Путешествия</a></li>
+                    <li><a href="#nature">Природа</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <h1>Привет, мир!</h1>
+
+            <form action="about.html" method="post">
+                <label for="name">Введите ваше имя: </label>
+                <input type="text" id="name" name="user_name">
+                <br>
+
+                <label for="email">Введите вашу почту: </label>
+                <input type="email" id="email" name="user_email">
+                <hr>
+                <label for="message">Введите ваше сообщение: </label>
+                <textarea id="message" name="user_message" rows="10"></textarea>
+                <br>
+                <label for="password">Введите ваш пароль: </label>
+                <input type="password" id="password" name="user_password">
+<br>
+                <button type="submit">Отправить</button>
+
+
+            </form>
+
+<!--            <h3>Привет, мир!</h3>-->
+<!--            <h4>Привет, мир!</h4>-->
+<!--            <h5>Привет, мир!</h5>-->
+<!--            <h6>Привет, мир!</h6>-->
+
+        </header>
+        <main>
+            <article id="travel">
+
+                <h2>Моё путешествие на Байкал</h2>
+                <img src="images/cat.jpg" alt="Тут кот" width="800">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto beatae, consequuntur
+                cupiditate dolore eligendi eveniet fugiat magnam minima rerum veritatis? Blanditiis culpa,
+                delectus eum natus nulla possimus quo? Enim, nisi.</p>
+                <a href="https://google.com" target="_blank">Google</a>
+                <blockquote>
+                    Not sure what to do when you first get a cat? We asked cat owners the things they wish they knew before getting a cat to help you prepare for your new feline friend
+                </blockquote>
+                <p>Автор цитаты <cite>Боб Иванов</cite></p>
+            </article>
+
+            <article id="nature">
+                <h2>Моё путешествие в Сочи</h2>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2NLea_FEibuAgLe6qhf4ulIh-9J_wsTMS0qqToQ8jNA&s=10" alt="" height="700" width="700">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit laboriosam laborum odio officia officiis sint soluta velit. Eos exercitationem expedita iusto laudantium necessitatibus non quae sequi. Amet eos inventore suscipit..</p>
+                <video src="media/temp_video.mp4" controls width="500"></video>
+                <audio src="media/temp_video.mp4" controls width="500"></audio>
+                <a href="about.html">About</a>
+            </article>
+
+            <article>
+                <h2>Моё путешествие на Алтайл</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gEPmA3USJdI?si=vV982Rp0nzkj3UCo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, dolore ducimus earum explicabo facilis ipsum, labore nihil nobis nostrum officiis quia quidem quo reiciendis sapiente suscipit tempore vel veritatis voluptatem?</p>
+            </article>
+
+                <table>
+                    <caption>Топ 3 города</caption>
+                    <tr>
+                        <th>Место</th>
+                        <th>Город</th>
+                        <th>Страна</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Москва</td>
+                        <td>Россия</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Сочи</td>
+                        <td>Россия</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Питер</td>
+                        <td>Россия</td>
+                    </tr>
+                </table>
+
+        </main>
+        <footer>
+            <p>&copy; 2026 Блог о путешествиях</p>
+        </footer>
+
+    </body>
+</html>
