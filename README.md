@@ -11,3 +11,4 @@
 - [Урок 16. Управление зависимостями в Python: pip, Poetry, uv](lessons/lesson.16/)
 - [Урок 17. Качество кода в Python: Ruff, Pylint, Flake8, Black, isort](lessons/lesson.17/)
 - [Урок 18. Работа с сетью в Python: requests, httpx и API](lessons/lesson.18/)
+- [Урок 19. Основы HTML: структура и элементы веб-страницы](lessons/lesson.19/)
