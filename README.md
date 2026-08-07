@@ -12,3 +12,4 @@
 - [Урок 17. Качество кода в Python: Ruff, Pylint, Flake8, Black, isort](lessons/lesson.17/)
 - [Урок 18. Работа с сетью в Python: requests, httpx и API](lessons/lesson.18/)
 - [Урок 19. Основы HTML: структура и элементы веб-страницы](lessons/lesson.19/)
+- [Урок 20. CSS, Bootstrap и обзор современных CSS-фреймворков](lessons/lesson.20/)
