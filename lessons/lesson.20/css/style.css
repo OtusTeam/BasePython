@@ -1,0 +1,47 @@
+:root {
+    --primary-color: white;
+    --page-color: darkblue;
+}
+
+ h1, h2 {
+     /*color: rgb(255, 100, 100);*/
+     color: #FF6464FF;
+     text-align: center;
+
+ }
+
+
+ p {
+     font-size: 28px;
+     font-weight: bold;
+ }
+ a {
+     color: var(primary-color);
+     background-color: green;
+ }
+
+ button {
+     background-color: var(--page-color);
+     color: yellow;
+     border: 2px solid black;
+ }
+
+.page-title {
+ color: yellowgreen;
+ text-align: center;
+}
+
+.main-nav ul li a {
+    color: darkblue;
+    background-color: darkgreen;
+}
+
+.main-nav ul li a:hover {
+    color: var(--page-color);
+    background-color: darkgoldenrod;
+}
+
+#travel {
+ color: var(--primary-color);
+ background-color: green;
+}
