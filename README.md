@@ -13,3 +13,5 @@
 - [Урок 18. Работа с сетью в Python: requests, httpx и API](lessons/lesson.18/)
 - [Урок 19. Основы HTML: структура и элементы веб-страницы](lessons/lesson.19/)
 - [Урок 20. CSS, Bootstrap и обзор современных CSS-фреймворков](lessons/lesson.20/)
+- [Урок 21. FastAPI: старт, маршруты, параметры и структура запроса](lessons/lesson.21/)
+- [Урок 22. FastAPI: тело запроса, Pydantic, валидация, формы и файлы](lessons/lesson.22/)
