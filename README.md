@@ -38,6 +38,7 @@
 - [Фоновые задачи в Django: работа с Celery 28.04.2026](open-lessons/django-celery-28-april-2026/)
 - [SSE в FastAPI: отправка данных в реальном времени 20.05.2026](open-lessons/fastapi-sse-20-may-2026/)
 - [Работа с SQLAlchemy и alembic в FastAPI 11.08.2026](open-lessons/fastapi-sqla-alembic-11.08.2026/)
+- [Python asyncio: gather, wait, TaskGroup на практике 18.08.2026](open-lessons/asyncio-18.08.2026/)
 
 
 ### Курсы Python Basic:
