@@ -1,0 +1,108 @@
+line-length = 89
+force-exclude = true
+required-version = ">=0.16.2,<0.17"
+target-version = "py314"
+
+[lint]
+select = [
+    "A",     # flake8-builtins
+    "ANN",   # flake8-annotations
+    "ARG",   # flake8-unused-arguments
+    "ASYNC", # flake8-async
+    "B",     # flake8-bugbear
+    "BLE",   # flake8-blind-except
+    "C4",    # flake8-comprehensions
+    "C90",   # mccabe
+    "COM",   # flake8-commas
+    "DTZ",   # flake8-datetimez
+    "E",     # pycodestyle errors
+    "EM",    # flake8-errmsg
+    "ERA",   # eradicate
+    "EXE",   # flake8-executable
+    "F",     # Pyflakes
+    "FA",    # flake8-future-annotations
+    "FAST",  # FastAPI
+    "FBT",   # flake8-boolean-trap
+    "FIX",   # flake8-fixme
+    "FLY",   # flynt
+    "FURB",  # refurb
+    "G",     # flake8-logging-format
+    "I",     # isort
+    "ICN",   # flake8-import-conventions
+    "INP",   # flake8-no-pep420
+    "INT",   # flake8-gettext
+    "ISC",   # flake8-implicit-str-concat
+    "LOG",   # flake8-logging
+    "N",     # pep8-naming
+    "PERF",  # Perflint
+    "PGH",   # pygrep-hooks
+    "PIE",   # flake8-pie
+    "PLC",   # Pylint convention
+    "PLE",   # Pylint error
+    "PLR",   # Pylint refactor
+    "PLW",   # Pylint warning
+    "PT",    # flake8-pytest-style
+    "PTH",   # flake8-use-pathlib
+    "Q",     # flake8-quotes
+    "RET",   # flake8-return
+    "RSE",   # flake8-raise
+    "RUF",   # Ruff-specific rules
+    "S",     # flake8-bandit
+    "SIM",   # flake8-simplify
+    "SLF",   # flake8-self
+    "SLOT",  # flake8-slots
+    "T10",   # flake8-debugger
+    "T20",   # flake8-print
+    "TC",    # flake8-type-checking
+    "TD",    # flake8-todos
+    "TID",   # flake8-tidy-imports
+    "TRY",   # tryceratops
+    "UP",    # pyupgrade
+    "W",     # pycodestyle warnings
+    "YTT",   # flake8-2020
+]
+ignore = [
+    "ANN401", # Explicit Any is allowed when a library has no narrower type.
+    "FIX002", # Allow TODO comments.
+    "RUF002", # Allow Cyrillic in docstrings.
+    "RUF003", # Allow Cyrillic in comments.
+    "S311",   # Random is not used for cryptography here.
+    "TC001",  # Prefer readable runtime imports in this educational project.
+    "TC002",
+    "TC003",
+    "TD002",  # Do not require an author for TODO comments.
+    "TD003",  # Do not require an issue link for TODO comments.
+]
+
+[lint.per-file-ignores]
+"tests/**/*.py" = [
+    "PLR0915",
+    "PLR2004",
+    "S101",
+]
+"alembic/versions/*.py" = [
+    "INP001",
+]
+
+
+[lint.flake8-bugbear]
+extend-immutable-calls = ["pydantic.SecretStr"]
+
+[lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[lint.isort]
+force-single-line = true
+known-first-party = ["app"]
+no-lines-before = []
+no-sections = false
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+
+[lint.pep8-naming]
+classmethod-decorators = ["sqlalchemy.orm.declared_attr.directive"]

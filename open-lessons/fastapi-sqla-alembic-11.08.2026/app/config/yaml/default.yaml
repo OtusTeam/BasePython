@@ -1,0 +1,18 @@
+fastapi-db-demo:
+  app:
+    name: FastAPI SQLAlchemy Alembic Demo
+    api_v1_prefix: /api/v1
+  database:
+    postgres:
+      host: localhost
+      port: 5432
+      user: app
+      database: app
+      max_connections: 100
+    sqlalchemy:
+      driver: postgresql+psycopg
+      pool_size: 30
+      max_overflow: 10
+      pool_timeout_seconds: 2
+      pool_recycle_seconds: 1800
+      connect_timeout_seconds: 3

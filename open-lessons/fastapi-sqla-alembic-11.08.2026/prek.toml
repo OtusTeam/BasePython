@@ -1,0 +1,20 @@
+minimum_prek_version = "0.4.12"
+
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "ruff-check"
+name = "ruff check"
+entry = "uv run --no-sync ruff check --fix"
+language = "system"
+always_run = true
+pass_filenames = false
+
+[[repos.hooks]]
+id = "pyrefly"
+name = "pyrefly"
+entry = "uv run --no-sync pyrefly check"
+language = "system"
+always_run = true
+pass_filenames = false

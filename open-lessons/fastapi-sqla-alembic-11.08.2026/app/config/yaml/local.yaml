@@ -1,0 +1,4 @@
+fastapi-db-demo:
+  database:
+    sqlalchemy:
+      echo: on
