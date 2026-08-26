@@ -15,3 +15,5 @@
 - [Урок 20. CSS, Bootstrap и обзор современных CSS-фреймворков](lessons/lesson.20/)
 - [Урок 21. FastAPI: старт, маршруты, параметры и структура запроса](lessons/lesson.21/)
 - [Урок 22. FastAPI: тело запроса, Pydantic, валидация, формы и файлы](lessons/lesson.22/)
+- [Урок 23. FastAPI: APIRouter, шаблоны, статика и организация мини-проекта](lessons/lesson.23/)
+- [Урок 24. Docker](lessons/lesson.24/)
