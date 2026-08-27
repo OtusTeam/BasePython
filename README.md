@@ -70,3 +70,4 @@
 - [PythonBasic.2025-09](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2025-09)
 - [PythonBasic.2025-11](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2025-11)
 - [PythonBasic.2026-05](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2026-05)
+- [PythonBasic.2026-08](https://github.com/OtusTeam/BasePython/tree/PythonBasic.2026-08)
