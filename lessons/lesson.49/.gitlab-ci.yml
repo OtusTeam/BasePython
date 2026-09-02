@@ -1,0 +1,46 @@
+image: python:3.14
+
+stages:
+  - testing
+  - build
+  - deploy
+
+before_script:
+  - python --version
+  - python -m pip install --upgrade pip
+  - pip install poetry
+  - poetry install
+
+lint:
+  stage: testing
+  script:
+    - make lint
+
+test:
+  stage: testing
+  services:
+    - postgres
+  variables:
+    POSTGRES_USER: gitlabuser
+    POSTGRES_PASSWORD: glpase2c33
+    POSTGRES_DB: gitlabdb
+    POSTGRES_HOST: postgres
+    COVERAGE_DIR: "coverage-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA"
+  script:
+    - poetry run pytest -s --cov --cov-report html:$COVERAGE_DIR --cov-fail-under 84
+  artifacts:
+    name: $COVERAGE_DIR
+    paths:
+      - $COVERAGE_DIR
+    when: on_success
+    expire_in: 1 week
+
+build-job:
+  stage: build
+  script:
+    - echo "Building ..."
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying application..."
