@@ -1,0 +1,8 @@
+[project]
+name = "26-db-intro"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.14"
+dependencies = [
+    "sqlalchemy>=2.0.52",
+]
