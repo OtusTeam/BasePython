@@ -17,3 +17,4 @@
 - [Урок 22. FastAPI: тело запроса, Pydantic, валидация, формы и файлы](lessons/lesson.22/)
 - [Урок 23. FastAPI: APIRouter, шаблоны, статика и организация мини-проекта](lessons/lesson.23/)
 - [Урок 24. Docker](lessons/lesson.24/)
+- [Урок 26. Хранение данных в реляционных БД. Язык SQL](lessons/lesson.26/)
