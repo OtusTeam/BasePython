@@ -1,0 +1,28 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+  <h1>Список постов</h1>
+  <ul class="list-group">
+      {% for post in posts %}
+          <li class="list-group-item">
+              <h5><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h5>
+              <p>{{ post.content|truncatechars:30 }}</p>
+              <small>Автор: {{ post.author.name }} | Рейтинг:  {{ post.rating }}</small>
+              {% if post.rating >= 5 %}
+                <p> Высокий рейтинг </p>
+              {% else %}
+                <p> Низкий рейтинг </p>
+              {% endif %}
+              <a href="{% url 'post_edit' post.id %}" class="btn btn-sm btn-warning">Редактировать</a>
+              <a href="{% url 'post_delete' post.id %}" class="btn btn-sm btn-danger">Удалить</a>
+          </li>
+      {% empty %}
+        <p>Постов пока нет</p>
+      {% endfor %}
+
+  </ul>
+{% endblock %}

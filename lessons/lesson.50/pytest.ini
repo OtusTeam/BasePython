@@ -1,0 +1,3 @@
+[pytest]
+DJANGO_SETTINGS_MODULE = config.settings
+python_files = test_*.py
