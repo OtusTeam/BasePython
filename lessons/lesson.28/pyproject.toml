@@ -1,0 +1,14 @@
+[project]
+name = "blog-app"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.14"
+dependencies = [
+    "psycopg[binary]>=3.3.5",
+    "sqlalchemy>=2.0.52",
+]
+
+[dependency-groups]
+dev = [
+    "black>=26.5.1",
+]
