@@ -20,3 +20,4 @@
 - [Урок 26. Хранение данных в реляционных БД. Язык SQL](lessons/lesson.26/)
 - [Урок 27. ORM: SQLAlchemy](lessons/lesson.27/)
 - [Урок 28. SQLAlchemy: связи между таблицами в БД](lessons/lesson.28/)
+- [Урок 29. Миграции схем: alembic](lessons/lesson.29/)
