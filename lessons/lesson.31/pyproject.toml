@@ -1,0 +1,11 @@
+[project]
+name = "asyncio-intro"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "black>=26.5.1",
+]
