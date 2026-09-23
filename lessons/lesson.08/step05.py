@@ -1,0 +1,8 @@
+my_file =  open("data/otus.txt", "rt", encoding="utf-8")
+data = my_file.read(15)
+data1 = my_file.read(15)
+data2 = my_file.read(15)
+my_file.close()
+print(data)
+print(data1)
+print(data2)

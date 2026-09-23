@@ -1,0 +1,5 @@
+my_file =  open("data/file.txt", "w", encoding="utf-8")
+my_file.write("Hello World!\n")
+my_file.write("11. Python lang\n")
+my_file.write("22. Bob 23 age\n")
+my_file.close()
