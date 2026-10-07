@@ -1,0 +1,11 @@
+[project]
+name = "12-modules"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "black>=26.10.0",
+]
