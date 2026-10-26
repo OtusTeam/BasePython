@@ -16,3 +16,4 @@
 - [Урок 12. Модули](lessons/lesson.12/)
 - [Урок 13. Знакомство со встроенной библиотекой](lessons/lesson.13/)
 - [Урок 14. Тесты и pytest](lessons/lesson.14/)
+- [Урок 15. Больше про тесты на pytest](lessons/lesson.15/)
