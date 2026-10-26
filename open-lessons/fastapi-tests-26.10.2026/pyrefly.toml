@@ -1,0 +1,8 @@
+project-includes = ["bookshelf", "tests"]
+project-excludes = [".venv"]
+python-version = "3.14"
+search-path = ["."]
+
+[errors]
+missing-import = "error"
+deprecated = "error"

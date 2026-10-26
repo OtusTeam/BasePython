@@ -1,0 +1,37 @@
+target-version = "py314"
+required-version = ">=0.16.10"
+src = ["."]
+line-length = 100
+
+[lint]
+select = ["ALL"]
+preview = true # UP052 requires explicit preview opt-in.
+explicit-preview-rules = true
+extend-select = ["UP052"]
+ignore = [
+  "D", # OpenAPI and the webinar guide document this teaching application.
+  "COM812", # The formatter owns trailing commas.
+  "ISC001", # The formatter owns adjacent string literals.
+  "ANN401", # Framework boundaries may expose Any.
+  "TD", "FIX", # A local workshop does not require an issue tracker.
+  "CPY001", # No copyright boilerplate per file.
+]
+
+[lint.isort]
+force-single-line = true
+known-first-party = ["bookshelf", "tests"]
+lines-after-imports = 2
+
+[lint.flake8-type-checking]
+runtime-evaluated-base-classes = [
+  "pydantic.BaseModel",
+  "pydantic_settings.BaseSettings",
+  "bookshelf.config.base.Config",
+]
+
+[lint.per-file-ignores]
+"**/router.py" = ["TC001", "TC002", "TC003"] # FastAPI evaluates annotations at runtime.
+"**/schemas.py" = ["TC001", "TC002", "TC003"] # Pydantic evaluates annotations at runtime.
+"**/models/*.py" = ["TC001", "TC002", "TC003"] # SQLAlchemy evaluates Mapped annotations.
+"**/deps.py" = ["TC001", "TC002", "TC003"] # Dependencies expose runtime annotations.
+"**/tests/**" = ["S101"] # Assertions are the pytest interface.

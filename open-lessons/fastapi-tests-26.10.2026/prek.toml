@@ -1,0 +1,34 @@
+# Native local hooks; each hook invokes its tool directly.
+#:schema https://www.schemastore.org/prek.json
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "ruff-check"
+name = "Ruff"
+entry = "uv run --locked ruff check --fix"
+language = "system"
+types_or = ["python", "pyi"]
+
+[[repos.hooks]]
+id = "ruff-format"
+name = "Ruff format"
+entry = "uv run --locked ruff format"
+language = "system"
+types_or = ["python", "pyi"]
+
+[[repos.hooks]]
+id = "pyrefly"
+name = "Pyrefly"
+entry = "uv run --locked pyrefly check"
+language = "system"
+pass_filenames = false
+types = ["python"]
+
+[[repos.hooks]]
+id = "architecture"
+name = "Import contracts"
+entry = "uv run --locked lint-imports"
+language = "system"
+pass_filenames = false
+types = ["python"]

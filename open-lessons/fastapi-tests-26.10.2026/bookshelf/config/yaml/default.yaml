@@ -1,0 +1,7 @@
+app:
+  environment: dev
+  title: Книжная полка
+database:
+  path: bookshelf.db
+books:
+  allow_create: true

@@ -39,6 +39,7 @@
 - [SSE в FastAPI: отправка данных в реальном времени 20.05.2026](open-lessons/fastapi-sse-20-may-2026/)
 - [Работа с SQLAlchemy и alembic в FastAPI 11.08.2026](open-lessons/fastapi-sqla-alembic-11.08.2026/)
 - [Python asyncio: gather, wait, TaskGroup на практике 18.08.2026](open-lessons/asyncio-18.08.2026/)
+- [Тестирование FastAPI: проверяем API с помощью pytest 26.10.2026](open-lessons/fastapi-tests-26.10.2026/)
 
 
 ### Курсы Python Basic:

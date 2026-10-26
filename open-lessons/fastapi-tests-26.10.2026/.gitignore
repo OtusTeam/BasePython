@@ -1,0 +1,33 @@
+# Python, environments and generated packages
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+
+# Local SQLite databases, including journals and write-ahead logs
+*.db
+*.db-*
+*.sqlite*
+
+# Tools and local evidence
+.pytest_cache/
+.ruff_cache/
+.pyrefly_cache/
+.import_linter_cache/
+.coverage*
+coverage.xml
+htmlcov/
+junit*.xml
+.runtime/
+
+# Local settings, credentials and editor state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.idea/
+.vscode/
+.DS_Store

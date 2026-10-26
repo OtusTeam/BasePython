@@ -1,0 +1,30 @@
+set positional-arguments
+
+# List the available commands.
+default:
+    @just --list
+
+# Install the pinned Python environment and both tool groups.
+setup:
+    uv sync --locked
+
+# Start the demo; API explorer: http://127.0.0.1:8000/docs.
+dev *args:
+    uv run --locked fastapi dev bookshelf/main.py "$@"
+
+# Check style, types, architecture and hook configuration.
+check:
+    uv run --locked ruff check .
+    uv run --locked ruff format --check .
+    uv run --locked pyrefly check
+    uv run --locked lint-imports
+    uv run --locked prek validate-config prek.toml
+    just --fmt --check
+
+# Format the Python files.
+format:
+    uv run --locked ruff format .
+
+# Run the tests written during the webinar.
+test *args:
+    uv run --locked pytest "$@"

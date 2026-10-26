@@ -1,0 +1,59 @@
+# --- Project metadata ---
+[project]
+name = "bookshelf"
+version = "0.1.0"
+description = "A tiny FastAPI application for a 38-minute pytest workshop"
+readme = "README.md"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+  "fastapi[standard]>=0.162.0",
+  "pydantic-settings[yaml]>=2.12,<3",
+  "sqlalchemy>=2.1.6",
+]
+
+# --- Development and test tools ---
+[dependency-groups]
+dev = [
+    "httpx2>=2.16.0",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+]
+
+# --- Package without src/ or a shared workspace ---
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+dev-mode-dirs = ["."]
+
+[tool.hatch.build.targets.wheel]
+packages = ["bookshelf"]
+
+# --- Application entry point ---
+[tool.fastapi]
+entrypoint = "bookshelf.main:app"
+
+# --- pytest: ready before the first test is written ---
+[tool.pytest.ini_options]
+#testpaths = ["tests"] # Keep discovery inside the workshop test suite.
+addopts = [
+  "-ra", # Show details for failures, skips and other non-passing outcomes.
+  "--strict-markers", # Reject misspelled markers.
+  "--strict-config", # Treat invalid pytest configuration as an error.
+#  "--cov=bookshelf", # Measure the application, not the tests.
+#  "--cov-branch", # Measure both outcomes of conditional branches.
+#  "--cov-report=term-missing:skip-covered", # Show missing lines without fully covered files.
+]
+filterwarnings = ["error"] # Surface deprecations rather than silently ignoring them.
+
+## --- Coverage is feedback, not a target for the lesson ---
+#[tool.coverage.run]
+#branch = true
+#source = ["bookshelf"]
+#
+#[tool.coverage.report]
+#show_missing = true
+#skip_covered = true
+#fail_under = 0.0
+#exclude_also = ["if TYPE_CHECKING:"]

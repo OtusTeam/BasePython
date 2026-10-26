@@ -1,0 +1,4 @@
+app:
+  environment: test
+database:
+  path: bookshelf-test.db
