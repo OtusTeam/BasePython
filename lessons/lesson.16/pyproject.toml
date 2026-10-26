@@ -1,0 +1,31 @@
+[project]
+name = "16-deps-controls"
+version = "0.1.0"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+    "aiogram>=3.31.0",
+    "fastapi[standard]>=0.158.1",
+    "pydantic[email]>=2.13.5",
+]
+
+[dependency-groups]
+dev = [
+    "black>=26.10.1",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+]
+docs = [
+    "sphinx>=9.2.0",
+]
+
+[project.scripts]
+flash = "tools.flash:main"
+
+
+[build-system]
+requires = ["uv_build>=0.12.17"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = "application"
+module-name = "tools"
