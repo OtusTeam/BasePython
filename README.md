@@ -18,3 +18,4 @@
 - [Урок 14. Тесты и pytest](lessons/lesson.14/)
 - [Урок 15. Больше про тесты на pytest](lessons/lesson.15/)
 - [Урок 16. Управление зависимостями в Python: pip, Poetry, uv](lessons/lesson.16/)
+- [Урок 18. Качество кода в Python: Ruff, Pylint, Flake8, Black, isort](lessons/lesson.18/)
