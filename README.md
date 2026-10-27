@@ -31,3 +31,4 @@
 - [Урок 38. Django ORM](lessons/lesson.38/)
 - [Урок 39. Шаблоны (Templates)](lessons/lesson.39/)
 - [Урок 40. Работа с админкой, кастомные команды](lessons/lesson.40/)
+- [Урок 42. Формы в Django](lessons/lesson.42/)
