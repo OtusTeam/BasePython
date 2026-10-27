@@ -29,3 +29,5 @@
 - [Урок 35. Взаимодействие приложений между контейнерами, docker compose](lessons/lesson.35/)
 - [Урок 37. Знакомство с Django](lessons/lesson.37/)
 - [Урок 38. Django ORM](lessons/lesson.38/)
+- [Урок 39. Шаблоны (Templates)](lessons/lesson.39/)
+- [Урок 40. Работа с админкой, кастомные команды](lessons/lesson.40/)
