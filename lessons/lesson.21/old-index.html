@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      font-size: 1.5em;
+      background-color: tomato;
+    }
+    div {
+      font-size: 1.2em;
+    }
+    .underlined {
+      color: blueviolet;
+      text-decoration: underline;
+    }
+    div.underlined {
+      color: blue;
+    }
+
+    #first-foo {
+      color: green;
+    }
+
+  </style>
+
+
+  <link rel="stylesheet" href="./loader.css">
+</head>
+<body style="background-color: lightgray;">
+  <h1>Hello world!</h1>
+
+  <p class="underlined">Hello paragraph</p>
+  
+  <hr>
+
+  <div id="first-foo" class="underlined">
+    Foo
+  </div>
+  
+  <div class="underlined">
+    Bar
+  </div>
+  
+  <div class="underlined" style="color: brown;">
+    buz
+  </div>
+
+  <hr>
+
+  <div>
+    Fizz
+  </div>
+  
+  <div>
+    Buzz
+  </div>
+  
+  <hr>
+  <h2>Loading posts...</h2>
+  <span class="loader"></span>
+</body>
+</html>
+
