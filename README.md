@@ -35,4 +35,5 @@
 - [Урок 43. Class-Based Views (CBV)](lessons/lesson.43/)
 - [Урок 44. Кастомный пользователь и личный кабинет](lessons/lesson.44/)
 - [Урок 45. Тестирование Django-приложений с Pytest](lessons/lesson.45/)
+- [Урок 46. Django и отложенные задачи с Celery и Redis](lessons/lesson.46/)
 - [Урок 49. GitHub Actions](lessons/lesson.49/)
