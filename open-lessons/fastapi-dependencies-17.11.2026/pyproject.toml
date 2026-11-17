@@ -1,0 +1,48 @@
+[project]
+name = "fastapi-depends-webinar"
+version = "0.1.0"
+description = "Three practical FastAPI dependency features in a small book catalog"
+readme = "README.md"
+requires-python = ">=3.15,<3.16"
+dependencies = [
+    "fastapi[standard]>=0.163.1",
+]
+
+[dependency-groups]
+dev = [
+    "pyrefly>=1.4.1",
+    "ruff>=0.17.5",
+]
+
+[tool.ruff]
+target-version = "py315"
+line-length = 89
+extend-exclude = [".uv-cache", ".python"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+# D211/D212 win over incompatible alternatives; formatter owns commas.
+# This teaching project does not require a copyright banner in every module.
+ignore = ["D203", "D213", "COM812", "CPY001"]
+
+[tool.ruff.lint.flake8-type-checking]
+# FastAPI evaluates view annotations when registering routes.
+runtime-evaluated-decorators = ["fastapi.APIRouter.get"]
+
+[tool.pyrefly]
+project-includes = ["app/**/*.py"]
+python-version = "3.15"
+python-interpreter-path = ".venv/bin/python"
+preset = "all"
+check-unannotated-defs = true
+infer-return-types = "never"
+strict-callable-subtyping = true
+strict-partial-subtyping = true
+treat-all-caps-as-final = true
+ignore-missing-imports = []
+replace-untyped-imports-with-any = []
+enabled-ignores = []
+
+
+[tool.fastapi]
+entrypoint = "app.main:app"
