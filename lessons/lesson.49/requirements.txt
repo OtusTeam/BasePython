@@ -1,0 +1,10 @@
+asgiref==3.12.1
+Django==6.1.2
+Faker==40.43.0
+PyYAML==6.0.3
+sqlparse==0.6.0
+Pillow==13.0.0
+beautifulsoup4==4.15.0
+pytest-django==4.14.0
+pytest-cov==7.1.0
+pylint==4.1.4
