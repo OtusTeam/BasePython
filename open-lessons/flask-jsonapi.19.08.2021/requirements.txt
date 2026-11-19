@@ -12,4 +12,4 @@ marshmallow-jsonapi==0.24.0
 PyYAML==5.4.1
 simplejson==3.17.3
 SQLAlchemy==1.3.24
-Werkzeug==2.0.1
+Werkzeug==2.2.3
