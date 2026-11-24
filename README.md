@@ -38,3 +38,4 @@
 - [Урок 46. Django и отложенные задачи с Celery и Redis](lessons/lesson.46/)
 - [Урок 49. GitHub Actions](lessons/lesson.49/)
 - [Урок 50. GitLab CI](lessons/lesson.50/)
+- [Урок 51. GitLab CD](lessons/lesson.51/)
