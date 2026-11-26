@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+
+{% block header %}
+    {{ title }}
+{% endblock %}
+
+
+{% block content %}
+    {% for movie in movies %}
+<a href="{{ url_for('html_movies_detail', movie_id=movie.id) }}">    <h5>{{ movie.title }}</h5></a>
+<!--    <p>{{ movie.description }}</p>-->
+    <p>{{ movie.year }}</p>
+
+    {% if movie.year > 1990 %}
+        <p>Новый фильм</p>
+    {% else %}
+        <p>Старый фильм</p>
+    {% endif %}
+
+    <hr>
+    {% endfor %}
+{% endblock %}
